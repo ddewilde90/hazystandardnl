@@ -1,6 +1,6 @@
 export const data = {
     featured: {
-        title: "De Val van Commercieel Vastgoed: Een Systeemfout",
+        title: "De Val van Commercieel Vastgoed: Een Systeem---fout",
         excerpt: "Analyse van de leegstand in de Zuidas en de kettingreactie in de pensioenfondsen. De data wijst op een structurele overwaardering van 40%.",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
         author: "Studio",
