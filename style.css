@@ -1,0 +1,61 @@
+/* Strict Monochrome & No Radius/Shadow Overrides */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove all rounded corners */
+* {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: none !important;
+}
+
+/* Custom scrollbar for raw data / gallery */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid var(--black);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--black);
+}
+
+.nav-link {
+    cursor: pointer;
+}
+.nav-link:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+.nav-link.active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.photo-gallery {
+    display: flex;
+    overflow-x: auto;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+.photo-item {
+    min-width: 300px;
+    border-right: 1px solid var(--black);
+}
+
+/* Grayscale images forcefully */
+img, video {
+    filter: grayscale(100%);
+    object-fit: cover;
+}
