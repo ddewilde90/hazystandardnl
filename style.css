@@ -1,4 +1,12 @@
-/* 1. ALGEMENE ZAKELIJKE BASIS */
+/* 1. CINEMATIC BASIS */
+:root {
+    --bg-dark: #0a0a0a;          /* Diep zwart uit de 'About Me' foto */
+    --text-main: #e0d9d1;        /* Warm off-white voor leesbaarheid */
+    --accent-pink: #f4c2c2;      /* Post-it roze voor accenten */
+    --accent-orange: #e67e22;    /* Telefoon oranje voor kleine details */
+    --border-soft: #333333;      /* Subtiele lijnen voor secties */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,91 +14,80 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Strak voor de feiten */
-    background-color: #fff;
-    color: #000;
-    line-height: 1.4;
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
 
-/* 2. MAGAZINE TYPOGRAFIE (De mix uit de foto) */
-.font-serif {
-    font-family: 'Playfair Display', serif; /* Elegant voor de nuance */
+/* 2. MAGAZINE TYPOGRAFIE */
+/* Gebruik voor koppen een Serif font (Playfair Display) */
+h1, h2, .font-serif {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic; /* Voor die 'Sentimental Value' look */
 }
 
-/* De enorme kop uit de foto */
+/* De enorme 'About Me' stijl kop */
 .text-huge {
-    font-size: clamp(5rem, 18vw, 15rem);
-    line-height: 0.75;
-    letter-spacing: -0.06em;
-    font-weight: 800;
+    font-size: clamp(4rem, 15vw, 12rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-/* 3. LAYOUT & ASYMMETRIE (Het 'boot' effect) */
-.relative {
-    position: relative;
+/* 3. LAYOUT & ACCENTEN */
+/* De roze 'Post-it' stijl voor een specifiek kader of button */
+.accent-box {
+    background-color: var(--accent-pink);
+    color: #000;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    transform: rotate(-1deg); /* Licht scheef voor het handgeplakte effect */
 }
 
-/* Voor de zwevende tekstblokken die niet netjes in het gelid staan */
-.md\:ml-\[50\%\] {
-    margin-left: 0;
+/* De navigatie balk */
+nav {
+    border-bottom: 1px solid var(--border-soft);
+    padding: 1rem 0;
 }
 
-@media (min-width: 768px) {
-    .md\:ml-\[50\%\] {
-        margin-left: 45%; /* Iets minder dan de helft voor een betere balans */
-    }
-}
-
-/* 4. AFBEELDINGEN (Rauw & Monochroom) */
-img {
-    filter: grayscale(100%) contrast(115%) brightness(90%);
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-    object-fit: cover;
-}
-
-/* Subtiel effect bij hoveren */
-img:hover {
-    filter: grayscale(0%) contrast(100%) brightness(100%);
-}
-
-/* 5. INTERACTIE (Strikt & Direct) */
 .nav-link {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--text-main);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
 }
 
-.nav-link.active, .nav-link:hover {
-    background-color: #000;
-    color: #fff;
+.nav-link:hover {
+    color: var(--accent-orange); /* Subtiel kleurdetail */
 }
 
-/* 6. EXTRA DETAILS VOOR DE 'FINISH' */
-.underline-offset-8 {
-    text-underline-offset: 12px;
+/* 4. SECTIE SCHEIDINGEN */
+section {
+    padding: 5rem 10%;
+    border-bottom: 1px solid var(--border-soft);
 }
 
-/* Custom scrollbar voor die high-end studio look */
+/* 5. SCROLLBAR (High-end look) */
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #000;
+    background: var(--bg-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #444;
+    background: var(--border-soft);
 }
 
-/* SECTION TRANSITIONS */
-section {
-    border-bottom: 1px solid #000;
-}
-
-.bg-black {
-    background-color: #000;
-}
-
-.bg-white {
-    background-color: #fff;
+/* 6. AFBEELDINGEN (Mocht je ze toch gebruiken) */
+img {
+    filter: grayscale(100%) contrast(110%);
 }
