@@ -65,63 +65,66 @@ function loadView(viewName) {
 }
 
 function renderHome() {
-    const fContainer = document.getElementById('featured-container');
-    if (fContainer && data.featured) {
-        fContainer.innerHTML = `
-            <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
-                <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[300px]">
-            </div>
-            <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
-                <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">${data.featured.author} // ${data.featured.date}</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">${data.featured.title}</h2>
-                <p class="text-lg font-semibold">${data.featured.excerpt}</p>
-            </div>
-        `;
-    }
+    const fContainer = document.getElementById('featured-container');
+    if (fContainer && data.featured) {
+        fContainer.innerHTML = `
+            <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
+                <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[400px]">
+            </div>
+            <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
+                <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">${data.featured.author} // ${data.featured.date}</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">${data.featured.title}</h2>
+                <p class="text-lg font-semibold">${data.featured.excerpt}</p>
+            </div>
+        `;
+    }
 
-    const vContainer = document.getElementById('col-video');
-    if (vContainer) {
-        data.videos.forEach(v => {
-            const vEl = document.createElement('div');
-            vEl.className = 'border-b border-black p-4 group cursor-pointer';
-            vEl.innerHTML = `
-                <div class="relative w-full h-40 mb-3 bg-gray-200 border border-black overflow-hidden">
-                    <img src="${v.thumb}" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                        <i data-lucide="play-circle" class="text-white w-12 h-12"></i>
-                    </div>
-                </div>
-                <h3 class="font-bold uppercase text-lg leading-tight">${v.title}</h3>
-            `;
-            vContainer.appendChild(vEl);
-        });
-    }
+    const vContainer = document.getElementById('col-video');
+    if (vContainer) {
+        vContainer.innerHTML = ''; // Leegmaken voor injectie
+        data.videos.forEach(v => {
+            const vEl = document.createElement('div');
+            vEl.className = 'border-b border-black p-4 group cursor-pointer';
+            vEl.innerHTML = `
+                <div class="relative w-full h-40 mb-3 bg-gray-200 border border-black overflow-hidden">
+                    <img src="${v.thumb}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <i data-lucide="play-circle" class="text-white w-12 h-12"></i>
+                    </div>
+                </div>
+                <h3 class="font-bold uppercase text-lg leading-tight">${v.title}</h3>
+            `;
+            vContainer.appendChild(vEl);
+        });
+    }
 
-    const aContainer = document.getElementById('col-analysis');
-    if (aContainer) {
-        data.analysis.forEach(a => {
-            const aEl = document.createElement('div');
-            aEl.className = 'border-b border-black p-6 cursor-pointer hover:bg-gray-50 transition-none';
-            aEl.innerHTML = `
-                <div class="text-xs font-bold uppercase mb-2 text-gray-500">${a.date}</div>
-                <h3 class="font-extrabold uppercase text-xl mb-3">${a.title}</h3>
-                <p class="text-sm font-semibold">${a.intro}</p>
-            `;
-            aEl.onclick = () => openArticle(a);
-            aContainer.appendChild(aEl);
-        });
-    }
+    const aContainer = document.getElementById('col-analysis');
+    if (aContainer) {
+        aContainer.innerHTML = ''; // Leegmaken voor injectie
+        data.analysis.forEach(a => {
+            const aEl = document.createElement('div');
+            aEl.className = 'border-b border-black p-6 cursor-pointer hover:bg-gray-50 transition-none';
+            aEl.innerHTML = `
+                <div class="text-xs font-bold uppercase mb-2 text-gray-500">${a.date}</div>
+                <h3 class="font-extrabold uppercase text-xl mb-3">${a.title}</h3>
+                <p class="text-sm font-semibold">${a.intro}</p>
+            `;
+            aEl.onclick = () => openArticle(a);
+            aContainer.appendChild(aEl);
+        });
+    }
 
-    const rContainer = document.getElementById('col-raw');
-    if (rContainer) {
-        data.rawData.forEach(r => {
-            const rEl = document.createElement('div');
-            rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-1';
-            rEl.textContent = r;
-            rContainer.appendChild(rEl);
-        });
-    }
-    lucide.createIcons();
+    const rContainer = document.getElementById('col-raw');
+    if (rContainer) {
+        rContainer.innerHTML = ''; // Leegmaken voor injectie
+        data.rawData.forEach(r => {
+            const rEl = document.createElement('div');
+            rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-1 mb-2';
+            rEl.textContent = r;
+            rContainer.appendChild(rEl);
+        });
+    }
+    lucide.createIcons();
 }
 
 function renderTopics() {
