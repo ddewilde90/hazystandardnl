@@ -21,7 +21,8 @@ function setupNavigation() {
         link.addEventListener('click', (e) => {
             links.forEach(l => l.classList.remove('active'));
             e.target.classList.add('active');
-            loadView(e.target.dataset.target);
+            // We zorgen dat we de target altijd naar kleine letters omzetten voor de zekerheid
+            loadView(e.target.dataset.target.toLowerCase());
         });
     });
 }
@@ -50,16 +51,19 @@ function openArticle(article) {
 function loadView(viewName) {
     const main = document.getElementById('main-content');
     main.innerHTML = '';
-    const templateId = viewName === 'archive' ? 'tpl-topics' : `tpl-${viewName}`;
+    
+    // We maken de viewName hier klein zodat 'Portfolio' en 'portfolio' allebei werken
+    const name = viewName.toLowerCase();
+    const templateId = name === 'archive' ? 'tpl-topics' : `tpl-${name}`;
     const tpl = document.getElementById(templateId);
     
     if (tpl) {
         main.appendChild(tpl.content.cloneNode(true));
-        if (viewName === 'home') renderHome();
-        if (viewName === 'topics' || viewName === 'archive') renderTopics();
+        if (name === 'home') renderHome();
+        if (name === 'topics' || name === 'archive') renderTopics();
         
-        // STAP 1: Voeg deze regel toe om de portfolio te tekenen
-        if (viewName === 'Portfolio') renderPortfolio();
+        // DIT IS DE BELANGRIJKE WIJZIGING:
+        if (name === 'portfolio') renderPortfolio();
     }
     lucide.createIcons();
 }
@@ -173,8 +177,7 @@ function renderTopics() {
     renderTopicGrid('ALLES');
 }
 
-// STAP 2: Voeg deze nieuwe functie onderaan toe
-function renderPortfolio() {
+function renderportfolio() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid || !data.portfolio) return;
 
@@ -188,7 +191,6 @@ function renderPortfolio() {
             <h3 class="text-xl font-extrabold uppercase mb-4 leading-tight">${item.title}</h3>
             <p class="text-sm font-semibold text-gray-700">${item.intro}</p>
         `;
-        // Zorg dat deze ook een artikel opent als je erop klikt
         el.onclick = () => openArticle(item);
         grid.appendChild(el);
     });
