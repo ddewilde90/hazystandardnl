@@ -67,15 +67,13 @@
     </template>
 
     <template id="tpl-topics">
-        <div class="flex flex-col flex-grow">
-            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto" id="topics-filters">
-                <!-- Filters injected via JS -->
+    <div class="flex flex-col flex-grow">
+        <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto" id="topics-filters"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8" id="topics-grid">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="topics-grid">
-                <!-- Articles injected via JS -->
-            </div>
-        </div>
-    </template>
+    </div>
+</template>
 
     <template id="tpl-about">
     <div class="bg-black text-white min-h-screen font-sans">
