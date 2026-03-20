@@ -21,7 +21,6 @@ function setupNavigation() {
         link.addEventListener('click', (e) => {
             links.forEach(l => l.classList.remove('active'));
             e.target.classList.add('active');
-            // We zetten de target om naar kleine letters om matches met templates te garanderen
             const target = e.target.dataset.target.toLowerCase();
             loadView(target);
         });
@@ -33,7 +32,7 @@ function openArticle(article) {
     main.innerHTML = `
         <div class="max-w-4xl mx-auto p-6 md:p-20 bg-white min-h-screen border-x border-black">
             <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">
-                ← Terug naar overzicht
+                ← Terug
             </button>
             <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
             <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight">${article.title}</h1>
@@ -41,7 +40,7 @@ function openArticle(article) {
                 ${article.intro}
             </div>
             <div class="prose max-w-none text-lg leading-relaxed font-medium border-t border-black pt-10">
-                ${article.content || "Gedetailleerde rapportage volgt."}
+                ${article.content || "Documentatie volgt."}
             </div>
         </div>
     `;
@@ -60,10 +59,44 @@ function loadView(viewName) {
     
     if (tpl) {
         main.appendChild(tpl.content.cloneNode(true));
-        
-        // Roep de juiste teken-functies aan op basis van de pagina
         if (name === 'home') renderHome();
         if (name === 'topics' || name === 'archive') renderTopics();
         if (name === 'portfolio') renderPortfolio(); 
     }
-    lucide.
+    lucide.createIcons();
+}
+
+function renderHome() {
+    const fContainer = document.getElementById('featured-container');
+    if (fContainer && data.featured) {
+        fContainer.innerHTML = `
+            <div class="md:col-span-2 border-r border-black relative">
+                <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[400px]">
+            </div>
+            <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
+                <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">
+                    ${data.featured.author} // ${data.featured.date}
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">
+                    ${data.featured.title}
+                </h2>
+                <p class="text-lg font-semibold">${data.featured.excerpt}</p>
+            </div>
+        `;
+    }
+
+    const vContainer = document.getElementById('col-video');
+    if (vContainer && data.videos) {
+        data.videos.forEach(v => {
+            const vEl = document.createElement('div');
+            vEl.className = 'border-b border-black p-4 group cursor-pointer';
+            vEl.innerHTML = `
+                <div class="relative w-full h-40 mb-3 bg-gray-200 border border-black overflow-hidden">
+                    <img src="${v.thumb}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <i data-lucide="play-circle" class="text-white w-12 h-12"></i>
+                    </div>
+                </div>
+                <h3 class="font-bold uppercase text-lg leading-tight">${v.title}</h3>
+            `;
+            vContainer.
