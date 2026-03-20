@@ -62,22 +62,29 @@ function loadView(viewName) {
         if (viewName === 'portfolio') renderportfolio();
     }
     lucide.createIcons();
-}
-
 function renderHome() {
-    const fContainer = document.getElementById('featured-container');
-    if (fContainer && data.featured) {
-        fContainer.innerHTML = `
-            <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
-                <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[300px]">
-            </div>
-            <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
-                <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">${data.featured.author} // ${data.featured.date}</div>
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">${data.featured.title}</h2>
-                <p class="text-lg font-semibold">${data.featured.excerpt}</p>
-            </div>
-        `;
-    }
+    const fContainer = document.getElementById('featured-container');
+    if (fContainer && data.featured) {
+        // We legen de container eerst om dubbele content te voorkomen
+        fContainer.innerHTML = `
+            <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
+                <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[400px]">
+            </div>
+            <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
+                <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">
+                    ${data.featured.author} // ${data.featured.date}
+                </div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">
+                    ${data.featured.title}
+                </h2>
+                <p class="text-lg font-semibold">${data.featured.excerpt}</p>
+            </div>
+        `;
+    }
+
+    // Vergeet niet de rest van de kolommen (video, analysis, raw data) hieronder te laten staan
+    renderHomeColumns(); 
+}
 
     const vContainer = document.getElementById('col-video');
     if (vContainer) {
