@@ -26,25 +26,105 @@ function setupNavigation() {
     });
 }
 
+// --- DE NIEUWE OPENARTICLE FUNCTIE (NOS STIJL) ---
 function openArticle(article) {
     const main = document.getElementById('main-content');
+    
     main.innerHTML = `
-        <div class="max-w-4xl mx-auto p-6 md:p-20 bg-white min-h-screen border-x border-black">
-            <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">
-                ← Terug naar overzicht
-            </button>
-            <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
-            <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight">${article.title}</h1>
-            <div class="prose max-w-none text-lg leading-relaxed font-medium mb-10">
-                ${article.intro}
+        <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
+            
+            <div class="relative w-full h-[300px] md:h-[500px] overflow-hidden border-b border-black">
+                <img src="${article.image || 'placeholder.jpg'}" 
+                     class="w-full h-full object-cover grayscale" alt="${article.title}">
+                <div class="absolute bottom-0 left-0 bg-black text-white px-4 py-2 text-[10px] uppercase font-bold">
+                    Beeld: Studio / Unsplash
+                </div>
             </div>
-            <div class="prose max-w-none text-lg leading-relaxed font-medium border-t border-black pt-10">
-                ${article.content || "Gedetailleerde rapportage volgt."}
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-0">
+                
+                <div class="lg:col-span-3 p-6 md:p-16 border-r border-black">
+                    <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">
+                        ← Terug naar overzicht
+                    </button>
+
+                    <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic">${article.title}</h1>
+                    
+                    <div class="flex gap-4 mb-10 border-y border-gray-100 py-4">
+                        <span class="text-[10px] font-bold uppercase self-center mr-2 text-gray-400">Deel dit:</span>
+                        <div class="w-8 h-8 rounded-full border border-black flex items-center justify-center cursor-pointer hover:bg-green-500 hover:text-white transition-colors">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-8 h-8 rounded-full border border-black flex items-center justify-center cursor-pointer hover:bg-blue-600 hover:text-white transition-colors">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-8 h-8 rounded-full border border-black flex items-center justify-center cursor-pointer hover:bg-black hover:text-white transition-colors">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="prose max-w-none text-xl leading-relaxed font-semibold mb-10 border-l-4 border-black pl-6">
+                        ${article.intro}
+                    </div>
+                    
+                    <div class="prose max-w-none text-lg leading-relaxed font-medium mb-20">
+                        ${article.content || "Gedetailleerde feitelijke analyse volgt."}
+                    </div>
+
+                    <div class="border-t-2 border-black pt-10">
+                        <h4 class="text-sm font-bold uppercase mb-6 tracking-widest">Lees ook:</h4>
+                        <div id="related-articles" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1 bg-gray-50 p-6 flex flex-col gap-8">
+                    <div class="sticky top-10">
+                        <div class="border border-gray-300 bg-white p-4 h-[400px] flex flex-col items-center justify-center text-gray-300 text-center uppercase font-bold text-xs">
+                            <span class="mb-4">Advertentie</span>
+                            <div class="w-full h-px bg-gray-100 mb-4"></div>
+                            <i data-lucide="layout" class="w-10 h-10 mb-2"></i>
+                            <span>Space for Rent</span>
+                        </div>
+                        
+                        <div class="mt-10 border border-black p-4 bg-black text-white text-[10px] font-bold uppercase text-center">
+                            Premium Analyse<br>Abonnement v.a. €5,-
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     `;
+
+    renderRelated();
     window.scrollTo(0, 0);
     document.getElementById('back-btn').onclick = () => loadView('topics');
+    lucide.createIcons();
+}
+
+// --- HULPFUNCTIE VOOR GERELATEERDE ARTIKELEN ---
+function renderRelated() {
+    const container = document.getElementById('related-articles');
+    if (!container) return;
+    
+    // We pakken de eerste 2 analyses uit je data.js
+    const related = data.analysis.slice(0, 2); 
+    
+    related.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'group cursor-pointer border border-black overflow-hidden bg-white';
+        div.innerHTML = `
+            <div class="aspect-video overflow-hidden border-b border-black">
+                <img src="${item.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+            </div>
+            <div class="p-4">
+                <h5 class="font-extrabold uppercase text-sm group-hover:underline">${item.title}</h5>
+            </div>
+        `;
+        div.onclick = () => openArticle(item);
+        container.appendChild(div);
+    });
 }
 
 function loadView(viewName) {
@@ -63,7 +143,6 @@ function loadView(viewName) {
 }
 
 function renderHome() {
-    // 1. Featured Article
     const fContainer = document.getElementById('featured-container');
     if (fContainer && data.featured) {
         fContainer.innerHTML = `
@@ -78,7 +157,6 @@ function renderHome() {
         `;
     }
 
-    // 2. Video Column
     const vContainer = document.getElementById('col-video');
     if (vContainer) {
         vContainer.innerHTML = '';
@@ -98,7 +176,6 @@ function renderHome() {
         });
     }
 
-    // 3. Analysis Column
     const aContainer = document.getElementById('col-analysis');
     if (aContainer) {
         aContainer.innerHTML = '';
@@ -115,19 +192,16 @@ function renderHome() {
         });
     }
 
-    // 4. Raw Data Column (DIT STUKJE ONTBRAK)
     const rContainer = document.getElementById('col-raw');
     if (rContainer && data.rawData) {
-        rContainer.innerHTML = ''; // Leegmaken
+        rContainer.innerHTML = '';
         data.rawData.forEach(r => {
             const rEl = document.createElement('div');
-            // We gebruiken een linker border voor de strakke "data" look
             rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-2 mb-4';
             rEl.textContent = r;
             rContainer.appendChild(rEl);
         });
     }
-
     lucide.createIcons();
 }
 
@@ -137,8 +211,6 @@ function renderTopics() {
     if (!filterContainer || !gridContainer) return;
     
     filterContainer.innerHTML = '';
-    
-    // Filter knoppen maken
     const categories = ['ALLES', ...data.topics];
     categories.forEach(cat => {
         const btn = document.createElement('button');
@@ -155,7 +227,6 @@ function renderTopics() {
         filterContainer.appendChild(btn);
     });
 
-    // De grid tekenaar met foto's
     function renderTopicGrid(filter) {
         gridContainer.innerHTML = '';
         let items = data.analysis;
@@ -178,14 +249,12 @@ function renderTopics() {
             gridContainer.appendChild(el);
         });
     }
-
     renderTopicGrid('ALLES');
 }
 
 function renderPortfolio() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid || !data.portfolio) return;
-
     grid.innerHTML = ''; 
     data.portfolio.forEach(item => {
         const el = document.createElement('div');
