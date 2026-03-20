@@ -1,61 +1,96 @@
-/* Strict Monochrome & No Radius/Shadow Overrides */
-:root {
-    --black: #000000;
-    --white: #ffffff;
+/* 1. ALGEMENE ZAKELIJKE BASIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--white);
-    color: var(--black);
+    font-family: 'Inter', sans-serif; /* Strak voor de feiten */
+    background-color: #fff;
+    color: #000;
+    line-height: 1.4;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Remove all rounded corners */
-* {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    transition: none !important;
+/* 2. MAGAZINE TYPOGRAFIE (De mix uit de foto) */
+.font-serif {
+    font-family: 'Playfair Display', serif; /* Elegant voor de nuance */
 }
 
-/* Custom scrollbar for raw data / gallery */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-::-webkit-scrollbar-track {
-    background: var(--white);
-    border-left: 1px solid var(--black);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--black);
+/* De enorme kop uit de foto */
+.text-huge {
+    font-size: clamp(5rem, 18vw, 15rem);
+    line-height: 0.75;
+    letter-spacing: -0.06em;
+    font-weight: 800;
 }
 
-.nav-link {
-    cursor: pointer;
-}
-.nav-link:hover {
-    background-color: var(--black);
-    color: var(--white);
-}
-.nav-link.active {
-    background-color: var(--black);
-    color: var(--white);
+/* 3. LAYOUT & ASYMMETRIE (Het 'boot' effect) */
+.relative {
+    position: relative;
 }
 
-.photo-gallery {
-    display: flex;
-    overflow-x: auto;
-    border-top: 1px solid var(--black);
-    border-bottom: 1px solid var(--black);
-}
-.photo-item {
-    min-width: 300px;
-    border-right: 1px solid var(--black);
+/* Voor de zwevende tekstblokken die niet netjes in het gelid staan */
+.md\:ml-\[50\%\] {
+    margin-left: 0;
 }
 
-/* Grayscale images forcefully */
-img, video {
-    filter: grayscale(100%);
+@media (min-width: 768px) {
+    .md\:ml-\[50\%\] {
+        margin-left: 45%; /* Iets minder dan de helft voor een betere balans */
+    }
+}
+
+/* 4. AFBEELDINGEN (Rauw & Monochroom) */
+img {
+    filter: grayscale(100%) contrast(115%) brightness(90%);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     object-fit: cover;
+}
+
+/* Subtiel effect bij hoveren */
+img:hover {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+}
+
+/* 5. INTERACTIE (Strikt & Direct) */
+.nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active, .nav-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 6. EXTRA DETAILS VOOR DE 'FINISH' */
+.underline-offset-8 {
+    text-underline-offset: 12px;
+}
+
+/* Custom scrollbar voor die high-end studio look */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+/* SECTION TRANSITIONS */
+section {
+    border-bottom: 1px solid #000;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.bg-white {
+    background-color: #fff;
 }
