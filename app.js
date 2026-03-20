@@ -125,57 +125,62 @@ function renderHome() {
         });
     }
     lucide.createIcons();
-}
-
 function renderTopics() {
-    const filterContainer = document.getElementById('topics-filters');
-    const gridContainer = document.getElementById('topics-grid');
-    if (!filterContainer || !gridContainer) return;
-    
-    filterContainer.innerHTML = '';
-    const allBtn = document.createElement('button');
-    allBtn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-black text-white';
-    allBtn.textContent = 'ALLES';
-    allBtn.onclick = () => renderTopicGrid('ALLES');
-    filterContainer.appendChild(allBtn);
+    const filterContainer = document.getElementById('topics-filters');
+    const gridContainer = document.getElementById('topics-grid');
+    if (!filterContainer || !gridContainer) return;
+    
+    filterContainer.innerHTML = '';
+    const allBtn = document.createElement('button');
+    allBtn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-black text-white';
+    allBtn.textContent = 'ALLES';
+    allBtn.onclick = () => renderTopicGrid('ALLES');
+    filterContainer.appendChild(allBtn);
 
-    data.topics.forEach(t => {
-        const btn = document.createElement('button');
-        btn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-white text-black';
-        btn.textContent = t;
-        btn.onclick = (e) => {
-            Array.from(filterContainer.children).forEach(c => {
-                c.classList.remove('bg-black', 'text-white');
-                c.classList.add('bg-white', 'text-black');
-            });
-            e.target.classList.add('bg-black', 'text-white');
-            renderTopicGrid(t);
-        };
-        filterContainer.appendChild(btn);
-    });
+    data.topics.forEach(t => {
+        const btn = document.createElement('button');
+        btn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-white text-black';
+        btn.textContent = t;
+        btn.onclick = (e) => {
+            Array.from(filterContainer.children).forEach(c => {
+                c.classList.remove('bg-black', 'text-white');
+                c.classList.add('bg-white', 'text-black');
+            });
+            e.target.classList.add('bg-black', 'text-white');
+            renderTopicGrid(t);
+        };
+        filterContainer.appendChild(btn);
+    });
 
-    function renderTopicGrid(filter) {
-        gridContainer.innerHTML = '';
-        let items = data.analysis;
-        if (filter !== 'ALLES') items = items.filter(a => a.tags && a.tags.includes(filter));
-        
-        items.forEach(a => {
-            const el = document.createElement('div');
-            el.className = 'border-r border-b border-black p-6 flex flex-col justify-between cursor-pointer hover:bg-gray-50';
-            el.innerHTML = `
-                <div>
-                    <h3 class="font-extrabold uppercase text-2xl mb-4 leading-tight">${a.title}</h3>
-                    <p class="text-sm font-semibold mb-6">${a.intro}</p>
-                </div>
-                <div class="text-xs font-bold uppercase border-t border-black pt-2">${a.date}</div>
-            `;
-            el.onclick = () => openArticle(a);
-            gridContainer.appendChild(el);
-        });
-    }
-    renderTopicGrid('ALLES');
+    function renderTopicGrid(filter) {
+        gridContainer.innerHTML = '';
+        let items = data.analysis;
+        if (filter !== 'ALLES') items = items.filter(a => a.tags && a.tags.includes(filter));
+        
+        items.forEach(a => {
+            const el = document.createElement('div');
+            // 'border' rondom elk kaartje ipv alleen rechts/onder
+            el.className = 'border border-black flex flex-col cursor-pointer hover:bg-gray-50 group overflow-hidden';
+            el.innerHTML = `
+                <div class="aspect-video w-full overflow-hidden border-b border-black">
+                    <img src="${a.image || 'placeholder.jpg'}" 
+                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                </div>
+                
+                <div class="p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                        <h3 class="font-extrabold uppercase text-2xl mb-4 leading-tight">${a.title}</h3>
+                        <p class="text-sm font-semibold mb-6 line-clamp-3">${a.intro}</p>
+                    </div>
+                    <div class="text-xs font-bold uppercase border-t border-black pt-2">${a.date}</div>
+                </div>
+            `;
+            el.onclick = () => openArticle(a);
+            gridContainer.appendChild(el);
+        });
+    }
+    renderTopicGrid('ALLES');
 }
-
 // STAP 2: Voeg deze nieuwe functie onderaan toe
 function renderportfolio() {
     const grid = document.getElementById('portfolio-grid');
