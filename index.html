@@ -78,56 +78,60 @@
     </template>
 
     <template id="tpl-about">
-    <div class="bg-black text-white min-h-screen flex flex-col">
-        <div class="p-8 md:p-16 border-b border-white">
-            <h1 class="text-[80px] md:text-[160px] font-extrabold uppercase leading-[0.8] tracking-tighter mb-4 text-huge">
-                About <br><span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Me</span>
+    <div class="bg-black text-white min-h-screen font-sans">
+        
+        <div class="relative h-[80vh] flex items-end p-8 md:p-16 border-b border-white overflow-hidden">
+            <div class="absolute inset-0 opacity-40 bg-[url('jouw-foto.jpg')] bg-cover bg-center grayscale"></div>
+            
+            <h1 class="relative z-10 text-[100px] md:text-[220px] font-extrabold uppercase leading-[0.75] tracking-tighter">
+                About <br>
+                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-300 ml-[0.2em]">Me</span>
             </h1>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 border-b border-white">
-            <div class="p-8 md:p-16 border-r border-white flex flex-col justify-center">
-                <p class="font-serif italic text-2xl md:text-3xl mb-8 text-gray-300 leading-tight">
-                    "In 2024 ben ik gestart vanuit een kernwaarde: feitelijkheid boven alles."
-                </p>
-                <p class="text-xs uppercase tracking-[0.2em] font-bold text-gray-500 mb-4">Mijn Achtergrond</p>
-                <p class="text-xl leading-tight font-bold uppercase italic font-serif">
-                    Mijn carrière in Business Intelligence is geworteld in de diepte van data-extractie. Waar anderen ruis zien, zoek ik de standaard.
-                </p>
-            </div>
-            <div class="p-8 md:p-16 bg-white text-black flex flex-col justify-center">
-                <h2 class="text-5xl font-extrabold uppercase leading-[0.9] mb-8 text-right">Analyse <br>(Studio)</h2>
-                <p class="text-sm font-bold uppercase border-t-2 border-black pt-6 leading-relaxed">
-                    Binnen de muren van de studio ontleden we ruwe data. Geen emotie, geen afleiding. Wij werken vanuit de kern: van binnen naar buiten.
-                </p>
+            
+            <div class="absolute top-1/2 right-8 md:right-24 max-w-xs text-sm leading-tight font-medium">
+                <p class="font-serif italic text-lg mb-2">In 2024, I founded Hazy Standard.</p>
+                <p class="text-gray-400 uppercase text-[10px] tracking-widest">Business Intelligence / Documentatie</p>
             </div>
         </div>
 
-        <div class="p-8 md:p-24 border-b border-white bg-black">
-            <p class="text-3xl md:text-6xl font-extrabold uppercase leading-[1.1] tracking-tight">
-                Mijn portfolio bevat <span class="font-serif italic font-normal text-gray-500 lowercase">uitgebreide analyses</span> voor de financiële sector en <span class="underline decoration-1 underline-offset-8">vastgoed.</span>
+        <div class="relative py-20 px-8 md:px-32">
+            <div class="max-w-4xl">
+                <h2 class="text-4xl md:text-7xl font-extrabold uppercase leading-[0.9] mb-12">
+                    Mijn portfolio inclusief <span class="font-serif italic font-normal text-gray-400 lowercase">uitgebreide</span> 
+                    BI-analyses, data-audits en <span class="underline decoration-1 underline-offset-8">veldwerk rapportages.</span>
+                </h2>
+            </div>
+
+            <div class="md:ml-[50%] max-w-sm mt-12 border-t border-gray-800 pt-6">
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Elk project weerspiegelt een diepe drang naar feitelijkheid. Ik onderzoek de verbindingen tussen ruwe data en de fysieke realiteit, 
+                    waarbij ik me focus op wat echt is, zonder ruis.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 bg-white text-black py-20">
+            <div class="md:col-start-2 md:col-span-4 p-8">
+                <div class="aspect-[3/4] bg-gray-200 border border-black mb-6 grayscale overflow-hidden">
+                    <img src="studio-detail.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div class="md:col-start-6 md:col-span-6 flex flex-col justify-center p-8">
+                <h3 class="text-3xl md:text-6xl font-extrabold uppercase leading-[0.9] mb-8">
+                    In elke analyse, <span class="font-serif italic font-normal">mijn kenmerkende stijl</span> 
+                    combineert objectiviteit met detail.
+                </h3>
+                <p class="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-black pb-2 inline-block self-start">
+                    The Hazy Standard Method
+                </p>
+            </div>
+        </div>
+
+        <div class="p-8 md:p-20 text-center border-t border-gray-900">
+            <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">
+                Strikt zakelijk — Geen opsmuk — Alleen de feiten
             </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 flex-grow">
-            <div class="p-8 md:p-16 border-r border-white bg-gray-900 flex flex-col justify-center">
-                <h2 class="text-4xl font-extrabold uppercase leading-none mb-6">Rapportage <br><span class="text-gray-500">(Buiten)</span></h2>
-                <p class="text-xl font-serif italic text-gray-400 leading-relaxed">
-                    "De realiteit bevindt zich op straat. Wij documenteren de fysieke manifestatie van de data in rauwe zwart-wit beelden."
-                </p>
-            </div>
-            <div class="p-8 md:p-16 flex flex-col justify-between bg-black relative">
-                <div class="absolute inset-0 bg-gray-900 opacity-80 border-l border-white"></div>
-                <div class="text-right relative">
-                    <i data-lucide="info" class="inline-block w-12 h-12 text-gray-700"></i>
-                </div>
-                <div class="relative">
-                    <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">De Methode</p>
-                    <p class="text-2xl font-bold uppercase leading-tight">
-                        Geen opsmuk, slechts de naakte waarheid zodat u nooit voor verrassingen komt te staan.
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
 </template>
