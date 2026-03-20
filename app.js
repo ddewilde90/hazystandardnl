@@ -54,7 +54,7 @@ function loadView(viewName) {
     
     // We maken de viewName hier klein zodat 'Portfolio' en 'portfolio' allebei werken
     const name = viewName.toLowerCase();
-    const templateId = name === 'archive' ? 'tpl-topics' : `tpl-${name}`;
+    const templateId = name === 'portfolio' ? 'tpl-topics' : `tpl-${name}`;
     const tpl = document.getElementById(templateId);
     
     if (tpl) {
