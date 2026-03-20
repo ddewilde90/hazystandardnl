@@ -122,7 +122,6 @@ function openArticle(article) {
         </div>
     `;
     
-    // Zorg dat de knoppen en gerelateerde items weer werken
     document.getElementById('back-btn').onclick = () => loadView('home');
     
     document.querySelectorAll('.related-item').forEach(item => {
@@ -142,21 +141,18 @@ function loadView(viewName) {
     const main = document.getElementById('main-content');
     const template = document.getElementById(`tpl-${viewName}`);
     
-    // Wis de huidige weergave
     main.innerHTML = '';
 
     if (template) {
         const content = template.content.cloneNode(true);
         main.appendChild(content);
         
-        // Render de dynamische data
         if (viewName === 'home') renderHome();
         if (viewName === 'topics') renderTopics();
         if (viewName === 'portfolio') renderPortfolio();
         
         if (window.lucide) lucide.createIcons();
     } else {
-        // Als er geen template is, gaan we terug naar home om een "wit scherm" te voorkomen
         console.warn(`Template tpl-${viewName} niet gevonden. Terug naar home.`);
         renderHome(); 
     }
@@ -177,6 +173,27 @@ function renderHome() {
         `;
         document.getElementById('featured-img').onclick = () => openArticle(data.featured);
         document.getElementById('featured-title').onclick = () => openArticle(data.featured);
+    }
+
+    // --- HERSTELDE VIDEO SECTIE ---
+    const vContainer = document.getElementById('col-video');
+    if (vContainer && data.videos) {
+        vContainer.innerHTML = '';
+        data.videos.slice(0, 2).forEach(v => {
+            const vEl = document.createElement('div');
+            vEl.className = 'border-b border-black p-4 group cursor-pointer hover:bg-gray-50';
+            vEl.innerHTML = `
+                <div class="relative w-full aspect-video mb-3 bg-gray-200 border border-black overflow-hidden shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                    <img src="${v.thumb}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent flex items-center justify-center transition-all">
+                        <i data-lucide="play-circle" class="text-white w-10 h-10 drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <h3 class="font-bold uppercase text-sm leading-tight group-hover:text-red-600 transition-colors">${v.title}</h3>
+                <p class="text-[9px] font-bold text-gray-400 mt-2 uppercase tracking-widest">Bekijk Analyse</p>
+            `;
+            vContainer.appendChild(vEl);
+        });
     }
 
     const aContainer = document.getElementById('col-analysis');
@@ -214,53 +231,3 @@ function renderHome() {
         rContainer.innerHTML = '';
         data.rawData.forEach(r => {
             const rEl = document.createElement('div');
-            rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-2 mb-4 hover:bg-gray-50 transition-colors cursor-default';
-            rEl.textContent = r;
-            rContainer.appendChild(rEl);
-        });
-    }
-}
-
-function renderTopics() {
-    const gridContainer = document.getElementById('topics-grid');
-    if (!gridContainer) return;
-    gridContainer.innerHTML = '';
-    data.analysis.forEach(a => {
-        const el = document.createElement('div');
-        el.className = 'border border-black flex flex-col cursor-pointer hover:bg-gray-50 group overflow-hidden bg-white';
-        el.innerHTML = `
-            <div class="aspect-video w-full overflow-hidden border-b border-black">
-                <img src="${a.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-            </div>
-            <div class="p-6 flex flex-col flex-grow">
-                <h3 class="font-extrabold uppercase text-xl mb-3 leading-tight">${a.title}</h3>
-                <p class="text-sm font-semibold mb-6 line-clamp-3 text-gray-600">${a.intro}</p>
-                <div class="text-[10px] font-bold uppercase border-t border-black pt-3 mt-auto">${a.date}</div>
-            </div>
-        `;
-        el.onclick = () => openArticle(a);
-        gridContainer.appendChild(el);
-    });
-}
-
-function renderPortfolio() {
-    const grid = document.getElementById('portfolio-grid');
-    if (!grid || !data.portfolio) return;
-    grid.innerHTML = ''; 
-    data.portfolio.forEach(item => {
-        const el = document.createElement('div');
-        el.className = 'border border-black flex flex-col hover:bg-gray-50 cursor-pointer group bg-white';
-        el.innerHTML = `
-            <div class="aspect-video w-full overflow-hidden border-b border-black">
-                <img src="${item.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-            </div>
-            <div class="p-6">
-                <div class="text-[10px] font-bold uppercase text-gray-400 mb-2">${item.date}</div>
-                <h3 class="text-xl font-extrabold uppercase mb-4 leading-tight">${item.title}</h3>
-                <p class="text-sm font-semibold text-gray-700 line-clamp-2">${item.intro}</p>
-            </div>
-        `;
-        el.onclick = () => openArticle(item);
-        grid.appendChild(el);
-    });
-}
