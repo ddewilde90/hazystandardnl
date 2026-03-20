@@ -31,6 +31,7 @@ export const data = {
     title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
     date: "20 MRT 2026",
     intro: "Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
+    content: "Hier typ je de volledige analyse en de feiten die je wilt delen. Dit is de diepgang die zichtbaar wordt zodra een bezoeker op de titel klikt.",
     tags: ["Onderwijs", "Data"]
 },
         {
