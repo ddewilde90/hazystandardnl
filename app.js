@@ -26,7 +26,6 @@ function setupNavigation() {
     });
 }
 
-// NIEUW: Functie om een specifiek artikel te tonen
 function openArticle(article) {
     const main = document.getElementById('main-content');
     main.innerHTML = `
@@ -36,11 +35,11 @@ function openArticle(article) {
             </button>
             <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
             <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight">${article.title}</h1>
-            <div class="flex gap-2 mb-10">
-                ${article.tags.map(tag => `<span class="bg-black text-white text-[10px] px-2 py-1 uppercase font-bold">${tag}</span>`).join('')}
+            <div class="prose max-w-none text-lg leading-relaxed font-medium mb-10">
+                ${article.intro}
             </div>
-            <div class="prose max-w-none text-lg leading-relaxed font-medium">
-                ${article.content || article.intro}
+            <div class="prose max-w-none text-lg leading-relaxed font-medium border-t border-black pt-10">
+                ${article.content || "Gedetailleerde rapportage volgt."}
             </div>
         </div>
     `;
@@ -58,77 +57,77 @@ function loadView(viewName) {
         main.appendChild(tpl.content.cloneNode(true));
         if (viewName === 'home') renderHome();
         if (viewName === 'topics' || viewName === 'archive') renderTopics();
+        
+        // STAP 1: Voeg deze regel toe om de portfolio te tekenen
+        if (viewName === 'Portfolio') renderPortfolio();
     }
+    lucide.createIcons();
 }
 
 function renderHome() {
-    // Featured sectie
     const fContainer = document.getElementById('featured-container');
-    fContainer.innerHTML = `
-        <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
-            <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[300px]">
-        </div>
-        <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
-            <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">${data.featured.author} // ${data.featured.date}</div>
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase cursor-pointer hover:underline" id="featured-title">${data.featured.title}</h2>
-            <p class="text-lg font-semibold">${data.featured.excerpt}</p>
-        </div>
-    `;
-
-    // Video sectie
-    const vContainer = document.getElementById('col-video');
-    data.videos.forEach(v => {
-        const vEl = document.createElement('div');
-        vEl.className = 'border-b border-black p-4 group cursor-pointer';
-        vEl.innerHTML = `
-            <div class="relative w-full h-40 mb-3 bg-gray-200 border border-black video-thumb" data-url="${v.videoUrl}">
-                <img src="${v.thumb}" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <i data-lucide="play-circle" class="text-white w-12 h-12"></i>
-                </div>
-                <div class="absolute bottom-2 right-2 bg-black text-white text-xs font-bold px-2 py-1">${v.duration}</div>
+    if (fContainer && data.featured) {
+        fContainer.innerHTML = `
+            <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
+                <img src="${data.featured.image}" alt="Featured" class="w-full h-full object-cover min-h-[300px]">
             </div>
-            <h3 class="font-bold uppercase text-lg">${v.title}</h3>
+            <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
+                <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">${data.featured.author} // ${data.featured.date}</div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">${data.featured.title}</h2>
+                <p class="text-lg font-semibold">${data.featured.excerpt}</p>
+            </div>
         `;
-        vContainer.appendChild(vEl);
-    });
+    }
 
-    document.querySelectorAll('.video-thumb').forEach(thumb => {
-        thumb.addEventListener('click', function() {
-            const url = this.getAttribute('data-url');
-            this.innerHTML = `<video src="${url}" controls autoplay class="w-full h-full object-cover border border-black"></video>`;
+    const vContainer = document.getElementById('col-video');
+    if (vContainer) {
+        data.videos.forEach(v => {
+            const vEl = document.createElement('div');
+            vEl.className = 'border-b border-black p-4 group cursor-pointer';
+            vEl.innerHTML = `
+                <div class="relative w-full h-40 mb-3 bg-gray-200 border border-black overflow-hidden">
+                    <img src="${v.thumb}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <i data-lucide="play-circle" class="text-white w-12 h-12"></i>
+                    </div>
+                </div>
+                <h3 class="font-bold uppercase text-lg leading-tight">${v.title}</h3>
+            `;
+            vContainer.appendChild(vEl);
         });
-    });
+    }
 
-    // Analyse sectie (NU KLIKBAAR)
     const aContainer = document.getElementById('col-analysis');
-    data.analysis.forEach(a => {
-        const aEl = document.createElement('div');
-        aEl.className = 'border-b border-black p-6 cursor-pointer hover:bg-gray-50 transition-colors';
-        aEl.innerHTML = `
-            <div class="text-xs font-bold uppercase mb-2 text-gray-500">${a.date}</div>
-            <h3 class="font-extrabold uppercase text-xl mb-3">${a.title}</h3>
-            <p class="text-sm font-semibold">${a.intro}</p>
-        `;
-        aEl.onclick = () => openArticle(a);
-        aContainer.appendChild(aEl);
-    });
+    if (aContainer) {
+        data.analysis.forEach(a => {
+            const aEl = document.createElement('div');
+            aEl.className = 'border-b border-black p-6 cursor-pointer hover:bg-gray-50 transition-none';
+            aEl.innerHTML = `
+                <div class="text-xs font-bold uppercase mb-2 text-gray-500">${a.date}</div>
+                <h3 class="font-extrabold uppercase text-xl mb-3">${a.title}</h3>
+                <p class="text-sm font-semibold">${a.intro}</p>
+            `;
+            aEl.onclick = () => openArticle(a);
+            aContainer.appendChild(aEl);
+        });
+    }
 
-    // Raw Data
     const rContainer = document.getElementById('col-raw');
-    data.rawData.forEach(r => {
-        const rEl = document.createElement('div');
-        rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-1';
-        rEl.textContent = r;
-        rContainer.appendChild(rEl);
-    });
-
+    if (rContainer) {
+        data.rawData.forEach(r => {
+            const rEl = document.createElement('div');
+            rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-1';
+            rEl.textContent = r;
+            rContainer.appendChild(rEl);
+        });
+    }
     lucide.createIcons();
 }
 
 function renderTopics() {
     const filterContainer = document.getElementById('topics-filters');
     const gridContainer = document.getElementById('topics-grid');
+    if (!filterContainer || !gridContainer) return;
     
     filterContainer.innerHTML = '';
     const allBtn = document.createElement('button');
@@ -155,16 +154,13 @@ function renderTopics() {
     function renderTopicGrid(filter) {
         gridContainer.innerHTML = '';
         let items = data.analysis;
-        if (filter !== 'ALLES') items = items.filter(a => a.tags.includes(filter));
+        if (filter !== 'ALLES') items = items.filter(a => a.tags && a.tags.includes(filter));
         
         items.forEach(a => {
             const el = document.createElement('div');
             el.className = 'border-r border-b border-black p-6 flex flex-col justify-between cursor-pointer hover:bg-gray-50';
             el.innerHTML = `
                 <div>
-                    <div class="flex space-x-2 mb-3">
-                        ${a.tags.map(tag => `<span class="bg-black text-white text-[10px] px-2 py-1 uppercase font-bold">${tag}</span>`).join('')}
-                    </div>
                     <h3 class="font-extrabold uppercase text-2xl mb-4 leading-tight">${a.title}</h3>
                     <p class="text-sm font-semibold mb-6">${a.intro}</p>
                 </div>
@@ -175,4 +171,25 @@ function renderTopics() {
         });
     }
     renderTopicGrid('ALLES');
+}
+
+// STAP 2: Voeg deze nieuwe functie onderaan toe
+function renderPortfolio() {
+    const grid = document.getElementById('portfolio-grid');
+    if (!grid || !data.portfolio) return;
+
+    grid.innerHTML = ''; 
+
+    data.portfolio.forEach(item => {
+        const el = document.createElement('div');
+        el.className = 'p-8 border-r border-b border-black hover:bg-gray-50 cursor-pointer transition-colors';
+        el.innerHTML = `
+            <div class="text-[10px] font-bold uppercase text-gray-400 mb-2">${item.date}</div>
+            <h3 class="text-xl font-extrabold uppercase mb-4 leading-tight">${item.title}</h3>
+            <p class="text-sm font-semibold text-gray-700">${item.intro}</p>
+        `;
+        // Zorg dat deze ook een artikel opent als je erop klikt
+        el.onclick = () => openArticle(item);
+        grid.appendChild(el);
+    });
 }
