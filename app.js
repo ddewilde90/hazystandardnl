@@ -26,7 +26,7 @@ function setupNavigation() {
     });
 }
 
-// --- DE NIEUWE OPENARTICLE FUNCTIE (NOS STIJL) ---
+// --- ARTIKEL WEERGAVE (NOS STIJL) ---
 function openArticle(article) {
     const main = document.getElementById('main-content');
     
@@ -37,7 +37,7 @@ function openArticle(article) {
                 <img src="${article.image || 'placeholder.jpg'}" 
                      class="w-full h-full object-cover grayscale" alt="${article.title}">
                 <div class="absolute bottom-0 left-0 bg-black text-white px-4 py-2 text-[10px] uppercase font-bold">
-                    Beeld: Studio / Unsplash
+                    Beeld: Hazy Standard / Archief
                 </div>
             </div>
 
@@ -75,7 +75,7 @@ function openArticle(article) {
                     <div class="border-t-2 border-black pt-10">
                         <h4 class="text-sm font-bold uppercase mb-6 tracking-widest">Lees ook:</h4>
                         <div id="related-articles" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@ function openArticle(article) {
                             <span class="mb-4">Advertentie</span>
                             <div class="w-full h-px bg-gray-100 mb-4"></div>
                             <i data-lucide="layout" class="w-10 h-10 mb-2"></i>
-                            <span>Space for Rent</span>
+                            <span>Ruimte voor Rapportage</span>
                         </div>
                         
                         <div class="mt-10 border border-black p-4 bg-black text-white text-[10px] font-bold uppercase text-center">
@@ -103,14 +103,10 @@ function openArticle(article) {
     lucide.createIcons();
 }
 
-// --- HULPFUNCTIE VOOR GERELATEERDE ARTIKELEN ---
 function renderRelated() {
     const container = document.getElementById('related-articles');
     if (!container) return;
-    
-    // We pakken de eerste 2 analyses uit je data.js
     const related = data.analysis.slice(0, 2); 
-    
     related.forEach(item => {
         const div = document.createElement('div');
         div.className = 'group cursor-pointer border border-black overflow-hidden bg-white';
@@ -127,6 +123,7 @@ function renderRelated() {
     });
 }
 
+// --- VIEW LOADER ---
 function loadView(viewName) {
     const main = document.getElementById('main-content');
     main.innerHTML = '';
@@ -142,7 +139,9 @@ function loadView(viewName) {
     lucide.createIcons();
 }
 
+// --- HOMEPAGE RENDERING ---
 function renderHome() {
+    // 1. Featured Article
     const fContainer = document.getElementById('featured-container');
     if (fContainer && data.featured) {
         fContainer.innerHTML = `
@@ -157,6 +156,7 @@ function renderHome() {
         `;
     }
 
+    // 2. Video Column
     const vContainer = document.getElementById('col-video');
     if (vContainer) {
         vContainer.innerHTML = '';
@@ -176,6 +176,7 @@ function renderHome() {
         });
     }
 
+    // 3. Analysis Column
     const aContainer = document.getElementById('col-analysis');
     if (aContainer) {
         aContainer.innerHTML = '';
@@ -192,6 +193,7 @@ function renderHome() {
         });
     }
 
+    // 4. Raw Data Column
     const rContainer = document.getElementById('col-raw');
     if (rContainer && data.rawData) {
         rContainer.innerHTML = '';
@@ -202,9 +204,26 @@ function renderHome() {
             rContainer.appendChild(rEl);
         });
     }
+
+    // 5. Home Advertentie vullen
+    const homeAd = document.getElementById('home-ad-sidebar');
+    if (homeAd) {
+        homeAd.innerHTML = `
+            <div class="flex flex-col items-center p-4">
+                <span class="text-[9px] text-gray-400 mb-4 tracking-[0.2em] font-bold">ADVERTENTIE</span>
+                <div class="w-full aspect-square bg-gray-100 border border-black mb-4 flex items-center justify-center overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=400" class="grayscale w-full h-full object-cover">
+                </div>
+                <h4 class="text-xs font-black uppercase mb-2 leading-tight text-center">BI Dashboarding Masterclass 2026</h4>
+                <p class="text-[10px] text-gray-600 mb-4 uppercase text-center">Optimaliseer uw data-output met de Hazy Standard methode.</p>
+                <button class="border border-black px-4 py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all w-full">Meer Informatie</button>
+            </div>
+        `;
+    }
     lucide.createIcons();
 }
 
+// --- OVERIGE RENDER FUNCTIES ---
 function renderTopics() {
     const filterContainer = document.getElementById('topics-filters');
     const gridContainer = document.getElementById('topics-grid');
