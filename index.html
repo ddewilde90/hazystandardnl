@@ -41,26 +41,27 @@
     <!-- TEMPLATES -->
     <template id="tpl-home">
         <div class="flex flex-col flex-grow">
-            <!-- FEATURED -->
             <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3">
-                <!-- Injected via JS -->
-            </div>
-            <!-- 3 COLUMNS -->
+                </div>
             <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
-                <!-- COL 1: Video -->
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
                     <div id="col-video" class="flex flex-col"></div>
                 </div>
-                <!-- COL 2: Analysis -->
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div>
                     <div id="col-analysis" class="flex flex-col"></div>
                 </div>
-                <!-- COL 3: Raw Data -->
                 <div class="flex flex-col bg-gray-50">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
-                    <div id="col-raw" class="flex flex-col p-4 space-y-4"></div>
+                    <div id="col-raw" class="flex flex-col p-4 space-y-4 border-b border-black">
+                        </div>
+                    
+                    <div class="p-6 bg-white flex-grow">
+                        <div id="home-ad-sidebar" class="border border-gray-300 h-full min-h-[250px] flex flex-col items-center justify-center p-4 text-center">
+                            <span class="text-[10px] text-gray-300 font-bold uppercase">Ruimte voor advertentie</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
