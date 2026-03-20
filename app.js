@@ -36,6 +36,12 @@ function setupNavigation() {
 // --- DE NOS-STIJL ARTIKEL WEERGAVE ---
 function openArticle(article) {
     const main = document.getElementById('main-content');
+    
+    // Filter 3 andere artikelen voor de "Lees ook" sectie
+    const related = data.analysis
+        .filter(a => a.title !== article.title)
+        .slice(0, 3);
+
     main.innerHTML = `
         <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
             <div class="relative w-full h-[300px] md:h-[500px] overflow-hidden border-b border-black">
@@ -45,33 +51,72 @@ function openArticle(article) {
 
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-0">
                 <div class="lg:col-span-3 p-6 md:p-16 border-r border-black">
-                    <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">← Terug naar overzicht</button>
+                    <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">← Terug</button>
                     
                     <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
                     <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic">${article.title}</h1>
                     
-                    <div class="prose max-w-none text-xl leading-relaxed font-semibold mb-10 border-l-4 border-black pl-6">
+                    <div class="flex gap-4 mb-10 border-y border-black py-4">
+                        <span class="text-[10px] font-bold uppercase mr-4 self-center">Deel dit bericht:</span>
+                        <button class="hover:text-gray-500 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></button>
+                        <button class="hover:text-gray-500 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></button>
+                        <button class="hover:text-gray-500 transition-colors"><i data-lucide="link-2" class="w-5 h-5"></i></button>
+                        <button class="hover:text-gray-500 transition-colors ml-auto"><i data-lucide="printer" class="w-5 h-5"></i></button>
+                    </div>
+
+                    <div class="prose max-w-none text-xl leading-relaxed font-semibold mb-10 border-l-4 border-black pl-6 italic">
                         ${article.intro}
                     </div>
                     
                     <div class="prose max-w-none text-lg leading-relaxed font-medium mb-20 text-gray-800">
-                        ${article.content || "Gedetailleerde feitelijke analyse volgt op basis van de laatste data-extractie. Blijf de feed volgen voor updates."}
+                        ${article.content || "Gedetailleerde feitelijke informatie zodat ik niet voor verrassingen kom te staan. Verdere analyse volgt op basis van dossierstukken."}
+                    </div>
+
+                    <div class="border-t-4 border-black pt-10 mt-20">
+                        <h4 class="font-black uppercase text-2xl mb-8 italic">Lees ook:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="related-articles">
+                            ${related.map(a => `
+                                <div class="cursor-pointer group related-item" data-id="${a.title}">
+                                    <div class="aspect-video overflow-hidden border border-black mb-4">
+                                        <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                                    </div>
+                                    <h5 class="font-bold uppercase text-sm leading-tight group-hover:underline">${a.title}</h5>
+                                </div>
+                            `).join('')}
+                        </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-1 bg-gray-50 p-6 flex flex-col gap-8">
-                    <div class="sticky top-10">
-                        <div class="border-2 border-black bg-white p-6 flex flex-col items-center text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <span class="text-[9px] text-gray-400 mb-4 tracking-widest font-bold uppercase italic">Sponsoring</span>
-                            <h5 class="text-xs font-black uppercase mb-2">Hazy Standard BI Tools</h5>
-                            <p class="text-[10px] font-medium text-gray-600 mb-6 uppercase leading-tight">Efficiënte rapportage voor complexe dossiers.</p>
-                            <button class="w-full border border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all">Bekijk Demo</button>
+                    <div class="sticky top-10 text-center">
+                        <div class="border-2 border-black bg-white p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                             <span class="text-[9px] text-gray-400 mb-4 block tracking-widest font-bold uppercase">Advertentie</span>
+                             <h5 class="text-xs font-black uppercase mb-2">Hazy Standard BI</h5>
+                             <p class="text-[10px] text-gray-600 mb-6 uppercase">Data-driven besluitvorming zonder ruis.</p>
+                             <button class="w-full border border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all">Informatie</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     `;
+    
+    // Event listeners toevoegen
+    document.getElementById('back-btn').onclick = () => loadView('home');
+    
+    // Zorg dat de gerelateerde artikelen ook echt werken als je erop klikt
+    document.querySelectorAll('.related-item').forEach(item => {
+        item.onclick = () => {
+            const selected = data.analysis.find(a => a.title === item.dataset.id);
+            if(selected) {
+                openArticle(selected);
+                window.scrollTo(0,0);
+            }
+        };
+    });
+
+    if (window.lucide) lucide.createIcons();
+}
     
     document.getElementById('back-btn').onclick = () => loadView('home');
     if (window.lucide) lucide.createIcons();
