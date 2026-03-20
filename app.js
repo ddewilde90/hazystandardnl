@@ -152,18 +152,23 @@ function renderHome() {
         });
     }
 
-    // 5. Ad
-    const homeAd = document.getElementById('home-ad-sidebar');
-    if (homeAd) {
-        homeAd.innerHTML = `
-            <div class="flex flex-col items-center">
-                <span class="text-[9px] text-gray-400 mb-4 tracking-widest font-bold">ADVERTENTIE</span>
-                <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=400" class="grayscale w-full aspect-square object-cover border border-black mb-4">
-                <h4 class="text-xs font-black uppercase mb-2 text-center">BI Masterclass 2026</h4>
-                <button class="border border-black px-4 py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white w-full">Informatie</button>
+
+const homeAd = document.getElementById('home-ad-sidebar');
+if (homeAd) {
+    homeAd.innerHTML = `
+        <div class="flex flex-col items-center p-6 bg-gray-50 border border-black/10 h-full">
+            <span class="text-[9px] text-gray-400 mb-6 tracking-[0.3em] font-bold uppercase">Advertentie</span>
+            <div class="w-full aspect-square bg-white border border-black mb-6 overflow-hidden group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=400" 
+                     class="grayscale hover:grayscale-0 transition-all duration-500 w-full h-full object-cover">
             </div>
-        `;
-    }
+            <h4 class="text-xs font-black uppercase mb-3 leading-tight text-center tracking-tight">BI Dashboarding Masterclass 2026</h4>
+            <p class="text-[10px] text-gray-500 mb-6 uppercase text-center leading-relaxed">Optimaliseer uw data-output met de Hazy Standard methode.</p>
+            <button class="border-2 border-black px-4 py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all w-full">
+                Direct Inschrijven
+            </button>
+        </div>
+    `;
 }
 
 function renderTopics() {
