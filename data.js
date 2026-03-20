@@ -1,6 +1,6 @@
 export const data = {
     featured: {
-        title: "De Val van Commercieel Vastgoed: Een Systeem---fout",
+        title: "De Val van Commercieel Vastgoed: Een Systeemfout",
         excerpt: "Analyse van de leegstand in de Zuidas en de kettingreactie in de pensioenfondsen. De data wijst op een structurele overwaardering van 40%.",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
         author: "Studio",
@@ -22,18 +22,18 @@ export const data = {
     ],
     analysis:[
         {
+            title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
+            date: "20 MRT 2026",
+            intro: "test 1 Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
+            content: "Hier typ je de volledige analyse en de feiten die je wilt delen. Dit is de diepgang die zichtbaar wordt zodra een bezoeker op de titel klikt.",
+            tags: ["Onderwijs", "Data"]
+        },
+        {
             title: "Inflatiecijfers Q1: De Verborgen Variabelen",
             date: "18 MRT 2026",
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
             tags: ["Economie", "Data"]
         },
-        {
-    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
-    date: "20 MRT 2026",
-    intro: "Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
-    content: "Hier typ je de volledige analyse en de feiten die je wilt delen. Dit is de diepgang die zichtbaar wordt zodra een bezoeker op de titel klikt.",
-    tags: ["Onderwijs", "Data"]
-},
         {
             title: "Klimaatwetgeving vs. Industriële Realiteit",
             date: "15 MRT 2026",
@@ -55,5 +55,5 @@ export const data = {
         "16/03 14:00 - Leegstandsindex kantoren Randstad stijgt naar 18.4%.",
         "15/03 10:30 - Werkloosheid stabiliseert, krapte IT-markt neemt af."
     ],
-    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"]
+    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Data", "Onderwijs"]
 };
