@@ -33,44 +33,56 @@ function setupNavigation() {
     });
 }
 
-// --- DE NOS-STIJL ARTIKEL WEERGAVE ---
+// --- DE ORIGINELE NOS-STIJL ARTIKELPAGINA ---
 function openArticle(article) {
     const main = document.getElementById('main-content');
+    
+    // Pak 3 andere artikelen voor onderaan
+    const related = data.analysis.filter(a => a.title !== article.title).slice(0, 3);
+
     main.innerHTML = `
-        <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
-            <div class="relative w-full h-[300px] md:h-[500px] overflow-hidden border-b border-black">
-                <img src="${article.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale" alt="${article.title}">
-                <div class="absolute bottom-0 left-0 bg-black text-white px-4 py-2 text-[10px] uppercase font-bold">Beeld: Hazy Standard / Archief</div>
+        <article class="max-w-5xl mx-auto bg-white min-h-screen border-x border-black shadow-2xl">
+            <div class="relative w-full h-[400px] overflow-hidden border-b border-black">
+                <img src="${article.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale" alt="Beeld bij artikel">
+                <div class="absolute bottom-0 left-0 bg-black text-white px-3 py-1 text-[10px] uppercase font-bold">Beeld: Hazy Standard / Archief</div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-0">
-                <div class="lg:col-span-3 p-6 md:p-16 border-r border-black">
-                    <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">← Terug naar overzicht</button>
-                    
-                    <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
-                    <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic">${article.title}</h1>
-                    
-                    <div class="prose max-w-none text-xl leading-relaxed font-semibold mb-10 border-l-4 border-black pl-6">
-                        ${article.intro}
-                    </div>
-                    
-                    <div class="prose max-w-none text-lg leading-relaxed font-medium mb-20 text-gray-800">
-                        ${article.content || "Gedetailleerde feitelijke analyse volgt op basis van de laatste data-extractie. Blijf de feed volgen voor updates."}
-                    </div>
+            <div class="p-6 md:p-12">
+                <button id="back-btn" class="mb-8 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">← Terug</button>
+                
+                <div class="text-xs font-bold uppercase mb-2 text-red-600">Analyse • ${article.date}</div>
+                <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic border-b-4 border-black pb-4">${article.title}</h1>
+                
+                <div class="flex gap-4 mb-10 border-b border-black pb-4">
+                    <i data-lucide="share-2" class="w-4 h-4 text-gray-400"></i>
+                    <i data-lucide="linkedin" class="w-4 h-4 cursor-pointer hover:text-blue-700"></i>
+                    <i data-lucide="twitter" class="w-4 h-4 cursor-pointer hover:text-blue-400"></i>
+                    <i data-lucide="mail" class="w-4 h-4 cursor-pointer hover:text-red-600"></i>
                 </div>
 
-                <div class="lg:col-span-1 bg-gray-50 p-6 flex flex-col gap-8">
-                    <div class="sticky top-10">
-                        <div class="border-2 border-black bg-white p-6 flex flex-col items-center text-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                            <span class="text-[9px] text-gray-400 mb-4 tracking-widest font-bold uppercase italic">Sponsoring</span>
-                            <h5 class="text-xs font-black uppercase mb-2">Hazy Standard BI Tools</h5>
-                            <p class="text-[10px] font-medium text-gray-600 mb-6 uppercase leading-tight">Efficiënte rapportage voor complexe dossiers.</p>
-                            <button class="w-full border border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all">Bekijk Demo</button>
-                        </div>
+                <div class="text-xl md:text-2xl leading-relaxed font-bold mb-8 text-gray-900 bg-gray-50 p-6 border-l-8 border-black">
+                    ${article.intro}
+                </div>
+                
+                <div class="text-lg leading-relaxed space-y-6 mb-20 font-medium">
+                    ${article.content || "Gedetailleerde feitelijke informatie zodat ik niet voor verrassingen kom te staan."}
+                </div>
+
+                <div class="border-t-2 border-black pt-10">
+                    <h3 class="font-black uppercase text-xl mb-6 italic underline">Lees ook:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        ${related.map(a => `
+                            <div class="cursor-pointer group related-trigger" data-title="${a.title}">
+                                <div class="aspect-video overflow-hidden border border-black mb-2">
+                                    <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                                </div>
+                                <h4 class="font-bold uppercase text-xs leading-tight group-hover:underline">${a.title}</h4>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     `;
     
     document.getElementById('back-btn').onclick = () => loadView('home');
