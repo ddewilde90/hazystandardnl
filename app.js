@@ -37,55 +37,104 @@ function setupNavigation() {
 function openArticle(article) {
     const main = document.getElementById('main-content');
     
-    // Pak 3 andere artikelen voor onderaan
-    const related = data.analysis.filter(a => a.title !== article.title).slice(0, 3);
+    // Filter 3 andere artikelen voor de "Lees ook" sectie onderaan
+    const related = data.analysis
+        .filter(a => a.title !== article.title)
+        .slice(0, 3);
 
     main.innerHTML = `
-        <article class="max-w-5xl mx-auto bg-white min-h-screen border-x border-black shadow-2xl">
-            <div class="relative w-full h-[400px] overflow-hidden border-b border-black">
-                <img src="${article.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale" alt="Beeld bij artikel">
-                <div class="absolute bottom-0 left-0 bg-black text-white px-3 py-1 text-[10px] uppercase font-bold">Beeld: Hazy Standard / Archief</div>
+        <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
+            <div class="relative w-full h-[350px] md:h-[500px] overflow-hidden border-b border-black">
+                <img src="${article.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale" alt="${article.title}">
+                <div class="absolute bottom-0 left-0 bg-black text-white px-4 py-2 text-[10px] uppercase font-bold tracking-widest italic">Beeld: Hazy Standard / Archief</div>
             </div>
 
-            <div class="p-6 md:p-12">
-                <button id="back-btn" class="mb-8 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">← Terug</button>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-0">
                 
-                <div class="text-xs font-bold uppercase mb-2 text-red-600">Analyse • ${article.date}</div>
-                <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic border-b-4 border-black pb-4">${article.title}</h1>
-                
-                <div class="flex gap-4 mb-10 border-b border-black pb-4">
-                    <i data-lucide="share-2" class="w-4 h-4 text-gray-400"></i>
-                    <i data-lucide="linkedin" class="w-4 h-4 cursor-pointer hover:text-blue-700"></i>
-                    <i data-lucide="twitter" class="w-4 h-4 cursor-pointer hover:text-blue-400"></i>
-                    <i data-lucide="mail" class="w-4 h-4 cursor-pointer hover:text-red-600"></i>
-                </div>
+                <div class="lg:col-span-3 p-6 md:p-16 border-r border-black">
+                    <button id="back-btn" class="mb-10 border border-black px-6 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white transition-all flex items-center gap-2">
+                        ← Terug naar overzicht
+                    </button>
+                    
+                    <div class="text-xs font-bold uppercase mb-4 text-red-600 tracking-tighter italic">Analyse • ${article.date}</div>
+                    <h1 class="text-4xl md:text-7xl font-extrabold uppercase mb-8 leading-[0.9] italic border-b-8 border-black pb-6">
+                        ${article.title}
+                    </h1>
+                    
+                    <div class="flex items-center gap-6 mb-12 border-b border-black/10 pb-6">
+                        <span class="text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+                            <i data-lucide="share-2" class="w-4 h-4"></i> Deel artikel
+                        </span>
+                        <div class="flex gap-4">
+                            <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-blue-700 transition-colors"></i>
+                            <i data-lucide="twitter" class="w-5 h-5 cursor-pointer hover:text-sky-500 transition-colors"></i>
+                            <i data-lucide="link-2" class="w-5 h-5 cursor-pointer hover:text-green-600 transition-colors"></i>
+                            <i data-lucide="printer" class="w-5 h-5 cursor-pointer hover:text-gray-400 transition-colors"></i>
+                        </div>
+                    </div>
 
-                <div class="text-xl md:text-2xl leading-relaxed font-bold mb-8 text-gray-900 bg-gray-50 p-6 border-l-8 border-black">
-                    ${article.intro}
-                </div>
-                
-                <div class="text-lg leading-relaxed space-y-6 mb-20 font-medium">
-                    ${article.content || "Gedetailleerde feitelijke informatie zodat ik niet voor verrassingen kom te staan."}
-                </div>
+                    <div class="prose max-w-none text-2xl leading-tight font-black mb-12 border-l-8 border-black pl-8 italic text-gray-900">
+                        ${article.intro}
+                    </div>
+                    
+                    <div class="prose max-w-none text-lg leading-relaxed font-medium space-y-6 text-gray-800">
+                        ${article.content || "<p>Gedetailleerde feitelijke informatie zodat ik niet voor verrassingen kom te staan. Deze analyse is gebaseerd op de beschikbare dossierstukken en BI-extracties van de afgelopen periode.</p>"}
+                    </div>
 
-                <div class="border-t-2 border-black pt-10">
-                    <h3 class="font-black uppercase text-xl mb-6 italic underline">Lees ook:</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        ${related.map(a => `
-                            <div class="cursor-pointer group related-trigger" data-title="${a.title}">
-                                <div class="aspect-video overflow-hidden border border-black mb-2">
-                                    <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                    <div class="border-t-8 border-black pt-12 mt-24">
+                        <h4 class="font-black uppercase text-3xl mb-10 italic decoration-red-600 underline underline-offset-8">Lees ook:</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                            ${related.map(a => `
+                                <div class="cursor-pointer group related-item" data-id="${a.title}">
+                                    <div class="aspect-video overflow-hidden border-2 border-black mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                        <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                                    </div>
+                                    <h5 class="font-black uppercase text-sm leading-tight group-hover:text-red-600 transition-colors">${a.title}</h5>
                                 </div>
-                                <h4 class="font-bold uppercase text-xs leading-tight group-hover:underline">${a.title}</h4>
-                            </div>
-                        `).join('')}
+                            `).join('')}
+                        </div>
                     </div>
                 </div>
+
+                <div class="lg:col-span-1 bg-gray-50 p-6 md:p-8">
+                    <div class="sticky top-10 space-y-8">
+                        <div class="bg-white border-2 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center">
+                            <span class="text-[9px] text-gray-400 mb-6 tracking-[0.4em] font-bold uppercase italic border-b border-gray-100 w-full pb-2">Advertentie</span>
+                            <div class="w-20 h-20 bg-black text-white flex items-center justify-center mb-6 rounded-full">
+                                <i data-lucide="bar-chart-3" class="w-10 h-10"></i>
+                            </div>
+                            <h5 class="text-sm font-black uppercase mb-3">BI Masterclass 2026</h5>
+                            <p class="text-[10px] font-bold text-gray-500 mb-8 uppercase leading-tight tracking-tight">Data-audits en dossier-analyse voor professionals.</p>
+                            <button class="w-full bg-black text-white py-3 text-[10px] font-bold uppercase hover:bg-white hover:text-black border-2 border-black transition-all">
+                                Direct aanmelden
+                            </button>
+                        </div>
+
+                        <div class="border-t border-black/10 pt-6">
+                            <p class="text-[10px] font-black uppercase mb-2">Hazy Standard Premium</p>
+                            <p class="text-[10px] text-gray-500 uppercase leading-snug mb-4">Onbeperkt toegang tot alle diepte-analyses en ruwe data feeds.</p>
+                            <a href="#" class="text-[10px] font-black uppercase underline hover:text-red-600 transition-colors italic">Word nu lid</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </article>
+        </div>
     `;
     
+    // Zorg dat de knoppen en gerelateerde items weer werken
     document.getElementById('back-btn').onclick = () => loadView('home');
+    
+    document.querySelectorAll('.related-item').forEach(item => {
+        item.onclick = () => {
+            const selected = data.analysis.find(a => a.title === item.dataset.id);
+            if(selected) {
+                openArticle(selected);
+                window.scrollTo(0,0);
+            }
+        };
+    });
+
     if (window.lucide) lucide.createIcons();
 }
 
