@@ -27,13 +27,13 @@ export const data = {
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
             tags: ["Economie", "Data"]
         },
-        {
-            title: "Klimaatwetgeving vs. Industriële Realiteit",
-            date: "15 MRT 2026",
-            intro: "De nieuwe emissienormen forceren een herstructurering van het productienetwerk. Wie overleeft?",
-            content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt. Dit wordt zichtbaar als iemand op de titel klikt.",
-            tags: ["Klimaat", "Maatschappij"]
-        },
+      {
+    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
+    date: "20 MRT 2026",
+    intro: "Dit is de korte tekst voor op de hoofdpagina.",
+    content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt. Dit wordt zichtbaar als iemand op de titel klikt.",
+    tags: ["Onderwijs"]
+},
         {
             title: "Urbanisatie 2.0: De Vlucht uit de Stad",
             date: "12 MRT 2026",
@@ -41,6 +41,7 @@ export const data = {
             content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt. Dit wordt zichtbaar als iemand op de titel klikt.",
             tags: ["Vastgoed", "Maatschappij"]
      }
+        
     ],
     rawData:[
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
