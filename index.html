@@ -6,58 +6,51 @@
     <title>Hazy Standard | Business Intelligence</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        <!-- HEADER -->
         <header class="border-b border-black">
             <div class="flex justify-between items-center px-4 py-6 border-b border-black">
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
                 <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block" id="current-date"></div>
             </div>
-            <nav class="flex flex-wrap overflow-x-auto border-black">
-                <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="portfolio">Portfolio</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Onderwerpen</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">Over Hazy Standard</button>
-                <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
+            <nav class="flex flex-wrap overflow-x-auto border-black bg-white">
+                <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-black hover:text-white transition-colors" data-target="home">Home</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-black hover:text-white transition-colors" data-target="portfolio">Portfolio</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-black hover:text-white transition-colors" data-target="topics">Onderwerpen</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-black hover:text-white transition-colors" data-target="about">Over Hazy Standard</button>
+                <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm hover:bg-black hover:text-white transition-colors" data-target="contact">Contact</button>
             </nav>
         </header>
 
-        <!-- MAIN CONTENT -->
         <main id="main-content" class="flex-grow flex flex-col">
-            <!-- VIEWS WILL BE INJECTED HERE -->
-        </main>
+            </main>
 
-        <!-- FOOTER -->
-        <footer class="border-t border-black p-4 flex justify-between items-center text-xs font-semibold uppercase">
+        <footer class="border-t border-black p-4 flex justify-between items-center text-xs font-semibold uppercase bg-white">
             <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
             <span>100% Monochroom / Strikt Zakelijk</span>
         </footer>
     </div>
 
-    <!-- TEMPLATES -->
     <template id="tpl-home">
         <div class="flex flex-col flex-grow">
-            <!-- FEATURED -->
             <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3">
-                <!-- Injected via JS -->
-            </div>
-            <!-- 3 COLUMNS -->
+                </div>
             <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
-                <!-- COL 1: Video -->
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
                     <div id="col-video" class="flex flex-col"></div>
                 </div>
-                <!-- COL 2: Analysis -->
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div>
                     <div id="col-analysis" class="flex flex-col"></div>
                 </div>
-                <!-- COL 3: Raw Data -->
                 <div class="flex flex-col bg-gray-50">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
                     <div id="col-raw" class="flex flex-col p-4 space-y-4"></div>
@@ -68,67 +61,24 @@
 
     <template id="tpl-topics">
         <div class="flex flex-col flex-grow">
-            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto" id="topics-filters">
-                <!-- Filters injected via JS -->
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="topics-grid">
-                <!-- Articles injected via JS -->
-            </div>
+            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-white" id="topics-filters"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="topics-grid"></div>
         </div>
     </template>
 
     <template id="tpl-about">
-        <div class="flex flex-col md:flex-row flex-grow">
-            <div class="md:w-1/2 p-8 border-r border-black flex flex-col justify-center">
-                <h2 class="text-4xl font-extrabold mb-6 uppercase">Analyse <br><span class="text-gray-500">(Studio)</span></h2>
-                <p class="text-lg leading-relaxed mb-4 font-semibold">Binnen de muren van onze studio ontleden we de ruwe data. Geen emotie, geen afleiding. Enkel feiten, patronen en voorspellingen.</p>
-                <p class="text-lg leading-relaxed">De studio is ons brein. Hier verwerken we de informatiestromen uit de financiële markten, vastgoedsectoren en macro-economische verschuivingen tot strategische rapporten.</p>
+        <div class="bg-black text-white min-h-screen flex flex-col">
+            <div class="p-8 md:p-16 border-b border-white">
+                <h1 class="text-[70px] md:text-[150px] font-extrabold uppercase leading-[0.8] tracking-tighter mb-4">
+                    About <br><span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Me</span>
+                </h1>
             </div>
-            <div class="md:w-1/2 p-8 flex flex-col justify-center bg-black text-white">
-                <h2 class="text-4xl font-extrabold mb-6 uppercase">Rapportage <br><span class="text-gray-400">(Buiten)</span></h2>
-                <p class="text-lg leading-relaxed mb-4 font-semibold">De realiteit bevindt zich op straat. Onze veldwerkers documenteren de fysieke manifestatie van de data.</p>
-                <p class="text-lg leading-relaxed">Van leegstaande kantoorpanden tot industriële expansies. Wij vangen het harde bewijs in zwart-wit fotografie en rauwe videodocumentaires. Geen opsmuk, slechts de naakte waarheid.</p>
-            </div>
-        </div>
-    </template>
 
-    <template id="tpl-contact">
-        <div class="p-8 flex-grow flex items-center justify-center">
-            <div class="w-full max-w-2xl border border-black p-8">
-                <h2 class="text-3xl font-extrabold uppercase mb-6 border-b border-black pb-4">Zakelijke Aanvragen</h2>
-                <form class="flex flex-col space-y-4" onsubmit="event.preventDefault(); alert('Verzonden.');">
-                    <div class="flex flex-col">
-                        <label class="font-bold uppercase text-sm mb-1">Naam / Organisatie</label>
-                        <input type="text" class="border border-black p-3 rounded-none focus:outline-none focus:ring-2 focus:ring-black" required>
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="font-bold uppercase text-sm mb-1">Referentie / Doel</label>
-                        <select class="border border-black p-3 rounded-none focus:outline-none focus:ring-2 focus:ring-black">
-                            <option>Samenwerking</option>
-                            <option>Data Aanvraag</option>
-                            <option>Media Licentie</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col">
-                        <label class="font-bold uppercase text-sm mb-1">Toelichting</label>
-                        <textarea rows="5" class="border border-black p-3 rounded-none focus:outline-none focus:ring-2 focus:ring-black" required></textarea>
-                    </div>
-                    <button type="submit" class="bg-black text-white font-bold uppercase py-4 hover:bg-white hover:text-black border border-black transition-none">Versturen</button>
-                </form>
-            </div>
-        </div>
-    </template>
- <template id="tpl-portfolio">
-    <div class="bg-white min-h-screen">
-        <div class="p-6 md:p-10 border-b border-black">
-            <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
-            <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
-        </div>
-        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            </div>
-    </div>
-</template>
-
-    <script type="module" src="app.js"></script>
-</body>
-</html>
+            <div class="grid grid-cols-1 md:grid-cols-2 border-b border-white">
+                <div class="p-8 md:p-16 border-r border-white flex flex-col justify-center">
+                    <p class="font-serif italic text-2xl md:text-3xl mb-8 text-gray-300 leading-tight">
+                        "In 2024 ben ik gestart vanuit een kernwaarde: feitelijkheid boven alles."
+                    </p>
+                    <p class="text-xs uppercase tracking-[0.2em] font-bold text-gray-500 mb-4">Mijn Achtergrond</p>
+                    <p class="text-xl leading-tight font-bold uppercase italic font-serif">
+                        Mijn carrière in Business Intelligence is geworteld in de diepte van data-extractie. Waar anderen ruis zien, zoek ik de standaard.
