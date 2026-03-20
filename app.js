@@ -61,19 +61,27 @@ function openArticle(article) {
 
 function loadView(viewName) {
     const main = document.getElementById('main-content');
-    const templateId = viewName === 'archive' ? 'tpl-topics' : `tpl-${viewName}`;
-    const tpl = document.getElementById(templateId);
+    const template = document.getElementById(`tpl-${viewName}`);
     
-    if (tpl) {
-        main.innerHTML = ''; // Maak main leeg
-        main.appendChild(tpl.content.cloneNode(true)); // Injecteer de template
+    if (template) {
+        // Forceer een schone lei
+        main.innerHTML = '';
         
-        // Voer specifieke render-functies uit als die nodig zijn
+        // Importeer de content van de template
+        const clone = document.importNode(template.content, true);
+        main.appendChild(clone);
+        
+        // Start de specifieke scripts voor die pagina
         if (viewName === 'home') renderHome();
-        if (viewName === 'topics' || viewName === 'archive') renderTopics();
+        if (viewName === 'topics') renderTopics();
         if (viewName === 'portfolio') renderPortfolio();
         
-        lucide.createIcons(); // Herteken altijd de icoontjes
+        // Reset icoontjes (belangrijk voor de footer!)
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    } else {
+        console.error(`Template tpl-${viewName} niet gevonden!`);
     }
 }
 
