@@ -1,7 +1,7 @@
 import { data } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    lucide.createIcons();
+    if (window.lucide) lucide.createIcons();
     setDate();
     setupNavigation();
     loadView('home');
@@ -49,14 +49,21 @@ function openArticle(article) {
                     <div class="prose max-w-none text-xl leading-relaxed font-semibold mb-10 border-l-4 border-black pl-6">${article.intro}</div>
                     <div class="prose max-w-none text-lg leading-relaxed font-medium mb-20">${article.content || "Gedetailleerde feitelijke analyse volgt."}</div>
                 </div>
-                <div class="lg:col-span-1 bg-gray-50 p-6">
-                    <div class="sticky top-10 text-center uppercase font-bold text-xs border border-black p-4 bg-white">Advertentie</div>
+                <div class="lg:col-span-1 bg-gray-50 p-6 flex flex-col gap-8">
+                    <div class="sticky top-10">
+                        <div class="border-2 border-black bg-white p-6 flex flex-col items-center text-center">
+                            <span class="text-[9px] text-gray-400 mb-4 tracking-widest font-bold uppercase">Sponsoring</span>
+                            <h5 class="text-xs font-black uppercase mb-2">Rapportage Tooling</h5>
+                            <p class="text-[10px] font-medium text-gray-600 mb-6 uppercase">Visualiseer uw veldwerk met precisie.</p>
+                            <button class="w-full border border-black px-4 py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all">Bekijk Demo</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     `;
     document.getElementById('back-btn').onclick = () => loadView('home');
-    lucide.createIcons();
+    if (window.lucide) lucide.createIcons();
 }
 
 function loadView(viewName) {
@@ -64,29 +71,20 @@ function loadView(viewName) {
     const template = document.getElementById(`tpl-${viewName}`);
     
     if (template) {
-        // Forceer een schone lei
         main.innerHTML = '';
+        // Stabielere manier van clonen:
+        const content = template.content.cloneNode(true);
+        main.appendChild(content);
         
-        // Importeer de content van de template
-        const clone = document.importNode(template.content, true);
-        main.appendChild(clone);
-        
-        // Start de specifieke scripts voor die pagina
         if (viewName === 'home') renderHome();
         if (viewName === 'topics') renderTopics();
         if (viewName === 'portfolio') renderPortfolio();
         
-        // Reset icoontjes (belangrijk voor de footer!)
-        if (window.lucide) {
-            lucide.createIcons();
-        }
-    } else {
-        console.error(`Template tpl-${viewName} niet gevonden!`);
+        if (window.lucide) lucide.createIcons();
     }
 }
 
 function renderHome() {
-    // 1. Featured
     const fContainer = document.getElementById('featured-container');
     if (fContainer && data.featured) {
         fContainer.innerHTML = `
@@ -103,27 +101,6 @@ function renderHome() {
         document.getElementById('featured-title').onclick = () => openArticle(data.featured);
     }
 
-    // 2. Video
-    const vContainer = document.getElementById('col-video');
-    if (vContainer && data.videos) {
-        vContainer.innerHTML = '';
-        data.videos.forEach(v => {
-            const vEl = document.createElement('div');
-            vEl.className = 'border-b border-black p-4 group cursor-pointer';
-            vEl.innerHTML = `
-                <div class="relative w-full h-40 mb-3 bg-gray-200 border border-black overflow-hidden">
-                    <img src="${v.thumb}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                        <i data-lucide="play-circle" class="text-white w-12 h-12"></i>
-                    </div>
-                </div>
-                <h3 class="font-bold uppercase text-lg leading-tight">${v.title}</h3>
-            `;
-            vContainer.appendChild(vEl);
-        });
-    }
-
-    // 3. Analysis
     const aContainer = document.getElementById('col-analysis');
     if (aContainer) {
         aContainer.innerHTML = '';
@@ -140,7 +117,21 @@ function renderHome() {
         });
     }
 
-    // 4. Raw Data
+    // Verbeterde Advertentie op Home
+    const homeAd = document.getElementById('home-ad-sidebar');
+    if (homeAd) {
+        homeAd.innerHTML = `
+            <div class="flex flex-col items-center p-6 bg-gray-50 border border-black/10 h-full">
+                <span class="text-[9px] text-gray-400 mb-6 tracking-[0.3em] font-bold uppercase text-center">Advertentie</span>
+                <div class="w-full aspect-square bg-white border border-black mb-6 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=400" class="grayscale w-full h-full object-cover">
+                </div>
+                <h4 class="text-xs font-black uppercase mb-3 text-center">BI Masterclass 2026</h4>
+                <button class="border-2 border-black px-4 py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all w-full">Informatie</button>
+            </div>
+        `;
+    }
+
     const rContainer = document.getElementById('col-raw');
     if (rContainer) {
         rContainer.innerHTML = '';
@@ -150,19 +141,6 @@ function renderHome() {
             rEl.textContent = r;
             rContainer.appendChild(rEl);
         });
-    }
-
-    // 5. Ad
-    const homeAd = document.getElementById('home-ad-sidebar');
-    if (homeAd) {
-        homeAd.innerHTML = `
-            <div class="flex flex-col items-center">
-                <span class="text-[9px] text-gray-400 mb-4 tracking-widest font-bold">ADVERTENTIE</span>
-                <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=400" class="grayscale w-full aspect-square object-cover border border-black mb-4">
-                <h4 class="text-xs font-black uppercase mb-2 text-center">BI Masterclass 2026</h4>
-                <button class="border border-black px-4 py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white w-full">Informatie</button>
-            </div>
-        `;
     }
 }
 
