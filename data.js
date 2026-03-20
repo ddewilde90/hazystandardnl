@@ -48,5 +48,5 @@ export const data = {
         "16/03 14:00 - Leegstandsindex kantoren Randstad stijgt naar 18.4%.",
         "15/03 10:30 - Werkloosheid stabiliseert, krapte IT-markt neemt af."
     ],
-    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Data", "Onderwijs"]
+    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"]
 };
