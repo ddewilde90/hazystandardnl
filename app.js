@@ -63,6 +63,7 @@ function loadView(viewName) {
 }
 
 function renderHome() {
+    // 1. Featured Article
     const fContainer = document.getElementById('featured-container');
     if (fContainer && data.featured) {
         fContainer.innerHTML = `
@@ -77,6 +78,7 @@ function renderHome() {
         `;
     }
 
+    // 2. Video Column
     const vContainer = document.getElementById('col-video');
     if (vContainer) {
         vContainer.innerHTML = '';
@@ -96,6 +98,7 @@ function renderHome() {
         });
     }
 
+    // 3. Analysis Column
     const aContainer = document.getElementById('col-analysis');
     if (aContainer) {
         aContainer.innerHTML = '';
@@ -111,6 +114,20 @@ function renderHome() {
             aContainer.appendChild(aEl);
         });
     }
+
+    // 4. Raw Data Column (DIT STUKJE ONTBRAK)
+    const rContainer = document.getElementById('col-raw');
+    if (rContainer && data.rawData) {
+        rContainer.innerHTML = ''; // Leegmaken
+        data.rawData.forEach(r => {
+            const rEl = document.createElement('div');
+            // We gebruiken een linker border voor de strakke "data" look
+            rEl.className = 'border-l-4 border-black pl-3 text-sm font-semibold py-2 mb-4';
+            rEl.textContent = r;
+            rContainer.appendChild(rEl);
+        });
+    }
+
     lucide.createIcons();
 }
 
