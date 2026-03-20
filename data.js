@@ -38,7 +38,12 @@ export const data = {
             date: "12 MRT 2026",
             intro: "Demografische hittekaarten tonen een omkering van de trek naar de Randstad.",
             tags: ["Vastgoed", "Maatschappij"]
-        }
+{
+    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
+    date: "20 MRT 2026",
+    intro: "Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
+    tags: ["Onderwijs", "Data"]
+},        }
     ],
     rawData:[
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
