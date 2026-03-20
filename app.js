@@ -59,7 +59,7 @@ function loadView(viewName) {
         if (viewName === 'topics' || viewName === 'archive') renderTopics();
         
         // STAP 1: Voeg deze regel toe om de portfolio te tekenen
-        if (viewName === 'Portfolio') renderportfolio();
+        if (viewName === 'portfolio') renderportfolio();
     }
     lucide.createIcons();
 }
