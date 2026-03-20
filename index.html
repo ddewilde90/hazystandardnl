@@ -1,215 +1,212 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazy Standard | Business Intelligence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazy Standard | Business Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white text-black font-sans antialiased">
-    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        <!-- HEADER -->
-        <header class="border-b border-black">
-            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
-                <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
-                <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block" id="current-date"></div>
-            </div>
-            <nav class="flex flex-wrap overflow-x-auto border-black">
-                <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="portfolio">Portfolio</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Onderwerpen</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">About me</button>
-                <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
-            </nav>
-        </header>
+    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
+        <!-- HEADER -->
+        <header class="border-b border-black">
+            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
+                <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
+                <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block" id="current-date"></div>
+            </div>
+            <nav class="flex flex-wrap overflow-x-auto border-black">
+                <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="portfolio">Portfolio</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Onderwerpen</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">About me</button>
+                <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
+            </nav>
+        </header>
 
-        <!-- MAIN CONTENT -->
-        <main id="main-content" class="flex-grow flex flex-col">
-            <!-- VIEWS WILL BE INJECTED HERE -->
-        </main>
+        <!-- MAIN CONTENT -->
+        <main id="main-content" class="flex-grow flex flex-col">
+            <!-- VIEWS WILL BE INJECTED HERE -->
+        </main>
 
-        <!-- FOOTER -->
-        <footer class="border-t border-black p-4 flex justify-between items-center text-xs font-semibold uppercase">
-            <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
-            <span>100% Monochroom / Strikt Zakelijk</span>
-        </footer>
-    </div>
+        <!-- FOOTER -->
+        <footer class="border-t border-black p-4 flex justify-between items-center text-xs font-semibold uppercase">
+            <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
+            <span>100% Monochroom / Strikt Zakelijk</span>
+        </footer>
+    </div>
 
-    <!-- TEMPLATES -->
-    <template id="tpl-home">
-        <div class="flex flex-col flex-grow">
-            <!-- FEATURED -->
-            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3">
-                <!-- Injected via JS -->
-            </div>
-            <!-- 3 COLUMNS -->
-            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
-                <!-- COL 1: Video -->
-                <div class="border-r border-black flex flex-col">
-                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
-                    <div id="col-video" class="flex flex-col"></div>
-                </div>
-                <!-- COL 2: Analysis -->
-                <div class="border-r border-black flex flex-col">
-                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div>
-                    <div id="col-analysis" class="flex flex-col"></div>
-                </div>
-                <!-- COL 3: Raw Data -->
-                <div class="flex flex-col bg-gray-50">
-                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
-                    <div id="col-raw" class="flex flex-col p-4 space-y-4"></div>
-                </div>
-            </div>
-        </div>
-    </template>
+    <!-- TEMPLATES -->
+    <template id="tpl-home">
+        <div class="flex flex-col flex-grow">
+            <!-- FEATURED -->
+            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3">
+                <!-- Injected via JS -->
+            </div>
+            <!-- 3 COLUMNS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
+                <!-- COL 1: Video -->
+                <div class="border-r border-black flex flex-col">
+                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
+                    <div id="col-video" class="flex flex-col"></div>
+                </div>
+                <!-- COL 2: Analysis -->
+                <div class="border-r border-black flex flex-col">
+                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div>
+                    <div id="col-analysis" class="flex flex-col"></div>
+                </div>
+                <!-- COL 3: Raw Data -->
+                <div class="flex flex-col bg-gray-50">
+                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
+                    <div id="col-raw" class="flex flex-col p-4 space-y-4"></div>
+                </div>
+            </div>
+        </div>
+    </template>
 
-    <template id="tpl-topics">
-        <div class="flex flex-col flex-grow">
-            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto" id="topics-filters">
-                <!-- Filters injected via JS -->
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="topics-grid">
-                <!-- Articles injected via JS -->
-            </div>
-        </div>
-    </template>
+    <template id="tpl-topics">
+        <div class="flex flex-col flex-grow">
+            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto" id="topics-filters">
+                <!-- Filters injected via JS -->
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="topics-grid">
+                <!-- Articles injected via JS -->
+            </div>
+        </div>
+    </template>
 
-    <template id="tpl-about">
-    <div class="bg-black text-white min-h-screen font-sans">
-        
-        <div class="relative flex items-end p-8 md:p-16 border-b border-white overflow-hidden">
-            <div class="absolute inset-0 opacity-40 bg-[url('jouw-foto.jpg')] bg-cover bg-center grayscale"></div>
-            
-            <h1 class="relative z-10 text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.75] tracking-tighter">
-                About <br>
-                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Me</span>
-            </h1>
-            
-            <div class="absolute top-1/2 right-8 md:right-24 max-w-xs text-sm leading-tight font-medium">
-                <p class="font-serif italic text-lg mb-2">In 2024, I founded Hazy Standard.</p>
-                <p class="text-gray-400 uppercase text-[10px] tracking-widest">Business Intelligence / Documentatie</p>
-            </div>
-        </div>
+    <template id="tpl-about">
+    <div class="bg-black text-white min-h-screen font-sans">
+        
+        <div class="relative flex items-end p-8 md:p-16 border-b border-white overflow-hidden">
+            <div class="absolute inset-0 opacity-40 bg-[url('jouw-foto.jpg')] bg-cover bg-center grayscale"></div>
+            
+            <h1 class="relative z-10 text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.75] tracking-tighter">
+                About <br>
+                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Me</span>
+            </h1>
+            
+            <div class="absolute top-1/2 right-8 md:right-24 max-w-xs text-sm leading-tight font-medium">
+                <p class="font-serif italic text-lg mb-2">In 2024, I founded Hazy Standard.</p>
+                <p class="text-gray-400 uppercase text-[10px] tracking-widest">Business Intelligence / Documentatie</p>
+            </div>
+        </div>
 
-        <div class="relative py-20 px-8 md:px-32">
-            <div class="max-w-4xl">
-                <h2 class="text-4xl md:text-7xl font-extrabold uppercase leading-[0.9] mb-12">
-                    Mijn portfolio inclusief <span class="font-serif italic font-normal text-gray-400 lowercase">uitgebreide</span> 
-                    BI-analyses, data-audits en <span class="underline decoration-1 underline-offset-8">veldwerk rapportages.</span>
-                </h2>
-            </div>
+        <div class="relative py-20 px-8 md:px-32">
+            <div class="max-w-4xl">
+                <h2 class="text-4xl md:text-7xl font-extrabold uppercase leading-[0.9] mb-12">
+                    Mijn portfolio inclusief <span class="font-serif italic font-normal text-gray-400 lowercase">uitgebreide</span> 
+                    BI-analyses, data-audits en <span class="underline decoration-1 underline-offset-8">veldwerk rapportages.</span>
+                </h2>
+            </div>
 
-            <div class="md:ml-[50%] max-w-sm mt-12 border-t border-gray-800 pt-6">
-                <p class="text-sm leading-relaxed text-gray-400">
-                    Elk project weerspiegelt een diepe drang naar feitelijkheid. Ik onderzoek de verbindingen tussen ruwe data en de fysieke realiteit, 
-                    waarbij ik me focus op wat echt is, zonder ruis.
-                </p>
-            </div>
-        </div>
+            <div class="md:ml-[50%] max-w-sm mt-12 border-t border-gray-800 pt-6">
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Elk project weerspiegelt een diepe drang naar feitelijkheid. Ik onderzoek de verbindingen tussen ruwe data en de fysieke realiteit, 
+                    waarbij ik me focus op wat echt is, zonder ruis.
+                </p>
+            </div>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 bg-white text-black py-20">
-            <div class="md:col-start-2 md:col-span-4 p-8">
-                <div class="aspect-[3/4] bg-gray-200 border border-black mb-6 grayscale overflow-hidden">
-                    <img src="studio-detail.jpg" class="w-full h-full object-cover">
-                </div>
-            </div>
-            
-            <div class="md:col-start-6 md:col-span-6 flex flex-col justify-center p-8">
-                <h3 class="text-3xl md:text-6xl font-extrabold uppercase leading-[0.9] mb-8">
-                    In elke analyse, <span class="font-serif italic font-normal">mijn kenmerkende stijl</span> 
-                    combineert objectiviteit met detail.
-                </h3>
-                <p class="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-black pb-2 inline-block self-start">
-                    The Hazy Standard Method
-                </p>
-            </div>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 bg-white text-black py-20">
+            <div class="md:col-start-2 md:col-span-4 p-8">
+                <div class="aspect-[3/4] bg-gray-200 border border-black mb-6 grayscale overflow-hidden">
+                    <img src="studio-detail.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <div class="md:col-start-6 md:col-span-6 flex flex-col justify-center p-8">
+                <h3 class="text-3xl md:text-6xl font-extrabold uppercase leading-[0.9] mb-8">
+                    In elke analyse, <span class="font-serif italic font-normal">mijn kenmerkende stijl</span> 
+                    combineert objectiviteit met detail.
+                </h3>
+                <p class="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-black pb-2 inline-block self-start">
+                    The Hazy Standard Method
+                </p>
+            </div>
+        </div>
 
-        <div class="p-8 md:p-20 text-center border-t border-gray-900">
-            <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">
-                Strikt zakelijk — Geen opsmuk — Alleen de feiten
-            </p>
-        </div>
-    </div>
+        <div class="p-8 md:p-20 text-center border-t border-gray-900">
+            <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">
+                Strikt zakelijk — Geen opsmuk — Alleen de feiten
+            </p>
+        </div>
+    </div>
 </template>
 
-    <template id="tpl-contact">
-    <div class="bg-white text-black min-h-screen flex flex-col font-sans">
-        
-        <div class="p-8 md:p-12 border-b border-black bg-black text-white">
-            <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
-                Get in <br>
-                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
-            </h1>
-        </div>
+    <template id="tpl-contact">
+    <div class="bg-white text-black min-h-screen flex flex-col font-sans">
+        
+        <div class="p-8 md:p-12 border-b border-black bg-black text-white">
+            <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
+                Get in <br>
+                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
+            </h1>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
-            
-            <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
-                <div>
-                    <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
-                    <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
-                        "Laten we bespreken wat de feiten voor uw organisatie betekenen."
-                    </p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
+            
+            <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
+                <div>
+                    <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
+                    <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
+                        "Laten we bespreken wat de feiten voor uw organisatie betekenen."
+                    </p>
+                </div>
 
-                <div class="space-y-6">
-                    <div class="border-t border-black pt-4">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
-                        <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
-                    </div>
-                </div>
-            </div>
+                <div class="space-y-6">
+                    <div class="border-t border-black pt-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
+                        <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
+                    </div>
+                </div>
+            </div>
 
-            <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
-                <form id="contact-form" class="flex flex-col space-y-10" onsubmit="event.preventDefault(); alert('Aanvraag ontvangen.');">
-                    
-                    <div class="flex flex-col">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">01. Naam</label>
-                        <input type="text" class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg focus:border-b-4 transition-all" placeholder="NAAM*" required>
-                    </div>
+            <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
+                <form id="contact-form" class="flex flex-col space-y-10" onsubmit="event.preventDefault(); alert('Aanvraag ontvangen.');">
+                    
+                    <div class="flex flex-col">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">01. Naam</label>
+                        <input type="text" class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg focus:border-b-4 transition-all" placeholder="NAAM*" required>
+                    </div>
 
-                    <div class="flex flex-col">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">02. Type Analyse</label>
-                        <select class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg cursor-pointer appearance-none">
-                            <option>BUSINESS INTELLIGENCE</option>
-                            <option>VELDWERK & RAPPORTAGE</option>
-                        </select>
-                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">02. Type Analyse</label>
+                        <select class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg cursor-pointer appearance-none">
+                            <option>BUSINESS INTELLIGENCE</option>
+                            <option>VELDWERK & RAPPORTAGE</option>
+                        </select>
+                    </div>
 
-                    <div class="flex flex-col">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">03. Bericht</label>
-                        <textarea rows="3" class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg focus:border-b-4 transition-all" placeholder="UW VRAAG*" required></textarea>
-                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">03. Bericht</label>
+                        <textarea rows="3" class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg focus:border-b-4 transition-all" placeholder="UW VRAAG*" required></textarea>
+                    </div>
 
-                    <div class="flex justify-start">
-                        <button type="submit" class="bg-black text-white px-8 py-4 font-extrabold uppercase hover:bg-white hover:text-black border-2 border-black transition-all">
-                            Verzenden
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                    <div class="flex justify-start">
+                        <button type="submit" class="bg-black text-white px-8 py-4 font-extrabold uppercase hover:bg-white hover:text-black border-2 border-black transition-all">
+                            Verzenden
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </template>
-                 
- <template id="tpl-portfolio">
-    <div class="bg-white min-h-screen">
-        <div class="p-6 md:p-10 border-b border-black">
-            <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
-            <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
-        </div>
-        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            </div>
-    </div>
+                 
+ <template id="tpl-portfolio">
+    <div class="bg-white min-h-screen">
+        <div class="p-6 md:p-10 border-b border-black">
+            <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
+            <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
+        </div>
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            </div>
+    </div>
 </template>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
-
-
-kun je die code aanpassen met deze about me en contact?
