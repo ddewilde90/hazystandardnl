@@ -25,7 +25,7 @@ export const data = {
             title: "Inflatiecijfers Q1: De Verborgen Variabelen",
             date: "18 MRT 2026",
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
-            image: "https://images.unsplash.com/photo-1526303328184-c7e659301da2?q=80&w=800", // GELD/DATA FOTO
+            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800", // GELD/DATA FOTO
             tags: ["Economie", "Data"]
         },
         {
