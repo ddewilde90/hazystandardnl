@@ -1,6 +1,5 @@
 import { data } from './data.js';
 
-
 document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
     setDate();
@@ -27,11 +26,31 @@ function setupNavigation() {
     });
 }
 
+// NIEUW: Functie om een specifiek artikel te tonen
+function openArticle(article) {
+    const main = document.getElementById('main-content');
+    main.innerHTML = `
+        <div class="max-w-4xl mx-auto p-6 md:p-20 bg-white min-h-screen border-x border-black">
+            <button id="back-btn" class="mb-10 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">
+                ← Terug naar overzicht
+            </button>
+            <div class="text-xs font-bold uppercase mb-4 text-gray-500">${article.date}</div>
+            <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight">${article.title}</h1>
+            <div class="flex gap-2 mb-10">
+                ${article.tags.map(tag => `<span class="bg-black text-white text-[10px] px-2 py-1 uppercase font-bold">${tag}</span>`).join('')}
+            </div>
+            <div class="prose max-w-none text-lg leading-relaxed font-medium">
+                ${article.content || article.intro}
+            </div>
+        </div>
+    `;
+    window.scrollTo(0, 0);
+    document.getElementById('back-btn').onclick = () => loadView('home');
+}
+
 function loadView(viewName) {
     const main = document.getElementById('main-content');
     main.innerHTML = '';
-    
-
     const templateId = viewName === 'archive' ? 'tpl-topics' : `tpl-${viewName}`;
     const tpl = document.getElementById(templateId);
     
@@ -42,9 +61,8 @@ function loadView(viewName) {
     }
 }
 
-
 function renderHome() {
-
+    // Featured sectie
     const fContainer = document.getElementById('featured-container');
     fContainer.innerHTML = `
         <div class="md:col-span-2 border-r border-black relative border-b md:border-b-0">
@@ -52,12 +70,12 @@ function renderHome() {
         </div>
         <div class="p-6 md:p-10 flex flex-col justify-center bg-white">
             <div class="text-xs font-bold uppercase mb-4 border-b border-black inline-block pb-1">${data.featured.author} // ${data.featured.date}</div>
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase">${data.featured.title}</h2>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight uppercase cursor-pointer hover:underline" id="featured-title">${data.featured.title}</h2>
             <p class="text-lg font-semibold">${data.featured.excerpt}</p>
         </div>
     `;
 
-
+    // Video sectie
     const vContainer = document.getElementById('col-video');
     data.videos.forEach(v => {
         const vEl = document.createElement('div');
@@ -75,7 +93,6 @@ function renderHome() {
         vContainer.appendChild(vEl);
     });
 
-
     document.querySelectorAll('.video-thumb').forEach(thumb => {
         thumb.addEventListener('click', function() {
             const url = this.getAttribute('data-url');
@@ -83,20 +100,21 @@ function renderHome() {
         });
     });
 
-
+    // Analyse sectie (NU KLIKBAAR)
     const aContainer = document.getElementById('col-analysis');
     data.analysis.forEach(a => {
         const aEl = document.createElement('div');
-        aEl.className = 'border-b border-black p-6';
+        aEl.className = 'border-b border-black p-6 cursor-pointer hover:bg-gray-50 transition-colors';
         aEl.innerHTML = `
             <div class="text-xs font-bold uppercase mb-2 text-gray-500">${a.date}</div>
             <h3 class="font-extrabold uppercase text-xl mb-3">${a.title}</h3>
             <p class="text-sm font-semibold">${a.intro}</p>
         `;
+        aEl.onclick = () => openArticle(a);
         aContainer.appendChild(aEl);
     });
 
-
+    // Raw Data
     const rContainer = document.getElementById('col-raw');
     data.rawData.forEach(r => {
         const rEl = document.createElement('div');
@@ -112,16 +130,16 @@ function renderTopics() {
     const filterContainer = document.getElementById('topics-filters');
     const gridContainer = document.getElementById('topics-grid');
     
-
+    filterContainer.innerHTML = '';
     const allBtn = document.createElement('button');
-    allBtn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-black text-white hover:bg-black hover:text-white';
+    allBtn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-black text-white';
     allBtn.textContent = 'ALLES';
     allBtn.onclick = () => renderTopicGrid('ALLES');
     filterContainer.appendChild(allBtn);
 
     data.topics.forEach(t => {
         const btn = document.createElement('button');
-        btn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-white text-black hover:bg-black hover:text-white';
+        btn.className = 'border border-black px-4 py-2 text-xs font-bold uppercase bg-white text-black';
         btn.textContent = t;
         btn.onclick = (e) => {
             Array.from(filterContainer.children).forEach(c => {
@@ -129,7 +147,6 @@ function renderTopics() {
                 c.classList.add('bg-white', 'text-black');
             });
             e.target.classList.add('bg-black', 'text-white');
-            e.target.classList.remove('bg-white', 'text-black');
             renderTopicGrid(t);
         };
         filterContainer.appendChild(btn);
@@ -138,13 +155,11 @@ function renderTopics() {
     function renderTopicGrid(filter) {
         gridContainer.innerHTML = '';
         let items = data.analysis;
-        if (filter !== 'ALLES') {
-            items = items.filter(a => a.tags.includes(filter));
-        }
+        if (filter !== 'ALLES') items = items.filter(a => a.tags.includes(filter));
         
         items.forEach(a => {
             const el = document.createElement('div');
-            el.className = 'border-r border-b border-black p-6 flex flex-col justify-between';
+            el.className = 'border-r border-b border-black p-6 flex flex-col justify-between cursor-pointer hover:bg-gray-50';
             el.innerHTML = `
                 <div>
                     <div class="flex space-x-2 mb-3">
@@ -155,9 +170,9 @@ function renderTopics() {
                 </div>
                 <div class="text-xs font-bold uppercase border-t border-black pt-2">${a.date}</div>
             `;
+            el.onclick = () => openArticle(a);
             gridContainer.appendChild(el);
         });
     }
-
     renderTopicGrid('ALLES');
 }
