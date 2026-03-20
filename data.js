@@ -49,4 +49,11 @@ export const data = {
         "15/03 10:30 - Werkloosheid stabiliseert, krapte IT-markt neemt af."
     ],
     topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"]
+
+    {
+    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
+    date: "20 MRT 2026",
+    intro: "Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
+    tags: ["Onderwijs", "Data"]
+},
 };
