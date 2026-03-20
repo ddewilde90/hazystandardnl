@@ -11,7 +11,6 @@
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        <!-- HEADER -->
         <header class="border-b border-black">
             <div class="flex justify-between items-center px-4 py-6 border-b border-black">
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
@@ -26,23 +25,74 @@
             </nav>
         </header>
 
-        <!-- MAIN CONTENT -->
         <main id="main-content" class="flex-grow flex flex-col">
-            <!-- VIEWS WILL BE INJECTED HERE -->
-        </main>
+            </main>
 
-        <!-- FOOTER -->
-        <footer class="border-t border-black p-4 flex justify-between items-center text-xs font-semibold uppercase">
-            <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
-            <span>100% Monochroom / Strikt Zakelijk</span>
+        <footer class="border-t-4 border-black bg-white pt-16 pb-8 px-6 mt-auto">
+            <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                
+                <div class="flex flex-col">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Hazy Standard.</h2>
+                    <p class="text-sm font-semibold leading-relaxed mb-6">
+                        Onafhankelijke Business Intelligence en veldwerk-rapportages. Wij zoeken de feiten achter de data.
+                    </p>
+                    <button class="bg-black text-white px-6 py-3 font-extrabold uppercase text-sm hover:bg-gray-800 transition-all self-start">
+                        Steun ons & Doneer
+                    </button>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase text-xs tracking-widest mb-6 border-b border-gray-200 pb-2">Over Hazy Standard</h4>
+                    <ul class="space-y-3 text-sm font-bold uppercase">
+                        <li><button class="hover:underline text-left" data-target="about">Onze Methode</button></li>
+                        <li><button class="hover:underline text-left">Redactiestatuut</button></li>
+                        <li><button class="hover:underline text-left" data-target="contact">Contact</button></li>
+                        <li><button class="hover:underline text-left">FAQ</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase text-xs tracking-widest mb-6 border-b border-gray-200 pb-2">Voorwaarden</h4>
+                    <ul class="space-y-3 text-sm font-bold uppercase text-gray-500">
+                        <li><button class="hover:underline text-left">Privacy Statement</button></li>
+                        <li><button class="hover:underline text-left">Cookiebeleid</button></li>
+                        <li><button class="hover:underline text-left">Algemene Voorwaarden</button></li>
+                        <li><button class="hover:underline text-left">Disclaimer</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase text-xs tracking-widest mb-6 border-b border-gray-200 pb-2">Volg de feiten</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-screen-xl mx-auto border-t border-gray-100 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <span>Strikt Zakelijk</span>
+                    <span>100% Monochroom</span>
+                </div>
+            </div>
         </footer>
     </div>
 
-    <!-- TEMPLATES -->
     <template id="tpl-home">
         <div class="flex flex-col flex-grow">
-            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3">
-                </div>
+            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3"></div>
             <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
@@ -54,9 +104,7 @@
                 </div>
                 <div class="flex flex-col bg-gray-50">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
-                    <div id="col-raw" class="flex flex-col p-4 space-y-4 border-b border-black">
-                        </div>
-                    
+                    <div id="col-raw" class="flex flex-col p-4 space-y-4 border-b border-black"></div>
                     <div class="p-6 bg-white flex-grow">
                         <div id="home-ad-sidebar" class="border border-gray-300 h-full min-h-[250px] flex flex-col items-center justify-center p-4 text-center">
                             <span class="text-[10px] text-gray-300 font-bold uppercase">Ruimte voor advertentie</span>
@@ -67,144 +115,67 @@
         </div>
     </template>
 
-   <template id="tpl-topics">
-    <div class="flex flex-col flex-grow">
-        <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-white" id="topics-filters"></div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8" id="topics-grid">
-            </div>
-    </div>
-</template>
+    <template id="tpl-topics">
+        <div class="flex flex-col flex-grow">
+            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-white" id="topics-filters"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8" id="topics-grid"></div>
+        </div>
+    </template>
 
     <template id="tpl-about">
-    <div class="bg-black text-white min-h-screen font-sans">
-        
-        <div class="relative flex items-end p-8 md:p-16 border-b border-white overflow-hidden">
-            <div class="absolute inset-0 opacity-40 bg-[url('jouw-foto.jpg')] bg-cover bg-center grayscale"></div>
-            
-            <h1 class="relative z-10 text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.75] tracking-tighter">
-                About <br>
-                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Me</span>
-            </h1>
-            
-            <div class="absolute top-1/2 right-8 md:right-24 max-w-xs text-sm leading-tight font-medium">
-                <p class="font-serif italic text-lg mb-2">In 2024, I founded Hazy Standard.</p>
-                <p class="text-gray-400 uppercase text-[10px] tracking-widest">Business Intelligence / Documentatie</p>
-            </div>
-        </div>
-
-        <div class="relative py-20 px-8 md:px-32">
-            <div class="max-w-4xl">
-                <h2 class="text-4xl md:text-7xl font-extrabold uppercase leading-[0.9] mb-12">
-                    Mijn portfolio inclusief <span class="font-serif italic font-normal text-gray-400 lowercase">uitgebreide</span> 
-                    BI-analyses, data-audits en <span class="underline decoration-1 underline-offset-8">veldwerk rapportages.</span>
-                </h2>
-            </div>
-
-            <div class="md:ml-[50%] max-w-sm mt-12 border-t border-gray-800 pt-6">
-                <p class="text-sm leading-relaxed text-gray-400">
-                    Elk project weerspiegelt een diepe drang naar feitelijkheid. Ik onderzoek de verbindingen tussen ruwe data en de fysieke realiteit, 
-                    waarbij ik me focus op wat echt is, zonder ruis.
-                </p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 bg-white text-black py-20">
-            <div class="md:col-start-2 md:col-span-4 p-8">
-                <div class="aspect-[3/4] bg-gray-200 border border-black mb-6 grayscale overflow-hidden">
-                    <img src="studio-detail.jpg" class="w-full h-full object-cover">
+        <div class="bg-black text-white min-h-screen font-sans">
+            <div class="relative flex items-end p-8 md:p-16 border-b border-white overflow-hidden">
+                <div class="absolute inset-0 opacity-40 bg-[url('jouw-foto.jpg')] bg-cover bg-center grayscale"></div>
+                <h1 class="relative z-10 text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.75] tracking-tighter">
+                    About <br>
+                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Me</span>
+                </h1>
+                <div class="absolute top-1/2 right-8 md:right-24 max-w-xs text-sm leading-tight font-medium">
+                    <p class="font-serif italic text-lg mb-2">In 2024, I founded Hazy Standard.</p>
+                    <p class="text-gray-400 uppercase text-[10px] tracking-widest">Business Intelligence / Documentatie</p>
                 </div>
             </div>
-            
-            <div class="md:col-start-6 md:col-span-6 flex flex-col justify-center p-8">
-                <h3 class="text-3xl md:text-6xl font-extrabold uppercase leading-[0.9] mb-8">
-                    In elke analyse, <span class="font-serif italic font-normal">mijn kenmerkende stijl</span> 
-                    combineert objectiviteit met detail.
-                </h3>
-                <p class="text-xs uppercase tracking-[0.3em] font-bold border-b-2 border-black pb-2 inline-block self-start">
-                    The Hazy Standard Method
-                </p>
             </div>
-        </div>
-
-        <div class="p-8 md:p-20 text-center border-t border-gray-900">
-            <p class="text-gray-600 text-[10px] uppercase tracking-[0.5em]">
-                Strikt zakelijk — Geen opsmuk — Alleen de feiten
-            </p>
-        </div>
-    </div>
-</template>
+    </template>
 
     <template id="tpl-contact">
-    <div class="bg-white text-black min-h-screen flex flex-col font-sans">
-        
-        <div class="p-8 md:p-12 border-b border-black bg-black text-white">
-            <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
-                Get in <br>
-                <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
-            </h1>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
-            
-            <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
-                <div>
-                    <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
-                    <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
-                        "Laten we bespreken wat de feiten voor uw organisatie betekenen."
-                    </p>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="border-t border-black pt-4">
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
-                        <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
+        <div class="bg-white text-black min-h-screen flex flex-col font-sans">
+            <div class="p-8 md:p-12 border-b border-black bg-black text-white">
+                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
+                    Get in <br>
+                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
+                </h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
+                <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
+                    <div>
+                        <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
+                        <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
+                            "Laten we bespreken wat de feiten voor uw organisatie betekenen."
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border-t border-black pt-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
+                            <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
-                <form id="contact-form" class="flex flex-col space-y-10" onsubmit="event.preventDefault(); alert('Aanvraag ontvangen.');">
-                    
-                    <div class="flex flex-col">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">01. Naam</label>
-                        <input type="text" class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg focus:border-b-4 transition-all" placeholder="NAAM*" required>
+                <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
                     </div>
-
-                    <div class="flex flex-col">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">02. Type Analyse</label>
-                        <select class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg cursor-pointer appearance-none">
-                            <option>BUSINESS INTELLIGENCE</option>
-                            <option>VELDWERK & RAPPORTAGE</option>
-                        </select>
-                    </div>
-
-                    <div class="flex flex-col">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-2">03. Bericht</label>
-                        <textarea rows="3" class="bg-transparent border-b border-black py-2 outline-none font-bold uppercase text-lg focus:border-b-4 transition-all" placeholder="UW VRAAG*" required></textarea>
-                    </div>
-
-                    <div class="flex justify-start">
-                        <button type="submit" class="bg-black text-white px-8 py-4 font-extrabold uppercase hover:bg-white hover:text-black border-2 border-black transition-all">
-                            Verzenden
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
-</template>
-                 
- <template id="tpl-portfolio">
-    <div class="bg-white min-h-screen">
-        <div class="p-6 md:p-10 border-b border-black">
-            <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
-            <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
-        </div>
-        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    </template>
+
+    <template id="tpl-portfolio">
+        <div class="bg-white min-h-screen">
+            <div class="p-6 md:p-10 border-b border-black">
+                <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
+                <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
             </div>
-    </div>
-</template>
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+    </template>
 
     <script type="module" src="app.js"></script>
 </body>
