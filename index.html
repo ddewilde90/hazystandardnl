@@ -11,7 +11,6 @@
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        <!-- HEADER -->
         <header class="border-b border-black">
             <div class="flex justify-between items-center px-4 py-6 border-b border-black">
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
@@ -19,45 +18,35 @@
             </div>
             <nav class="flex flex-wrap overflow-x-auto border-black">
                 <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
-                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="archive">Portfolio</button>
+                <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="portfolio">Portfolio</button>
                 <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Onderwerpen</button>
                 <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">Over Hazy Standard</button>
                 <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
             </nav>
         </header>
 
-        <!-- MAIN CONTENT -->
         <main id="main-content" class="flex-grow flex flex-col">
-            <!-- VIEWS WILL BE INJECTED HERE -->
-        </main>
+            </main>
 
-        <!-- FOOTER -->
         <footer class="border-t border-black p-4 flex justify-between items-center text-xs font-semibold uppercase">
             <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
             <span>100% Monochroom / Strikt Zakelijk</span>
         </footer>
     </div>
 
-    <!-- TEMPLATES -->
     <template id="tpl-home">
         <div class="flex flex-col flex-grow">
-            <!-- FEATURED -->
             <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3">
-                <!-- Injected via JS -->
-            </div>
-            <!-- 3 COLUMNS -->
+                </div>
             <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
-                <!-- COL 1: Video -->
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
                     <div id="col-video" class="flex flex-col"></div>
                 </div>
-                <!-- COL 2: Analysis -->
                 <div class="border-r border-black flex flex-col">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div>
                     <div id="col-analysis" class="flex flex-col"></div>
                 </div>
-                <!-- COL 3: Raw Data -->
                 <div class="flex flex-col bg-gray-50">
                     <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
                     <div id="col-raw" class="flex flex-col p-4 space-y-4"></div>
@@ -66,14 +55,23 @@
         </div>
     </template>
 
+    <template id="tpl-portfolio">
+        <div class="flex flex-col flex-grow">
+            <div class="p-8 border-b border-black bg-gray-50">
+                <h2 class="text-4xl font-extrabold uppercase">Portfolio</h2>
+                <p class="text-sm font-semibold uppercase tracking-widest text-gray-500">Gerealiseerde Projecten & Casussen</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="portfolio-grid">
+                </div>
+        </div>
+    </template>
+
     <template id="tpl-topics">
         <div class="flex flex-col flex-grow">
             <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto" id="topics-filters">
-                <!-- Filters injected via JS -->
-            </div>
+                </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-black" id="topics-grid">
-                <!-- Articles injected via JS -->
-            </div>
+                </div>
         </div>
     </template>
 
