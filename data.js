@@ -27,21 +27,20 @@ export const data = {
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
             tags: ["Economie", "Data"]
         },
-      {
-    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
-    date: "20 MRT 2026",
-    intro: "Dit is de korte tekst voor op de hoofdpagina.",
-    content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt. Dit wordt zichtbaar als iemand op de titel klikt.",
-    tags: ["Onderwijs"]
-},
+        {
+            title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
+            date: "20 MRT 2026",
+            intro: "Dit is de korte tekst voor op de hoofdpagina.",
+            content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt.",
+            tags: ["Onderwijs"]
+        },
         {
             title: "Urbanisatie 2.0: De Vlucht uit de Stad",
             date: "12 MRT 2026",
             intro: "Demografische hittekaarten tonen een omkering van de trek naar de Randstad.",
-            content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt. Dit wordt zichtbaar als iemand op de titel klikt.",
+            content: "Hier typ je de volledige feitelijke analyse.",
             tags: ["Vastgoed", "Maatschappij"]
-     }
-        
+        }
     ],
     rawData:[
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
@@ -51,5 +50,21 @@ export const data = {
         "16/03 14:00 - Leegstandsindex kantoren Randstad stijgt naar 18.4%.",
         "15/03 10:30 - Werkloosheid stabiliseert, krapte IT-markt neemt af."
     ],
-    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"]
+    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"],
+    
+    // DIT STUKJE MOEST ER NOG BIJ:
+    portfolio: [
+        {
+            title: "Data-extractie Logistiek",
+            date: "MAART 2026",
+            intro: "Automatisering van rapportages voor transportbewegingen in de haven.",
+            content: "Hier kun je de uitgebreide uitleg van je project kwijt."
+        },
+        {
+            title: "Dashboarding Vastgoed",
+            date: "FEBRUARI 2026",
+            intro: "Visuele weergave van de leegstandscijfers in de Randstad.",
+            content: "Details over de gebruikte parameters en bronnen."
+        }
+    ]
 };
