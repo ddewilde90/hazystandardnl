@@ -28,6 +28,12 @@ export const data = {
             tags: ["Economie", "Data"]
         },
         {
+    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
+    date: "20 MRT 2026",
+    intro: "Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
+    tags: ["Onderwijs", "Data"]
+},
+        {
             title: "Klimaatwetgeving vs. Industriële Realiteit",
             date: "15 MRT 2026",
             intro: "De nieuwe emissienormen forceren een herstructurering van het productienetwerk. Wie overleeft?",
@@ -49,11 +55,4 @@ export const data = {
         "15/03 10:30 - Werkloosheid stabiliseert, krapte IT-markt neemt af."
     ],
     topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"]
-
-    {
-    title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
-    date: "20 MRT 2026",
-    intro: "Schrijf hier een korte, krachtige inleiding van twee of drie regels die de kern van het nieuws raakt.",
-    tags: ["Onderwijs", "Data"]
-},
 };
