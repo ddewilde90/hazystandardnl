@@ -25,6 +25,7 @@ export const data = {
             title: "Inflatiecijfers Q1: De Verborgen Variabelen",
             date: "18 MRT 2026",
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
+            image: "https://images.unsplash.com/photo-1526303328184-c7e659301da2?q=80&w=800", // GELD/DATA FOTO
             tags: ["Economie", "Data"]
         },
         {
@@ -32,6 +33,7 @@ export const data = {
             date: "20 MRT 2026",
             intro: "Dit is de korte tekst voor op de hoofdpagina.",
             content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt.",
+            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800", // ONDERWIJS FOTO
             tags: ["Onderwijs"]
         },
         {
@@ -39,6 +41,7 @@ export const data = {
             date: "12 MRT 2026",
             intro: "Demografische hittekaarten tonen een omkering van de trek naar de Randstad.",
             content: "Hier typ je de volledige feitelijke analyse.",
+            image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800", // STAD FOTO
             tags: ["Vastgoed", "Maatschappij"]
         }
     ],
@@ -52,18 +55,19 @@ export const data = {
     ],
     topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"],
     
-    // DIT STUKJE MOEST ER NOG BIJ:
     portfolio: [
         {
             title: "Data-extractie Logistiek",
             date: "MAART 2026",
             intro: "Automatisering van rapportages voor transportbewegingen in de haven.",
+            image: "https://images.unsplash.com/photo-1494412574743-0194856f038f?q=80&w=800", // LOGISTIEK FOTO
             content: "Hier kun je de uitgebreide uitleg van je project kwijt."
         },
         {
             title: "Dashboarding Vastgoed",
             date: "FEBRUARI 2026",
             intro: "Visuele weergave van de leegstandscijfers in de Randstad.",
+            image: "https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=800", // DASHBOARD FOTO
             content: "Details over de gebruikte parameters en bronnen."
         }
     ]
