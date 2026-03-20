@@ -47,6 +47,15 @@ export const data = {
             tags: ["Vastgoed", "Maatschappij"]
         }
     ],
+    portfolio: [
+        {
+            title: "Project Hazy Standard",
+            date: "2026",
+            intro: "De ontwikkeling van dit Business Intelligence platform.",
+            content: "In dit project heb ik de basis gelegd voor een onafhankelijk platform waar data en feiten centraal staan, zonder afhankelijk te zijn van standaard templates of beperkende systemen.",
+            tags: ["BI", "Development"]
+        }
+    ],
     rawData:[
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
         "18/03 16:45 - Faillissementen bouwsector +15% YoY.",
