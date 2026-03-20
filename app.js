@@ -41,85 +41,49 @@ function openArticle(article) {
     const related = data.analysis.filter(a => a.title !== article.title).slice(0, 3);
 
     main.innerHTML = `
-        <article class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black shadow-2xl">
-            <div class="relative w-full h-[400px] md:h-[500px] overflow-hidden border-b border-black">
+        <article class="max-w-5xl mx-auto bg-white min-h-screen border-x border-black shadow-2xl">
+            <div class="relative w-full h-[400px] overflow-hidden border-b border-black">
                 <img src="${article.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale" alt="Beeld bij artikel">
-                <div class="absolute bottom-0 left-0 bg-black text-white px-3 py-1 text-[10px] uppercase font-bold italic">Beeld: Hazy Standard / Archief</div>
+                <div class="absolute bottom-0 left-0 bg-black text-white px-3 py-1 text-[10px] uppercase font-bold">Beeld: Hazy Standard / Archief</div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-0">
-                <div class="lg:col-span-3 p-6 md:p-12 border-r border-black">
-                    <button id="back-btn" class="mb-8 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2 transition-all">← Terug naar overzicht</button>
-                    
-                    <div class="text-xs font-bold uppercase mb-2 text-red-600 tracking-widest">Analyse • ${article.date}</div>
-                    <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic border-b-4 border-black pb-4">${article.title}</h1>
-                    
-                    <div class="flex gap-6 mb-10 border-b border-black pb-4 text-gray-400">
-                        <div class="flex items-center gap-2 text-[10px] font-black uppercase text-black">
-                            <i data-lucide="share-2" class="w-4 h-4"></i> Delen
-                        </div>
-                        <i data-lucide="linkedin" class="w-5 h-5 cursor-pointer hover:text-[#0077b5] transition-colors"></i>
-                        <i data-lucide="twitter" class="w-5 h-5 cursor-pointer hover:text-black transition-colors"></i>
-                        <i data-lucide="link-2" class="w-5 h-5 cursor-pointer hover:text-green-600 transition-colors"></i>
-                    </div>
-
-                    <div class="text-xl md:text-2xl leading-relaxed font-bold mb-10 text-gray-900 bg-gray-50 p-6 border-l-8 border-black italic">
-                        ${article.intro}
-                    </div>
-                    
-                    <div class="text-lg leading-relaxed space-y-6 mb-20 font-medium text-gray-800">
-                        ${article.content || "Gedetailleerde feitelijke informatie zodat ik niet voor verrassingen kom te staan. Analyse op basis van dossierstukken volgt."}
-                    </div>
-
-                    <div class="border-t-4 border-black pt-10">
-                        <h3 class="font-black uppercase text-2xl mb-8 italic underline decoration-red-600">Lees ook:</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            ${related.map(a => `
-                                <div class="cursor-pointer group related-trigger" data-title="${a.title}">
-                                    <div class="aspect-video overflow-hidden border border-black mb-3">
-                                        <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                                    </div>
-                                    <h4 class="font-bold uppercase text-sm leading-tight group-hover:underline">${a.title}</h4>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
+            <div class="p-6 md:p-12">
+                <button id="back-btn" class="mb-8 border border-black px-4 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white flex items-center gap-2">← Terug</button>
+                
+                <div class="text-xs font-bold uppercase mb-2 text-red-600">Analyse • ${article.date}</div>
+                <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-8 leading-tight italic border-b-4 border-black pb-4">${article.title}</h1>
+                
+                <div class="flex gap-4 mb-10 border-b border-black pb-4">
+                    <i data-lucide="share-2" class="w-4 h-4 text-gray-400"></i>
+                    <i data-lucide="linkedin" class="w-4 h-4 cursor-pointer hover:text-blue-700"></i>
+                    <i data-lucide="twitter" class="w-4 h-4 cursor-pointer hover:text-blue-400"></i>
+                    <i data-lucide="mail" class="w-4 h-4 cursor-pointer hover:text-red-600"></i>
                 </div>
 
-                <div class="lg:col-span-1 bg-gray-50 p-6">
-                    <div class="sticky top-10 flex flex-col gap-6">
-                        <div class="bg-white border-2 border-black p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center text-center">
-                            <span class="text-[9px] text-gray-400 mb-4 tracking-[0.2em] font-bold uppercase italic">Advertentie</span>
-                            <div class="w-16 h-16 bg-gray-100 border border-black mb-4 flex items-center justify-center">
-                                <i data-lucide="database" class="w-8 h-8 text-black"></i>
-                            </div>
-                            <h5 class="text-xs font-black uppercase mb-2">Hazy Standard BI</h5>
-                            <p class="text-[10px] font-medium text-gray-500 mb-6 uppercase leading-tight">Data-audits en dossier-analyse voor professionals.</p>
-                            <button class="w-full border-2 border-black py-2 text-[10px] font-bold uppercase hover:bg-black hover:text-white transition-all">Meer informatie</button>
-                        </div>
+                <div class="text-xl md:text-2xl leading-relaxed font-bold mb-8 text-gray-900 bg-gray-50 p-6 border-l-8 border-black">
+                    ${article.intro}
+                </div>
+                
+                <div class="text-lg leading-relaxed space-y-6 mb-20 font-medium">
+                    ${article.content || "Gedetailleerde feitelijke informatie zodat ik niet voor verrassingen kom te staan."}
+                </div>
 
-                        <div class="p-4 border border-black/10 rounded">
-                             <p class="text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-2 text-center">Nieuwsbrief</p>
-                             <input type="text" placeholder="E-MAILADRES" class="w-full border border-black p-2 text-[10px] mb-2 uppercase font-bold">
-                             <button class="w-full bg-black text-white py-2 text-[10px] font-bold uppercase">Inschrijven</button>
-                        </div>
+                <div class="border-t-2 border-black pt-10">
+                    <h3 class="font-black uppercase text-xl mb-6 italic underline">Lees ook:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        ${related.map(a => `
+                            <div class="cursor-pointer group related-trigger" data-title="${a.title}">
+                                <div class="aspect-video overflow-hidden border border-black mb-2">
+                                    <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all">
+                                </div>
+                                <h4 class="font-bold uppercase text-xs leading-tight group-hover:underline">${a.title}</h4>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             </div>
         </article>
     `;
-
-    document.getElementById('back-btn').onclick = () => loadView('home');
-    
-    document.querySelectorAll('.related-trigger').forEach(el => {
-        el.onclick = () => {
-            const found = data.analysis.find(a => a.title === el.dataset.title);
-            if(found) { openArticle(found); window.scrollTo(0,0); }
-        };
-    });
-
-    if (window.lucide) lucide.createIcons();
-}
     
     document.getElementById('back-btn').onclick = () => loadView('home');
     if (window.lucide) lucide.createIcons();
