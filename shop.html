@@ -8,6 +8,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
@@ -15,7 +17,11 @@
         <header class="border-b border-black">
             <div class="flex justify-between items-center px-4 py-6 border-b border-black">
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
-                <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block">STRIKT ZAKELIJK</div>
+                
+                <button class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
+                </button>
             </div>
             <nav class="flex flex-wrap overflow-x-auto border-black">
                 <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Home</a>
@@ -33,7 +39,7 @@
                     The <br>
                     <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span>
                 </h1>
-                <p class="text-xs uppercase tracking-[0.2em] font-bold mt-6">Zorgvuldig geselecteerde collecties: van diepgaande data tot tastbaar design.</p>
+                <p class="text-xs uppercase tracking-[0.2em] font-bold mt-6">Voeg meerdere producten toe en reken alles in één keer af via Wero of iDEAL.</p>
             </div>
 
             <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-gray-50">
@@ -52,11 +58,18 @@
                         </div>
                         <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Edelsteen Collectie</span>
                         <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Ocean Jasper Handgemaakte Ring</h3>
-                        <p class="text-sm mt-4 text-gray-600 leading-relaxed">Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper. Gevormd vanuit de essentie.</p>
+                        <p class="text-sm mt-4 text-gray-600 leading-relaxed">Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper.</p>
                     </div>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€85,00</span>
-                        <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
+                        
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800"
+                            data-item-id="ocean-jasper-ring"
+                            data-item-name="Ocean Jasper Handgemaakte Ring"
+                            data-item-price="85.00"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html">
+                            + Mandje
+                        </button>
                     </div>
                 </div>
 
@@ -71,7 +84,14 @@
                     </div>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€110,00</span>
-                        <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
+                        
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800"
+                            data-item-id="moldaviet-amulet"
+                            data-item-name="Moldaviet Kosmisch Amullet"
+                            data-item-price="110.00"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html">
+                            + Mandje
+                        </button>
                     </div>
                 </div>
 
@@ -86,52 +106,14 @@
                     </div>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€45,00</span>
-                        <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
-                    </div>
-                </div>
-
-                <div class="product-card border-r border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all" data-category="reports">
-                    <div>
-                        <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center">
-                            <i data-lucide="database" class="w-16 h-16 text-gray-300"></i>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Raw Dataset</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Veldwerk Dossier: Logistiek NL</h3>
-                        <p class="text-sm mt-4 text-gray-600 leading-relaxed">De ruwe data en observaties van onze laatste onafhankelijke veldwerk-rapportage.</p>
-                    </div>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€120,00</span>
-                        <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
-                    </div>
-                </div>
-
-                <div class="product-card border-r border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all" data-category="assets">
-                    <div>
-                        <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center">
-                            <i data-lucide="layers" class="w-16 h-16 text-gray-300"></i>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-amber-600">Trading Portfolio</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Gecurated Pokémon Card Pack</h3>
-                        <p class="text-sm mt-4 text-gray-600 leading-relaxed">Exclusieve en gecureerde selectie uit ons fysieke kaarten-portfolio. Waardevaste verzamelobjecten.</p>
-                    </div>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€75,00</span>
-                        <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
-                    </div>
-                </div>
-
-                <div class="product-card p-8 flex flex-col justify-between bg-black text-white hover:bg-zinc-900 transition-all" data-category="reports">
-                    <div>
-                        <div class="aspect-square border border-white/20 mb-6 flex items-center justify-center bg-white/5">
-                            <i data-lucide="star" class="w-16 h-16 text-white/20"></i>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Jaarabonnement</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2 text-white">Premium Membership</h3>
-                        <p class="text-sm mt-4 text-gray-400 leading-relaxed">Toegang tot alle toekomstige rapportages, BI-dashboards en exclusieve verhalen.</p>
-                    </div>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€250,00</span>
-                        <a href="#" target="_blank" class="bg-white text-black px-4 py-2 text-xs font-bold uppercase hover:bg-gray-200 text-center inline-block">Word Lid</a>
+                        
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800"
+                            data-item-id="jaaroverzicht-2025"
+                            data-item-name="Jaaroverzicht 2025: Data-Industrie"
+                            data-item-price="45.00"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html">
+                            + Mandje
+                        </button>
                     </div>
                 </div>
 
@@ -141,10 +123,6 @@
         <footer class="border-t-4 border-black bg-white pt-16 pb-8 px-6 mt-auto">
             <div class="max-w-screen-xl mx-auto border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
                 <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <span>Strikt Zakelijk</span>
-                    <span>100% Monochroom</span>
-                </div>
             </div>
         </footer>
     </div>
@@ -156,13 +134,11 @@
             const cards = document.querySelectorAll('.product-card');
             cards.forEach(card => {
                 if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex'; // Toon product
+                    card.style.display = 'flex';
                 } else {
-                    card.style.display = 'none'; // Verberg product
+                    card.style.display = 'none';
                 }
             });
-
-            // Visuele feedback op de knoppen (actieve knop wordt zwart, de rest wit)
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 btn.classList.remove('bg-black', 'text-white');
@@ -172,5 +148,9 @@
             event.target.classList.add('bg-black', 'text-white');
         }
     </script>
+
+    <script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
+    <div id="snipcart" data-api-key="NzY0M2I2M2EtY2ZmNS00ZTIwLWI5MzUtM2MwYzhjZWYzNTA3NjM4NTM3OTg1NTI0MDgxNzEw" data-test-mode="true"></div>
+
 </body>
 </html>
