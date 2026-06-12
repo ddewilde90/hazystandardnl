@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazy Standard | Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-black font-sans antialiased">
+    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
+        
+        <!-- Header & Navigatie -->
+        <header class="border-b border-black">
+            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
+                <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
+                <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block">STRIKT ZAKELIJK</div>
+            </div>
+            <nav class="flex flex-wrap overflow-x-auto border-black">
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Home</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Portfolio</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Verhalen</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">About me</a>
+                <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
+                <a href="index.html" class="px-6 py-3 border-black font-semibold uppercase text-sm hover:bg-gray-50">Contact</a>
+            </nav>
+        </header>
 
+        <!-- Winkel Inhoud -->
+        <main class="flex-grow flex flex-col">
+            <div class="bg-white min-h-screen flex flex-col font-sans">
+                <div class="p-8 md:p-12 border-b border-black bg-white text-black">
+                    <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
+                        The <br>
+                        <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span>
+                    </h1>
+                    <p class="text-xs uppercase tracking-[0.2em] font-bold mt-6">Exclusieve rapportages, datasets & tools voor professionals.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 flex-grow border-b border-black">
+                    
+                    <!-- Product 1 -->
+                    <div class="border-r border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all">
+                        <div>
+                            <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center">
+                                <i data-lucide="file-text" class="w-16 h-16 text-gray-300"></i>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-red-600">PDF Rapport</span>
+                            <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Jaaroverzicht 2025: Data-Industrie</h3>
+                            <p class="text-sm mt-4 text-gray-600 leading-relaxed">Een diepgaande analyse van de feiten achter de groeiende informatie-ruis.</p>
+                        </div>
+                        <div class="mt-8 flex justify-between items-end">
+                            <span class="text-xl font-black">€45,00</span>
+                            <!-- Hier vervang je straks de '#' door je echte Stripe-link -->
+                            <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="border-r border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all">
+                        <div>
+                            <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center">
+                                <i data-lucide="database" class="w-16 h-16 text-gray-300"></i>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Raw Dataset</span>
+                            <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Veldwerk Dossier: Logistiek NL</h3>
+                            <p class="text-sm mt-4 text-gray-600 leading-relaxed">De ruwe data en observaties van onze laatste onafhankelijke veldwerk-rapportage.</p>
+                        </div>
+                        <div class="mt-8 flex justify-between items-end">
+                            <span class="text-xl font-black">€120,00</span>
+                            <a href="#" target="_blank" class="bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 text-center inline-block">Bestel</a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="p-8 flex flex-col justify-between bg-black text-white hover:bg-zinc-900 transition-all">
+                        <div>
+                            <div class="aspect-square border border-white/20 mb-6 flex items-center justify-center bg-white/5">
+                                <i data-lucide="star" class="w-16 h-16 text-white/20"></i>
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Jaarabonnement</span>
+                            <h3 class="text-2xl font-black uppercase tracking-tighter mt-2 text-white">Premium Membership</h3>
+                            <p class="text-sm mt-4 text-gray-400 leading-relaxed">Toegang tot alle toekomstige rapportages, BI-dashboards en exclusieve verhalen.</p>
+                        </div>
+                        <div class="mt-8 flex justify-between items-end">
+                            <span class="text-xl font-black">€250,00</span>
+                            <a href="#" target="_blank" class="bg-white text-black px-4 py-2 text-xs font-bold uppercase hover:bg-gray-200 text-center inline-block">Word Lid</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (Zelfde monochrome look) -->
+        <footer class="border-t-4 border-black bg-white pt-16 pb-8 px-6 mt-auto">
+            <!-- ... De rest van je bestaande footer ... -->
+            <div class="max-w-screen-xl mx-auto border-t border-gray-100 mt-16 pt-8 text-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                &copy; 2026 Hazy Standard. Alle rechten voorbehouden.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Dit zorgt ervoor dat de icoontjes (Lucide) netjes geladen worden op deze pagina
+        lucide.createIcons();
+    </script>
+</body>
+</html>
