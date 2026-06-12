@@ -18,10 +18,10 @@
             <div class="flex justify-between items-center px-4 py-6 border-b border-black">
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
                 
-                <button class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all">
+                <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
                     <i data-lucide="shopping-bag" class="w-4 h-4"></i>
                     <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
-                </button>
+                </a>
             </div>
             <nav class="flex flex-wrap overflow-x-auto border-black">
                 <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Home</a>
@@ -39,7 +39,7 @@
                     The <br>
                     <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span>
                 </h1>
-                <p class="text-xs uppercase tracking-[0.2em] font-bold mt-6">Voeg meerdere producten toe en reken alles in één keer af via Wero of iDEAL.</p>
+                <p class="text-xs uppercase tracking-[0.2em] font-bold mt-6">Zorgvuldig geselecteerde collecties: van diepgaande data tot tastbaar design.</p>
             </div>
 
             <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-gray-50">
@@ -63,11 +63,12 @@
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€85,00</span>
                         
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800"
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 transition-all"
                             data-item-id="ocean-jasper-ring"
                             data-item-name="Ocean Jasper Handgemaakte Ring"
                             data-item-price="85.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html">
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
+                            data-item-description="Handgemaakte ring van puur Ocean Jasper.">
                             + Mandje
                         </button>
                     </div>
@@ -79,17 +80,18 @@
                             <i data-lucide="sparkles" class="w-16 h-16 text-gray-300"></i>
                         </div>
                         <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Ruwe Stenen</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Kosmisch Amullet</h3>
+                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Kosmisch Amulet</h3>
                         <p class="text-sm mt-4 text-gray-600 leading-relaxed">Een minimalistisch en krachtig ontwerp, gecentreerd rondom een puur stuk Moldaviet.</p>
                     </div>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€110,00</span>
                         
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800"
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 transition-all"
                             data-item-id="moldaviet-amulet"
-                            data-item-name="Moldaviet Kosmisch Amullet"
+                            data-item-name="Moldaviet Kosmisch Amulet"
                             data-item-price="110.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html">
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
+                            data-item-description="Minimalistisch sieraad met puur Moldaviet.">
                             + Mandje
                         </button>
                     </div>
@@ -107,11 +109,12 @@
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€45,00</span>
                         
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800"
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 transition-all"
                             data-item-id="jaaroverzicht-2025"
                             data-item-name="Jaaroverzicht 2025: Data-Industrie"
                             data-item-price="45.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html">
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
+                            data-item-description="Digitale PDF download van het marktrapport.">
                             + Mandje
                         </button>
                     </div>
@@ -150,7 +153,11 @@
     </script>
 
     <script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
-    <div id="snipcart" data-api-key="NzY0M2I2M2EtY2ZmNS00ZTIwLWI5MzUtM2MwYzhjZWYzNTA3NjM4NTM3OTg1NTI0MDgxNzEw" data-test-mode="true"></div>
+    
+    <div id="snipcart" 
+         data-api-key="NzY0M2I2M2EtY2ZmNS00ZTIwLWI5MzUtM2MwYzhjZWYzNTA3NjM4NTM3OTg1NTI0MDgxNzEw" 
+         data-test-mode="false">
+    </div>
 
 </body>
 </html>
