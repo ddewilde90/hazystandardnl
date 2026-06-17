@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
-    <!-- Officiële Snipcart v3 CSS -->
     <link rel="preconnect" href="https://app.snipcart.com" />
     <link rel="preconnect" href="https://cdn.snipcart.com" />
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
@@ -17,12 +16,9 @@
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
         
-        <!-- Header & Navigatie -->
         <header class="border-b border-black">
             <div class="flex justify-between items-center px-4 py-6 border-b border-black">
                 <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
-                
-                <!-- Interactieve Winkelwagenknop -->
                 <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
                     <i data-lucide="shopping-bag" class="w-4 h-4"></i>
                     <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
@@ -38,134 +34,71 @@
             </nav>
         </header>
 
-        <!-- Winkel Introductie -->
         <main class="flex-grow flex flex-col">
             <div class="p-8 md:p-12 border-b border-black bg-white text-black">
-                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
-                    The <br>
-                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span>
-                </h1>
-                <p class="text-xs uppercase tracking-[0.2em] font-bold mt-6">Zorgvuldig geselecteerde collecties: van diepgaande data tot tastbaar design.</p>
+                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">The <br><span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span></h1>
             </div>
 
-            <!-- Categorie Filters -->
-            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-gray-50">
-                <button class="filter-btn bg-black text-white px-4 py-2 text-xs font-bold uppercase tracking-wider" onclick="filterShop('all')">Alles</button>
-                <button class="filter-btn bg-white border border-black text-black px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-gray-100" onclick="filterShop('jewelry')">Sieraden & Edelstenen</button>
-                <button class="filter-btn bg-white border border-black text-black px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-gray-100" onclick="filterShop('reports')">Intelligence Rapporten</button>
-                <button class="filter-btn bg-white border border-black text-black px-4 py-2 text-xs font-bold uppercase tracking-wider hover:bg-gray-100" onclick="filterShop('assets')">Exclusieve Assets</button>
-            </div>
-
-            <!-- Producten Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 flex-grow border-b border-black" id="shop-grid">
                 
-                <!-- PRODUCT: Ocean Jasper Ring -->
-                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all" data-category="jewelry">
-                    <div>
-                        <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center overflow-hidden">
-                            <i data-lucide="gem" class="w-16 h-16 text-gray-300"></i>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Edelsteen Collectie</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Ocean Jasper Handgemaakte Ring</h3>
-                    </div>
+                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Ocean Jasper Ring</h3>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€85,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 transition-all"
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
                             data-item-id="ocean-jasper-ring"
                             data-item-name="Ocean Jasper Handgemaakte Ring"
                             data-item-price="85.00"
                             data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper.">
+                            data-item-description="Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper."
+                            data-item-image="/assets/images/ocean-jasper.jpg">
                             + Mandje
                         </button>
                     </div>
                 </div>
 
-                <!-- PRODUCT: Moldaviet Amulet -->
-                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all" data-category="jewelry">
-                    <div>
-                        <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center overflow-hidden">
-                            <i data-lucide="sparkles" class="w-16 h-16 text-gray-300"></i>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-700">Ruwe Stenen</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Kosmisch Amulet</h3>
-                    </div>
+                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Amulet</h3>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€110,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 transition-all"
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
                             data-item-id="moldaviet-amulet"
                             data-item-name="Moldaviet Kosmisch Amulet"
                             data-item-price="110.00"
                             data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Minimalistisch sieraad met puur Moldaviet.">
+                            data-item-description="Minimalistisch sieraad met puur Moldaviet."
+                            data-item-image="/assets/images/moldaviet.jpg">
                             + Mandje
                         </button>
                     </div>
                 </div>
 
-                <!-- PRODUCT: Jaaroverzicht -->
-                <div class="product-card border-b border-black p-8 flex flex-col justify-between hover:bg-gray-50 transition-all" data-category="reports">
-                    <div>
-                        <div class="aspect-square bg-gray-100 border border-black mb-6 grayscale flex items-center justify-center">
-                            <i data-lucide="file-text" class="w-16 h-16 text-gray-300"></i>
-                        </div>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-red-600">PDF Rapport</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Jaaroverzicht 2025: Data-Industrie</h3>
-                    </div>
+                <div class="product-card border-b border-black p-8 flex flex-col justify-between" data-category="reports">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Jaaroverzicht 2025</h3>
                     <div class="mt-8 flex justify-between items-end">
                         <span class="text-xl font-black">€45,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase hover:bg-gray-800 transition-all"
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
                             data-item-id="jaaroverzicht-2025"
                             data-item-name="Jaaroverzicht 2025: Data-Industrie"
                             data-item-price="45.00"
                             data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Digitale PDF download van het marktrapport.">
+                            data-item-description="Digitale PDF download van het marktrapport."
+                            data-item-image="/assets/images/rapport.jpg">
                             + Mandje
                         </button>
                     </div>
                 </div>
             </div>
         </main>
-
-        <!-- Footer -->
-        <footer class="border-t-4 border-black bg-white pt-16 pb-8 px-6 mt-auto">
-            <div class="max-w-screen-xl mx-auto border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
-            </div>
-        </footer>
     </div>
 
-    <!-- Scripts -->
-    <script>
-        lucide.createIcons();
-        function filterShop(category) {
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-black', 'text-white');
-                btn.classList.add('bg-white', 'text-black');
-            });
-            event.target.classList.remove('bg-white', 'text-black');
-            event.target.classList.add('bg-black', 'text-white');
-        }
-    </script>
-
-    <!-- Snipcart Loader -->
     <script>
       window.SnipcartSettings = {
-        publicApiKey: "MGFlOThmYzgtM2NjYi00MjIwLTk3ZGUtYThiZWExNjk3ZWM0NjM5MTY4NjIyNzM2NDU3MTA5",
+        publicApiKey: "YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5",
         loadStrategy: "immediate",
         currency: "eur",
         version: "3.7.1"
       };
-
       (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('script[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
     </script>
 </body>
