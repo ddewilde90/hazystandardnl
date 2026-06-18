@@ -28,23 +28,15 @@
             </nav>
         </header>
 
-       <div class="p-4 border-b border-black flex gap-2 overflow-x-auto items-center">
-    <select id="filter-cat" class="border border-black rounded-full px-4 py-1 text-xs uppercase font-bold cursor-pointer hover:bg-gray-50">
-        <option value="all">Categorie</option>
-    </select>
-    
-    <select id="filter-kleur" class="border border-black rounded-full px-4 py-1 text-xs uppercase font-bold cursor-pointer hover:bg-gray-50">
-        <option value="all">Kleur</option>
-    </select>
-    
-    <select id="sort-prijs" class="border border-black rounded-full px-4 py-1 text-xs uppercase font-bold cursor-pointer hover:bg-gray-50">
-        <option value="default">Prijs sorteren</option>
-        <option value="low-high">Laagste eerst</option>
-        <option value="high-low">Hoogste eerst</option>
-    </select>
-
-    <button onclick="resetFilters()" class="text-xs underline uppercase font-bold px-4">Alles wissen</button>
-</div>
+        <div class="p-4 border-b border-black flex gap-2 overflow-x-auto">
+            <select id="filter-cat" class="border border-black rounded-full px-4 py-1 text-sm uppercase font-bold cursor-pointer hover:bg-gray-50">
+                <option value="all">Categorie</option>
+            </select>
+            <select id="filter-materiaal" class="border border-black rounded-full px-4 py-1 text-sm uppercase font-bold cursor-pointer hover:bg-gray-50">
+                <option value="all">Materiaal</option>
+            </select>
+            <button onclick="resetFilters()" class="text-sm underline uppercase font-bold px-4">Filters wissen</button>
+        </div>
 
         <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid">
         </main>
