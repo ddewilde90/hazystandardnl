@@ -42,12 +42,23 @@
                 </button>
 
                 <div class="mt-12 border-t border-black">
-                    <div class="py-4 border-b border-gray-200 font-bold uppercase">Materiaal & Wasvoorschrift</div>
-                    <p id="prod-specs" class="py-4 text-sm text-gray-600"></p>
-                    <div class="py-4 border-b border-gray-200 font-bold uppercase">Alles over dit product</div>
-                    <p id="prod-content" class="py-4 text-sm text-gray-600"></p>
-                </div>
-            </div>
+    <!-- Dropdown 1: Materiaal -->
+    <div class="border-b border-black">
+        <button onclick="toggleSection('specs-content')" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50">
+            <span>Materiaal & Wasvoorschrift</span>
+            <i data-lucide="chevron-down"></i>
+        </button>
+        <p id="specs-content" class="hidden py-4 text-sm text-gray-600 px-1"></p>
+    </div>
+
+    <!-- Dropdown 2: Alles over dit product -->
+    <div class="border-b border-black">
+        <button onclick="toggleSection('prod-content')" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50">
+            <span>Alles over dit product</span>
+            <i data-lucide="chevron-down"></i>
+        </button>
+        <p id="prod-content" class="hidden py-4 text-sm text-gray-600 px-1"></p>
+    </div>
         </main>
 
         <div id="footer-placeholder"></div>
