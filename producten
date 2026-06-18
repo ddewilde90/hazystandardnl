@@ -1,0 +1,17 @@
+const producten = [
+    {
+        id: "ocean-jasper-ring",
+        title: "Ocean Jasper Ring",
+        price: 1.00,
+        image: "/assets/images/ocean-jasper.jpg",
+        description: "Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper."
+    },
+    // Hier kun je oneindig producten onder elkaar blijven toevoegen
+    {
+        id: "volgende-item",
+        title: "Naam van item",
+        price: 25.00,
+        image: "/assets/images/foto.jpg",
+        description: "Korte omschrijving."
+    }
+];
