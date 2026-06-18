@@ -1,19 +1,18 @@
-const producten = [
-    {
-        id: "ocean-jasper-ring",
-        title: "Ocean Jasper Ring",
-        price: 45.00,
-        image: "./images/ocean-jasper.jpg",
-        intro: "Een uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper voor de moderne professional.",
-        content: `
-            <p class="mb-6">Deze ring is met de hand geslepen en gezet in hoogwaardig 925 sterling zilver.</p>
-            
-            <h3 class="text-2xl font-black uppercase mt-12 mb-4 italic border-b-2 border-black pb-2">01. Analyse van het materiaal</h3>
-            <p class="mb-6">Ocean Jasper staat bekend om zijn rustgevende eigenschappen en unieke kleurschakeringen...</p>
-
-            <blockquote class="border-l-4 border-red-600 pl-6 my-10 italic font-bold text-xl text-gray-900">
-                "Een sieraad dat niet alleen siert, maar ook de aandacht trekt in elke zakelijke omgeving."
-            </blockquote>
-        `
+[
+    { 
+        "id": "ocean-jasper-ring", 
+        "title": "Ocean Jasper Ring", 
+        "price": 45.00, 
+        "image": "/assets/images/ocean-jasper.jpg",
+        "specs": "Materiaal: 925 Sterling Zilver.",
+        "content": "Uniek handgemaakt sieraad."
+    },
+    { 
+        "id": "zilveren-ring", 
+        "title": "Zilveren Ring", 
+        "price": 35.00, 
+        "image": "/assets/images/zilver.jpg",
+        "specs": "Materiaal: 925 Sterling Zilver.",
+        "content": "Minimalistisch design."
     }
-];
+]
