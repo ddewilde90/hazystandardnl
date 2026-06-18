@@ -4,39 +4,45 @@
     <meta charset="UTF-8">
     <title>Hazy Standard | Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 </head>
 <body class="bg-white text-black font-sans">
-    <main class="max-w-4xl mx-auto p-12">
-        <a href="shop.html" class="text-xs font-bold uppercase underline mb-8 block">&larr; Terug naar Shop</a>
+    <div id="content-container" class="max-w-4xl mx-auto p-12">
+        <h1 id="title" class="text-5xl font-black uppercase mb-6">Laden...</h1>
+        <img id="image" src="" class="w-full h-64 object-cover mb-8">
+        <p id="intro" class="text-xl italic mb-10 text-gray-600"></p>
         
-        <h1 id="product-title" class="text-5xl font-black uppercase tracking-tighter">Laden...</h1>
-        <p id="product-desc" class="mt-6 text-lg"></p>
-        <p id="product-price" class="text-2xl font-black mt-6"></p>
-    </main>
+        <div id="content" class="prose max-w-none"></div>
 
+        <div id="buy-section" class="mt-12 pt-12 border-t border-black">
+            <button id="buy-button" class="snipcart-add-item bg-black text-white px-8 py-4 font-bold uppercase hover:bg-gray-800">
+                Voeg toe aan mandje - €0,00
+            </button>
+        </div>
+    </div>
+
+    <script src="producten.js"></script>
     <script>
-        // Een simpele database voor je producten
-        const database = {
-            "ocean-jasper-ring": {
-                title: "Ocean Jasper Ring",
-                price: "€1,00",
-                desc: "Dit is een unieke, handgemaakte ring van ruwe Ocean Jasper."
-            }
-        };
+        const params = new URLSearchParams(window.location.search);
+        const p = producten.find(x => x.id === params.get('id'));
 
-        // Haal het ID uit de URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = urlParams.get('id');
-
-        // Vul de pagina als het product bestaat
-        const product = database[productId];
-        if (product) {
-            document.getElementById('product-title').innerText = product.title;
-            document.getElementById('product-desc').innerText = product.desc;
-            document.getElementById('product-price').innerText = product.price;
-        } else {
-            document.getElementById('product-title').innerText = "Product niet gevonden";
+        if (p) {
+            document.getElementById('title').innerText = p.title;
+            document.getElementById('image').src = p.image;
+            document.getElementById('intro').innerText = p.intro;
+            document.getElementById('content').innerHTML = p.content;
+            
+            // Stel de Snipcart knop in
+            const btn = document.getElementById('buy-button');
+            btn.innerText = `Voeg toe aan mandje - €${p.price.toFixed(2)}`;
+            btn.setAttribute('data-item-id', p.id);
+            btn.setAttribute('data-item-name', p.title);
+            btn.setAttribute('data-item-price', p.price);
+            btn.setAttribute('data-item-image', p.image);
+            btn.setAttribute('data-item-url', window.location.href);
         }
     </script>
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="JOUW_KEY"></div>
 </body>
 </html>
