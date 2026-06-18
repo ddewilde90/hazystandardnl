@@ -21,6 +21,8 @@
             </div>
             <nav class="flex overflow-x-auto border-black">
                 <a href="shop.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm bg-black text-white">Shop</a>
+                <a href="shop.html?cat=ringen" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Ringen</a>
+                <a href="shop.html?cat=kettingen" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Kettingen</a>
                 <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Portfolio</a>
             </nav>
         </header>
@@ -32,10 +34,17 @@
 
             <div class="flex flex-col">
                 <h1 id="prod-title" class="text-4xl font-black uppercase tracking-tighter">Laden...</h1>
+                <p id="prod-sku" class="text-xs text-gray-500 mt-1 uppercase font-bold"></p>
+                
                 <div class="mt-6">
                     <span id="prod-price" class="text-3xl font-black">€0,00</span>
-                    <p class="text-xs text-gray-400">Inclusief btw</p>
+                    <p class="text-sm font-bold text-green-600 mt-2">GRATIS VERZENDING VANAF €75 (NL)</p>
                 </div>
+
+                <ul class="text-sm mt-6 space-y-1">
+                    <li><strong>Kleur:</strong> <span id="prod-color"></span></li>
+                    <li><strong>Edelsteensoort:</strong> <span id="prod-stone"></span></li>
+                </ul>
 
                 <button id="buy-button" class="mt-8 snipcart-add-item w-full bg-black text-white py-4 font-bold uppercase hover:bg-gray-800 transition-all">
                     Toevoegen aan mandje
@@ -61,6 +70,11 @@
             </div>
         </main>
 
+        <section class="mt-20 border-t border-black p-8 md:p-12">
+            <h2 class="text-2xl font-black uppercase mb-8">Aanbevolen voor jou</h2>
+            <div id="related-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+        </section>
+
         <div id="footer-placeholder"></div>
     </div>
 
@@ -73,7 +87,6 @@
             btn.querySelector('i').classList.toggle('rotate-180');
         }
 
-        // Haal de data op uit het externe JSON bestand
         fetch('producten.json')
             .then(response => response.json())
             .then(producten => {
@@ -82,8 +95,11 @@
 
                 if (p) {
                     document.getElementById('prod-title').innerText = p.title;
-                    document.getElementById('prod-image').src = p.image;
+                    document.getElementById('prod-sku').innerText = "SKU: " + p.sku;
+                    document.getElementById('prod-image').src = p.images[0];
                     document.getElementById('prod-price').innerText = "€" + p.price.toFixed(2).replace('.', ',');
+                    document.getElementById('prod-color').innerText = p.color;
+                    document.getElementById('prod-stone').innerText = p.stone;
                     document.getElementById('specs-content').innerText = p.specs;
                     document.getElementById('prod-content').innerText = p.content;
 
@@ -92,6 +108,15 @@
                     btn.setAttribute('data-item-name', p.title);
                     btn.setAttribute('data-item-price', p.price);
                     btn.setAttribute('data-item-url', window.location.href);
+
+                    // Aanbevolen grid (filter het huidige product eruit)
+                    const related = producten.filter(x => x.id !== p.id).slice(0, 4);
+                    document.getElementById('related-grid').innerHTML = related.map(item => `
+                        <a href="product.html?id=${item.id}" class="border border-black p-2 hover:bg-gray-50">
+                            <img src="${item.images[0]}" class="w-full">
+                            <h4 class="text-sm font-bold mt-2 uppercase">${item.title}</h4>
+                        </a>
+                    `).join('');
                 }
             });
 
