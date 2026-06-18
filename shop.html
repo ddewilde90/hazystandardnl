@@ -28,20 +28,19 @@
             </nav>
         </header>
 
-        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-50">
-            <select id="filter-cat" class="border border-black px-3 py-2 text-xs font-bold uppercase"><option value="all">Categorie</option></select>
-            <select id="filter-mat" class="border border-black px-3 py-2 text-xs font-bold uppercase"><option value="all">Materiaal</option></select>
-            <select id="filter-color" class="border border-black px-3 py-2 text-xs font-bold uppercase"><option value="all">Kleur</option></select>
+        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-50 items-center">
+            <select id="filter-cat" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer"><option value="all">Categorie</option></select>
+            <select id="filter-mat" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer"><option value="all">Materiaal</option></select>
+            <select id="filter-color" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer"><option value="all">Kleur</option></select>
             <input type="number" id="max-price" placeholder="Max prijs (€)" class="border border-black px-3 py-2 text-xs font-bold uppercase">
-            <select id="sort-price" class="border border-black px-3 py-2 text-xs font-bold uppercase">
+            <select id="sort-price" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer">
                 <option value="none">Sorteren op</option>
                 <option value="low-high">Prijs: Laag naar hoog</option>
                 <option value="high-low">Prijs: Hoog naar laag</option>
             </select>
         </div>
 
-        <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid">
-        </main>
+        <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid"></main>
 
         <div id="footer-placeholder"></div>
     </div>
@@ -53,15 +52,17 @@
         let alleProducten = [];
 
         async function initShop() {
-            const response = await fetch('producten.json');
-            alleProducten = await response.json();
-            vulFilters();
-            renderProducten(alleProducten);
+            try {
+                const response = await fetch('producten.json');
+                alleProducten = await response.json();
+                vulFilters();
+                renderProducten(alleProducten);
+            } catch (err) { console.error("Fout bij laden:", err); }
         }
 
         function vulFilters() {
             ['category', 'material', 'color'].forEach(key => {
-                const select = document.getElementById(`filter-${key === 'material' ? 'mat' : key}`);
+                const select = document.getElementById(key === 'material' ? 'filter-mat' : `filter-${key}`);
                 const unique = [...new Set(alleProducten.map(p => p[key]))];
                 unique.forEach(val => select.innerHTML += `<option value="${val}">${val}</option>`);
             });
@@ -70,13 +71,18 @@
         function renderProducten(items) {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = items.map(p => `
-                <div class="border-r border-b border-black p-8 hover:bg-gray-50">
+                <div class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors">
                     <a href="product.html?id=${p.id}">
                         <img src="${p.image}" class="w-full mb-4">
                         <h3 class="text-2xl font-black uppercase tracking-tighter">${p.title}</h3>
                     </a>
                     <div class="mt-4 flex justify-between items-center">
                         <span class="text-xl font-black">€${p.price.toFixed(2).replace('.', ',')}</span>
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
+                            data-item-id="${p.id}" data-item-name="${p.title}" data-item-price="${p.price}"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/product.html?id=${p.id}">
+                            + Mandje
+                        </button>
                     </div>
                 </div>
             `).join('');
@@ -102,12 +108,17 @@
             renderProducten(filtered);
         }
 
-        // Event listeners
         ['filter-cat', 'filter-mat', 'filter-color', 'sort-price'].forEach(id => 
             document.getElementById(id).addEventListener('change', applyFilters));
         document.getElementById('max-price').addEventListener('input', applyFilters);
 
         initShop();
+
+        // Footer laden
+        fetch('footer.html').then(r => r.text()).then(d => {
+            document.getElementById('footer-placeholder').innerHTML = d;
+            lucide.createIcons();
+        });
     </script>
 </body>
 </html>
