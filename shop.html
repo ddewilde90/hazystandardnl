@@ -39,15 +39,15 @@
     <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
 
     <script>
-    // Haal de data op uit je externe bestand (producten.html)
-    fetch('producten.html')
+    // Haal de data op uit je externe bestand (producten.json)
+    fetch('producten.json')
         .then(response => response.json())
         .then(producten => {
             // Nu is 'producten' je database en kun je het grid vullen
             const grid = document.getElementById('product-grid');
             grid.innerHTML = producten.map(p => `
                 <div class="border-r border-b border-black p-8 hover:bg-gray-50">
-                    <a href="product.html?id=${p.id}">
+                    <a href="product.json?id=${p.id}">
                         <img src="${p.image}" class="w-full mb-4">
                         <h3 class="text-2xl font-black uppercase tracking-tighter">${p.title}</h3>
                     </a>
