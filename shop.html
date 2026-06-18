@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 </head>
 <body class="bg-white text-black font-sans antialiased">
@@ -51,24 +52,27 @@
     <script>
         let alleProducten = [];
 
-        async function initShop() {
-            const response = await fetch('producten.json');
-            alleProducten = await response.json();
-            
-            // Dropdowns vullen
+        // Data ophalen en initialiseren
+        fetch('producten.json')
+            .then(r => r.json())
+            .then(data => {
+                alleProducten = data;
+                vulDropdowns();
+                renderProducten(alleProducten);
+            });
+
+        function vulDropdowns() {
             ['category', 'material', 'color'].forEach(key => {
                 const select = document.getElementById(key === 'material' ? 'filter-mat' : `filter-${key}`);
                 const unique = [...new Set(alleProducten.map(p => p[key]))];
                 unique.forEach(val => select.innerHTML += `<option value="${val}">${val}</option>`);
             });
-            
-            renderProducten(alleProducten);
         }
 
         function renderProducten(items) {
             const grid = document.getElementById('product-grid');
             grid.innerHTML = items.map(p => `
-                <div class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors">
+                <div class="border-r border-b border-black p-8 hover:bg-gray-50">
                     <a href="product.html?id=${p.id}">
                         <img src="${p.image}" class="w-full mb-4">
                         <h3 class="text-2xl font-black uppercase tracking-tighter">${p.title}</h3>
@@ -103,12 +107,12 @@
             renderProducten(filtered);
         }
 
+        // Event listeners voor filters
         ['filter-cat', 'filter-mat', 'filter-color', 'sort-price'].forEach(id => 
             document.getElementById(id).addEventListener('change', applyFilters));
         document.getElementById('max-price').addEventListener('input', applyFilters);
 
-        initShop();
-
+        // Footer laden
         fetch('footer.html').then(r => r.text()).then(d => {
             document.getElementById('footer-placeholder').innerHTML = d;
             lucide.createIcons();
