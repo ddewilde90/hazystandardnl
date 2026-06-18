@@ -1,104 +1,104 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazy Standard | Shop</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://cdn.snipcart.com" />
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazy Standard | Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 </head>
 <body class="bg-white text-black font-sans antialiased">
-    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        
-        <header class="border-b border-black">
-            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
-                <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
-                <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
-                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                    <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
-                </a>
-            </div>
-            <nav class="flex flex-wrap overflow-x-auto border-black">
-                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Home</a>
-                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Portfolio</a>
-                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Verhalen</a>
-                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">About me</a>
-                <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
-                <a href="index.html" class="px-6 py-3 border-black font-semibold uppercase text-sm hover:bg-gray-50">Contact</a>
-            </nav>
-        </header>
+    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
+        
+        <header class="border-b border-black">
+            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
+                <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
+                <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
+                </a>
+            </div>
+            <nav class="flex flex-wrap overflow-x-auto border-black">
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Home</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Portfolio</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Verhalen</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">About me</a>
+                <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
+                <a href="index.html" class="px-6 py-3 border-black font-semibold uppercase text-sm hover:bg-gray-50">Contact</a>
+            </nav>
+        </header>
 
-        <main class="flex-grow flex flex-col">
-            <div class="p-8 md:p-12 border-b border-black bg-white text-black">
-                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">The <br><span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span></h1>
-            </div>
+        <main class="flex-grow flex flex-col">
+            <div class="p-8 md:p-12 border-b border-black bg-white text-black">
+                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">The <br><span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Shop</span></h1>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow border-b border-black" id="shop-grid">
-                
-                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Ocean Jasper Ring</h3>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€1,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
-                            data-item-id="ocean-jasper-ring"
-                            data-item-name="Ocean Jasper Handgemaakte Ring"
-                            data-item-price="1.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper."
-                            data-item-image="/assets/images/ocean-jasper.jpg">
-                            + Mandje
-                        </button>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow border-b border-black" id="shop-grid">
+                
+                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Ocean Jasper Ring</h3>
+                    <div class="mt-8 flex justify-between items-end">
+                        <span class="text-xl font-black">€1,00</span>
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
+                            data-item-id="ocean-jasper-ring"
+                            data-item-name="Ocean Jasper Handgemaakte Ring"
+                            data-item-price="1.00"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
+                            data-item-description="Uniek, handgemaakt design met geselecteerde ruwe Ocean Jasper."
+                            data-item-image="/assets/images/ocean-jasper.jpg">
+                            + Mandje
+                        </button>
+                    </div>
+                </div>
 
-                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Amulet</h3>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€110,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
-                            data-item-id="moldaviet-amulet"
-                            data-item-name="Moldaviet Kosmisch Amulet"
-                            data-item-price="110.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Minimalistisch sieraad met puur Moldaviet."
-                            data-item-image="/assets/images/moldaviet.jpg">
-                            + Mandje
-                        </button>
-                    </div>
-                </div>
+                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Amulet</h3>
+                    <div class="mt-8 flex justify-between items-end">
+                        <span class="text-xl font-black">€110,00</span>
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
+                            data-item-id="moldaviet-amulet"
+                            data-item-name="Moldaviet Kosmisch Amulet"
+                            data-item-price="110.00"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
+                            data-item-description="Minimalistisch sieraad met puur Moldaviet."
+                            data-item-image="/assets/images/moldaviet.jpg">
+                            + Mandje
+                        </button>
+                    </div>
+                </div>
 
-                <div class="product-card border-b border-black p-8 flex flex-col justify-between" data-category="reports">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Jaaroverzicht 2025</h3>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€45,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
-                            data-item-id="jaaroverzicht-2025"
-                            data-item-name="Jaaroverzicht 2025: Data-Industrie"
-                            data-item-price="45.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Digitale PDF download van het marktrapport."
-                            data-item-image="/assets/images/rapport.jpg">
-                            + Mandje
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
+                <div class="product-card border-b border-black p-8 flex flex-col justify-between" data-category="reports">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Jaaroverzicht 2025</h3>
+                    <div class="mt-8 flex justify-between items-end">
+                        <span class="text-xl font-black">€45,00</span>
+                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
+                            data-item-id="jaaroverzicht-2025"
+                            data-item-name="Jaaroverzicht 2025: Data-Industrie"
+                            data-item-price="45.00"
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
+                            data-item-description="Digitale PDF download van het marktrapport."
+                            data-item-image="/assets/images/rapport.jpg">
+                            + Mandje
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    <script>
-      window.SnipcartSettings = {
-        publicApiKey: "YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5",
-        loadStrategy: "on-user-interaction",
-        currency: "eur",
-        version: "3.7.1"
-      };
-      (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('script[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
-    </script>
+    <script>
+      window.SnipcartSettings = {
+        publicApiKey: "YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5",
+        loadStrategy: "on-user-interaction",
+        currency: "eur",
+        version: "3.7.1"
+      };
+      (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('script[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),h(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),!e&&window.SnipcartSettings.loadCSS&&(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f.forEach(function(v){return document.removeEventListener(v,o)})}function h(t){!y||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+    </script>
 </body>
 </html>
