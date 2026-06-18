@@ -7,6 +7,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+    <style>
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid #000;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
@@ -41,8 +51,14 @@
                     <p class="text-sm font-bold text-green-600 mt-2">GRATIS VERZENDING VANAF €75 (NL)</p>
                 </div>
 
-                <ul class="text-sm mt-6 space-y-1">
-                    <li><strong>Kleur:</strong> <span id="prod-color"></span></li>
+                <ul class="text-sm mt-6 space-y-2">
+                    <li>
+                        <strong>Kleur:</strong> 
+                        <span class="inline-flex items-center">
+                            <span id="prod-color-dot" class="color-dot"></span>
+                            <span id="prod-color-text"></span>
+                        </span>
+                    </li>
                     <li><strong>Edelsteensoort:</strong> <span id="prod-stone"></span></li>
                 </ul>
 
@@ -87,6 +103,16 @@
             btn.querySelector('i').classList.toggle('rotate-180');
         }
 
+        const colorMap = {
+            "Paars": "#800080",
+            "Zwart": "#000000",
+            "Groen": "#008000",
+            "Blauw": "#0000FF",
+            "Wit": "#FFFFFF",
+            "Goud": "#FFD700",
+            "Zilver": "#C0C0C0"
+        };
+
         fetch('producten.json')
             .then(response => response.json())
             .then(producten => {
@@ -98,7 +124,10 @@
                     document.getElementById('prod-sku').innerText = "SKU: " + p.sku;
                     document.getElementById('prod-image').src = p.images[0];
                     document.getElementById('prod-price').innerText = "€" + p.price.toFixed(2).replace('.', ',');
-                    document.getElementById('prod-color').innerText = p.color;
+                    
+                    document.getElementById('prod-color-text').innerText = p.color;
+                    document.getElementById('prod-color-dot').style.backgroundColor = colorMap[p.color] || "#000000";
+                    
                     document.getElementById('prod-stone').innerText = p.stone;
                     document.getElementById('specs-content').innerText = p.specs;
                     document.getElementById('prod-content').innerText = p.content;
@@ -109,7 +138,6 @@
                     btn.setAttribute('data-item-price', p.price);
                     btn.setAttribute('data-item-url', window.location.href);
 
-                    // Aanbevolen grid (filter het huidige product eruit)
                     const related = producten.filter(x => x.id !== p.id).slice(0, 4);
                     document.getElementById('related-grid').innerHTML = related.map(item => `
                         <a href="product.html?id=${item.id}" class="border border-black p-2 hover:bg-gray-50">
