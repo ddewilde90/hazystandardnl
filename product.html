@@ -2,35 +2,40 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Product Details</title>
+    <title>Hazy Standard | Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="p-10">
-    <div id="product-container" class="max-w-2xl mx-auto">
-        <h1 id="prod-title" class="text-4xl font-black uppercase">Laden...</h1>
-        <p id="prod-desc" class="mt-4 text-lg"></p>
-        <div id="prod-price" class="text-2xl font-bold mt-4"></div>
-    </div>
+<body class="bg-white text-black font-sans">
+    <main class="max-w-4xl mx-auto p-12">
+        <a href="shop.html" class="text-xs font-bold uppercase underline mb-8 block">&larr; Terug naar Shop</a>
+        
+        <h1 id="product-title" class="text-5xl font-black uppercase tracking-tighter">Laden...</h1>
+        <p id="product-desc" class="mt-6 text-lg"></p>
+        <p id="product-price" class="text-2xl font-black mt-6"></p>
+    </main>
 
     <script>
-        // 1. Haal het ID uit de URL
-        const params = new URLSearchParams(window.location.search);
-        const productId = params.get('id');
+        // Een simpele database voor je producten
+        const database = {
+            "ocean-jasper-ring": {
+                title: "Ocean Jasper Ring",
+                price: "€1,00",
+                desc: "Dit is een unieke, handgemaakte ring van ruwe Ocean Jasper."
+            }
+        };
 
-        // 2. Jouw productendatabase (dezelfde als in app.js)
-        const producten = [
-            { id: "ocean-jasper-ring", title: "Ocean Jasper Ring", price: "1.00", desc: "Dit is de unieke Ocean Jasper ring..." },
-            // ... voeg hier je andere producten toe
-        ];
+        // Haal het ID uit de URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
 
-        // 3. Zoek het product op en vul de pagina
-        const product = producten.find(p => p.id === productId);
+        // Vul de pagina als het product bestaat
+        const product = database[productId];
         if (product) {
-            document.getElementById('prod-title').innerText = product.title;
-            document.getElementById('prod-desc').innerText = product.desc;
-            document.getElementById('prod-price').innerText = "€" + product.price;
+            document.getElementById('product-title').innerText = product.title;
+            document.getElementById('product-desc').innerText = product.desc;
+            document.getElementById('product-price').innerText = product.price;
         } else {
-            document.getElementById('product-container').innerText = "Product niet gevonden.";
+            document.getElementById('product-title').innerText = "Product niet gevonden";
         }
     </script>
 </body>
