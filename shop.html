@@ -39,7 +39,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 flex-grow border-b border-black" id="shop-grid">
-                
                 <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
                     <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Ocean Jasper Ring</h3>
                     <div class="mt-8 flex justify-between items-end">
@@ -55,48 +54,22 @@
                         </button>
                     </div>
                 </div>
-
-                <div class="product-card border-r border-b border-black p-8 flex flex-col justify-between" data-category="jewelry">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Moldaviet Amulet</h3>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€110,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
-                            data-item-id="moldaviet-amulet"
-                            data-item-name="Moldaviet Kosmisch Amulet"
-                            data-item-price="110.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Minimalistisch sieraad met puur Moldaviet."
-                            data-item-image="/assets/images/moldaviet.jpg">
-                            + Mandje
-                        </button>
-                    </div>
                 </div>
-
-                <div class="product-card border-b border-black p-8 flex flex-col justify-between" data-category="reports">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mt-2">Jaaroverzicht 2025</h3>
-                    <div class="mt-8 flex justify-between items-end">
-                        <span class="text-xl font-black">€45,00</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
-                            data-item-id="jaaroverzicht-2025"
-                            data-item-name="Jaaroverzicht 2025: Data-Industrie"
-                            data-item-price="45.00"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/shop.html"
-                            data-item-description="Digitale PDF download van het marktrapport."
-                            data-item-image="/assets/images/rapport.jpg">
-                            + Mandje
-                        </button>
-                    </div>
-                </div>
-            </div>
         </main>
+
+        <div id="footer-placeholder"></div>
     </div>
 
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="JOUW_SNIPCART_API_KEY"></div>
+
     <script>
+        // Laad footer in
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
-                lucide.createIcons();
+                lucide.createIcons(); // Zorg dat iconen in de footer ook laden
             });
     </script>
 </body>
