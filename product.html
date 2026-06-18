@@ -41,15 +41,33 @@
                     Toevoegen aan mandje
                 </button>
 
-                <div class="mt-12 border-t border-black">
-    <!-- Dropdown 1: Materiaal -->
+                <!-- HTML Structuur -->
+<div class="mt-12 border-t border-black">
+    
     <div class="border-b border-black">
-        <button onclick="toggleSection('specs-content')" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50">
+        <button onclick="toggleSection(this, 'specs-content')" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
             <span>Materiaal & Wasvoorschrift</span>
-            <i data-lucide="chevron-down">hoi 123</i>
+            <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
         </button>
-        <p id="specs-content" class="hidden py-4 text-sm text-gray-600 px-1">test test</p>
+        <p id="specs-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100">
+            <!-- Data komt hier -->
+        </p>
     </div>
+
+</div>
+
+<script>
+    function toggleSection(button, id) {
+        const element = document.getElementById(id);
+        const icon = button.querySelector('i');
+        
+        // Wissel de 'hidden' class om de tekst te tonen/verbergen
+        element.classList.toggle('hidden');
+        
+        // Draai het icoontje
+        icon.classList.toggle('rotate-180');
+    }
+</script>
 
     <!-- Dropdown 2: Alles over dit product -->
     <div class="border-b border-black">
