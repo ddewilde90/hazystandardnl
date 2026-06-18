@@ -1,21 +1,18 @@
 [
-    {
-    "id": "1",
-    "title": "Zilveren Ring",
-    "price": 45.00,
-    "category": "Ringen",
-    "material": "Zilver",
-    "color": "Zilver",
-    "image": "https://via.placeholder.com/300"
-  },
-   [
-  {
-    "id": "1",
-    "title": "Zilveren Ring",
-    "price": 45.00,
-    "category": "Ringen",
-    "material": "Zilver",
-    "color": "Zilver",
-    "image": "https://via.placeholder.com/300"
-  }
+    { 
+        "id": "ocean-jasper-ring", 
+        "title": "Ocean Jasper Ring", 
+        "price": 45.00, 
+        "image": "/assets/images/ocean-jasper.jpg",
+        "specs": "Materiaal: 925 Sterling Zilver.",
+        "content": "Uniek handgemaakt sieraad."
+    },
+    { 
+        "id": "zilveren-ring", 
+        "title": "Zilveren Ring", 
+        "price": 35.00, 
+        "image": "/assets/images/zilver.jpg",
+        "specs": "Materiaal: 925 Sterling Zilver.",
+        "content": "Minimalistisch design."
+    }
 ]
