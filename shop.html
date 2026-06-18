@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 </head>
 <body class="bg-white text-black font-sans antialiased">
@@ -27,10 +28,16 @@
             </nav>
         </header>
 
-        <div class="p-4 border-b border-black flex gap-2 overflow-x-auto items-center">
-            <select id="filter-cat" class="border border-black rounded-full px-4 py-1 text-sm uppercase font-bold cursor-pointer hover:bg-gray-50"><option value="all">Categorie</option></select>
-            <select id="filter-mat" class="border border-black rounded-full px-4 py-1 text-sm uppercase font-bold cursor-pointer hover:bg-gray-50"><option value="all">Materiaal</option></select>
-            <button onclick="resetFilters()" class="text-sm underline uppercase font-bold px-4">Filters wissen</button>
+        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-5 gap-2 bg-gray-50 items-center">
+            <select id="filter-cat" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer"><option value="all">Categorie</option></select>
+            <select id="filter-mat" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer"><option value="all">Materiaal</option></select>
+            <select id="filter-color" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer"><option value="all">Kleur</option></select>
+            <input type="number" id="max-price" placeholder="Max prijs (€)" class="border border-black px-3 py-2 text-xs font-bold uppercase">
+            <select id="sort-price" class="border border-black px-3 py-2 text-xs font-bold uppercase cursor-pointer">
+                <option value="none">Sorteren</option>
+                <option value="low-high">Prijs: Laag naar hoog</option>
+                <option value="high-low">Prijs: Hoog naar laag</option>
+            </select>
         </div>
 
         <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid"></main>
@@ -45,76 +52,67 @@
         let alleProducten = [];
 
         async function initShop() {
-            try {
-                const response = await fetch('producten.json');
-                if (!response.ok) throw new Error("Bestand niet gevonden");
-                alleProducten = await response.json();
-                console.log("Producten geladen:", alleProducten);
-                vulFilters();
-                renderProducten(alleProducten);
-            } catch (err) {
-                console.error("Fout:", err);
-                document.getElementById('product-grid').innerHTML = "<p class='p-8'>Geen producten gevonden.</p>";
-            }
-        }
-
-        function vulFilters() {
-            const catSelect = document.getElementById('filter-cat');
-            const matSelect = document.getElementById('filter-mat');
+            const response = await fetch('producten.json');
+            alleProducten = await response.json();
             
-            const cats = [...new Set(alleProducten.map(p => p.category).filter(Boolean))];
-            const mats = [...new Set(alleProducten.map(p => p.material).filter(Boolean))];
+            // Dropdowns vullen
+            ['category', 'material', 'color'].forEach(key => {
+                const select = document.getElementById(key === 'material' ? 'filter-mat' : `filter-${key}`);
+                const unique = [...new Set(alleProducten.map(p => p[key]))];
+                unique.forEach(val => select.innerHTML += `<option value="${val}">${val}</option>`);
+            });
             
-            cats.forEach(c => catSelect.innerHTML += `<option value="${c}">${c}</option>`);
-            mats.forEach(m => matSelect.innerHTML += `<option value="${m}">${m}</option>`);
+            renderProducten(alleProducten);
         }
 
         function renderProducten(items) {
             const grid = document.getElementById('product-grid');
-            if (items.length === 0) {
-                grid.innerHTML = "<p class='p-8'>Geen resultaten gevonden.</p>";
-                return;
-            }
             grid.innerHTML = items.map(p => `
-                <div class="border-r border-b border-black p-8 hover:bg-gray-50">
+                <div class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors">
                     <a href="product.html?id=${p.id}">
                         <img src="${p.image}" class="w-full mb-4">
                         <h3 class="text-2xl font-black uppercase tracking-tighter">${p.title}</h3>
                     </a>
                     <div class="mt-4 flex justify-between items-center">
-                        <span class="text-xl font-black">€${p.price ? p.price.toFixed(2).replace('.', ',') : '0,00'}</span>
+                        <span class="text-xl font-black">€${p.price.toFixed(2).replace('.', ',')}</span>
                         <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
                             data-item-id="${p.id}" data-item-name="${p.title}" data-item-price="${p.price}"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/product.html?id=${p.id}">
-                            + Mandje
-                        </button>
+                            data-item-url="https://ddewilde90.github.io/hazystandardnl/product.html?id=${p.id}">+ Mandje</button>
                     </div>
                 </div>
             `).join('');
         }
 
-        function filter() {
-            const cat = document.getElementById('filter-cat').value;
-            const mat = document.getElementById('filter-mat').value;
-            
-            const filtered = alleProducten.filter(p => {
-                const matchCat = (cat === 'all' || p.category === cat);
-                const matchMat = (mat === 'all' || p.material === mat);
-                return matchCat && matchMat;
+        function applyFilters() {
+            let filtered = alleProducten.filter(p => {
+                const cat = document.getElementById('filter-cat').value;
+                const mat = document.getElementById('filter-mat').value;
+                const col = document.getElementById('filter-color').value;
+                const max = document.getElementById('max-price').value;
+                
+                return (cat === 'all' || p.category === cat) &&
+                       (mat === 'all' || p.material === mat) &&
+                       (col === 'all' || p.color === col) &&
+                       (max === '' || p.price <= parseFloat(max));
             });
+
+            const sort = document.getElementById('sort-price').value;
+            if(sort === 'low-high') filtered.sort((a,b) => a.price - b.price);
+            if(sort === 'high-low') filtered.sort((a,b) => b.price - a.price);
+
             renderProducten(filtered);
         }
 
-        function resetFilters() {
-            document.getElementById('filter-cat').value = 'all';
-            document.getElementById('filter-mat').value = 'all';
-            renderProducten(alleProducten);
-        }
-
-        document.getElementById('filter-cat').addEventListener('change', filter);
-        document.getElementById('filter-mat').addEventListener('change', filter);
+        ['filter-cat', 'filter-mat', 'filter-color', 'sort-price'].forEach(id => 
+            document.getElementById(id).addEventListener('change', applyFilters));
+        document.getElementById('max-price').addEventListener('input', applyFilters);
 
         initShop();
 
         fetch('footer.html').then(r => r.text()).then(d => {
             document.getElementById('footer-placeholder').innerHTML = d;
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
