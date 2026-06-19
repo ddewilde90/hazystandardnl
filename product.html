@@ -18,18 +18,7 @@
         }
     </style>
 </head>
-<div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-6 gap-2 bg-gray-50 items-center">
-    <select id="filter-cat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Categorie</option></select>
-    <select id="filter-mat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Materiaal</option></select>
-    <select id="filter-color" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Kleur</option></select>
-    <input type="number" id="max-price" placeholder="Max prijs (€)" class="border border-black px-2 py-1 text-xs font-bold uppercase">
-    <select id="sort-price" class="border border-black px-2 py-1 text-xs font-bold uppercase">
-        <option value="none">Sorteren</option>
-        <option value="low-high">Prijs: Laag naar hoog</option>
-        <option value="high-low">Prijs: Hoog naar laag</option>
-    </select>
-    <button onclick="resetFilters()" class="text-xs underline font-bold uppercase">Filters wissen</button>
-</div>
+
     <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
         
@@ -48,7 +37,18 @@
                 <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Portfolio</a>
             </nav>
         </header>
-
+<div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-6 gap-2 bg-gray-50 items-center">
+    <select id="filter-cat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Categorie</option></select>
+    <select id="filter-mat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Materiaal</option></select>
+    <select id="filter-color" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Kleur</option></select>
+    <input type="number" id="max-price" placeholder="Max prijs (€)" class="border border-black px-2 py-1 text-xs font-bold uppercase">
+    <select id="sort-price" class="border border-black px-2 py-1 text-xs font-bold uppercase">
+        <option value="none">Sorteren</option>
+        <option value="low-high">Prijs: Laag naar hoog</option>
+        <option value="high-low">Prijs: Hoog naar laag</option>
+    </select>
+    <button onclick="resetFilters()" class="text-xs underline font-bold uppercase">Filters wissen</button>
+</div>
         <main class="flex-grow p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
                 <img id="prod-image" src="" class="w-full border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
