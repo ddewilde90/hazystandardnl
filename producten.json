@@ -14,11 +14,11 @@
       "content": "Uniek handgemaakt sieraad."
   },
   { 
-      "id": "volgende-ring", 
-      "title": "Naam van volgende ring", 
+      "id": "zilveren-ring", 
+      "title": "Zilveren Ring", 
       "price": 35.00, 
       "sku": "RING-02",
-      "image": "/assets/images/volgende.jpg",
+      "image": "/assets/images/zilver.jpg",
       "color": "Zilver",
       "stone": "Geen",
       "category": "Ringen",
