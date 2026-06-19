@@ -1,18 +1,33 @@
 [
-    { 
-        "id": "ocean-jasper-ring", 
-        "title": "Ocean Jasper Ring", 
-        "price": 45.00, 
-        "image": "/assets/images/ocean-jasper.jpg",
-        "specs": "Materiaal: 925 Sterling Zilver.",
-        "content": "Uniek handgemaakt sieraad."
-    },
-    { 
-        "id": "zilveren-ring", 
-        "title": "Zilveren Ring", 
-        "price": 35.00, 
-        "image": "/assets/images/zilver.jpg",
-        "specs": "Materiaal: 925 Sterling Zilver.",
-        "content": "Minimalistisch design."
-    }
+  { 
+      "id": "ocean-jasper-ring", 
+      "title": "Ocean Jasper Ring", 
+      "price": 4765.00, 
+      "sku": "RING-OJ-01",
+      "images": ["/assets/images/ocean-jasper.jpg"],
+      "color": "Groen",
+      "stone": "Ocean Jasper",
+      "category": "Ringen",
+      "material": "Zilver",
+      "stock": 5,
+      "specs": "Materiaal: 925 Sterling Zilver.",
+      "content": "Uniek handgemaakt sieraad."
+  }
+]
+
+[
+  { 
+      "id": "ocean-jasper-ring", 
+      "title": "Ocean Jasper Ring", 
+      "price": 445.00, 
+      "sku": "RING-OJ-01",
+      "images": ["/assets/images/ocean-jasper.jpg"],
+      "color": "Groen",
+      "stone": "Ocean Jasper",
+      "category": "Ringen",
+      "material": "Zilver",
+      "stock": 5,
+      "specs": "Materiaal: 925 Sterling Zilver.",
+      "content": "Uniek handgemaakt sieraad."
+  }
 ]
