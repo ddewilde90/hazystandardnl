@@ -200,3 +200,31 @@ function renderPortfolio() {
         grid.appendChild(el);
     });
 }
+
+const seoConfig = {
+    home: {
+        title: "Hazy Standard | Onafhankelijke Business Intelligence & Veldwerk",
+        description: "Hazy Standard biedt onafhankelijke business intelligence. Wij zoeken de feiten achter de data door middel van diepgaande rapportages."
+    },
+    portfolio: {
+        title: "Portfolio | Projecten & Cases | Hazy Standard",
+        description: "Bekijk onze gerealiseerde projecten en business intelligence cases."
+    },
+    // ... en zo door voor elke pagina
+};
+
+function updateSEO(pageName) {
+    const config = seoConfig[pageName] || seoConfig.home;
+    
+    // Update titel
+    document.title = config.title;
+    
+    // Update meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.name = "description";
+        document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = config.description;
+}
