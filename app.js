@@ -228,3 +228,10 @@ function updateSEO(pageName) {
     }
     metaDesc.content = config.description;
 }
+
+// Voorbeeld in je app.js
+function loadBlogContent(blogData) {
+    document.title = `${blogData.title} | Hazy Standard`;
+    document.querySelector('meta[name="description"]').setAttribute("content", blogData.excerpt);
+    // ... rest van je content laden
+}
