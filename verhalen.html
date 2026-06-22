@@ -3,7 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazy Standard | Shop</title>
+    <title>Hazy Standarkun je de algehele code hier neerzetten?
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazy Standard | Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+</head>
+<body class="bg-white text-black font-sans antialiased">
+    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
+        
+        <header class="border-b border-black">
+            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
+                <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
+                <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
+                </a>
+            </div>
+            <nav class="flex flex-wrap border-b border-black bg-white overflow-x-auto">
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-100">Home</a>
+                <a href="portfolio.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-100">Portfolio</a>
+                <a href="verhalen.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-100">Verhalen</a>
+                <a href="about.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-100">About me</a>
+                <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
+                <a href="contact.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-100">Contact</a>
+            </nav>
+        </header>
+
+ 
+
+
+        fetch('footer.html').then(r => r.text()).then(d => {
+            document.getElementById('footer-placeholder').innerHTML = d;
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>d | Shop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
