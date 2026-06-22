@@ -31,18 +31,33 @@
 </nav>
         </header>
 
-        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-6 gap-2 bg-gray-50 items-center">
-            <select id="filter-cat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Categorie</option></select>
-            <select id="filter-mat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Materiaal</option></select>
-            <select id="filter-color" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Kleur</option></select>
-            <input type="number" id="max-price" placeholder="Max prijs (€)" class="border border-black px-2 py-1 text-xs font-bold uppercase">
-            <select id="sort-price" class="border border-black px-2 py-1 text-xs font-bold uppercase">
-                <option value="none">Sorteren</option>
-                <option value="low-high">Prijs: Laag naar hoog</option>
-                <option value="high-low">Prijs: Hoog naar laag</option>
-            </select>
-            <button onclick="resetFilters()" class="text-xs underline font-bold uppercase">Filters wissen</button>
+                <div class="bg-white text-black min-h-screen flex flex-col font-sans">
+            <div class="p-8 md:p-12 border-b border-black bg-black text-white">
+                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
+                    Get in <br>
+                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
+                </h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
+                <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
+                    <div>
+                        <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
+                        <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
+                            "Laten we bespreken wat de feiten voor uw organisatie betekenen."
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border-t border-black pt-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
+                            <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
+                    </div>
+            </div>
         </div>
+
 
         <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid"></main>
 
