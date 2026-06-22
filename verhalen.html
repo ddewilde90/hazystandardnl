@@ -50,94 +50,14 @@
         <div id="footer-placeholder"></div>
     </div>
 
-    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
-
-    <script>
-        let allProducts = [];
-
-        fetch('producten.json')
-            .then(r => r.json())
-            .then(data => {
-                allProducts = data;
-                initFilters(allProducts);
-                renderProducts(allProducts);
-                lucide.createIcons();
-            });
-
-        function initFilters(products) {
-            const config = [
-                { id: 'filter-cat', key: 'category' },
-                { id: 'filter-mat', key: 'material' },
-                { id: 'filter-color', key: 'color' }
-            ];
-            config.forEach(c => {
-                const select = document.getElementById(c.id);
-                const values = [...new Set(products.map(p => p[c.key]))];
-                values.forEach(v => {
-                    if(v && v !== "Geen") {
-                        const opt = document.createElement('option');
-                        opt.value = v; opt.textContent = v;
-                        select.appendChild(opt);
-                    }
-                });
-            });
-        }
-
-        function renderProducts(list) {
-            const grid = document.getElementById('product-grid');
-            grid.innerHTML = list.map(p => `
-                <div class="border-r border-b border-black p-8 hover:bg-gray-50">
-                    <a href="product.html?id=${p.id}">
-                        <img src="${p.image}" class="w-full h-64 object-cover mb-4">
-                        <h3 class="text-2xl font-black uppercase tracking-tighter">${p.title}</h3>
-                    </a>
-                    <div class="mt-4 flex justify-between items-center">
-                        <span class="text-xl font-black">€${p.price.toFixed(2).replace('.', ',')}</span>
-                        <button class="snipcart-add-item bg-black text-white px-4 py-2 text-xs font-bold uppercase"
-                            data-item-id="${p.id}" data-item-name="${p.title}" data-item-price="${p.price}"
-                            data-item-url="https://ddewilde90.github.io/hazystandardnl/product.html?id=${p.id}">
-                            + Mandje
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function applyFilters() {
-            let filtered = allProducts.filter(p => {
-                const cat = document.getElementById('filter-cat').value;
-                const mat = document.getElementById('filter-mat').value;
-                const col = document.getElementById('filter-color').value;
-                const max = parseFloat(document.getElementById('max-price').value) || Infinity;
-                return (cat === 'all' || p.category === cat) &&
-                       (mat === 'all' || p.material === mat) &&
-                       (col === 'all' || p.color === col) &&
-                       (p.price <= max);
-            });
-            const sort = document.getElementById('sort-price').value;
-            if(sort === 'low-high') filtered.sort((a,b) => a.price - b.price);
-            if(sort === 'high-low') filtered.sort((a,b) => b.price - a.price);
-            renderProducts(filtered);
-        }
-
-        function resetFilters() {
-            document.getElementById('filter-cat').value = 'all';
-            document.getElementById('filter-mat').value = 'all';
-            document.getElementById('filter-color').value = 'all';
-            document.getElementById('max-price').value = '';
-            document.getElementById('sort-price').value = 'none';
-            renderProducts(allProducts);
-        }
-
-        ['filter-cat', 'filter-mat', 'filter-color', 'max-price', 'sort-price'].forEach(id => {
-            document.getElementById(id).addEventListener('change', applyFilters);
-        });
-
-        fetch('footer.html').then(r => r.text()).then(d => {
-            document.getElementById('footer-placeholder').innerHTML = d;
-            lucide.createIcons();
-        });
-    </script>
+     <template id="tpl-portfolio">
+        <div class="bg-white min-h-screen">
+            <div class="p-6 md:p-10 border-b border-black">
+                <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
+                <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
+            </div>
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+    </template>
 </body>
 </html>
