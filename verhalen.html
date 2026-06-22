@@ -22,13 +22,35 @@
                     <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
                 </a>
             </div>
-          <div id="header-placeholder"></div>
+               <nav class="flex flex-wrap overflow-x-auto border-black">
+    <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
+    <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Verhalen</button>
+    <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">About me</button>
+           <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
+    <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
+</nav>
         </header>
+
+        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-6 gap-2 bg-gray-50 items-center">
+            <select id="filter-cat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Categorie</option></select>
+            <select id="filter-mat" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Materiaal</option></select>
+            <select id="filter-color" class="border border-black px-2 py-1 text-xs font-bold uppercase"><option value="all">Kleur</option></select>
+            <input type="number" id="max-price" placeholder="Max prijs (€)" class="border border-black px-2 py-1 text-xs font-bold uppercase">
+            <select id="sort-price" class="border border-black px-2 py-1 text-xs font-bold uppercase">
+                <option value="none">Sorteren</option>
+                <option value="low-high">Prijs: Laag naar hoog</option>
+                <option value="high-low">Prijs: Hoog naar laag</option>
+            </select>
+            <button onclick="resetFilters()" class="text-xs underline font-bold uppercase">Filters wissen</button>
+        </div>
 
         <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid"></main>
 
         <div id="footer-placeholder"></div>
     </div>
+
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
 
     <script>
         let allProducts = [];
@@ -115,31 +137,6 @@
             document.getElementById('footer-placeholder').innerHTML = d;
             lucide.createIcons();
         });
-
-        <!-- Hier worden de footer en nieuwsbrief ingeladen -->
-        <div id="nieuwsbrief-placeholder"></div>
-        <div id="footer-placeholder"></div>
-    </div>
-
-    <script>
-        // Functie om bestanden in te laden
-        function loadComponent(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                });
-        }
-
-        // Zodra de pagina is geladen, haal de componenten op
-        document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('nieuwsbrief-placeholder', 'nieuwsbrief.html');
-            loadComponent('footer-placeholder', 'footer.html');
-        });
-    </script>
-</body>
-</html>
     </script>
 </body>
 </html>
