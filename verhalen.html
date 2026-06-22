@@ -138,6 +138,31 @@
             document.getElementById('footer-placeholder').innerHTML = d;
             lucide.createIcons();
         });
+
+        <!-- Hier worden de footer en nieuwsbrief ingeladen -->
+        <div id="nieuwsbrief-placeholder"></div>
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <script>
+        // Functie om bestanden in te laden
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+        }
+
+        // Zodra de pagina is geladen, haal de componenten op
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('nieuwsbrief-placeholder', 'nieuwsbrief.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+</body>
+</html>
     </script>
 </body>
 </html>
