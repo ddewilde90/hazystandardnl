@@ -11,29 +11,31 @@
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
         
-        <header class="border-b border-black p-6 flex justify-between items-center">
-            <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
-            <nav class="flex gap-6 font-bold uppercase text-sm">
-                <a href="index.html" class="hover:underline">Home</a>
-                <a href="verhalen.html" class="underline">Verhalen</a>
-            </nav>
-        </header>
+        <div id="header-placeholder"></div>
 
         <main id="blog-grid" class="flex-grow grid grid-cols-1 md:grid-cols-3 border-b border-black">
             </main>
 
-        <footer class="p-8 border-t border-black text-xs font-bold uppercase text-gray-500">
-            &copy; 2026 Hazy Standard. Alle rechten voorbehouden.
-        </footer>
+        <div id="footer-placeholder"></div>
     </div>
 
     <script type="module">
         import { data } from './data.js';
 
+        // 1. Functie om header/footer in te laden
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById(id).innerHTML = html;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+        }
+
+        // 2. Data in de grid plaatsen
         const grid = document.getElementById('blog-grid');
         
-        // Zorg dat grid en data bestaan
-        if (grid && data && data.analysis) {
+        if (data && data.analysis) {
             grid.innerHTML = data.analysis.map(item => `
                 <article class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors flex flex-col">
                     <img src="${item.image}" class="w-full h-64 object-cover mb-6 border border-black" alt="${item.title}">
@@ -52,10 +54,13 @@
                     </div>
                 </article>
             `).join('');
-            
-            // Lucide icons activeren
-            if (window.lucide) lucide.createIcons();
         }
+
+        // 3. Initialiseer componenten
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
     </script>
 </body>
 </html>
