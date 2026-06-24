@@ -104,7 +104,7 @@ function loadView(viewName) {
     if (template) {
         main.appendChild(template.content.cloneNode(true));
         if (viewName === 'home') renderHome();
-        if (viewName === 'topics') renderTopics();
+        if (viewName === 'verhale') renderVerhalen();
         if (viewName === 'verhalen') renderVerhalen();
         if (window.lucide) lucide.createIcons();
     } else {
