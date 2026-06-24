@@ -235,3 +235,49 @@ function loadBlogContent(blogData) {
     document.querySelector('meta[name="description"]').setAttribute("content", blogData.excerpt);
     // ... rest van je content laden
 }
+
+// --- FILTER & RENDER LOGICA ---
+
+function renderTopics(filterCategory = 'Alles') {
+    const grid = document.getElementById('topics-grid');
+    const filterContainer = document.getElementById('topics-filters');
+    if (!grid) return;
+
+    // 1. Haal unieke categorieën op voor de filters
+    const categories = ['Alles', ...new Set(data.analysis.map(a => a.category))];
+    
+    // 2. Render de filterknoppen (alleen als ze er nog niet zijn)
+    if (filterContainer.innerHTML === '') {
+        categories.forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = `px-4 py-1 text-[10px] font-bold uppercase border border-black transition-all ${filterCategory === cat ? 'bg-black text-white' : 'hover:bg-gray-100'}`;
+            btn.textContent = cat;
+            btn.onclick = () => renderTopics(cat); // Opnieuw renderen met nieuwe filter
+            filterContainer.appendChild(btn);
+        });
+    }
+
+    // 3. Render de grid
+    grid.innerHTML = '';
+    const filteredData = filterCategory === 'Alles' 
+        ? data.analysis 
+        : data.analysis.filter(a => a.category === filterCategory);
+
+    filteredData.forEach(a => {
+        const el = document.createElement('div');
+        el.className = 'border-r border-b border-black flex flex-col cursor-pointer hover:bg-gray-50 group bg-white';
+        el.innerHTML = `
+            <div class="aspect-video w-full overflow-hidden border-b border-black">
+                <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <div class="text-[9px] font-bold uppercase text-red-600 mb-2 italic">${a.category}</div>
+                <h3 class="font-extrabold uppercase text-lg mb-3 leading-tight">${a.title}</h3>
+                <p class="text-xs font-semibold text-gray-600 line-clamp-3 mb-4">${a.intro}</p>
+                <div class="text-[9px] font-bold uppercase border-t border-black pt-3 mt-auto">${a.date}</div>
+            </div>
+        `;
+        el.onclick = () => window.location.href = 'artikel.html?id=' + a.id;
+        grid.appendChild(el);
+    });
+}
