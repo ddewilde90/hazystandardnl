@@ -1,12 +1,25 @@
+// --- In je app.js ---
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Check welke pagina we zijn op basis van het aanwezige grid-element in de HTML
+    if (document.getElementById('topics-grid')) renderTopics();
+    if (document.getElementById('portfolio-grid')) renderPortfolio();
+    
+    // Voer algemene functies uit
+    if (window.lucide) lucide.createIcons();
+    setDate();
+    setupNavigation();
+});
+
+// Specifieke render functie voor Verhalen
 function renderTopics() {
     const grid = document.getElementById('topics-grid');
     if (!grid) return;
     grid.innerHTML = '';
     
-    // We gebruiken border-r en border-b voor de tegels
-    // De grid-container in je HTML moet border-l en border-t hebben voor de buitenranden
     data.analysis.forEach(a => {
         const el = document.createElement('div');
+        // 'border-r border-b' zorgt voor de raster-lijnen, container in HTML krijgt border-l/t
         el.className = 'border-r border-b border-black flex flex-col cursor-pointer hover:bg-gray-50 group bg-white';
         
         el.innerHTML = `
@@ -24,6 +37,7 @@ function renderTopics() {
     });
 }
 
+// Specifieke render functie voor Portfolio
 function renderPortfolio() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid || !data.portfolio) return;
