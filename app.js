@@ -1,17 +1,17 @@
 import { data } from './data.js';
 
+// --- INITIALISATIE ---
 document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide) lucide.createIcons();
     setDate();
-    setupNavigation();
     
-    // Routering: Bepaal wat we moeten laden op basis van de aanwezige ID's
+    // Check per pagina welke render-functie nodig is
     if (document.getElementById('topics-grid')) {
         renderTopics();
     } else if (document.getElementById('portfolio-grid')) {
         renderPortfolio();
     } else {
-        // Fallback naar home als we op de index of een andere pagina zijn
+        // Alleen laden als we op de Home-pagina zijn
         loadView('home'); 
     }
 });
@@ -30,11 +30,7 @@ function setupNavigation() {
         link.addEventListener('click', (e) => {
             const target = link.dataset.target;
             if(!target) return;
-            
-            // Als we naar een pagina navigeren die in de navigatie staat,
-            // checken we of we naar een andere HTML-pagina moeten of binnen de SPA blijven
-            if (window.location.pathname.includes(target + '.html')) return;
-            
+            // Navigeer naar de juiste HTML pagina
             window.location.href = target + '.html';
         });
     });
@@ -57,16 +53,19 @@ function renderHome() {
         `;
         document.getElementById('featured-img').onclick = () => window.location.href = 'artikel.html?id=' + data.featured.id;
     }
-    // ... (rest van je renderHome blijft zoals hij was)
+    // ... (rest van renderHome blijft gelijk)
 }
 
 function renderTopics() {
     const grid = document.getElementById('topics-grid');
     if (!grid) return;
     grid.innerHTML = '';
+    
+    // Grid krijgt borders via de container (HTML) en tegels
     data.analysis.forEach(a => {
         const el = document.createElement('div');
         el.className = 'border-r border-b border-black flex flex-col cursor-pointer hover:bg-gray-50 group bg-white';
+        
         el.innerHTML = `
             <div class="aspect-video w-full overflow-hidden border-b border-black">
                 <img src="${a.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
@@ -85,10 +84,12 @@ function renderTopics() {
 function renderPortfolio() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid || !data.portfolio) return;
-    grid.innerHTML = '';
+    grid.innerHTML = ''; 
+    
     data.portfolio.forEach(item => {
         const el = document.createElement('div');
         el.className = 'border-r border-b border-black flex flex-col hover:bg-gray-50 cursor-pointer group bg-white';
+        
         el.innerHTML = `
             <div class="aspect-video w-full overflow-hidden border-b border-black">
                 <img src="${item.image || 'placeholder.jpg'}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
@@ -104,6 +105,10 @@ function renderPortfolio() {
 }
 
 function loadView(viewName) {
-    // Deze functie is nu alleen nodig als je dynamisch wilt laden
-    // Anders kun je navigatie via href's regelen (zoals hierboven in setupNavigation)
+    const main = document.getElementById('main-content');
+    const template = document.getElementById(`tpl-${viewName}`);
+    if (template && main) {
+        main.appendChild(template.content.cloneNode(true));
+        if (viewName === 'home') renderHome();
+    }
 }
