@@ -2,56 +2,40 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verhalen | Hazy Standard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-black font-sans antialiased">
-    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        
-        <div id="header-placeholder"></div>
+<body class="bg-white text-black font-sans">
+    
+    <header class="border-b border-black p-6">
+        <h1 class="text-4xl font-black uppercase">Hazy Standard</h1>
+    </header>
 
-        <main id="blog-grid" class="flex-grow grid grid-cols-1 md:grid-cols-3 border-b border-black">
-            </main>
+    <main id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 border-b border-black">
+        </main>
 
-        <div id="footer-placeholder"></div>
-    </div>
+    <footer class="p-6 text-xs font-bold uppercase border-t border-black">
+        &copy; 2026 Hazy Standard
+    </footer>
 
-   <script type="module">
-    import { data } from './data.js';
+    <script>
+        // GEEN import, GEEN fetch. We definiëren de data hier direct voor de test.
+        const articles = [
+            { title: "Verhaal 1", intro: "Dit is de intro tekst.", image: "https://via.placeholder.com/400", date: "24 juni 2026" },
+            { title: "Verhaal 2", intro: "Nog een verhaal.", image: "https://via.placeholder.com/400", date: "24 juni 2026" }
+        ];
 
-    function loadComponent(id, file) {
-        fetch(file)
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById(id).innerHTML = html;
-                if (window.lucide) lucide.createIcons();
-            });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // Laad header en footer
-        loadComponent('header-placeholder', 'header.html');
-        loadComponent('footer-placeholder', 'footer.html');
-
-        // Vul de grid
         const grid = document.getElementById('blog-grid');
-        if (data && data.analysis) {
-            grid.innerHTML = data.analysis.map(item => `
-                <article class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors flex flex-col">
-                    <img src="${item.image}" class="w-full h-64 object-cover mb-6 border border-black" alt="${item.title}">
-                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-4 leading-tight">${item.title}</h3>
-                    <p class="text-sm text-gray-700 mb-6 flex-grow">${item.intro}</p>
-                    <div class="mt-auto pt-6 border-t border-black flex justify-between items-center">
-                        <span class="text-[10px] font-bold uppercase tracking-widest">${item.date}</span>
-                        <a href="artikel.html?id=${encodeURIComponent(item.title)}" class="text-xs font-bold uppercase underline">Lees verder</a>
-                    </div>
-                </article>
-            `).join('');
-        }
-    });
-</script>
+        grid.innerHTML = articles.map(item => `
+            <article class="border-r border-b border-black p-8">
+                <img src="${item.image}" class="w-full h-64 object-cover mb-6 border border-black">
+                <h3 class="text-2xl font-black uppercase mb-4">${item.title}</h3>
+                <p class="text-sm text-gray-700 mb-6">${item.intro}</p>
+                <div class="pt-6 border-t border-black">
+                    <span class="text-[10px] font-bold uppercase">${item.date}</span>
+                </div>
+            </article>
+        `).join('');
+    </script>
 </body>
 </html>
