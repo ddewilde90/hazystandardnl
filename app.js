@@ -175,8 +175,8 @@ function renderHome() {
     }
 }
 
-function renderTopics() {
-    const grid = document.getElementById('topics-grid');
+function renderVerhalen() {
+    const grid = document.getElementById('verhalen-grid');
     if (!grid) return;
     grid.innerHTML = '';
     data.analysis.forEach(a => {
