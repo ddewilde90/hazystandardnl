@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide) lucide.createIcons();
     setDate();
     setupNavigation();
-    loadView('home'); // Laad home als standaard
+    loadView('home'); 
 });
 
 function setDate() {
@@ -34,40 +34,45 @@ function setupNavigation() {
 }
 
 function loadView(viewName) {
-    // Verberg alle templates/secties eerst (zorg dat je in HTML secties hebt met een class 'page')
-    // Of: laad alleen de data in de elementen die al op de pagina staan
-    
+    const main = document.getElementById('main-content');
+    if (!main) return;
+
+    // 1. Wis de inhoud van de main
+    main.innerHTML = '';
+
+    // 2. Plaats de basis HTML-structuur per pagina
     if (viewName === 'home') {
+        main.innerHTML = `
+            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
+                <div class="border-r border-black flex flex-col"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div><div id="col-video"></div></div>
+                <div class="border-r border-black flex flex-col"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div><div id="col-analysis"></div></div>
+                <div class="flex flex-col bg-gray-50"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div><div id="col-raw" class="p-4 space-y-4"></div></div>
+            </div>
+        `;
         renderHome();
     } else if (viewName === 'topics') {
+        main.innerHTML = `<div id="topics-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8"></div>`;
         renderTopics();
+    } else if (viewName === 'portfolio') {
+        main.innerHTML = `<div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-8"></div>`;
+        renderPortfolio();
     }
-    // ... enzovoorts
-}
+
+    if (window.lucide) lucide.createIcons();
 }
 
 function openArticle(article) {
     const main = document.getElementById('main-content');
-    const related = data.analysis.filter(a => a.title !== article.title).slice(0, 3);
-
     main.innerHTML = `
-        <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
-            <div class="relative w-full h-[350px] md:h-[500px] overflow-hidden border-b border-black">
-                <img src="${article.image}" class="w-full h-full object-cover grayscale" alt="${article.title}">
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-4">
-                <div class="lg:col-span-3 p-6 md:p-16 border-r border-black">
-                    <button id="back-btn" class="mb-10 border border-black px-6 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white transition-all">← Terug</button>
-                    <h1 class="text-4xl md:text-7xl font-extrabold uppercase mb-8 leading-[0.9] italic border-b-8 border-black pb-6">${article.title}</h1>
-                    <div class="prose max-w-none text-xl font-black mb-12 border-l-8 border-black pl-8 italic">${article.intro}</div>
-                    <div class="prose max-w-none text-lg text-gray-800">${article.content || "<p>Geen inhoud beschikbaar.</p>"}</div>
-                </div>
-            </div>
+        <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black p-10">
+            <button id="back-btn" class="mb-10 border border-black px-6 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white transition-all">← Terug</button>
+            <h1 class="text-4xl md:text-7xl font-extrabold uppercase mb-8 italic border-b-8 border-black pb-6">${article.title}</h1>
+            <div class="prose max-w-none text-xl mb-12">${article.intro}</div>
+            <div class="prose max-w-none text-lg">${article.content || "<p>Geen inhoud beschikbaar.</p>"}</div>
         </div>
     `;
-    
-    document.getElementById('back-btn').onclick = () => loadView('topics');
-    if (window.lucide) lucide.createIcons();
+    document.getElementById('back-btn').onclick = () => loadView('home');
 }
 
 function renderHome() {
@@ -84,17 +89,13 @@ function renderHome() {
         `;
         document.getElementById('featured-img').onclick = () => openArticle(data.featured);
     }
-    // ... render video/analysis/raw hier zoals je had ...
+    // Vul hier eventueel ook je col-video, col-analysis etc. aan met document.getElementById(...).innerHTML = ...
 }
 
-function renderTopics(filterCategory = 'Alles') {
+function renderTopics() {
     const grid = document.getElementById('topics-grid');
     if (!grid) return;
-    grid.innerHTML = '';
-    
-    const filtered = filterCategory === 'Alles' ? data.analysis : data.analysis.filter(a => a.tags?.includes(filterCategory));
-
-    filtered.forEach(a => {
+    data.analysis.forEach(a => {
         const el = document.createElement('div');
         el.className = 'border border-black p-6 cursor-pointer hover:bg-gray-50';
         el.innerHTML = `<h3 class="font-extrabold uppercase text-lg mb-2">${a.title}</h3><p class="text-sm text-gray-600">${a.intro}</p>`;
@@ -106,7 +107,6 @@ function renderTopics(filterCategory = 'Alles') {
 function renderPortfolio() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid) return;
-    grid.innerHTML = '';
     data.portfolio.forEach(item => {
         const el = document.createElement('div');
         el.className = 'border border-black p-6 cursor-pointer hover:bg-gray-50';
