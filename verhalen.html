@@ -20,10 +20,18 @@
     </div>
 
     <script type="module">
-        import { data } from './data.js';
-        // Zorg dat openArticle en andere functies beschikbaar zijn
-        import * as app from './apps.js'; 
-        window.data = data; // Maak data globaal voor je functies
+      <script type="module">
+    import { data } from './data.js';
+    import * as app from './apps.js';
+
+        window.openArticleById = (id) => {
+        const article = data.analysis.find(a => a.id === id);
+        if (article) {
+            app.openArticle(article);
+        } else {
+            console.error("Artikel niet gevonden met ID:", id);
+        }
+    };
 
         async function loadComponent(id, file) {
             const response = await fetch(file);
