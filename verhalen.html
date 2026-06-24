@@ -3,160 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazy Standard | Business Intelligence</title>
+    <title>Hazy Standard | Verhalen</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        <header class="border-b border-black">
-            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
-                <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
-                <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block" id="current-date"></div>
+        
+        <div id="header-placeholder"></div>
+
+        <main class="flex-grow">
+            <div class="p-8 border-b border-black">
+                <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Verhalen.</h1>
+                <p class="text-sm font-bold text-gray-500 uppercase mt-2">Diepgaande rapportages en feitenonderzoek.</p>
             </div>
-           <nav class="flex flex-wrap overflow-x-auto border-black">
-    <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
-    <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Verhalen</button>
-    <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">About me</button>
-           <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
-    <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
-</nav>
-        </header>
-
-        <main id="main-content" class="flex-grow flex flex-col">
-            </main>
-
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-b border-black">
+                <div class="p-8 border-b md:border-b-0 md:border-r border-black hover:bg-gray-50 transition-colors">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Analyse</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4">De impact van data op de markt</h3>
+                    <button class="text-sm font-black uppercase underline">Lees verder</button>
+                </div>
+                </div>
         </main>
 
-<section class="bg-[#1a1a1a] text-white py-16 px-6 border-t border-black">
-    <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-2xl md:text-3xl font-bold mb-4">Blijf op de hoogte van Hazy Standard</h2>
-        <p class="text-sm text-gray-300 mb-8">Ontvang wekelijks updates over nieuwe rapportages en exclusieve inzichten in je mailbox.</p>
-        
-        <div class="ml-embedded" data-form="8Qhza5"></div>
-        
-        <p class="text-[10px] text-gray-500 mt-6">
-            Bekijk ons <a href="#" class="underline hover:text-white">privacy beleid</a>. Je kunt je op elk moment uitschrijven.
-        </p>
-    </div>
-</section>
-
-
-        <footer class="border-t-4 border-black bg-white pt-16 pb-8 px-6 mt-auto">
-            <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-                
-                <div class="flex flex-col">
-                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Hazy Standard.</h2>
-                    <p class="text-sm font-semibold leading-relaxed mb-6">
-                        Onafhankelijke Business Intelligence en veldwerk-rapportages. Wij zoeken de feiten achter de data.
-                    </p>
-                    <button class="bg-black text-white px-6 py-3 font-extrabold uppercase text-sm hover:bg-gray-800 transition-all self-start">
-                        Steun ons & Doneer
-                    </button>
-                </div>
-
-                <div>
-                    <h4 class="font-black uppercase text-xs tracking-widest mb-6 border-b border-gray-200 pb-2">Over Hazy Standard</h4>
-                    <ul class="space-y-3 text-sm font-bold uppercase">
-                        <li><button class="hover:underline text-left" data-target="about">Onze Methode</button></li>
-                        <li><button class="hover:underline text-left">Redactiestatuut</button></li>
-                        <li><button class="hover:underline text-left" data-target="contact">Contact</button></li>
-                        <li><button class="hover:underline text-left">FAQ</button></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-black uppercase text-xs tracking-widest mb-6 border-b border-gray-200 pb-2">Voorwaarden</h4>
-                    <ul class="space-y-3 text-sm font-bold uppercase text-gray-500">
-                        <li><button class="hover:underline text-left">Privacy Statement</button></li>
-                        <li><button class="hover:underline text-left">Cookiebeleid</button></li>
-                        <li><button class="hover:underline text-left">Algemene Voorwaarden</button></li>
-                        <li><button class="hover:underline text-left">Disclaimer</button></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="font-black uppercase text-xs tracking-widest mb-6 border-b border-gray-200 pb-2">Volg de feiten</h4>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
-                            <i data-lucide="twitter" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 border border-black flex items-center justify-center hover:bg-black hover:text-white transition-all">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="max-w-screen-xl mx-auto border-t border-gray-100 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-gray-400">
-                <span>&copy; 2026 Hazy Standard. Alle rechten voorbehouden.</span>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <span>Strikt Zakelijk</span>
-                    <span>100% Monochroom</span>
-                </div>
-            </div>
-        </footer>
+        <div id="footer-placeholder"></div>
     </div>
 
- 
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+        }
 
-    <template id="tpl-topics">
-        <div class="flex flex-col flex-grow">
-            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-white" id="topics-filters"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8" id="topics-grid"></div>
-        </div>
-    </template>
-
-
-    <template id="tpl-contact">
-        <div class="bg-white text-black min-h-screen flex flex-col font-sans">
-            <div class="p-8 md:p-12 border-b border-black bg-black text-white">
-                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
-                    Get in <br>
-                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
-                </h1>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
-                <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
-                    <div>
-                        <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
-                        <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
-                            "Laten we bespreken wat de feiten voor uw organisatie betekenen."
-                        </p>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="border-t border-black pt-4">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
-                            <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
-                    </div>
-            </div>
-        </div>
-    </template>
-
-    <template id="tpl-portfolio">
-        <div class="bg-white min-h-screen">
-            <div class="p-6 md:p-10 border-b border-black">
-                <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
-                <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
-            </div>
-            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
-        </div>
-    </template>
-
-    <script type="module" src="app.js"></script>
-    
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
 </body>
 </html>
