@@ -23,10 +23,10 @@ function loadFooter() {
             if (container) {
                 container.innerHTML = html;
                 
-                // Activeer iconen in de zojuist geladen footer
+                // 1. Iconen opnieuw laden
                 if (window.lucide) lucide.createIcons();
 
-                // FIX: Dwing MailerLite om het formulier in de nieuwe HTML te laden
+                // 2. MailerLite dwingen om het formulier in de net geladen HTML te injecteren
                 if (typeof ml !== 'undefined') {
                     ml('webforms', 'load', '8Qhza5');
                 }
