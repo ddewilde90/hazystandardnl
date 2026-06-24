@@ -97,10 +97,12 @@ function renderTopics() {
     const grid = document.getElementById('topics-grid');
     if (!grid) return;
     grid.innerHTML = '';
+    
     data.analysis.forEach(a => {
         const el = document.createElement('div');
-        // Toegevoegd: border-r en border-b voor de strakke grid-look
+        // De border-r en border-b zorgen voor het grid-raster
         el.className = 'border-r border-b border-black flex flex-col cursor-pointer hover:bg-gray-50 group bg-white';
+        
         el.innerHTML = `
             <div class="aspect-video w-full overflow-hidden border-b border-black">
                 <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
@@ -109,7 +111,9 @@ function renderTopics() {
                 <h3 class="font-extrabold uppercase text-xl mb-4 leading-tight group-hover:text-red-600 transition-colors">${a.title}</h3>
                 <p class="text-sm font-semibold mb-6 text-gray-700 line-clamp-3">${a.intro}</p>
                 <div class="text-[10px] font-bold uppercase border-t border-black pt-4 mt-auto tracking-widest">${a.date}</div>
-            </div>`;
+            </div>
+        `;
+        
         el.onclick = () => openArticle(a);
         grid.appendChild(el);
     });
@@ -119,21 +123,23 @@ function renderPortfolio() {
     const grid = document.getElementById('portfolio-grid');
     if (!grid || !data.portfolio) return;
     grid.innerHTML = ''; 
+    
     data.portfolio.forEach(item => {
         const el = document.createElement('div');
-        // Toegevoegd: border-r en border-b voor de strakke grid-look
+        // Dezelfde grid-structuur als bij topics
         el.className = 'border-r border-b border-black flex flex-col hover:bg-gray-50 cursor-pointer group bg-white';
+        
         el.innerHTML = `
             <div class="aspect-video w-full border-b border-black">
-                <img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+                <img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
             </div>
             <div class="p-8">
                 <h3 class="text-xl font-extrabold uppercase mb-4">${item.title}</h3>
                 <p class="text-sm text-gray-700">${item.intro}</p>
-            </div>`;
+            </div>
+        `;
+        
         el.onclick = () => openArticle(item);
         grid.appendChild(el);
     });
 }
-
-// RenderHome blijft hieronder ongewijzigd staan...
