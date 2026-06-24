@@ -2,26 +2,11 @@ import { data } from './data.js';
 
 // SEO Configuratie
 const seoConfig = {
-    home: {
-        title: "Hazy Standard | Onafhankelijke Business Intelligence & Veldwerk",
-        description: "Hazy Standard biedt onafhankelijke business intelligence. Wij zoeken de feiten achter de data door middel van diepgaande rapportages."
-    },
-    topics: {
-        title: "Verhalen | Dossiers & Analyse | Hazy Standard",
-        description: "Bekijk onze uitgebreide verzameling verhalen, analyses en veldwerk-rapportages."
-    },
-    about: {
-        title: "Over Hazy Standard | Onze Methode",
-        description: "In een wereld vol ruis kiest Hazy Standard voor de essentie. Ontdek onze methodiek en achtergrond."
-    },
-    contact: {
-        title: "Contact | Hazy Standard",
-        description: "Directe lijnen met Hazy Standard? Neem contact met ons op voor samenwerkingen en vragen."
-    },
-    portfolio: {
-        title: "Portfolio | Projecten & Cases | Hazy Standard",
-        description: "Bekijk onze gerealiseerde projecten en business intelligence cases."
-    }
+    home: { title: "Hazy Standard | Onafhankelijke Business Intelligence & Veldwerk", description: "Hazy Standard biedt onafhankelijke business intelligence. Wij zoeken de feiten achter de data door middel van diepgaande rapportages." },
+    topics: { title: "Verhalen | Dossiers & Analyse | Hazy Standard", description: "Bekijk onze uitgebreide verzameling verhalen, analyses en veldwerk-rapportages." },
+    about: { title: "Over Hazy Standard | Onze Methode", description: "In een wereld vol ruis kiest Hazy Standard voor de essentie." },
+    contact: { title: "Contact | Hazy Standard", description: "Directe lijnen met Hazy Standard." },
+    portfolio: { title: "Portfolio | Projecten & Cases | Hazy Standard", description: "Bekijk onze gerealiseerde projecten en business intelligence cases." }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -46,11 +31,9 @@ function setupNavigation() {
             e.preventDefault();
             const target = link.dataset.target;
             if(!target) return;
-
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
             const activeNav = document.querySelector(`.nav-link[data-target="${target}"]`);
             if (activeNav) activeNav.classList.add('active');
-
             loadView(target);
             window.scrollTo(0, 0);
         });
@@ -59,27 +42,15 @@ function setupNavigation() {
 
 function updateSEO(pageName, article = null) {
     const config = seoConfig[pageName] || seoConfig.home;
-    
-    // Gebruik artikelgegevens als we in een artikel zitten
-    const title = article ? `${article.title} | Hazy Standard` : config.title;
-    const description = article ? (article.intro || config.description) : config.description;
-
-    document.title = title;
-    
+    document.title = article ? `${article.title} | Hazy Standard` : config.title;
     let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.name = "description";
-        document.head.appendChild(metaDesc);
-    }
-    metaDesc.content = description;
+    if (!metaDesc) { metaDesc = document.createElement('meta'); metaDesc.name = "description"; document.head.appendChild(metaDesc); }
+    metaDesc.content = article ? (article.intro || config.description) : config.description;
 }
 
 function openArticle(article) {
-    updateSEO('topics', article); // SEO updaten bij openen artikel
+    updateSEO('topics', article);
     const main = document.getElementById('main-content');
-    const related = data.analysis.filter(a => a.title !== article.title).slice(0, 3);
-
     main.innerHTML = `
         <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
             <div class="relative w-full h-[350px] md:h-[500px] overflow-hidden border-b border-black">
@@ -112,7 +83,6 @@ function loadView(viewName) {
     updateSEO(viewName);
     const main = document.getElementById('main-content');
     const template = document.getElementById(`tpl-${viewName}`);
-    
     main.innerHTML = '';
     if (template) {
         main.appendChild(template.content.cloneNode(true));
@@ -129,8 +99,17 @@ function renderTopics() {
     grid.innerHTML = '';
     data.analysis.forEach(a => {
         const el = document.createElement('div');
-        el.className = 'border border-black flex flex-col cursor-pointer hover:bg-gray-50 group bg-white';
-        el.innerHTML = `<div class="aspect-video w-full overflow-hidden border-b border-black"><img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"></div><div class="p-6"><h3 class="font-extrabold uppercase text-xl mb-3">${a.title}</h3><p class="text-sm font-semibold mb-6 line-clamp-3">${a.intro}</p><div class="text-[10px] font-bold uppercase border-t border-black pt-3">${a.date}</div></div>`;
+        // Toegevoegd: border-r en border-b voor de strakke grid-look
+        el.className = 'border-r border-b border-black flex flex-col cursor-pointer hover:bg-gray-50 group bg-white';
+        el.innerHTML = `
+            <div class="aspect-video w-full overflow-hidden border-b border-black">
+                <img src="${a.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="font-extrabold uppercase text-xl mb-4 leading-tight group-hover:text-red-600 transition-colors">${a.title}</h3>
+                <p class="text-sm font-semibold mb-6 text-gray-700 line-clamp-3">${a.intro}</p>
+                <div class="text-[10px] font-bold uppercase border-t border-black pt-4 mt-auto tracking-widest">${a.date}</div>
+            </div>`;
         el.onclick = () => openArticle(a);
         grid.appendChild(el);
     });
@@ -142,11 +121,19 @@ function renderPortfolio() {
     grid.innerHTML = ''; 
     data.portfolio.forEach(item => {
         const el = document.createElement('div');
-        el.className = 'border border-black flex flex-col hover:bg-gray-50 cursor-pointer group bg-white';
-        el.innerHTML = `<div class="aspect-video w-full border-b border-black"><img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0"></div><div class="p-6"><h3 class="text-xl font-extrabold uppercase mb-4">${item.title}</h3><p class="text-sm text-gray-700">${item.intro}</p></div>`;
+        // Toegevoegd: border-r en border-b voor de strakke grid-look
+        el.className = 'border-r border-b border-black flex flex-col hover:bg-gray-50 cursor-pointer group bg-white';
+        el.innerHTML = `
+            <div class="aspect-video w-full border-b border-black">
+                <img src="${item.image}" class="w-full h-full object-cover grayscale group-hover:grayscale-0">
+            </div>
+            <div class="p-8">
+                <h3 class="text-xl font-extrabold uppercase mb-4">${item.title}</h3>
+                <p class="text-sm text-gray-700">${item.intro}</p>
+            </div>`;
         el.onclick = () => openArticle(item);
         grid.appendChild(el);
     });
 }
 
-// ... (renderHome blijft gelijk)
+// RenderHome blijft hieronder ongewijzigd staan...
