@@ -1,11 +1,13 @@
 import { data } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialiseer iconen voor de statische onderdelen
     if (window.lucide) lucide.createIcons();
+    
     setDate();
     setupNavigation();
     
-    // Laad de footer direct bij het opstarten
+    // Footer laden en acties uitvoeren
     loadFooter();
     
     // Start de pagina
@@ -42,6 +44,7 @@ function setDate() {
 }
 
 function setupNavigation() {
+    // We selecteren zowel de hoofdnavigatie als knoppen in de footer
     const navLinks = document.querySelectorAll('.nav-link, footer [data-target]');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -59,33 +62,21 @@ function setupNavigation() {
     });
 }
 
-function openArticle(article) {
-    const main = document.getElementById('main-content');
-    const related = data.analysis.filter(a => a.title !== article.title).slice(0, 3);
-
-    main.innerHTML = `
-        <div class="max-w-7xl mx-auto bg-white min-h-screen border-x border-black">
-            </div>
-    `;
-    // ... rest van je openArticle logica
-    if (window.lucide) lucide.createIcons();
-}
-
 function loadView(viewName) {
     const main = document.getElementById('main-content');
     const template = document.getElementById(`tpl-${viewName}`);
     main.innerHTML = '';
+    
     if (template) {
         main.appendChild(template.content.cloneNode(true));
         if (viewName === 'home') renderHome();
+        // Belangrijk: na het laden van een nieuwe view, iconen opnieuw scannen
         if (window.lucide) lucide.createIcons();
     } else {
         renderHome(); 
     }
 }
 
-function renderHome() {
-    // ... (jouw renderHome functies zoals featured, video, etc.)
-}
-
-// ... (overige functies zoals renderTopics, renderPortfolio, updateSEO blijven staan)
+// Hier staan je andere functies zoals renderHome, openArticle, etc.
+// Zorg dat elke functie aan het einde de iconen update indien nodig:
+// if (window.lucide) lucide.createIcons();
