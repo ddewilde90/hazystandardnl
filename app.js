@@ -34,17 +34,16 @@ function setupNavigation() {
 }
 
 function loadView(viewName) {
-    const main = document.getElementById('main-content');
-    const template = document.getElementById(`tpl-${viewName}`);
-    main.innerHTML = '';
+    // Verberg alle templates/secties eerst (zorg dat je in HTML secties hebt met een class 'page')
+    // Of: laad alleen de data in de elementen die al op de pagina staan
     
-    if (template) {
-        main.appendChild(template.content.cloneNode(true));
-        if (viewName === 'home') renderHome();
-        if (viewName === 'topics') renderTopics();
-        if (viewName === 'portfolio') renderPortfolio();
-        if (window.lucide) lucide.createIcons();
+    if (viewName === 'home') {
+        renderHome();
+    } else if (viewName === 'topics') {
+        renderTopics();
     }
+    // ... enzovoorts
+}
 }
 
 function openArticle(article) {
