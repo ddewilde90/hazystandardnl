@@ -1,5 +1,6 @@
 export const data = {
     featured: {
+        id: "featured-1",
         title: "De Val van Commercieel Vastgoed: Een Systeemfout",
         excerpt: "Analyse van de leegstand in de Zuidas en de kettingreactie in de pensioenfondsen. De data wijst op een structurele overwaardering van 40%.",
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
@@ -8,12 +9,14 @@ export const data = {
     },
     videos:[
         {
+            id: "vid-1",
             title: "Project Z: Verlaten Kantoorkolossen",
             duration: "14:20",
             thumb: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=600&auto=format&fit=crop",
             videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
         },
         {
+            id: "vid-2",
             title: "Grondstoftekorten in de Haven",
             duration: "08:45",
             thumb: "https://images.unsplash.com/photo-1586528116311-ad8ed745da33?q=80&w=600&auto=format&fit=crop",
@@ -22,26 +25,30 @@ export const data = {
     ],
     analysis:[
         {
+            id: "ana-1",
             title: "Inflatiecijfers Q1: De Verborgen Variabelen",
             date: "18 MRT 2026",
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
-            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800", // GELD/DATA FOTO
+            content: "Volledige analyse volgt...",
+            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800",
             tags: ["Economie", "Data"]
         },
         {
+            id: "ana-2",
             title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
             date: "20 MRT 2026",
             intro: "Dit is de korte tekst voor op de hoofdpagina.",
             content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt.",
-            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800", // ONDERWIJS FOTO
+            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800",
             tags: ["Onderwijs"]
         },
         {
+            id: "ana-3",
             title: "Urbanisatie 2.0: De Vlucht uit de Stad",
             date: "12 MRT 2026",
             intro: "Demografische hittekaarten tonen een omkering van de trek naar de Randstad.",
             content: "Hier typ je de volledige feitelijke analyse.",
-            image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800", // STAD FOTO
+            image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
             tags: ["Vastgoed", "Maatschappij"]
         }
     ],
@@ -57,17 +64,19 @@ export const data = {
     
     portfolio: [
         {
+            id: "port-1",
             title: "Data-extractie Logistiek",
             date: "MAART 2026",
             intro: "Automatisering van rapportages voor transportbewegingen in de haven.",
-            image: "https://images.unsplash.com/photo-1494412574743-0194856f038f?q=80&w=800", // LOGISTIEK FOTO
+            image: "https://images.unsplash.com/photo-1494412574743-0194856f038f?q=80&w=800",
             content: "Hier kun je de uitgebreide uitleg van je project kwijt."
         },
         {
+            id: "port-2",
             title: "Dashboarding Vastgoed",
             date: "FEBRUARI 2026",
             intro: "Visuele weergave van de leegstandscijfers in de Randstad.",
-            image: "https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=800", // DASHBOARD FOTO
+            image: "https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=800",
             content: "Details over de gebruikte parameters en bronnen."
         }
     ]
