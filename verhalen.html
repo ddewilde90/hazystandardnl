@@ -1,78 +1,125 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazy Standard | Verhalen</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2457736');
-    </script>
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazy Standard | Product Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+    <style>
+        .color-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; border: 1px solid #000; margin-right: 8px; }
+    </style>
+</head>
 <body class="bg-white text-black font-sans antialiased">
-    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        <header class="border-b border-black">
-            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
-                <h1 class="text-4xl font-extrabold uppercase tracking-tighter">Hazy Standard.</h1>
-                <div class="text-xs font-semibold uppercase tracking-widest hidden sm:block" id="current-date"></div>
-            </div>
-            <nav class="flex flex-wrap overflow-x-auto border-black">
-                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-100">Home</a>
-                <button class="active px-6 py-3 border-r border-black font-semibold uppercase text-sm bg-gray-100">Verhalen</button>
-                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">About me</a>
-                <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
-                <a href="index.html" class="px-6 py-3 border-black font-semibold uppercase text-sm">Contact</a>
-            </nav>
-        </header>
-        
-<template id="tpl-topics">
-    <div class="flex flex-col flex-grow">
-        <div class="p-4 border-b border-black flex flex-wrap gap-2 bg-white" id="topics-filters"></div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 border-l border-t border-black" id="topics-grid"></div>
-    </div>
-</template>
-        
-       <template id="tpl-portfolio">
-        <div class="bg-white min-h-screen">
-            <div class="p-6 md:p-10 border-b border-black">
-                <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
-                <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
-            </div>
-            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
-        </div>
-    </template>
+    <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
+        
+        <header class="border-b border-black">
+            <div class="flex justify-between items-center px-4 py-6 border-b border-black">
+                <h1 class="text-4xl font-extrabold uppercase tracking-tighter"><a href="index.html">Hazy Standard.</a></h1>
+                <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
+                </a>
+            </div>
+            <nav class="flex overflow-x-auto border-black">
+                <a href="shop.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Shop</a>
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm hover:bg-gray-50">Portfolio</a>
+            </nav>
+        </header>
 
-    <script type="module" src="app.js"></script>
+        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-6 gap-2 bg-gray-50 items-center">
+            <span class="text-[10px] font-bold uppercase text-gray-400">Filters enkel op shop-pagina actief</span>
+        </div>
 
-        <section class="bg-[#1a1a1a] text-white py-16 px-6 border-t border-black">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">Blijf op de hoogte van Hazy Standard</h2>
-                <div class="ml-embedded" data-form="8Qhza5"></div>
-            </div>
-        </section>
+        <main class="flex-grow p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <img id="prod-image" src="" class="w-full border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            </div>
 
-        <footer class="border-t-4 border-black bg-white pt-16 pb-8 px-6 mt-auto">
-            <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div class="flex flex-col">
-                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-4">Hazy Standard.</h2>
-                    <p class="text-sm font-semibold leading-relaxed mb-6">Onafhankelijke Business Intelligence en veldwerk-rapportages.</p>
-                </div>
-            </div>
-        </footer>
-    </div>
-    
-    <script>
-        // Lucide iconen activeren
-        if (window.lucide) lucide.createIcons();
-    </script>
+            <div class="flex flex-col">
+                <h1 id="prod-title" class="text-4xl font-black uppercase tracking-tighter">Laden...</h1>
+                <p id="prod-sku" class="text-xs text-gray-500 mt-1 uppercase font-bold"></p>
+                
+                <div class="mt-6">
+                    <span id="prod-price" class="text-3xl font-black">€0,00</span>
+                </div>
+
+                <ul class="text-sm mt-6 space-y-2">
+                    <li>
+                        <strong>Kleur:</strong> 
+                        <span class="inline-flex items-center"><span id="prod-color-dot" class="color-dot"></span><span id="prod-color-text"></span></span>
+                    </li>
+                    <li><strong>Edelsteensoort:</strong> <span id="prod-stone"></span></li>
+                </ul>
+
+                <button id="buy-button" class="mt-8 snipcart-add-item w-full bg-black text-white py-4 font-bold uppercase hover:bg-gray-800 transition-all">Toevoegen aan mandje</button>
+
+                <div class="mt-12 border-t border-black">
+                    <div class="border-b border-black">
+                        <button onclick="toggleSection('specs-content', this)" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
+                            <span>Materiaal</span><i data-lucide="chevron-down"></i>
+                        </button>
+                        <p id="specs-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100"></p>
+                    </div>
+                    <div class="border-b border-black">
+                        <button onclick="toggleSection('prod-content', this)" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
+                            <span>Alles over dit product</span><i data-lucide="chevron-down"></i>
+                        </button>
+                        <p id="prod-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="mt-20 border-t border-black p-8 md:p-12">
+            <h2 class="text-2xl font-black uppercase mb-8">Aanbevolen voor jou</h2>
+            <div id="related-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+        </section>
+    </div>
+
+    <script>
+        function toggleSection(id, btn) {
+            document.getElementById(id).classList.toggle('hidden');
+            btn.querySelector('i').classList.toggle('rotate-180');
+        }
+
+        const colorMap = { "Paars": "#800080", "Zwart": "#000000", "Groen": "#008000", "Blauw": "#0000FF", "Wit": "#FFFFFF", "Goud": "#FFD700", "Zilver": "#C0C0C0" };
+
+        fetch('producten.json')
+            .then(res => res.json())
+            .then(producten => {
+                const params = new URLSearchParams(window.location.search);
+                const p = producten.find(x => x.id === params.get('id'));
+
+                if (p) {
+                    document.getElementById('prod-title').innerText = p.title;
+                    document.getElementById('prod-sku').innerText = "SKU: " + (p.sku || "N.v.t.");
+                    document.getElementById('prod-image').src = p.image;
+                    document.getElementById('prod-price').innerText = "€" + p.price.toFixed(2).replace('.', ',');
+                    
+                    document.getElementById('prod-color-text').innerText = p.color || "Standaard";
+                    document.getElementById('prod-color-dot').style.backgroundColor = colorMap[p.color] || "#000000";
+                    document.getElementById('prod-stone').innerText = p.stone || "N.v.t.";
+                    document.getElementById('specs-content').innerText = p.specs || "Geen specificaties.";
+                    document.getElementById('prod-content').innerText = p.content || "Geen beschrijving.";
+
+                    const btn = document.getElementById('buy-button');
+                    btn.setAttribute('data-item-id', p.id);
+                    btn.setAttribute('data-item-name', p.title);
+                    btn.setAttribute('data-item-price', p.price);
+                    btn.setAttribute('data-item-url', window.location.href);
+
+                    const related = producten.filter(x => x.id !== p.id).slice(0, 4);
+                    document.getElementById('related-grid').innerHTML = related.map(item => `
+                        <a href="product.html?id=${item.id}" class="border border-black p-2 hover:bg-gray-50">
+                            <img src="${item.image}" class="w-full">
+                            <h4 class="text-sm font-bold mt-2 uppercase">${item.title}</h4>
+                        </a>
+                    `).join('');
+                }
+                lucide.createIcons();
+            });
+    </script>
 </body>
 </html>
