@@ -6,65 +6,18 @@
     <title>Verhalen | Hazy Standard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
-        
         <div id="header-placeholder"></div>
 
-        <main id="blog-grid" class="flex-grow grid grid-cols-1 md:grid-cols-3"></main>
+        <main id="main-content" class="flex-grow">
+            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3"></div>
+        </main>
 
         <div id="footer-placeholder"></div>
     </div>
 
-    <script type="module">
-        import { data } from './data.js';
-
-        // Helper functie voor laden
-        async function loadComponent(id, file) {
-            try {
-                const response = await fetch(file);
-                const html = await response.text();
-                document.getElementById(id).innerHTML = html;
-                if (window.lucide) lucide.createIcons();
-            } catch (e) {
-                console.error(`Fout bij laden van ${file}:`, e);
-            }
-        }
-
-        // Hoofd-logica binnen DOMContentLoaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Laad onderdelen
-            loadComponent('header-placeholder', 'header.html');
-            loadComponent('footer-placeholder', 'footer.html');
-
-            // 2. Data renderen
-            const grid = document.getElementById('blog-grid');
-            
-            if (data && data.analysis && grid) {
-                grid.innerHTML = data.analysis.map(item => `
-                    <article class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors flex flex-col bg-white">
-                        <img src="${item.image}" class="w-full h-64 object-cover mb-6 border border-black" alt="${item.title}">
-                        
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mb-4 leading-tight">
-                            ${item.title}
-                        </h3>
-                        
-                        <p class="text-sm text-gray-700 mb-6 flex-grow">
-                            ${item.intro}
-                        </p>
-                        
-                        <div class="mt-auto pt-6 border-t border-black flex justify-between items-center">
-                            <span class="text-[10px] font-bold uppercase tracking-widest">${item.date}</span>
-                            <a href="artikel.html?id=${item.id}" class="text-xs font-bold uppercase underline">Lees verder</a>
-                        </div>
-                    </article>
-                `).join('');
-            } else {
-                console.error("Data of #blog-grid niet gevonden.");
-            }
-        });
-    </script>
+    <script type="module" src="apps.js"></script>
 </body>
 </html>
