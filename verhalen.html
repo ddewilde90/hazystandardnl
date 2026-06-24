@@ -32,13 +32,25 @@
                 <a href="index.html" class="px-6 py-3 border-black font-semibold uppercase text-sm">Contact</a>
             </nav>
         </header>
+        
+  <template id="tpl-topics">
+        <div class="flex flex-col flex-grow">
+            <div class="p-4 border-b border-black flex space-x-2 overflow-x-auto bg-white" id="topics-filters"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8" id="topics-grid"></div>
+        </div>
+    </template>
+        
+       <template id="tpl-portfolio">
+        <div class="bg-white min-h-screen">
+            <div class="p-6 md:p-10 border-b border-black">
+                <h1 class="text-4xl md:text-6xl font-extrabold uppercase leading-none mb-4">Portfolio</h1>
+                <p class="text-lg font-bold uppercase text-gray-400">Gerealiseerde projecten & Business Intelligence</p>
+            </div>
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+    </template>
 
-        <main class="flex-grow flex flex-col">
-    <div class="p-8 border-b border-black">
-        <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter">Verhalen.</h1>
-    </div>
-    <div id="topics-grid" class="grid grid-cols-1 md:grid-cols-3 border-l border-t border-black"></div>
-</main>
+    <script type="module" src="app.js"></script>
 
         <section class="bg-[#1a1a1a] text-white py-16 px-6 border-t border-black">
             <div class="max-w-2xl mx-auto text-center">
