@@ -1,4 +1,13 @@
 export const data = {
+    analysis: [
+        { title: "De toekomst van BI", category: "Technologie", content: "...", ... },
+        { title: "Kernwaarden in de zorg", category: "Maatschappij", content: "...", ... },
+        { title: "Data-analyse in Friesland", category: "Technologie", content: "...", ... }
+    ],
+    // ...
+};
+
+export const data = {
     featured: {
         title: "De Val van Commercieel Vastgoed: Een Systeemfout",
         excerpt: "Analyse van de leegstand in de Zuidas en de kettingreactie in de pensioenfondsen. De data wijst op een structurele overwaardering van 40%.",
