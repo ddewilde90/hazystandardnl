@@ -17,21 +17,25 @@ function setDate() {
 }
 
 function setupNavigation() {
-    const navLinks = document.querySelectorAll('.nav-link, footer [data-target]');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+    // We laten de 'document' body luisteren naar klikken
+    document.addEventListener('click', (e) => {
+        // Kijk of de aangeklikte knop (of een element erin) een data-target heeft
+        const link = e.target.closest('[data-target]');
+        
+        if (link) {
             e.preventDefault();
             const target = link.dataset.target;
-            if(!target) return;
-
+            
+            // Update active states in het hoofdmenu
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
             const activeNav = document.querySelector(`.nav-link[data-target="${target}"]`);
             if (activeNav) activeNav.classList.add('active');
 
+            // Laad de view
             loadView(target);
             updateSEO(target);
             window.scrollTo(0, 0);
-        });
+        }
     });
 }
 
