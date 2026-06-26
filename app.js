@@ -17,19 +17,15 @@ function setDate() {
 }
 
 function setupNavigation() {
-    // We laten de 'document' body luisteren naar klikken
     document.addEventListener('click', (e) => {
-        // Kijk of de aangeklikte knop (of een element erin) een data-target heeft
-        const link = e.target.closest('[data-target]');
+        // Zoek of het aangeklikte element een [data-target] heeft
+        const targetElement = e.target.closest('[data-target]');
         
-        if (link) {
-            e.preventDefault();
-            const target = link.dataset.target;
+        if (targetElement) {
+            e.preventDefault(); // Voorkom dat de link daadwerkelijk probeert te laden
+            const target = targetElement.dataset.target;
             
-            // Update active states in het hoofdmenu
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            const activeNav = document.querySelector(`.nav-link[data-target="${target}"]`);
-            if (activeNav) activeNav.classList.add('active');
+            console.log("Navigeren naar:", target); // Check de console of dit verschijnt!
 
             // Laad de view
             loadView(target);
