@@ -21,13 +21,13 @@
                 </h1>
             </div>
 
-            <!-- Grid verdeling 2/5 (Linkerkolom) en 3/5 (Rechterkolom) -->
+            <!-- Grid verdeling 2/5 en 3/5 -->
             <div class="grid grid-cols-1 md:grid-cols-5">
                 
-                <!-- Linkerkolom: Wie ben ik (2/5) -->
-                <div class="p-8 md:p-16 border-r border-black md:col-span-2">
-                    <h3 class="text-3xl font-black uppercase tracking-tighter mb-8">Wie ben ik?</h3>
+                <!-- Linkerkolom (2/5) -->
+                <div class="p-8 md:p-16 border-r border-black md:col-span-2 flex flex-col">
                     <div class="prose max-w-none text-gray-700 space-y-6">
+                        <h3 class="text-3xl font-black uppercase tracking-tighter text-black mb-8">Wie ben ik?</h3>
                         <p>Ik ben <strong>Daniëlle de Wilde</strong>, de drijvende kracht achter Hazy Standard. Vanuit mijn uitvalsbasis in <strong>Grou, Friesland</strong>, werk ik aan het blootleggen van de verhalen die ertoe doen.</p>
                         <p>Je kunt contact met mij opnemen voor:</p>
                         <ul class="list-disc list-inside space-y-2 font-bold uppercase text-sm">
@@ -36,9 +36,35 @@
                             <li>Sprekersverzoeken of interviews</li>
                         </ul>
                     </div>
+
+                    <!-- Social Media & Contact Details -->
+                    <div class="mt-12 pt-8 border-t border-gray-300 space-y-6">
+                        <div>
+                            <p class="font-bold text-sm uppercase mb-4">Volg de feiten & de conversatie:</p>
+                            <div class="flex gap-4">
+                                <a href="https://linkedin.com/in/jouwprofiel" target="_blank" class="text-xs font-bold underline hover:text-black">LinkedIn</a>
+                                <a href="https://x.com/Hazystandardnl" target="_blank" class="text-xs font-bold underline hover:text-black">X</a>
+                                <a href="https://instagram.com/jouwhandle" target="_blank" class="text-xs font-bold underline hover:text-black">Instagram</a>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Direct contact</span>
+                            <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-gray-400">KvK</p>
+                                <p class="text-sm font-bold">Vul in</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase font-bold text-gray-400">BTW</p>
+                                <p class="text-sm font-bold">Vul in</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Rechterkolom: Formulier (3/5) -->
+                <!-- Rechterkolom (3/5) -->
                 <div class="p-8 md:p-16 md:col-span-3">
                     <h3 class="text-2xl font-black uppercase tracking-tighter mb-6">Stuur een bericht</h3>
                     <form action="https://formspree.io/f/xqevdqge" method="POST" class="space-y-4">
