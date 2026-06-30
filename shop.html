@@ -46,8 +46,17 @@
 
         <main class="flex-grow grid grid-cols-1 md:grid-cols-3" id="product-grid"></main>
 
-        <div id="footer-placeholder"></div>
-    </div>
+     <div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Nadat de footer geladen is, moet het MailerLite script opnieuw aangeroepen worden:
+            ml('account', '2457736'); 
+        });
+</script>
 
     <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
