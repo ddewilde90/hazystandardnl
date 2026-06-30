@@ -16,8 +16,17 @@
             <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3"></div>
         </main>
 
-        <div id="footer-placeholder"></div>
-    </div>
+      <div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Nadat de footer geladen is, moet het MailerLite script opnieuw aangeroepen worden:
+            ml('account', '2457736'); 
+        });
+</script>
 
     <script type="module">
     import { data } from './data.js';
