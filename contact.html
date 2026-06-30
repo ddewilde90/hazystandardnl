@@ -13,7 +13,7 @@
         <div id="header-placeholder"></div>
 
         <div class="bg-white text-black flex-grow flex flex-col">
-            <!-- Hero Sectie (tekst alleen, geen afbeelding) -->
+            <!-- Hero Sectie -->
             <div class="border-b border-black bg-black text-white p-12 md:p-20">
                 <h1 class="text-[60px] md:text-[120px] font-extrabold uppercase leading-[0.8] tracking-tighter">
                     Get in <br>
@@ -21,11 +21,11 @@
                 </h1>
             </div>
 
-            <!-- Inhoud zoals in Schermafbeelding 2026-06-30 111655.png -->
-            <div class="grid grid-cols-1 md:grid-cols-2">
+            <!-- Grid verdeling 2/5 (Linkerkolom) en 3/5 (Rechterkolom) -->
+            <div class="grid grid-cols-1 md:grid-cols-5">
                 
-                <!-- Linkerkolom: Wie ben ik -->
-                <div class="p-8 md:p-16 border-r border-black">
+                <!-- Linkerkolom: Wie ben ik (2/5) -->
+                <div class="p-8 md:p-16 border-r border-black md:col-span-2">
                     <h3 class="text-3xl font-black uppercase tracking-tighter mb-8">Wie ben ik?</h3>
                     <div class="prose max-w-none text-gray-700 space-y-6">
                         <p>Ik ben <strong>Daniëlle de Wilde</strong>, de drijvende kracht achter Hazy Standard. Vanuit mijn uitvalsbasis in <strong>Grou, Friesland</strong>, werk ik aan het blootleggen van de verhalen die ertoe doen.</p>
@@ -38,14 +38,14 @@
                     </div>
                 </div>
 
-                <!-- Rechterkolom: Formulier -->
-                <div class="p-8 md:p-16">
+                <!-- Rechterkolom: Formulier (3/5) -->
+                <div class="p-8 md:p-16 md:col-span-3">
                     <h3 class="text-2xl font-black uppercase tracking-tighter mb-6">Stuur een bericht</h3>
                     <form action="https://formspree.io/f/xqevdqge" method="POST" class="space-y-4">
                         <input type="text" name="naam" placeholder="Jouw Naam" required class="w-full p-3 border border-black focus:outline-none">
                         <input type="email" name="email" placeholder="Jouw Email" required class="w-full p-3 border border-black focus:outline-none">
                         <textarea name="bericht" rows="4" placeholder="Waar kan ik je mee helpen?" required class="w-full p-3 border border-black focus:outline-none"></textarea>
-                        <button type="submit" class="bg-black text-white px-8 py-3 font-black uppercase text-sm hover:bg-gray-800 transition-all w-full">Verstuur bericht</button>
+                        <button type="submit" class="bg-black text-white px-8 py-3 font-black uppercase text-sm hover:bg-gray-800 transition-all w-full md:w-auto">Verstuur bericht</button>
                     </form>
                 </div>
             </div>
