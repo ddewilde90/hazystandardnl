@@ -11,16 +11,20 @@
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
         
+        <!-- Header wordt ingeladen via script -->
         <div id="header-placeholder"></div>
 
         <div class="bg-white text-black flex-grow flex flex-col font-sans">
+            <!-- Hero Sectie -->
             <div class="p-8 md:p-12 border-b border-black bg-black text-white">
                 <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
                     Get in <br>
                     <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
                 </h1>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
+                <!-- Linkerkolom: Contactgegevens -->
                 <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
                     <div>
                         <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
@@ -33,26 +37,45 @@
                             <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
                             <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
                         </div>
+                        <div class="border-t border-black pt-4">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Locatie</span>
+                            <p class="font-bold uppercase text-sm">Grou, Friesland</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Rechterkolom: Over mij & Doel -->
                 <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
+                    <h3 class="text-3xl font-black uppercase tracking-tighter mb-8">Wie ben ik?</h3>
+                    <div class="prose max-w-none text-gray-700 space-y-6">
+                        <p>Ik ben <strong>Daniëlle de Wilde</strong>, de drijvende kracht achter Hazy Standard. Vanuit mijn uitvalsbasis in <strong>Grou, Friesland</strong>, werk ik aan het blootleggen van de verhalen die ertoe doen.</p>
+                        
+                        <p>Je kunt contact met mij opnemen voor:</p>
+                        <ul class="list-disc list-inside space-y-2 font-bold uppercase text-sm">
+                            <li>Samenwerkingen voor documentaires of journalistieke projecten</li>
+                            <li>Vragen over onze redactie-methode</li>
+                            <li>Sprekersverzoeken of interviews</li>
+                            <li>Algemene zakelijke verzoeken</li>
+                        </ul>
+                        
+                        <div class="pt-8 border-t border-gray-300 mt-8">
+                            <p class="font-bold text-sm uppercase mb-4">Volg de feiten & de conversatie:</p>
+                            <div class="flex gap-4">
+                                <a href="https://linkedin.com/in/jouwprofiel" target="_blank" class="text-xs font-bold underline hover:text-black">LinkedIn</a>
+                                <a href="https://x.com/Hazystandardnl" target="_blank" class="text-xs font-bold underline hover:text-black">X</a>
+                                <a href="https://instagram.com/jouwhandle" target="_blank" class="text-xs font-bold underline hover:text-black">Instagram</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
-<head>
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2457736');
-    </script>
-</head>
+
+        <!-- Footer wordt ingeladen via script -->
         <div id="footer-placeholder"></div>
     </div>
 
     <script>
-        // Functie om bestanden in te laden
         function loadComponent(id, file) {
             fetch(file)
                 .then(response => response.text())
