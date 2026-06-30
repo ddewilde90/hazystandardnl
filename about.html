@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazy Standard | Contact</title>
+    <title>Hazy Standard | Over Ons</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-black font-sans antialiased">
@@ -13,30 +12,36 @@
         
         <div id="header-placeholder"></div>
 
-        <div class="bg-white text-black flex-grow flex flex-col font-sans">
-            <div class="p-8 md:p-12 border-b border-black bg-black text-white">
-                <h1 class="text-[50px] md:text-[100px] font-extrabold uppercase leading-[0.8] tracking-tighter">
-                    Get in <br>
-                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
+        <div class="bg-white text-black flex-grow flex flex-col">
+            <!-- Hero Sectie -->
+            <div class="border-b border-black bg-black text-white p-12 md:p-20">
+                <h1 class="text-[60px] md:text-[120px] font-extrabold uppercase leading-[0.8] tracking-tighter">
+                    About <br>
+                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Standard</span>
                 </h1>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
-                <div class="md:col-span-4 p-8 md:p-12 border-r border-black flex flex-col justify-between bg-white">
-                    <div>
-                        <h2 class="text-2xl font-extrabold uppercase mb-6">Directe Lijnen.</h2>
-                        <p class="font-serif italic text-lg text-gray-600 mb-8 leading-snug">
-                            "Laten we bespreken wat de feiten voor uw organisatie betekenen."
-                        </p>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="border-t border-black pt-4">
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
-                            <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
-                        </div>
+
+            <!-- Grid verdeling 2/5 en 3/5 -->
+            <div class="grid grid-cols-1 md:grid-cols-5">
+                
+                <!-- Linkerkolom (2/5): Persoonlijk & Kern -->
+                <div class="p-8 md:p-16 border-r border-black md:col-span-2">
+                    <h3 class="text-3xl font-black uppercase tracking-tighter mb-8">Onze Visie</h3>
+                    <div class="prose max-w-none text-gray-700 space-y-6">
+                        <p>Hazy Standard is ontstaan vanuit de behoefte aan feitelijke helderheid in een wereld vol ruis. Wij geloven dat verhalen pas echt impact maken als ze geworteld zijn in eerlijkheid en openheid.</p>
+                        <p>Als onafhankelijk platform fungeren wij als podium voor documentaires, journalistieke verdieping en blogs die de status quo uitdagen.</p>
                     </div>
                 </div>
-                <div class="md:col-span-8 p-8 md:p-16 bg-gray-50">
+
+                <!-- Rechterkolom (3/5): Verdieping -->
+                <div class="p-8 md:p-16 md:col-span-3">
+                    <h3 class="text-2xl font-black uppercase tracking-tighter mb-6">Van Ruis naar Plezier</h3>
+                    <div class="prose max-w-none text-gray-700 space-y-6">
+                        <p>In een tijd waarin informatieoverdracht vaak versnipperd is, kiest Hazy Standard voor een bewuste koers. Wij verbinden feiten met menselijke ervaringen.</p>
+                        <p>Daarom werken wij momenteel aan ons interactieve werkboek: <em>"Het spelende kind: van ruis naar plezier"</em>. Dit project reflecteert onze missie om niet alleen te informeren, maar ook om verbinding te creëren tussen generaties en perspectieven.</p>
+                        <p>Wij zijn ervan overtuigd dat door in te zoomen op de details die er écht toe doen, we samen een scherper beeld van de werkelijkheid kunnen vormen.</p>
                     </div>
+                </div>
             </div>
         </div>
 
@@ -44,16 +49,9 @@
     </div>
 
     <script>
-        // Functie om bestanden in te laden
         function loadComponent(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                });
+            fetch(file).then(res => res.text()).then(data => document.getElementById(id).innerHTML = data);
         }
-
         document.addEventListener('DOMContentLoaded', () => {
             loadComponent('header-placeholder', 'header.html');
             loadComponent('footer-placeholder', 'footer.html');
