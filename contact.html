@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hazy Standard | Contact</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-white text-black font-sans antialiased">
@@ -13,70 +12,41 @@
         
         <div id="header-placeholder"></div>
 
-        <div class="bg-white text-black flex-grow flex flex-col font-sans">
-            <!-- Hero Sectie: Foto links, Tekst rechts -->
-            <div class="grid md:grid-cols-2 border-b border-black">
-                <div class="h-96 md:h-[500px] overflow-hidden">
-                    <img src="jouw-foto.jpg" alt="Daniëlle de Wilde" class="w-full h-full object-cover">
-                </div>
-                <div class="p-8 md:p-12 flex flex-col justify-center bg-black text-white">
-                    <h1 class="text-[50px] md:text-[80px] font-extrabold uppercase leading-[0.8] tracking-tighter">
-                        Get in <br>
-                        <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">Touch</span>
-                    </h1>
-                </div>
+        <div class="bg-white text-black flex-grow flex flex-col">
+            <!-- Hero Sectie (tekst alleen, geen afbeelding) -->
+            <div class="border-b border-black bg-black text-white p-12 md:p-20">
+                <h1 class="text-[60px] md:text-[120px] font-extrabold uppercase leading-[0.8] tracking-tighter">
+                    Get in <br>
+                    <span class="italic font-serif font-normal lowercase tracking-normal text-gray-400">touch</span>
+                </h1>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-12 flex-grow">
-                <!-- Linkerkolom: Wie ben ik (verplaatst naar links) -->
-                <div class="md:col-span-8 p-8 md:p-16 border-r border-black bg-white">
+            <!-- Inhoud zoals in Schermafbeelding 2026-06-30 111655.png -->
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                
+                <!-- Linkerkolom: Wie ben ik -->
+                <div class="p-8 md:p-16 border-r border-black">
                     <h3 class="text-3xl font-black uppercase tracking-tighter mb-8">Wie ben ik?</h3>
-                    <div class="prose max-w-none text-gray-700 space-y-6 mb-12">
+                    <div class="prose max-w-none text-gray-700 space-y-6">
                         <p>Ik ben <strong>Daniëlle de Wilde</strong>, de drijvende kracht achter Hazy Standard. Vanuit mijn uitvalsbasis in <strong>Grou, Friesland</strong>, werk ik aan het blootleggen van de verhalen die ertoe doen.</p>
                         <p>Je kunt contact met mij opnemen voor:</p>
                         <ul class="list-disc list-inside space-y-2 font-bold uppercase text-sm">
                             <li>Samenwerkingen voor documentaires of journalistieke projecten</li>
                             <li>Vragen over onze redactie-methode</li>
                             <li>Sprekersverzoeken of interviews</li>
-                            <li>Algemene zakelijke verzoeken</li>
                         </ul>
-                        <div class="pt-8 border-t border-gray-300 mt-8">
-                            <p class="font-bold text-sm uppercase mb-4">Volg de feiten & de conversatie:</p>
-                            <div class="flex gap-4">
-                                <a href="#" target="_blank" class="text-xs font-bold underline hover:text-black">LinkedIn</a>
-                                <a href="#" target="_blank" class="text-xs font-bold underline hover:text-black">X</a>
-                                <a href="#" target="_blank" class="text-xs font-bold underline hover:text-black">Instagram</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Rechterkolom: Formulier en gegevens -->
-                <div class="md:col-span-4 p-8 md:p-12 bg-gray-50 flex flex-col">
+                <!-- Rechterkolom: Formulier -->
+                <div class="p-8 md:p-16">
                     <h3 class="text-2xl font-black uppercase tracking-tighter mb-6">Stuur een bericht</h3>
-                    <form action="https://formspree.io/f/xqevdqge" method="POST" class="space-y-4 mb-12">
+                    <form action="https://formspree.io/f/xqevdqge" method="POST" class="space-y-4">
                         <input type="text" name="naam" placeholder="Jouw Naam" required class="w-full p-3 border border-black focus:outline-none">
                         <input type="email" name="email" placeholder="Jouw Email" required class="w-full p-3 border border-black focus:outline-none">
                         <textarea name="bericht" rows="4" placeholder="Waar kan ik je mee helpen?" required class="w-full p-3 border border-black focus:outline-none"></textarea>
                         <button type="submit" class="bg-black text-white px-8 py-3 font-black uppercase text-sm hover:bg-gray-800 transition-all w-full">Verstuur bericht</button>
                     </form>
-
-                    <div class="mt-auto space-y-6 pt-8 border-t border-gray-300">
-                        <div>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</span>
-                            <p class="font-bold uppercase text-sm">info@hazystandard.nl</p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <p class="text-[10px] uppercase font-bold text-gray-400">KvK</p>
-                                <p class="text-sm font-bold">12345678</p>
-                            </div>
-                            <div>
-                                <p class="text-[10px] uppercase font-bold text-gray-400">BTW</p>
-                                <p class="text-sm font-bold">NL001234567B01</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -87,11 +57,8 @@
     <script>
         function loadComponent(id, file) {
             fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                });
+                .then(res => res.text())
+                .then(data => document.getElementById(id).innerHTML = data);
         }
         document.addEventListener('DOMContentLoaded', () => {
             loadComponent('header-placeholder', 'header.html');
