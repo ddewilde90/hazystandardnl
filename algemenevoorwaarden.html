@@ -40,8 +40,17 @@
             </div>
         </div>
 
-        <div id="footer-placeholder"></div>
-    </div>
+     <div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Nadat de footer geladen is, moet het MailerLite script opnieuw aangeroepen worden:
+            ml('account', 'XXXXXX'); 
+        });
+</script>
 
     <script>
         // Functie om bestanden in te laden
