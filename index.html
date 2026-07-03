@@ -87,10 +87,19 @@
                 </div>
          </template>
     
+ 
         <div id="footer-placeholder"></div>
+    </div>
 
-
-    <!- (Andere templates zoals tpl-about etc. blijven hier staan) -->
+    <script>
+        function loadComponent(id, file) {
+            fetch(file).then(res => res.text()).then(data => document.getElementById(id).innerHTML = data);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
 
    <script type="module">
         import { data } from './data.js';
