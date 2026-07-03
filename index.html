@@ -86,7 +86,7 @@
         </section>
          </template>
     
-        <div id="footer-placeholder"></div>
+      <div id="footer-placeholder"></div>
 
 <script>
     fetch('footer.html')
@@ -98,6 +98,22 @@
         });
 </script>
 
+    <script>
+        // Functie om bestanden in te laden
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
    <script type="module">
         import { data } from './data.js';
         import * as app from './app.js';
