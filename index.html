@@ -132,31 +132,23 @@
     </div>
 
  <!-- TEMPLATES -->
- <template id="tpl-home">
-        <div class="flex flex-col flex-grow">
-            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
-                <div class="border-r border-black flex flex-col">
-                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div>
-                    <div id="col-video" class="flex flex-col"></div>
-                </div>
-                <div class="border-r border-black flex flex-col">
-                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div>
-                    <div id="col-analysis" class="flex flex-col"></div>
-                </div>
-                <div class="flex flex-col bg-gray-50">
-                    <div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div>
-                    <div id="col-raw" class="flex flex-col p-4 space-y-4 border-b border-black"></div>
-                    <div class="p-6 bg-white flex-grow">
-                        <div id="home-ad-sidebar" class="border border-gray-300 h-full min-h-[250px] flex flex-col items-center justify-center p-4 text-center">
-                            <span class="text-[10px] text-gray-300 font-bold uppercase">Ruimte voor advertentie</span>
-                        </div>
+<template id="tpl-home">
+            <div class="flex flex-col flex-grow">
+                <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3"></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
+                    <div class="border-r border-black flex flex-col"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div><div id="col-video" class="flex flex-col"></div></div>
+                    <div class="border-r border-black flex flex-col"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div><div id="col-analysis" class="flex flex-col"></div></div>
+                    <div class="flex flex-col bg-gray-50"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div><div id="col-raw" class="flex flex-col p-4 space-y-4 border-b border-black"></div>
+                        <div class="p-6 bg-white flex-grow"><div id="home-ad-sidebar" class="border border-gray-300 h-full min-h-[250px] flex flex-col items-center justify-center p-4 text-center"><span class="text-[10px] text-gray-300 font-bold uppercase">Ruimte voor advertentie</span></div></div>
                     </div>
                 </div>
+                <!-- Nieuwe sectie voor 6 blogartikelen -->
+                <div class="border-t border-black p-8">
+                    <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Recente Analyses</h2>
+                    <div id="home-blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
             </div>
-        </div>
-    </template>
-
+        </template>
 
 
     <template id="tpl-topics">
