@@ -21,12 +21,10 @@
 </head>
 <body class="bg-white text-black font-sans antialiased">
     
-    <!-- HEADER --->
     <header class="border-b border-black">
         <div class="flex flex-col md:flex-row justify-between items-center px-4 py-6 border-b border-black">
             <h1 class="text-4xl font-extrabold uppercase tracking-tighter mb-4 md:mb-0"><a href="index.html">Hazy Standard.</a></h1>
             <div class="flex items-center space-x-6">
-                <div class="text-xs font-semibold uppercase tracking-widest" id="current-date"></div>
                 <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
                     <i data-lucide="shopping-bag" class="w-4 h-4"></i>
                     <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
@@ -34,134 +32,48 @@
             </div>
         </div>
         <nav class="flex flex-wrap overflow-x-auto border-black">
-            <button class="nav-link active px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="home">Home</button>
-            <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="topics">Verhalen</button>
-            <button class="nav-link px-6 py-3 border-r border-black font-semibold uppercase text-sm" data-target="about">About me</button>
+            <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Home</a>
+            <a href="verhalen.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Verhalen</a>
+            <a href="about.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">About me</a>
             <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
-            <button class="nav-link px-6 py-3 border-black font-semibold uppercase text-sm" data-target="contact">Contact</button>
+            <a href="contact.html" class="px-6 py-3 border-black font-semibold uppercase text-sm">Contact</a>
         </nav>
     </header>
 
-    <!-- MAIN CONTENT (Hier komt de template in te staan) -->
-    <main id="main-content" class="flex-grow flex flex-col"></main>
+    <main id="main-content" class="flex-grow p-8">
+        <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Recente Analyses</h2>
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+    </main>
 
-    <!-- TEMPLATES -->
-    <template id="tpl-home">
-        <div class="flex flex-col flex-grow">
-            <!-- Featured & Columns -->
-            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">
-                <div class="border-r border-black flex flex-col"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Video / Docu</div><div id="col-video" class="flex flex-col"></div></div>
-                <div class="border-r border-black flex flex-col"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Analysis / Blog</div><div id="col-analysis" class="flex flex-col"></div></div>
-                <div class="flex flex-col bg-gray-50"><div class="p-3 border-b border-black bg-black text-white font-bold uppercase text-sm">Raw Data</div><div id="col-raw" class="flex flex-col p-4 space-y-4 border-b border-black"></div>
-                    <div class="p-6 bg-white flex-grow"><div id="home-ad-sidebar" class="border border-gray-300 h-full min-h-[250px] flex flex-col items-center justify-center p-4 text-center"><span class="text-[10px] text-gray-300 font-bold uppercase">Advertentie</span></div></div>
-                </div>
-            </div>
-            
-            <!-- Blog Grid (Deze wordt gevuld via JS) -->
-            <div class="border-t border-black p-8">
-                <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Recente Analyses</h2>
-                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-            </div>
-        </div>
-         
-        
-         </template>
-
-     <main id="main-content" class="flex-grow">
-            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3"></div>
-        </main>
-
-      <div id="footer-placeholder"></div>
-
-<script>
-    fetch('footer.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-            // Nadat de footer geladen is, moet het MailerLite script opnieuw aangeroepen worden:
-            ml('account', '2457736'); 
-        });
-</script>
+    <div id="footer-placeholder"></div>
 
     <script type="module">
-    import { data } from './data.js';
-    import * as app from './app.js';
-
-        window.openArticleById = (id) => {
-        const article = data.analysis.find(a => a.id === id);
-        if (article) {
-            app.openArticle(article);
-        } else {
-            console.error("Artikel niet gevonden met ID:", id);
-        }
-    };
-
-        async function loadComponent(id, file) {
-            const response = await fetch(file);
-            document.getElementById(id).innerHTML = await response.text();
-            if (window.lucide) lucide.createIcons();
-        }
-
-        document.addEventListener('DOMContentLoaded', async () => {
-            await loadComponent('header-placeholder', 'header.html');
-            await loadComponent('footer-placeholder', 'footer.html');
-
-            const grid = document.getElementById('blog-grid');
-            
-            if (data && data.analysis && grid) {
-                grid.innerHTML = data.analysis.map(item => `
-                    <article class="border-r border-b border-black p-8 hover:bg-gray-50 transition-colors flex flex-col bg-white cursor-pointer group">
-                        <img src="${item.image}" class="w-full h-64 object-cover mb-6 border border-black" alt="${item.title}">
-                        <h3 class="text-2xl font-black uppercase tracking-tighter mb-4 leading-tight">${item.title}</h3>
-                        <p class="text-sm text-gray-700 mb-6 flex-grow">${item.intro}</p>
-                        <div class="mt-auto pt-6 border-t border-black flex justify-between items-center">
-                            <span class="text-[10px] font-bold uppercase tracking-widest">${item.date}</span>
-                            <button onclick="window.openArticleById('${item.id}')" class="text-xs font-bold uppercase underline">Lees verder</button>
-                        </div>
-                    </article>
-                `).join('');
-            }
-        });
-
-        // Bridge functie om vanuit HTML bij de openArticle functie in apps.js te komen
-        window.openArticleById = (id) => {
-            const article = data.analysis.find(a => a.id === id);
-            if (article) app.openArticle(article); 
-        };
-    </script>
-
-<script>
-    fetch('footer.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
-            // Nadat de footer geladen is, moet het MailerLite script opnieuw aangeroepen worden:
-            ml('account', '2457736'); 
-        });
-</script>
-
-    <script>
-        // Functie om bestanden in te laden
-        function loadComponent(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(id).innerHTML = data;
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            loadComponent('header-placeholder', 'header.html');
-            loadComponent('footer-placeholder', 'footer.html');
-        });
-    </script>
-   <script type="module">
         import { data } from './data.js';
         import * as app from './app.js';
 
-        window.renderBlogGrid = () => {
+        // Globale functie voor artikel links
+        window.openArticleById = (id) => {
+            const article = data.analysis.find(a => a.id === id);
+            if (article) app.openArticle(article);
+            else console.error("Artikel niet gevonden:", id);
+        };
+
+        async function initPage() {
+            // Header en Footer laden
+            const [headerRes, footerRes] = await Promise.all([
+                fetch('header.html'),
+                fetch('footer.html')
+            ]);
+            
+            // Note: Header staat al in de HTML, maar als je header.html ook wilt injecteren:
+            // document.getElementById('header-placeholder').innerHTML = await headerRes.text();
+            
+            document.getElementById('footer-placeholder').innerHTML = await footerRes.text();
+            
+            // MailerLite opnieuw triggeren in footer
+            if (window.ml) ml('account', '2457736');
+
+            // Blog grid vullen
             const grid = document.getElementById('blog-grid');
             if (grid && data.analysis) {
                 grid.innerHTML = data.analysis.map(item => `
@@ -171,31 +83,19 @@
                         <p class="text-xs opacity-70 mb-4">${item.intro}</p>
                         <div class="mt-auto pt-4 border-t border-current flex justify-between items-center">
                             <span class="text-[9px] font-bold uppercase tracking-widest">${item.date}</span>
-                            <span class="text-[9px] font-bold uppercase underline">Lees meer</span>
+                            <button onclick="window.openArticleById('${item.id}')" class="text-[9px] font-bold uppercase underline">Lees meer</button>
                         </div>
                     </article>
                 `).join('');
             }
-        };
+            
+            if (window.lucide) lucide.createIcons();
+        }
 
-         // Bridge functie om vanuit HTML bij de openArticle functie in apps.js te komen
-        window.openArticleById = (id) => {
-            const article = data.analysis.find(a => a.id === id);
-            if (article) app.openArticle(article); 
-        };
-
-        // ZORG DAT DIT ER STAAT:
-        // Omdat je waarschijnlijk in app.js de home-template laadt, 
-        // moet je die daar aanroepen. Maar om het nu direct te testen:
-        document.addEventListener('DOMContentLoaded', () => {
-            // Eerst de home template laden (als je app.js dat nog niet doet)
-            // Daarna het grid vullen:
-            window.renderBlogGrid();
-        });
+        document.addEventListener('DOMContentLoaded', initPage);
     </script>
 
-     <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
-
 </body>
 </html>
