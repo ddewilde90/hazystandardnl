@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,105 +22,119 @@
                     <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
                 </a>
             </div>
-               <nav class="flex flex-wrap overflow-x-auto border-black">
-    <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Home</a>
-    <a href="verhalen.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Verhalen</a>
-    <a href="about.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">About</a>
-    <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
-    <a href="contact.html" class="px-6 py-3 border-black font-semibold uppercase text-sm">Contact</a>
-</nav>
+            <nav class="flex flex-wrap overflow-x-auto border-black">
+                <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Home</a>
+                <a href="verhalen.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Verhalen</a>
+                <a href="about.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">About</a>
+                <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
+                <a href="contact.html" class="px-6 py-3 border-black font-semibold uppercase text-sm">Contact</a>
+            </nav>
         </header>
 
-     <div id="footer-placeholder"></div>
+        <div class="p-4 border-b border-black grid grid-cols-2 md:grid-cols-6 gap-2 bg-gray-50 items-center">
+            <span class="text-[10px] font-bold uppercase text-gray-400">Filters enkel op shop-pagina actief</span>
+        </div>
 
-        <main class="flex-grow p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <img id="prod-image" src="" class="w-full border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-            </div>
+        <main class="flex-grow p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <img id="prod-image" src="" class="w-full border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]" alt="Product afbeelding">
+            </div>
 
-            <div class="flex flex-col">
-                <h1 id="prod-title" class="text-4xl font-black uppercase tracking-tighter">Laden...</h1>
-                <p id="prod-sku" class="text-xs text-gray-500 mt-1 uppercase font-bold"></p>
-                
-                <div class="mt-6">
-                    <span id="prod-price" class="text-3xl font-black">€0,00</span>
-                </div>
+            <div class="flex flex-col">
+                <h1 id="prod-title" class="text-4xl font-black uppercase tracking-tighter">Laden...</h1>
+                <p id="prod-sku" class="text-xs text-gray-500 mt-1 uppercase font-bold"></p>
+                
+                <div class="mt-6">
+                    <span id="prod-price" class="text-3xl font-black">€0,00</span>
+                </div>
 
-                <ul class="text-sm mt-6 space-y-2">
-                    <li>
-                        <strong>Kleur:</strong> 
-                        <span class="inline-flex items-center"><span id="prod-color-dot" class="color-dot"></span><span id="prod-color-text"></span></span>
-                    </li>
-                    <li><strong>Edelsteensoort:</strong> <span id="prod-stone"></span></li>
-                </ul>
+                <ul class="text-sm mt-6 space-y-2">
+                    <li>
+                        <strong>Kleur:</strong> 
+                        <span class="inline-flex items-center"><span id="prod-color-dot" class="w-3 h-3 rounded-full mr-2 border border-black"></span><span id="prod-color-text"></span></span>
+                    </li>
+                    <li><strong>Edelsteensoort:</strong> <span id="prod-stone"></span></li>
+                </ul>
 
-                <button id="buy-button" class="mt-8 snipcart-add-item w-full bg-black text-white py-4 font-bold uppercase hover:bg-gray-800 transition-all">Toevoegen aan mandje</button>
+                <button id="buy-button" class="mt-8 snipcart-add-item w-full bg-black text-white py-4 font-bold uppercase hover:bg-gray-800 transition-all">Toevoegen aan mandje</button>
 
-                <div class="mt-12 border-t border-black">
-                    <div class="border-b border-black">
-                        <button onclick="toggleSection('specs-content', this)" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
-                            <span>Materiaal</span><i data-lucide="chevron-down"></i>
-                        </button>
-                        <p id="specs-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100"></p>
-                    </div>
-                    <div class="border-b border-black">
-                        <button onclick="toggleSection('prod-content', this)" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
-                            <span>Alles over dit product</span><i data-lucide="chevron-down"></i>
-                        </button>
-                        <p id="prod-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100"></p>
-                    </div>
-                </div>
-            </div>
-        </main>
+                <div class="mt-12 border-t border-black">
+                    <div class="border-b border-black">
+                        <button onclick="toggleSection('specs-content', this)" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
+                            <span>Materiaal</span><i data-lucide="chevron-down"></i>
+                        </button>
+                        <p id="specs-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100"></p>
+                    </div>
+                    <div class="border-b border-black">
+                        <button onclick="toggleSection('prod-content', this)" class="w-full flex justify-between items-center py-4 font-bold uppercase hover:bg-gray-50 transition-all">
+                            <span>Alles over dit product</span><i data-lucide="chevron-down"></i>
+                        </button>
+                        <p id="prod-content" class="hidden py-4 text-sm text-gray-600 px-1 border-t border-gray-100"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-        <section class="mt-20 border-t border-black p-8 md:p-12">
-            <h2 class="text-2xl font-black uppercase mb-8">Aanbevolen voor jou</h2>
-            <div id="related-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
-        </section>
-    </div>
+        <section class="mt-20 border-t border-black p-8 md:p-12">
+            <h2 class="text-2xl font-black uppercase mb-8">Aanbevolen voor jou</h2>
+            <div id="related-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+        </section>
 
-    <script>
-        function toggleSection(id, btn) {
-            document.getElementById(id).classList.toggle('hidden');
-            btn.querySelector('i').classList.toggle('rotate-180');
-        }
+        <div id="footer-placeholder"></div>
+    </div>
 
-        const colorMap = { "Paars": "#800080", "Zwart": "#000000", "Groen": "#008000", "Blauw": "#0000FF", "Wit": "#FFFFFF", "Goud": "#FFD700", "Zilver": "#C0C0C0" };
+    <script>
+        function toggleSection(id, btn) {
+            document.getElementById(id).classList.toggle('hidden');
+            btn.querySelector('i').classList.toggle('rotate-180');
+        }
 
-        fetch('producten.json')
-            .then(res => res.json())
-            .then(producten => {
-                const params = new URLSearchParams(window.location.search);
-                const p = producten.find(x => x.id === params.get('id'));
+        // Footer inladen
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+                if (window.lucide) lucide.createIcons();
+            });
 
-                if (p) {
-                    document.getElementById('prod-title').innerText = p.title;
-                    document.getElementById('prod-sku').innerText = "SKU: " + (p.sku || "N.v.t.");
-                    document.getElementById('prod-image').src = p.image;
-                    document.getElementById('prod-price').innerText = "€" + p.price.toFixed(2).replace('.', ',');
-                    
-                    document.getElementById('prod-color-text').innerText = p.color || "Standaard";
-                    document.getElementById('prod-color-dot').style.backgroundColor = colorMap[p.color] || "#000000";
-                    document.getElementById('prod-stone').innerText = p.stone || "N.v.t.";
-                    document.getElementById('specs-content').innerText = p.specs || "Geen specificaties.";
-                    document.getElementById('prod-content').innerText = p.content || "Geen beschrijving.";
+        const colorMap = { "Paars": "#800080", "Zwart": "#000000", "Groen": "#008000", "Blauw": "#0000FF", "Wit": "#FFFFFF", "Goud": "#FFD700", "Zilver": "#C0C0C0" };
 
-                    const btn = document.getElementById('buy-button');
-                    btn.setAttribute('data-item-id', p.id);
-                    btn.setAttribute('data-item-name', p.title);
-                    btn.setAttribute('data-item-price', p.price);
-                    btn.setAttribute('data-item-url', window.location.href);
+        fetch('producten.json')
+            .then(res => res.json())
+            .then(producten => {
+                const params = new URLSearchParams(window.location.search);
+                const p = producten.find(x => x.id === params.get('id'));
 
-                    const related = producten.filter(x => x.id !== p.id).slice(0, 4);
-                    document.getElementById('related-grid').innerHTML = related.map(item => `
-                        <a href="product.html?id=${item.id}" class="border border-black p-2 hover:bg-gray-50">
-                            <img src="${item.image}" class="w-full">
-                            <h4 class="text-sm font-bold mt-2 uppercase">${item.title}</h4>
-                        </a>
-                    `).join('');
-                }
-                lucide.createIcons();
-            });
-    </script>
+                if (p) {
+                    document.getElementById('prod-title').innerText = p.title;
+                    document.getElementById('prod-sku').innerText = "SKU: " + (p.sku || "N.v.t.");
+                    document.getElementById('prod-image').src = p.image;
+                    document.getElementById('prod-price').innerText = "€" + p.price.toFixed(2).replace('.', ',');
+                    
+                    document.getElementById('prod-color-text').innerText = p.color || "Standaard";
+                    document.getElementById('prod-color-dot').style.backgroundColor = colorMap[p.color] || "#000000";
+                    document.getElementById('prod-stone').innerText = p.stone || "N.v.t.";
+                    document.getElementById('specs-content').innerText = p.specs || "Geen specificaties.";
+                    document.getElementById('prod-content').innerText = p.content || "Geen beschrijving.";
+
+                    const btn = document.getElementById('buy-button');
+                    btn.setAttribute('data-item-id', p.id);
+                    btn.setAttribute('data-item-name', p.title);
+                    btn.setAttribute('data-item-price', p.price);
+                    btn.setAttribute('data-item-url', window.location.href);
+
+                    const related = producten.filter(x => x.id !== p.id).slice(0, 4);
+                    document.getElementById('related-grid').innerHTML = related.map(item => `
+                        <a href="product.html?id=${item.id}" class="border border-black p-2 hover:bg-gray-50">
+                            <img src="${item.image}" class="w-full">
+                            <h4 class="text-sm font-bold mt-2 uppercase">${item.title}</h4>
+                        </a>
+                    `).join('');
+                }
+                lucide.createIcons();
+            });
+    </script>
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
 </body>
 </html>
