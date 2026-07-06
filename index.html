@@ -172,9 +172,9 @@ window.renderFeatured = () => {
 
          // Bridge functie om vanuit HTML bij de openArticle functie in apps.js te komen
         window.openArticleById = (id) => {
-            const article = data.analysis.find(a => a.id === id);
-            if (article) app.openArticle(article); 
-        };
+    const article = data.analysis.find(a => a.id === id);
+    if (article) app.openArticle(article);
+};
 
         // ZORG DAT DIT ER STAAT:
         // Omdat je waarschijnlijk in app.js de home-template laadt, 
