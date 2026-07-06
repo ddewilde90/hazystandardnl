@@ -122,3 +122,10 @@ function updateSEO(pageName) {
     };
     document.title = seo[pageName]?.title || "Hazy Standard";
 }
+
+// Binnen je switchPage functie, NA de appendChild regel:
+if (target === 'home') {
+    window.renderBlogGrid();
+    window.renderSidebarNews();
+    window.renderFeatured();
+}
