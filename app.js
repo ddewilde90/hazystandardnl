@@ -95,61 +95,8 @@ function renderHome() {
             </div>
         `;
         document.getElementById('featured-img').onclick = () => openArticle(data.featured);
-        // Roep hier de nieuwe functies aan:
-    renderSidebarNews();
-    renderExtraGrids();
-}
     }
-// Voeg dit toe in app.js
-export function renderHomeContent() {
-    // 1. Vul de nieuwe elementen
-    if (typeof window.renderSidebarNews === 'function') window.renderSidebarNews();
-    if (typeof window.renderFeatured === 'function') window.renderFeatured();
-    if (typeof window.renderBlogGrid === 'function') window.renderBlogGrid();
-}
-
-// Pas je loadView aan in app.js:
-export function loadView(viewName) {
-    const main = document.getElementById('main-content');
-    const template = document.getElementById(`tpl-${viewName}`);
-    
-    if (template) {
-        main.innerHTML = '';
-        main.appendChild(template.content.cloneNode(true));
-        
-        // Nu roepen we de content vuller aan
-        if (viewName === 'home') {
-            renderHomeContent();
-        }
-        if (window.lucide) lucide.createIcons();
-    }
-}
-function renderSidebarNews() {
-    const sidebar = document.getElementById('sidebar-news');
-    if (sidebar && data.analysis) {
-        // Pakt de titels uit je data voor de zijbalk
-        sidebar.innerHTML = data.analysis.slice(0, 5).map(item => `
-            <div class="border-b border-gray-100 pb-3">
-                <a href="#" onclick="event.preventDefault(); window.openArticleById('${item.id}')" class="text-sm font-semibold hover:text-red-600 transition-colors">
-                    ${item.title}
-                </a>
-            </div>
-        `).join('');
-    }
-}
-
-function renderExtraGrids() {
-    // Vul Video / Docu kolom
-    const colVideo = document.getElementById('col-video');
-    if (colVideo && data.video) { // Zorg dat je 'video' array in data.js hebt
-        colVideo.innerHTML = data.video.map(v => `
-            <div class="mb-4">
-                <div class="text-[10px] font-bold uppercase text-gray-500 italic">Video</div>
-                <h4 class="font-bold text-sm">${v.title}</h4>
-            </div>
-        `).join('');
-    }
-}
+    // ... (rest van je renderHome blijft hier staan)
 }
 
 function renderVerhalen() {
@@ -174,11 +121,4 @@ function updateSEO(pageName) {
         verhalen: { title: "Verhalen | Hazy Standard" }
     };
     document.title = seo[pageName]?.title || "Hazy Standard";
-}
-
-// Binnen je switchPage functie, NA de appendChild regel:
-if (target === 'home') {
-    window.renderBlogGrid();
-    window.renderSidebarNews();
-    window.renderFeatured();
 }
