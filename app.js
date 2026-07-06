@@ -96,7 +96,32 @@ function renderHome() {
         `;
         document.getElementById('featured-img').onclick = () => openArticle(data.featured);
     }
-    // ... (rest van je renderHome blijft hier staan)
+function renderSidebarNews() {
+    const sidebar = document.getElementById('sidebar-news');
+    if (sidebar && data.analysis) {
+        // Pakt de titels uit je data voor de zijbalk
+        sidebar.innerHTML = data.analysis.slice(0, 5).map(item => `
+            <div class="border-b border-gray-100 pb-3">
+                <a href="#" onclick="event.preventDefault(); window.openArticleById('${item.id}')" class="text-sm font-semibold hover:text-red-600 transition-colors">
+                    ${item.title}
+                </a>
+            </div>
+        `).join('');
+    }
+}
+
+function renderExtraGrids() {
+    // Vul Video / Docu kolom
+    const colVideo = document.getElementById('col-video');
+    if (colVideo && data.video) { // Zorg dat je 'video' array in data.js hebt
+        colVideo.innerHTML = data.video.map(v => `
+            <div class="mb-4">
+                <div class="text-[10px] font-bold uppercase text-gray-500 italic">Video</div>
+                <h4 class="font-bold text-sm">${v.title}</h4>
+            </div>
+        `).join('');
+    }
+}
 }
 
 function renderVerhalen() {
