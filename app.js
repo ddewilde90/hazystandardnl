@@ -100,6 +100,30 @@ function renderHome() {
     renderExtraGrids();
 }
     }
+// Voeg dit toe in app.js
+export function renderHomeContent() {
+    // 1. Vul de nieuwe elementen
+    if (typeof window.renderSidebarNews === 'function') window.renderSidebarNews();
+    if (typeof window.renderFeatured === 'function') window.renderFeatured();
+    if (typeof window.renderBlogGrid === 'function') window.renderBlogGrid();
+}
+
+// Pas je loadView aan in app.js:
+export function loadView(viewName) {
+    const main = document.getElementById('main-content');
+    const template = document.getElementById(`tpl-${viewName}`);
+    
+    if (template) {
+        main.innerHTML = '';
+        main.appendChild(template.content.cloneNode(true));
+        
+        // Nu roepen we de content vuller aan
+        if (viewName === 'home') {
+            renderHomeContent();
+        }
+        if (window.lucide) lucide.createIcons();
+    }
+}
 function renderSidebarNews() {
     const sidebar = document.getElementById('sidebar-news');
     if (sidebar && data.analysis) {
