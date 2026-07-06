@@ -95,6 +95,10 @@ function renderHome() {
             </div>
         `;
         document.getElementById('featured-img').onclick = () => openArticle(data.featured);
+        // Roep hier de nieuwe functies aan:
+    renderSidebarNews();
+    renderExtraGrids();
+}
     }
 function renderSidebarNews() {
     const sidebar = document.getElementById('sidebar-news');
