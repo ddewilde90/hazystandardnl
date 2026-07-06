@@ -98,7 +98,42 @@
         });
 </script>
 
+    
     <script>
+        // Functie voor de zijbalk (Net binnen)
+window.renderSidebarNews = () => {
+    const sidebar = document.getElementById('sidebar-news');
+    if (sidebar && data.analysis) {
+        sidebar.innerHTML = data.analysis.slice(0, 5).map(item => `
+            <div class="border-b border-gray-100 pb-2">
+                <a href="#" onclick="window.openArticleById('${item.id}')" class="text-sm font-semibold hover:underline">
+                    ${item.title}
+                </a>
+            </div>
+        `).join('');
+    }
+};
+
+// Functie voor het hoofdartikel
+window.renderFeatured = () => {
+    const container = document.getElementById('featured-container');
+    const featured = data.analysis[0]; 
+    if (container && featured) {
+        container.innerHTML = `
+            <img src="${featured.image}" class="w-full h-96 object-cover border border-black mb-4">
+            <h1 class="text-3xl font-black uppercase">${featured.title}</h1>
+        `;
+    }
+};
+
+// INITIALISATIE:
+// Zorg dat deze functies worden aangeroepen NADAT de template naar main-content is gekopieerd.
+// Als je app.js gebruikt, roep ze daar aan na: main.appendChild(template.content.cloneNode(true));
+
+    </script>
+
+        
+         <script>
         // Functie om bestanden in te laden
         function loadComponent(id, file) {
             fetch(file)
