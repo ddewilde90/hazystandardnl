@@ -1,30 +1,194 @@
-[
-  { 
-      "id": "ocean-jasper-ring", 
-      "title": "Ocean Jasper Ring", 
-      "price": 445.00, 
-      "sku": "RING-OJ-01",
-      "image": "/assets/images/ocean-jasper.jpg",
-      "color": "Groen",
-      "stone": "Ocean Jasper",
-      "category": "Ringen",
-      "material": "Zilver",
-      "stock": 5,
-      "specs": "Materiaal: 925 Sterling Zilver.",
-      "content": "Uniek handgemaakt sieraad."
-  },
-  { 
-      "id": "zilveren-ring", 
-      "title": "Zilveren Ring", 
-      "price": 35.00, 
-      "sku": "RING-02",
-      "image": "/assets/images/zilver.jpg",
-      "color": "Zilver",
-      "stone": "Geen",
-      "category": "Ringen",
-      "material": "Zilver",
-      "stock": 10,
-      "specs": "Materiaal: 925 Sterling Zilver.",
-      "content": "Minimalistisch design."
-  }
-]
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazy Standard | Business Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2457736');
+    </script>
+</head>
+<body class="bg-white text-black font-sans antialiased">
+    
+    <!-- HEADER --->
+    <header class="border-b border-black">
+        <div class="flex flex-col md:flex-row justify-between items-center px-4 py-6 border-b border-black">
+            <h1 class="text-4xl font-extrabold uppercase tracking-tighter mb-4 md:mb-0"><a href="index.html">Hazy Standard.</a></h1>
+            <div class="flex items-center space-x-6">
+                <div class="text-xs font-semibold uppercase tracking-widest" id="current-date"></div>
+                <a href="#" class="snipcart-checkout flex items-center space-x-2 text-xs font-bold uppercase tracking-widest border border-black px-3 py-2 hover:bg-black hover:text-white transition-all cursor-pointer">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                    <span>Mandje (<span class="snipcart-items-count">0</span>)</span>
+                </a>
+            </div>
+        </div>
+             <nav class="flex flex-wrap overflow-x-auto border-black">
+    <a href="index.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Home</a>
+    <a href="verhalen.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">Verhalen</a>
+    <a href="about.html" class="px-6 py-3 border-r border-black font-semibold uppercase text-sm">About</a>
+    <a href="shop.html" class="bg-black text-white px-6 py-3 border-r border-black font-semibold uppercase text-sm">Shop</a>
+    <a href="contact.html" class="px-6 py-3 border-black font-semibold uppercase text-sm">Contact</a>
+</nav>
+    </header>
+
+    <!-- MAIN CONTENT (Hier komt de template in te staan) -->
+    <main id="main-content" class="flex-grow flex flex-col"></main>
+
+    <!-- TEMPLATES -->
+    <template id="tpl-home">
+        <div class="flex flex-col flex-grow">
+            <!-- Featured & Columns -->
+            <div id="featured-container" class="border-b border-black grid grid-cols-1 md:grid-cols-3"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 flex-grow">  
+            </div>
+            </div>
+            
+            <!-- Blog Grid (Deze wordt gevuld via JS) -->
+            <div class="border-t border-black p-8">
+                <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Laatste verhalen</h2>
+                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            </div>
+        </div>
+          <!-- Blog Grid (Deze wordt gevuld via JS) -->
+        <div class="border-t border-black p-8">
+
+                <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Populaire producten</h2>
+                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-8 pb-12">
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2">
+                <div id="featured-products" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    </div>
+            </div>
+
+            <aside class="border-l border-black pl-6">
+                <h2 class="text-xl font-black uppercase mb-6">Nieuw binnen</h2>
+                <div id="sidebar-products" class="space-y-6">
+                    </div>
+            </aside>
+        </section>
+         </template>
+    
+      <div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+            // Nadat de footer geladen is, moet het MailerLite script opnieuw aangeroepen worden:
+            ml('account', '2457736'); 
+        });
+</script>
+
+    <script>
+        // Functie om bestanden in te laden
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('header-placeholder', 'header.html');
+            loadComponent('footer-placeholder', 'footer.html');
+        });
+    </script>
+   <script type="module">
+        import { data } from './data.js';
+        import * as app from './app.js';
+
+        window.renderBlogGrid = () => {
+            const grid = document.getElementById('blog-grid');
+            if (grid && data.analysis) {
+                grid.innerHTML = data.analysis.map(item => `
+                    <article class="border border-black p-6 hover:bg-black hover:text-white transition-colors cursor-pointer group">
+                        <img src="${item.image}" class="w-full h-48 object-cover mb-4 border border-black" alt="${item.title}">
+                        <h3 class="text-xl font-black uppercase tracking-tighter mb-2 leading-tight">${item.title}</h3>
+                        <p class="text-xs opacity-70 mb-4">${item.intro}</p>
+                        <div class="mt-auto pt-4 border-t border-current flex justify-between items-center">
+                            <span class="text-[9px] font-bold uppercase tracking-widest">${item.date}</span>
+                            <span class="text-[9px] font-bold uppercase underline">Lees meer</span>
+                        </div>
+                    </article>
+                `).join('');
+            }
+        };
+
+         // Bridge functie om vanuit HTML bij de openArticle functie in apps.js te komen
+        window.openArticleById = (id) => {
+            const article = data.analysis.find(a => a.id === id);
+            if (article) app.openArticle(article); 
+        };
+
+        // ZORG DAT DIT ER STAAT:
+        // Omdat je waarschijnlijk in app.js de home-template laadt, 
+        // moet je die daar aanroepen. Maar om het nu direct te testen:
+        document.addEventListener('DOMContentLoaded', () => {
+            // Eerst de home template laden (als je app.js dat nog niet doet)
+            // Daarna het grid vullen:
+            window.renderBlogGrid();
+        });
+
+  window.renderSpecificProducts = async () => {
+    try {
+        const response = await fetch('producten.json');
+        if (!response.ok) throw new Error('Kon JSON niet laden');
+        const products = await response.json();
+
+        const featured = document.getElementById('featured-products');
+        
+        // STOP als de container niet bestaat (voorkomt vastlopen van het menu)
+        if (!featured) {
+            console.warn("Featured container nog niet gevonden in de DOM");
+            return;
+        }
+
+        // Slice de eerste 3 producten en map ze naar HTML
+        featured.innerHTML = products.slice(0, 3).map(item => `
+            <div class="border border-black p-4 flex flex-col">
+                <img src="${item.image}" class="w-full h-48 object-cover mb-4" alt="${item.title}">
+                <h3 class="font-bold text-lg uppercase">${item.title}</h3>
+                <p class="text-sm">€${item.price.toFixed(2)}</p>
+                <button class="snipcart-add-item border border-black px-4 py-2 mt-auto text-xs uppercase"
+                    data-item-id="${item.id}"
+                    data-item-price="${item.price}"
+                    data-item-name="${item.title}"
+                    data-item-image="${item.image}">
+                    Toevoegen
+                </button>
+            </div>
+        `).join('');
+
+    } catch (error) {
+        console.error("Fout bij laden producten:", error);
+    }
+};
+       document.addEventListener('DOMContentLoaded', () => {
+    window.renderBlogGrid();
+    window.renderSpecificProducts(); // Deze activeert de twee secties
+});
+    </script>
+
+     <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
+
+</body>
+</html>
