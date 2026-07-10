@@ -146,6 +146,37 @@
             // Daarna het grid vullen:
             window.renderBlogGrid();
         });
+
+       window.renderSpecificProducts = () => {
+    // Vul de Featured container
+    const featured = document.getElementById('featured-products');
+    if (featured && data.products) {
+        // Pak bijvoorbeeld het eerste product uit de array
+        const item = data.products[0]; 
+        featured.innerHTML = `
+            <div class="product-card">
+                <img src="${item.image}" class="w-full h-auto">
+                <h3 class="font-bold">${item.name}</h3>
+                <p>€${item.price}</p>
+            </div>
+        `;
+    }
+
+    // Vul de Sidebar container
+    const sidebar = document.getElementById('sidebar-products');
+    if (sidebar && data.products) {
+        // Pak een lijst van producten voor de sidebar
+        sidebar.innerHTML = data.products.slice(1, 4).map(item => `
+            <div class="flex gap-4">
+                <img src="${item.image}" class="w-16 h-16 object-cover">
+                <div>
+                    <h4 class="font-bold text-sm">${item.name}</h4>
+                    <span class="text-xs">€${item.price}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+};
     </script>
 
      <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
