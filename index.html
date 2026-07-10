@@ -172,7 +172,7 @@ window.renderSpecificProducts = async () => {
             `).join('') + `</div>`;
         }
 
-        // 2. Sidebar sectie blijft zoals hij was (bijv. de rest van de producten)
+       // 2. Sidebar sectie blijft zoals hij was (bijv. de rest van de producten)
         const sidebar = document.getElementById('sidebar-products');
         if (sidebar && products.length > 3) {
             sidebar.innerHTML = products.slice(3, 6).map(item => `
