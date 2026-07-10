@@ -174,11 +174,25 @@
                     data-item-image="${item.image}">
                     Toevoegen
                 </button>
-            </div>
-        `).join('');
+           </div>
+            `;
+        }
 
+        // 2. Vul de Sidebar container (de rest)
+        const sidebar = document.getElementById('sidebar-products');
+        if (sidebar && products.length > 1) {
+            sidebar.innerHTML = products.slice(1).map(item => `
+                <div class="flex gap-4">
+                    <img src="${item.image}" class="w-16 h-16 object-cover border border-black" alt="${item.title}">
+                    <div>
+                        <h4 class="font-bold text-sm">${item.title}</h4>
+                        <span class="text-xs">€${item.price.toFixed(2)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
     } catch (error) {
-        console.error("Fout bij laden producten:", error);
+        console.error("Fout bij laden van producten:", error);
     }
 };
        document.addEventListener('DOMContentLoaded', () => {
