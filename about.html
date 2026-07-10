@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hazy Standard | About</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://cdn.snipcart.com" />
@@ -13,26 +14,18 @@
 <body class="bg-white text-black font-sans antialiased">
     <div class="max-w-screen-2xl mx-auto border-x border-black min-h-screen flex flex-col">
 
-             <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2457736');
-    </script>
-
         <div id="header-placeholder"></div>
-    
+        
         <main class="flex-grow">
             <div class="grid md:grid-cols-2 border-b border-black">
                 <div class="h-[500px] overflow-hidden">
                     <img src="assets/images/daan1.jpg" alt="Daniëlle de Wilde" class="w-full h-full object-cover">
                 </div>
                 <div class="p-12 md:p-20 flex flex-col justify-center bg-gray-50">
-    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">Daniëlle de Wilde</h2>
-    <p class="text-xl font-serif italic mb-8">Drijvende kracht achter Hazy Standard. Documentairemaker, verhalenverteller en onderzoeker van de menselijke maat.</p>
-    <p class="text-sm leading-relaxed text-gray-700">Als grafisch vormgever en creatieve duizendpoot verken ik de grens tussen beeld en waarheid. Ik heb geen journalistieke achtergrond, maar schrijf en onderzoek vanuit een pure behoefte om te begrijpen. Mijn werk is een continue zoektocht naar de essentie; ik duik tot de kern om ruis te filteren en verhalen zichtbaar te maken die er écht toe doen.</p>
-</div>
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6">Daniëlle de Wilde</h2>
+                    <p class="text-xl font-serif italic mb-8">Drijvende kracht achter Hazy Standard. Documentairemaker, verhalenverteller en onderzoeker van de menselijke maat.</p>
+                    <p class="text-sm leading-relaxed text-gray-700">Als grafisch vormgever en creatieve duizendpoot verken ik de grens tussen beeld en waarheid. Ik heb geen journalistieke achtergrond, maar schrijf en onderzoek vanuit een pure behoefte om te begrijpen. Mijn werk is een continue zoektocht naar de essentie; ik duik tot de kern om ruis te filteren en verhalen zichtbaar te maken die er écht toe doen.</p>
+                </div>
             </div>
 
             <div class="grid md:grid-cols-5 border-b border-black">
@@ -54,20 +47,8 @@
 
             <div class="p-12 md:p-20">
                 <h3 class="text-sm font-bold uppercase tracking-widest mb-10 border-b border-black pb-4">Uitgelichte reportages</h3>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <a href="verhalen.html" class="group border border-black p-8 hover:bg-black hover:text-white transition-all">
-                        <span class="text-[10px] font-bold uppercase text-gray-400 group-hover:text-gray-200">Reportage 01</span>
-                        <h4 class="text-2xl font-black uppercase mt-2">De kracht van beeldtaal</h4>
-                    </a>
-                    <a href="verhalen.html" class="group border border-black p-8 hover:bg-black hover:text-white transition-all">
-                        <span class="text-[10px] font-bold uppercase text-gray-400 group-hover:text-gray-200">Reportage 02</span>
-                        <h4 class="text-2xl font-black uppercase mt-2">Waarom feiten ertoe doen</h4>
-                    </a>
-                    <a href="verhalen.html" class="group border border-black p-8 hover:bg-black hover:text-white transition-all">
-                        <span class="text-[10px] font-bold uppercase text-gray-400 group-hover:text-gray-200">Reportage 03</span>
-                        <h4 class="text-2xl font-black uppercase mt-2">Creativiteit in crisis</h4>
-                    </a>
-                </div>
+                <div id="featured-reports-grid" class="grid md:grid-cols-3 gap-8">
+                    </div>
             </div>
         </main>
 
@@ -76,14 +57,45 @@
 
     <script>
         function loadComponent(id, file) {
-            fetch(file).then(res => res.text()).then(data => document.getElementById(id).innerHTML = data);
+            fetch(file).then(res => res.text()).then(data => {
+                document.getElementById(id).innerHTML = data;
+                if(window.lucide) lucide.createIcons();
+            });
         }
         document.addEventListener('DOMContentLoaded', () => {
             loadComponent('header-placeholder', 'header.html');
             loadComponent('footer-placeholder', 'footer.html');
         });
-  </script>
-     <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+    </script>
+
+    <script type="module">
+        import { data } from './data.js';
+        import * as app from './app.js';
+
+        // Functie voor de uitgelichte reportages
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('featured-reports-grid');
+            if (grid && data.analysis) {
+                grid.innerHTML = data.analysis.slice(0, 3).map(item => `
+                    <article 
+                        onclick="window.openArticleById('${item.id}')" 
+                        class="border border-black p-8 hover:bg-black hover:text-white transition-all cursor-pointer group"
+                    >
+                        <span class="text-[10px] font-bold uppercase text-gray-400 group-hover:text-gray-200">Reportage</span>
+                        <h4 class="text-2xl font-black uppercase mt-2">${item.title}</h4>
+                    </article>
+                `).join('');
+            }
+        });
+
+        // Bridge naar app.js
+        window.openArticleById = (id) => {
+            const article = data.analysis.find(a => a.id === id);
+            if (article) app.openArticle(article);
+        };
+    </script>
+
+    <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
 </body>
 </html>
