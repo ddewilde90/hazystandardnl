@@ -71,8 +71,8 @@
         <div class="flex flex-col gap-8 pb-12">
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div class="lg:col-span-2">
-                <div id="featured-products" class="relative">
-                    </div>
+                <div id="featured-products" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    </div>
             </div>
 
             <aside class="border-l border-black pl-6">
@@ -147,46 +147,38 @@
             window.renderBlogGrid();
         });
 
-    window.renderSpecificProducts = async () => {
+  window.renderSpecificProducts = async () => {
     try {
         const response = await fetch('producten.json');
+        if (!response.ok) throw new Error('Kon JSON niet laden');
         const products = await response.json();
 
-        // 1. Vul de Featured container (het eerste product)
         const featured = document.getElementById('featured-products');
-        if (featured && products.length > 0) {
-            const item = products[0]; 
-            featured.innerHTML = `
-                <div class="border border-black p-4">
-                    <img src="${item.image}" class="w-full h-auto" alt="${item.title}">
-                    <h3 class="font-bold text-xl mt-2">${item.title}</h3>
-                    <p>€${item.price.toFixed(2)}</p>
-                    <button class="snipcart-add-item border border-black px-4 py-2 mt-2"
-                        data-item-id="${item.id}"
-                        data-item-price="${item.price}"
-                        data-item-name="${item.title}"
-                        data-item-image="${item.image}">
-                        Toevoegen
-                    </button>
-                </div>
-            `;
+        
+        // STOP als de container niet bestaat (voorkomt vastlopen van het menu)
+        if (!featured) {
+            console.warn("Featured container nog niet gevonden in de DOM");
+            return;
         }
 
-        // 2. Vul de Sidebar container (de rest)
-        const sidebar = document.getElementById('sidebar-products');
-        if (sidebar && products.length > 1) {
-            sidebar.innerHTML = products.slice(1).map(item => `
-                <div class="flex gap-4">
-                    <img src="${item.image}" class="w-16 h-16 object-cover border border-black" alt="${item.title}">
-                    <div>
-                        <h4 class="font-bold text-sm">${item.title}</h4>
-                        <span class="text-xs">€${item.price.toFixed(2)}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
+        // Slice de eerste 3 producten en map ze naar HTML
+        featured.innerHTML = products.slice(0, 3).map(item => `
+            <div class="border border-black p-4 flex flex-col">
+                <img src="${item.image}" class="w-full h-48 object-cover mb-4" alt="${item.title}">
+                <h3 class="font-bold text-lg uppercase">${item.title}</h3>
+                <p class="text-sm">€${item.price.toFixed(2)}</p>
+                <button class="snipcart-add-item border border-black px-4 py-2 mt-auto text-xs uppercase"
+                    data-item-id="${item.id}"
+                    data-item-price="${item.price}"
+                    data-item-name="${item.title}"
+                    data-item-image="${item.image}">
+                    Toevoegen
+                </button>
+            </div>
+        `).join('');
+
     } catch (error) {
-        console.error("Fout bij laden van producten:", error);
+        console.error("Fout bij laden producten:", error);
     }
 };
        document.addEventListener('DOMContentLoaded', () => {
