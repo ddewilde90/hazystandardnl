@@ -147,22 +147,22 @@
             window.renderBlogGrid();
         });
 
-  window.renderSpecificProducts = async () => {
+    window.renderSpecificProducts = async () => {
     try {
         const response = await fetch('producten.json');
         const products = await response.json();
-        
-        // 1. Featured sectie: Pak de eerste 3 producten
+
+        // 1. Vul de Featured container (het eerste product)
         const featured = document.getElementById('featured-products');
         if (featured && products.length > 0) {
-            // We gebruiken .slice(0, 3) om de eerste 3 te pakken
-            featured.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-3 gap-6">` + 
+            const item = products[0]; 
+         featured.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-3 gap-6">` + 
             products.slice(0, 3).map(item => `
-                <div class="border border-black p-4 flex flex-col">
-                    <img src="${item.image}" class="w-full h-48 object-cover mb-4" alt="${item.title}">
-                    <h3 class="font-bold uppercase">${item.title}</h3>
-                    <p class="text-sm">€${item.price.toFixed(2)}</p>
-                    <button class="snipcart-add-item border border-black px-4 py-2 mt-2 w-full text-xs uppercase"
+                <div class="border border-black p-4">
+                    <img src="${item.image}" class="w-full h-auto" alt="${item.title}">
+                    <h3 class="font-bold text-xl mt-2">${item.title}</h3>
+                    <p>€${item.price.toFixed(2)}</p>
+                    <button class="snipcart-add-item border border-black px-4 py-2 mt-2"
                         data-item-id="${item.id}"
                         data-item-price="${item.price}"
                         data-item-name="${item.title}"
@@ -170,26 +170,19 @@
                         Toevoegen
                     </button>
                 </div>
-            `).join('') + `</div>`;
+            `;
         }
 
-        // 2. Sidebar sectie blijft zoals hij was (bijv. de rest van de producten)
+        // 2. Vul de Sidebar container (de rest)
         const sidebar = document.getElementById('sidebar-products');
-        if (sidebar && products.length > 3) {
-            sidebar.innerHTML = products.slice(3, 6).map(item => `
-                <div class="flex gap-4 border-b border-black pb-4">
+        if (sidebar && products.length > 1) {
+            sidebar.innerHTML = products.slice(1).map(item => `
+                <div class="flex gap-4">
                     <img src="${item.image}" class="w-16 h-16 object-cover border border-black" alt="${item.title}">
                     <div>
-                        <h4 class="font-bold text-sm uppercase">${item.title}</h4>
+                        <h4 class="font-bold text-sm">${item.title}</h4>
                         <span class="text-xs">€${item.price.toFixed(2)}</span>
                     </div>
-                </div>
-            `).join('');
-        }
-    } catch (error) {
-        console.error("Fout bij laden producten:", error);
-    }
-};
                 </div>
             `).join('');
         }
