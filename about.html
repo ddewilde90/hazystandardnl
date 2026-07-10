@@ -89,10 +89,12 @@
         });
 
         // Bridge naar app.js
-        window.openArticleById = (id) => {
-            const article = data.analysis.find(a => a.id === id);
-            if (article) app.openArticle(article);
-        };
+       // Vervang de huidige window.openArticleById functie in about.html door deze:
+window.openArticleById = (id) => {
+    // Navigeer direct naar de verhalen pagina met het ID in de URL
+    // Zo kan verhalen.html zelf het juiste artikel laden via de URL parameter
+    window.location.href = `verhalen.html?id=${id}`;
+};
     </script>
 
     <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
