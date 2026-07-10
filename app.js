@@ -47,7 +47,7 @@ export function openArticle(article) {
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-0">
                 <div class="lg:col-span-3 p-6 md:p-16 border-r border-black">
-                    <button id="back-btn" class="mb-10 border border-black px-6 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white transition-all flex items-center gap-2">← Terug naar overzicht</button>
+                    <button id="verhalen.html" class="mb-10 border border-black px-6 py-2 text-xs font-bold uppercase hover:bg-black hover:text-white transition-all flex items-center gap-2">← Terug naar overzicht</button>
                     <div class="text-xs font-bold uppercase mb-4 text-red-600 tracking-tighter italic">Analyse • ${article.date}</div>
                     <h1 class="text-4xl md:text-7xl font-extrabold uppercase mb-8 leading-[0.9] italic border-b-8 border-black pb-6">${article.title}</h1>
                     <div class="prose max-w-none text-2xl leading-tight font-black mb-12 border-l-8 border-black pl-8 italic text-gray-900">${article.intro}</div>
