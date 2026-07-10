@@ -60,57 +60,26 @@
                 <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             </div>
         </div>
-          <!-- onderste Blog Grid 2222(Deze wordt gevuld via JS) -->
-       <script type="module">
-    import { data } from './data.js';
-    import * as app from './app.js';
-
-    window.openArticleById = (id) => {
-        const article = data.analysis.find(a => a.id === id);
-        if (article) app.openArticle(article);
-    };
-
-    async function initPage() {
-        // 1. Footer laden
-        const footerRes = await fetch('footer.html');
-        document.getElementById('footer-placeholder').innerHTML = await footerRes.text();
-        if (window.ml) ml('account', '2457736');
-
-        // 2. Producten ophalen voor zijbalk
-        const shopRes = await fetch('producten.json');
-        const producten = await shopRes.json();
-        const sidebar = document.getElementById('sidebar-news');
+          <!-- Blog Grid (Deze wordt gevuld via JS) -->
+            <div class="border-t border-black p-8">
+                <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Populaire producten</h2>
+                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-8 pb-12">
         
-        // Pak het laatste product
-        const nieuwsteProduct = producten[producten.length - 1];
-
-        if (sidebar && nieuwsteProduct) {
-            sidebar.innerHTML = `
-                <a href="product.html?id=${nieuwsteProduct.id}" class="block border border-black p-4 hover:bg-black group transition-all">
-                    <img src="${nieuwsteProduct.image}" class="w-full h-48 object-cover mb-4 border border-black">
-                    <h3 class="text-sm font-black uppercase text-black group-hover:text-white">${nieuwsteProduct.title}</h3>
-                    <p class="text-[10px] font-bold text-gray-500 group-hover:text-gray-300 mt-2">€${nieuwsteProduct.price.toFixed(2).replace('.', ',')}</p>
-                </a>
-            `;
-        }
-
-        // 3. Blog grid vullen
-        const grid = document.getElementById('blog-grid');
-        if (grid && data.analysis) {
-            grid.innerHTML = data.analysis.map(item => `
-                <article class="border border-black p-6 hover:bg-black hover:text-white transition-colors cursor-pointer group">
-                    <img src="${item.image}" class="w-full h-48 object-cover mb-4 border border-black" alt="${item.title}">
-                    <h3 class="text-xl font-black uppercase mb-2">${item.title}</h3>
-                    <button onclick="window.openArticleById('${item.id}')" class="text-xs font-bold uppercase underline">Lees meer</button>
-                </article>
-            `).join('');
-        }
-
-        if (window.lucide) lucide.createIcons();
-    }
-
-    document.addEventListener('DOMContentLoaded', initPage);
-</script>
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2">
+                <div id="featured-container" class="relative">
+                    </div>
+            </div>
+            
+            <aside class="border-l border-black pl-6">
+                <h2 class="text-xl font-black uppercase mb-6">Nieuw binnen</h2>
+                <div id="sidebar-news" class="space-y-6">
+                    </div>
+            </aside>
+        </section>
          </template>
     
       <div id="footer-placeholder"></div>
