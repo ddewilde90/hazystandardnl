@@ -153,10 +153,10 @@ window.renderSpecificProducts = async () => {
             const products = await response.json();
 
             // 1. Featured product invullen
-            const featured = document.getElementById('featured-products');
-            if (featured && products.length > 0) {
-                const item = products[0]; 
-                featured.innerHTML = `
+         const productGrid = document.getElementById('product-grid');
+        if (productGrid) {
+            // We pakken de eerste 3 producten uit de JSON
+            productGrid.innerHTML = products.slice(0, 3).map(item => ``
                     <div class="border border-black p-6 hover:shadow-lg transition-shadow">
                         <img src="${item.image}" class="w-full h-80 object-cover" alt="${item.title}">
                         <h3 class="text-2xl font-black uppercase mt-4">${item.title}</h3>
