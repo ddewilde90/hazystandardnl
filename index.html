@@ -63,8 +63,9 @@
           <!-- Blog Grid (Deze wordt gevuld via JS) -->
 
 
-              <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Populaire producten</h2>
-<div id="product-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                <h2 class="text-xs font-black uppercase tracking-widest mb-8 border-b border-black pb-2">Populaire producten</h2>
+                <div id="blog-grid" class="grid grid-cols-3 md:grid-cols-4 gap-8"></div>
+            </div>
         </div>
 
         <div class="flex flex-col gap-8 pb-12">
@@ -146,68 +147,54 @@
             window.renderBlogGrid();
         });
 
-<script type="module">
-    // ... importeer je andere modules zoals voorheen
-
-<script type="module">
-    // ... importeer je andere modules zoals voorheen
-
-    // De functie die de JSON ophaalt en de HTML vult
     window.renderSpecificProducts = async () => {
-        try {
-            const response = await fetch('producten.json');
-            if (!response.ok) throw new Error('Kon producten niet laden');
-            const products = await response.json();
+    try {
+        const response = await fetch('producten.json');
+        const products = await response.json();
 
-            // 1. Featured product invullen
-            const featured = document.getElementById('featured-products');
-            if (featured && products.length > 0) {
-                const item = products[0]; 
-                featured.innerHTML = `
-                    <div class="border border-black p-6 hover:shadow-lg transition-shadow">
-                        <img src="${item.image}" class="w-full h-80 object-cover" alt="${item.title}">
-                        <h3 class="text-2xl font-black uppercase mt-4">${item.title}</h3>
-                        <p class="text-sm font-semibold mt-1">€${item.price.toFixed(2)}</p>
-                        <button class="snipcart-add-item bg-black text-white px-6 py-3 mt-4 w-full uppercase text-xs font-bold"
-                            data-item-id="${item.id}"
-                            data-item-price="${item.price}"
-                            data-item-name="${item.title}"
-                            data-item-image="${item.image}">
-                            Toevoegen aan mandje
-                        </button>
-                    </div>
-                `;
-            }
-
-            // 2. Sidebar producten invullen
-            const sidebar = document.getElementById('sidebar-products');
-            if (sidebar && products.length > 1) {
-                sidebar.innerHTML = products.slice(1).map(item => `
-                    <div class="flex gap-4 border-b border-black pb-4 hover:opacity-70 cursor-pointer">
-                        <img src="${item.image}" class="w-20 h-20 object-cover border border-black" alt="${item.title}">
-                        <div class="flex flex-col justify-center">
-                            <h4 class="font-bold text-sm uppercase">${item.title}</h4>
-                            <span class="text-xs font-semibold">€${item.price.toFixed(2)}</span>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        } catch (error) {
-            console.error("Fout:", error);
+        // 1. Vul de Featured container (het eerste product)
+        const featured = document.getElementById('featured-products');
+        if (featured && products.length > 0) {
+            const item = products[0]; 
+         featured.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-3 gap-6">` + 
+            products.slice(0, 3).map(item => `
+                <div class="border border-black p-4">
+                    <img src="${item.image}" class="w-full h-auto" alt="${item.title}">
+                    <h3 class="font-bold text-xl mt-2">${item.title}</h3>
+                    <p>€${item.price.toFixed(2)}</p>
+                    <button class="snipcart-add-item border border-black px-4 py-2 mt-2"
+                        data-item-id="${item.id}"
+                        data-item-price="${item.price}"
+                        data-item-name="${item.title}"
+                        data-item-image="${item.image}">
+                        Toevoegen
+                    </button>
+                </div>
+            `;
         }
-    };
 
-    // Belangrijk: Wacht tot de DOM volledig geladen is
-    document.addEventListener('DOMContentLoaded', () => {
-        window.renderBlogGrid();
-        
-        // Als je template door app.js wordt geladen, voeg een kleine vertraging toe
-        // zodat de elementen zeker in de DOM staan voordat we ze proberen te vullen
-        setTimeout(window.renderSpecificProducts, 100); 
-    });
-</script>
-</script>
-   
+        // 2. Vul de Sidebar container (de rest)
+        const sidebar = document.getElementById('sidebar-products');
+        if (sidebar && products.length > 1) {
+            sidebar.innerHTML = products.slice(1).map(item => `
+                <div class="flex gap-4">
+                    <img src="${item.image}" class="w-16 h-16 object-cover border border-black" alt="${item.title}">
+                    <div>
+                        <h4 class="font-bold text-sm">${item.title}</h4>
+                        <span class="text-xs">€${item.price.toFixed(2)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+    } catch (error) {
+        console.error("Fout bij laden van producten:", error);
+    }
+};
+       document.addEventListener('DOMContentLoaded', () => {
+    window.renderBlogGrid();
+    window.renderSpecificProducts(); // Deze activeert de twee secties
+});
+    </script>
 
      <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="YzkwMTE0ZjgtNTg2Yi00ZDRiLWJmZjktYjZkNjg2OTAwOTJmNjM5MTY4NjIyNzM2NDU3MTA5" data-currency="eur"></div>
