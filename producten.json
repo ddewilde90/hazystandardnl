@@ -26,20 +26,5 @@
       "stock": 10,
       "specs": "Materiaal: 925 Sterling Zilver.",
       "content": "Minimalistisch design."
-  },
-   { 
-      "id": "ocean-jasper-riing", 
-      "title": "0gghOcean Jasper Ring", 
-      "price": 445.00, 
-      "sku": "RING-OJ-01",
-      "image": "/assets/images/ocean-jasper.jpg",
-      "color": "Groen",
-      "stone": "Ocean Jasper",
-      "category": "Ringen",
-      "material": "Zilver",
-      "stock": 5,
-      "specs": "Materiaal: 925 Sterling Zilver.",
-      "content": "Uniek handgemaakt sieraad."
   }
 ]
-
