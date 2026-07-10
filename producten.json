@@ -26,5 +26,19 @@
       "stock": 10,
       "specs": "Materiaal: 925 Sterling Zilver.",
       "content": "Minimalistisch design."
+  },
+  { 
+      "id": "nieuwe-ketting", 
+      "title": "Gouden Ketting", 
+      "price": 89.00, 
+      "sku": "KET-03",
+      "image": "/assets/images/ketting.jpg",
+      "color": "Goud",
+      "stone": "Geen",
+      "category": "Kettingen",
+      "material": "Goud",
+      "stock": 8,
+      "specs": "Materiaal: 14k Goud.",
+      "content": "Elegante ketting voor elke dag."
   }
 ]
