@@ -156,7 +156,7 @@
         const featured = document.getElementById('featured-products');
         if (featured && products.length > 0) {
             const item = products[0]; 
-         featured.innerHTML = products.slice(0, 3).map(item => `
+            featured.innerHTML = `
                 <div class="border border-black p-4">
                     <img src="${item.image}" class="w-full h-auto" alt="${item.title}">
                     <h3 class="font-bold text-xl mt-2">${item.title}</h3>
