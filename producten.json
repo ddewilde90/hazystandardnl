@@ -40,5 +40,19 @@
       "stock": 8,
       "specs": "Materiaal: 14k Goud.",
       "content": "Elegante ketting voor elke dag."
+  },
+  { 
+      "id": "zwarte-armband", 
+      "title": "Zwarte Armband", 
+      "price": 55.00, 
+      "sku": "ARM-04",
+      "image": "/assets/images/armband.jpg",
+      "color": "Zwart",
+      "stone": "Geen",
+      "category": "Armbanden",
+      "material": "Leer",
+      "stock": 12,
+      "specs": "Materiaal: Echt leer en RVS.",
+      "content": "Robuuste armband met zwarte details."
   }
 ]
