@@ -147,37 +147,48 @@
             window.renderBlogGrid();
         });
 
-       window.renderSpecificProducts = () => {
-    // Vul de Featured container
-    const featured = document.getElementById('featured-products');
-    if (featured && data.products) {
-        // Pak bijvoorbeeld het eerste product uit de array
-        const item = data.products[0]; 
-        featured.innerHTML = `
-            <div class="product-card">
-                <img src="${item.image}" class="w-full h-auto">
-                <h3 class="font-bold">${item.name}</h3>
-                <p>€${item.price}</p>
-            </div>
-        `;
-    }
+    window.renderSpecificProducts = async () => {
+    try {
+        const response = await fetch('producten.json');
+        const products = await response.json();
 
-    // Vul de Sidebar container
-    const sidebar = document.getElementById('sidebar-products');
-    if (sidebar && data.products) {
-        // Pak een lijst van producten voor de sidebar
-        sidebar.innerHTML = data.products.slice(1, 4).map(item => `
-            <div class="flex gap-4">
-                <img src="${item.image}" class="w-16 h-16 object-cover">
-                <div>
-                    <h4 class="font-bold text-sm">${item.name}</h4>
-                    <span class="text-xs">€${item.price}</span>
+        // 1. Vul de Featured container (het eerste product)
+        const featured = document.getElementById('featured-products');
+        if (featured && products.length > 0) {
+            const item = products[0]; 
+            featured.innerHTML = `
+                <div class="border border-black p-4">
+                    <img src="${item.image}" class="w-full h-auto" alt="${item.title}">
+                    <h3 class="font-bold text-xl mt-2">${item.title}</h3>
+                    <p>€${item.price.toFixed(2)}</p>
+                    <button class="snipcart-add-item border border-black px-4 py-2 mt-2"
+                        data-item-id="${item.id}"
+                        data-item-price="${item.price}"
+                        data-item-name="${item.title}"
+                        data-item-image="${item.image}">
+                        Toevoegen
+                    </button>
                 </div>
-            </div>
-        `).join('');
+            `;
+        }
+
+        // 2. Vul de Sidebar container (de rest)
+        const sidebar = document.getElementById('sidebar-products');
+        if (sidebar && products.length > 1) {
+            sidebar.innerHTML = products.slice(1).map(item => `
+                <div class="flex gap-4">
+                    <img src="${item.image}" class="w-16 h-16 object-cover border border-black" alt="${item.title}">
+                    <div>
+                        <h4 class="font-bold text-sm">${item.title}</h4>
+                        <span class="text-xs">€${item.price.toFixed(2)}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+    } catch (error) {
+        console.error("Fout bij laden van producten:", error);
     }
 };
-
        document.addEventListener('DOMContentLoaded', () => {
     window.renderBlogGrid();
     window.renderSpecificProducts(); // Deze activeert de twee secties
