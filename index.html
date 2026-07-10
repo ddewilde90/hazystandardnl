@@ -147,51 +147,38 @@
             window.renderBlogGrid();
         });
 
-window.renderSpecificProducts = async () => {
+  window.renderSpecificProducts = async () => {
     try {
         const response = await fetch('producten.json');
+        if (!response.ok) throw new Error('Kon JSON niet laden');
         const products = await response.json();
 
-        // 1. Featured product (Product 0)
         const featured = document.getElementById('featured-products');
-        if (featured && products.length > 0) {
-            const item = products[0];
-            featured.innerHTML = `
-                <div class="border border-black p-4">
-                    <img src="${item.image}" class="w-full h-auto" alt="${item.title}">
-                    <h3 class="font-bold text-xl mt-2">${item.title}</h3>
-                    <p>€${item.price.toFixed(2)}</p>
-                </div>`;
+        
+        // STOP als de container niet bestaat (voorkomt vastlopen van het menu)
+        if (!featured) {
+            console.warn("Featured container nog niet gevonden in de DOM");
+            return;
         }
 
-        // 2. Populaire producten (Product 1, 2, 3)
-        // Let op: in je HTML staat id="blog-grid" voor deze sectie
-        const popular = document.getElementById('blog-grid'); 
-        if (popular && products.length > 3) {
-            popular.innerHTML = products.slice(1, 4).map(item => `
-                <div class="border border-black p-4">
-                    <img src="${item.image}" class="w-full h-48 object-cover mb-4" alt="${item.title}">
-                    <h3 class="font-bold text-lg">${item.title}</h3>
-                    <p class="text-sm">€${item.price.toFixed(2)}</p>
-                </div>
-            `).join('');
-        }
+        // Slice de eerste 3 producten en map ze naar HTML
+        featured.innerHTML = products.slice(0, 3).map(item => `
+            <div class="border border-black p-4 flex flex-col">
+                <img src="${item.image}" class="w-full h-48 object-cover mb-4" alt="${item.title}">
+                <h3 class="font-bold text-lg uppercase">${item.title}</h3>
+                <p class="text-sm">€${item.price.toFixed(2)}</p>
+                <button class="snipcart-add-item border border-black px-4 py-2 mt-auto text-xs uppercase"
+                    data-item-id="${item.id}"
+                    data-item-price="${item.price}"
+                    data-item-name="${item.title}"
+                    data-item-image="${item.image}">
+                    Toevoegen
+                </button>
+            </div>
+        `).join('');
 
-        // 3. Nieuw binnen (Sidebar) (Product 4 en verder)
-        const sidebar = document.getElementById('sidebar-products');
-        if (sidebar && products.length > 4) {
-            sidebar.innerHTML = products.slice(4).map(item => `
-                <div class="flex gap-4">
-                    <img src="${item.image}" class="w-16 h-16 object-cover border border-black" alt="${item.title}">
-                    <div>
-                        <h4 class="font-bold text-sm">${item.title}</h4>
-                        <span class="text-xs">€${item.price.toFixed(2)}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
     } catch (error) {
-        console.error("Fout:", error);
+        console.error("Fout bij laden producten:", error);
     }
 };
        document.addEventListener('DOMContentLoaded', () => {
