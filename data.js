@@ -35,7 +35,7 @@ export const data = {
 
 En dan was er die bekende, goedbedoelde dooddoener: "Ach, we hebben toch allemaal wel een beetje ADHD?" <br><br>
 
-Een laconieke zin die aanvoelt als een klap in het gezicht. Het veegt een slopend innerlijk gevecht in één haal van tafel. Het maakt dat je aan je eigen waarneming gaat twijfelen: *ligt het dan toch aan mij? Ben ik gewoon druk?* Want hoe leer je te navigeren door de chaos in je hoofd als de buitenwereld die storm niet wil begrijpen, maar alleen verlangt dat je je stil gedraagt? Het constante jezelf geweld aandoen om maar mee te draaien in het 'perfecte' plaatje, bracht hem op het punt van totale uitputting.<br><br>
+Een laconieke zin die aanvoelt als een klap in het gezicht. Het veegt een slopend innerlijk gevecht in één haal van tafel. Het maakt dat je aan je eigen waarneming gaat twijfelen: ligt het dan toch aan mij? Ben ik gewoon druk? Want hoe leer je te navigeren door de chaos in je hoofd als de buitenwereld die storm niet wil begrijpen, maar alleen verlangt dat je je stil gedraagt? Het constante jezelf geweld aandoen om maar mee te draaien in het 'perfecte' plaatje, bracht hem op het punt van totale uitputting.<br><br>
 
 Dat zoveel mensen tegenwoordig vastlopen, is geen individueel tekortschieten; het is een systeemfout. Uit landelijke cijfers blijkt dat inmiddels ruim 1 op de 3 jongeren (36%) kampt met mentale druk. En toch blijft de reguliere zorg krampachtig vasthouden aan standaard protocollen en vragenlijsten. Jongeren worden van het kastje naar de muur gestuurd: 'te ingewikkeld voor de basiszorg, maar niet urgent genoeg voor de specialist.' Er wordt geprobeerd om symptomen te dempen, in plaats van te kijken naar de werkelijke herkomst van de klachten.<br><br>
 
