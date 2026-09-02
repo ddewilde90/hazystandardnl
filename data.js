@@ -51,7 +51,7 @@ Voor iedereen die nu klem zit tussen de druk om te voldoen en de wens om zichzel
 
 Zoals Tim het onwrikbaar samenvat: "Altijd jezelf blijven. Want als je jezelf bent, kun je nooit negatief zijn."<br><br>
 
-Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 manieren om van die veelzijdigheid te houden.`,
+Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 manieren om van te houden.`,
         image: "assets/images/tim uitsnede.jpg",
         tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
     },
