@@ -28,7 +28,7 @@ export const data = {
             id: "ana-1",
             title: "Duizenden manieren om mens te zijn",
             date: "2 SEPTEMBER 2026",
-            intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
+            intro: "Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar één route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen.",
             content: "Volledige analyse volgt...",
             image: "assets/images/tim.jpg",
             tags: ["Economie", "Data"]
