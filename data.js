@@ -23,16 +23,36 @@ export const data = {
             videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
         }
     ],
-    analysis:[
-        {
-            id: "ana-1",
-            title: "Duizenden manieren om mens te zijn",
-            date: "2 SEPTEMBER 2026",
-            intro: "Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar één route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen.",
-            content: "Volledige analyse volgt....",
-            image: "assets/images/tim uitsnede.jpg",
-            tags: ["Economie", "Data"]
-        },
+   analysis: [
+    {
+        id: "ana-1",
+        title: "Duizend manieren om mens te zijn",
+        date: "2 SEPTEMBER 2026",
+        intro: "Het idee dat je pas deugt als je in het plaatje past, is keiharde bekrompenheid. Over de kracht van een neurodivergent brein en het verhaal van Tim.",
+        content: `Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar één route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen.
+
+"Al mijn leven lang wist ik dat ik anders was," vertelt Tim. Die wetenschap was op zichzelf niet het ergste. Het echte trauma zat in de subtiele, dagelijkse afwijzing. In het gevoel een vreemde eend te zijn in een kamer vol mensen die dezelfde taal spreken, terwijl jij de enige bent die de ondertiteling mist. Het zat in de afkeurende blikken wanneer zijn gedachten sneller gingen dan de lesstof, de diepe eenzaamheid wanneer de buitenwereld zijn overprikkeling verwarde met 'lastig gedrag', en de ijzige stilte die volgde als hij probeerde uit te leggen hoe stormachtig het vanbinnen waaide.
+
+En dan was er die bekende, goedbedoelde dooddoener: "Ach, we hebben toch allemaal wel een beetje ADHD?"
+
+Een laconieke zin die aanvoelt als een klap in het gezicht. Het veegt een slopend innerlijk gevecht in één haal van tafel. Het maakt dat je aan je eigen waarneming gaat twijfelen: ligt het dan toch aan mij? Ben ik gewoon druk? Want hoe leer je te navigeren door de chaos in je hoofd als de buitenwereld die storm niet wil begrijpen, maar alleen verlangt dat je je stil gedraagt? Het constante jezelf geweld aandoen om maar mee te draaien in het 'perfecte' plaatje, bracht hem op het punt van totale uitputting.
+
+Dat zoveel mensen tegenwoordig vastlopen, is geen individueel tekortschieten; het is een systeemfout. Uit landelijke cijfers blijkt dat inmiddels ruim 1 op de 3 jongeren (36%) kampt met mentale druk. En toch blijft de reguliere zorg krampachtig vasthouden aan standaard protocollen en vragenlijsten. Jongeren worden van het kastje naar de muur gestuurd: 'te ingewikkeld voor de basiszorg, maar niet urgent genoeg voor de specialist.' Er wordt geprobeerd om symptomen te dempen, in plaats van te kijken naar de werkelijke herkomst van de klachten.
+
+Het keerpunt voor Tim kwam niet door een pasklaar antwoord uit het systeem. Het kwam op het moment dat hij stopte met wachten op de goedkeuring van een maatschappij die hem nooit echt had gezien. Diep van binnen vond hij de onverwoestbare kracht om de regie terug te pakken. Hij besloot op te houden met vechten tegen zijn eigen natuur. Door stug naar zijn eigen onderbuikgevoel te luisteren en te vertrouwen op zijn eigen binnenwereld, veranderde de chaos van een vijand in zijn kompas. Zijn besluit om zichzelf kwetsbaar op te stellen en zijn rauwe verhaal te delen, is nu zijn grootste bescherming én zijn gift aan anderen. Hij laat zien dat het doormaken van onbegrip geen eindstation is, maar de geboorte van authentieke eigenheid.
+
+Want een brein dat anders werkt, is geen defect mechanisme; het is een wonder van variatie. Er zijn duizend manieren waarop een geest kan werken. Waar het klassieke denken stopt bij de randen van het papier, vliegt een ADHD-brein er dwars overheen. Het is de bron van inspiratie: het zeldzame vermogen om op te gaan in wat er echt toe doet, tot de tijd verdwijnt en pure creatie ontstaat. Het is de rauwe intuïtie die verbanden ziet die anderen ontgaan, het ongefilterde empathische vermogen, de vindingrijkheid in crisissituaties en een passie die hele ruimtes kan aansteken. Het is geen tekort aan aandacht, maar een overvloed aan leven.
+
+Er is niet één manier om te voelen, te denken, te werken of te creëren. Er zijn duizend manieren. Duizend manieren om informatie te verwerken, duizend manieren om de werkelijkheid te interpreteren, duizend manieren om de wereld van kleur te voorzien.
+
+Voor iedereen die nu klem zit tussen de druk om te voldoen en de wens om zichzelf te zijn: je hoeft jezelf niet kleiner te maken om in de starre mal van een ander te passen. Je hoeft niet te herstellen van wie je bent, hooguit van de uitputting die het aanpassen heeft gekost.
+
+Zoals Tim het onwrikbaar samenvat: "Altijd jezelf blijven. Want als je jezelf bent, kun je nooit negatief zijn."
+
+Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 manieren om van die veelzijdigheid te houden.`,
+        image: "assets/images/tim uitsnede.jpg",
+        tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
+    },
         {
             id: "ana-2",
             title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
