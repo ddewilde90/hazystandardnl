@@ -26,11 +26,11 @@ export const data = {
     analysis:[
         {
             id: "ana-1",
-            title: "Duizend manieren om mens te zijn",
+            title: "Inflatiecijfers Q1: De Verborgen Variabelen",
             date: "18 MRT 2026",
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
             content: "Volledige analyse volgt...",
-            image: "assets/images/daan1.jpg",
+            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800",
             tags: ["Economie", "Data"]
         },
         {
