@@ -28,7 +28,7 @@ export const data = {
         id: "ana-1",
         title: "Duizend manieren om mens te zijn",
         date: "2 SEPTEMBER 2026",
-        intro: "Het idee dat je pas deugt als je in het plaatje past, is keiharde bekrompenheid. Over de kracht van een neurodivergent brein en het verhaal van Tim.",
+        intro: "In de maatschappij geldt vaak één norm voor hoe we moeten focussen, leren en functioneren. Voor Tim leidde het constante aanpassen aan die starre mal en het onbegrip rondom zijn ADHD.",
         content: `Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar één route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen.<br><br>
 
 "Al mijn leven lang wist ik dat ik anders was," vertelt Tim. Die wetenschap was op zichzelf niet het ergste. Het echte trauma zat in de subtiele, dagelijkse afwijzing. In het gevoel een vreemde eend te zijn in een kamer vol mensen die dezelfde taal spreken, terwijl jij de enige bent die de ondertiteling mist. Het zat in de afkeurende blikken wanneer zijn gedachten sneller gingen dan de lesstof, de diepe eenzaamheid wanneer de buitenwereld zijn overprikkeling verwarde met 'lastig gedrag', en de ijzige stilte die volgde als hij probeerde uit te leggen hoe stormachtig het vanbinnen waaide.<br><br>
