@@ -60,7 +60,7 @@ Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 maniere
             title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
             date: "20 MRT 2026",
             intro: "Dit is de korte tekst voor op de hoofdpagina.",
-            content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt...",
+            content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt.",
             image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800",
             tags: ["Onderwijs"]
         },
