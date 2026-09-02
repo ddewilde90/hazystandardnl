@@ -30,7 +30,7 @@ export const data = {
             date: "2 SEPTEMBER 2026",
             intro: "Officiële cijfers tonen krimp, maar onze ruwe dataset wijst op stagflatie in de logistieke sector.",
             content: "Volledige analyse volgt...",
-            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800",
+            image: "assets/images/tim.jpg",
             tags: ["Economie", "Data"]
         },
         {
