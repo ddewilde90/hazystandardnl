@@ -1,12 +1,11 @@
 export const data = {
     featured: {
         id: "featured-1",
-        title: analysisArticles[0].title,
-        excerpt: analysisArticles[0].intro,
-        image: analysisArticles[0].image,
+        title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
+        excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
         author: "HAZY STANDARD",
-        date: analysisArticles[0].date
-    },
+        date: "24 SEPTEMBER 2026"
     },
     videos: [
         {
