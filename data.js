@@ -57,12 +57,28 @@ Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 maniere
     },
         {
             id: "ana-2",
-            title: "HIER DE TITEL VAN JE NIEUWE PAGINA",
-            date: "20 MRT 2026",
-            intro: "Dit is de korte tekst voor op de hoofdpagina.",
-            content: "Hier typ je de volledige feitelijke analyse. Je kunt hier duizenden woorden kwijt.",
-            image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800",
-            tags: ["Onderwijs"]
+            title: "Spreken is zilver, zwijgen is goud",
+            date: "24 SEPTEMBER 2026",
+            intro: "Het beëindigen van een relatie met dwingende controle brengt zelden rust. Waarom de echte terreur vaak pas ná de breuk begint en het familierecht slachtoffers dwingt tot stilte.",
+            content: `Het is een van de meest fnuikende paradoxen binnen ons familierecht en de jeugdhulpverlening. Een ouder die een relatie beëindigt waarin sprake was van dwingende controle, loopt vrijwel meteen tegen een onzichtbare maar meedogenloze muur op. Waar het verbreken van de banden rust en veiligheid zou moeten brengen, verplaatst de strijd zich simpelweg naar het enige speelveld dat nog over is: het kind en de rechtbank. En wie het aandurft om het patroon van macht en manipulatie hardop te benoemen, krijgt van het systeem direct de deksel op de neus. Eerlijkheid wordt afgestraft als het 'voeden van de strijd'. Welkom in de werkelijkheid waarin het aloude spreekwoord cynisch waarheid wordt: spreken is zilver, maar zwijgen is goud.<br><br>
+
+Dwingende controle (coercive control) is geen verzameling van incidentele echtelijke ruzies of twee mensen die simpelweg niet bij elkaar passen. Het is een systematisch patroon van dominantie, isolatie, intimidatie en micro-regulering. In zo’n relatie is het voor het slachtoffer letterlijk onmogelijk om zichzelf te zijn. Het zenuwstelsel staat onder continue hoogspanning. Om escalaties, stiltebehandelingen of emotionele chantage te voorkomen, ontwikkelt het slachtoffer een chronische fawn-respons: het voortdurend aanpassen van de eigen emoties, meningen en waarden aan de grille van de controleur. Door continue verdraaiing van de werkelijkheid (gaslighting) en het isoleren van vrienden en familie, raakt het eigen innerlijke kompas volledig uitgehold.<br><br>
+
+Veel mensen vragen zich af waarom slachtoffers niet sneller weggaan. Het antwoord is even simpel als intriest: veel slachtoffers blijven juist jarenlang zitten omdat ze haarscherp aanvoelen dat het verbreken van de relatie het gevaar niet bezweert, maar verergert. Zodra de controleur de directe grip in huis verliest, slaat de paniek om machtsverlies toe. De dwingende controle stopt niet, maar verandert van vorm.<br><br>
+
+Het echte gevecht begint pas ná het beëindigen van de relatie. Het kind wordt door de controlerende ex-partner ingezet als het ultieme instrument om alsnog macht uit te oefenen. Ouderverstoting wordt hierbij bewust gecreëerd: het kind wordt emotioneel onder druk gezet, de andere ouder wordt zwartgemaakt, en omgangsafspraken worden eenzijdig geschrapt. Daarnaast wordt het familierechtstelsel als wapen gebruikt. Het aansturen op eindeloze rechtszaken en kort gedingen is een beproefde methode om de ex-partner financieel uit te putten en emotioneel gijzelaar te houden.<br><br>
+
+Slachtoffers staan hierin volkomen alleen. Er ontbreekt in Nederland een landelijk, gespecialiseerd steunpunt voor dwingende controle waar slachtoffers terechtkunnen voor daadwerkelijke bescherming, juridische rugdekking en specifieke expertise. Uit angst voor verdere escalatie of wraakacties durven slachtoffers er nauwelijks over te praten, wat leidt tot een diep emotioneel en maatschappelijk isolement.<br><br>
+
+Wanneer de gedupeerde ouder vervolgens aanklopt bij de jeugdzorg, de Raad voor de Kinderbescherming of de rechter, volgt de tweede klap. Ons systeem is verslaafd aan de gedachte dat een conflictscheiding per definitie de verantwoordelijkheid is van twee 'kijvende' ouders. Er wordt vastgehouden aan het dogma van gelijkwaardig ouderschap, zonder dat er wordt ingezoomd op de unieke dynamiek die zich achter gesloten deuren afspeelt.<br><br>
+
+Hier maakt de controleur handig gebruik van de zogeheten DARVO-tactiek (Deny, Attack, Reverse Victim and Offender). De feiten worden ontkend, de gedupeerde ouder wordt aangevallen op diens stabiliteit, en de pleger presenteert zichzelf als de redelijke, 'beschermende' ouder. Als het slachtoffer wanhopig of emotioneel reageert op het feit dat het kind bij hen wordt weggehouden, wijst het systeem al snel met de beschuldigende vinger: "Zie je wel, ze maken allebei ruzie."<br><br>
+
+Zo wordt feitelijke duiding weggezet als 'modder gooien'. Wie het patroon benoemt, wordt gelabeld als onwillig om samen te werken. En dus leert de beschadigde ouder de wrede spelregels van de institutionele werkelijkheid: als je je kind niet helemaal kwijt wilt raken, moet je je mond houden, slikken en meebewegen. Zwijgen wordt de enige overlevingsstrategie.<br><br>
+
+Het kan zo niet langer. Om deze schadelijke spiraal te doorbreken, moet het familierechtstelsel grondig op de schop met een landelijk steunpunt dwingende controle, scholing voor instanties in het herkennen van eenzijdige intieme terreur, en een beëindiging van het automatische 'twee schuld'-frame. Pas wanneer ons rechtssysteem de moed heeft om de diepte in te gaan en de feiten onder ogen te zien, hoeven slachtoffers niet langer te zwijgen om hun kinderen te beschermen. Pas dan wordt spreken weer goud.`,
+            image: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?q=80&w=800",
+            tags: ["Maatschappij", "Familierecht", "Dwingende Controle"]
         },
         {
             id: "ana-3",
