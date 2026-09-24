@@ -1,13 +1,13 @@
 export const data = {
     featured: {
-       id: "featured-1",
+        id: "featured-1",
         title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
         excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
         image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
         author: "HAZY STANDARD",
         date: "24 SEPTEMBER 2026"
     },
-    videos:[
+    videos: [
         {
             id: "vid-1",
             title: "Project Z: Verlaten Kantoorkolossen",
@@ -23,8 +23,8 @@ export const data = {
             videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
         }
     ],
-   analysis: [
-       {
+    analysis: [
+        {
             id: "ana-4",
             title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
             date: "24 SEPTEMBER 2026",
@@ -117,40 +117,64 @@ Het familierecht moet dringend op de schop:<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
   <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
-  <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragende procedures direct worden afgewezen.</li>
+  <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragendinge procedures direct worden afgewezen.</li>
   <li><strong>Erkenning in de jeugdzorg:</strong> Bied gerichte ondersteuning en erkenning voor duo-moeders, zodat het 'uitgummen' van een ouder niet langer gefaciliteerd wordt door het systeem.</li>
 </ul>
 
-<!-- HIER PLAATS JE HET ONDERSTAANDE BLOK -->
-        <hr style="margin: 40px 0 20px 0; border: 0; border-top: 1px solid #ddd;" />
+<hr style="margin: 40px 0 20px 0; border: 0; border-top: 1px solid #ddd;" />
 
-        <div class="article-footer">
-            <div class="source-citation" style="margin-bottom: 24px;">
-                <h4 style="margin-bottom: 8px;">Bronvermelding</h4>
-                <p style="font-size: 0.9em; line-height: 1.5; color: #444;">
-                    Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses uit het afstammingsrecht, waaronder:<br />
-                    <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023)[cite: 2].
-                </p>
-            </div>
+<div class="article-footer">
+    <div class="source-citation" style="margin-bottom: 24px;">
+        <h4 style="margin-bottom: 8px;">Bronvermelding</h4>
+        <p style="font-size: 0.9em; line-height: 1.5; color: #444;">
+            Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses uit het afstammingsrecht, waaronder:<br />
+            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023)[cite: 2].
+        </p>
+    </div>
 
-            <div class="related-article-box" style="background-color: #f4f4f4; padding: 16px; border-left: 4px solid #000; margin-bottom: 24px;">
-                <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
-                <p style="margin: 6px 0 0 0; font-size: 0.95em;">
-                    Lees ook de juridische verdieping: 
-                    <a href="/artikelen/duomoeder-erkenning" style="text-decoration: underline; color: #000; font-weight: 600;">
-                        De Rechtspositie van de Duomoeder bij Erkenning &rarr;
-                    </a>
-                </p>
-            </div>
+    <div class="related-article-box" style="background-color: #f4f4f4; padding: 16px; border-left: 4px solid #000; margin-bottom: 24px;">
+        <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
+        <p style="margin: 6px 0 0 0; font-size: 0.95em;">
+            Lees ook de juridische verdieping: 
+            <a href="/artikelen/duomoeder-erkenning" style="text-decoration: underline; color: #000; font-weight: 600;">
+                De Rechtspositie van de Duomoeder bij Erkenning &rarr;
+            </a>
+        </p>
+    </div>
 
-            <div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; line-height: 1.4;">
-                <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
-            </div>
-        </div>
-    `
-}`,
+    <div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; line-height: 1.4;">
+        <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
+    </div>
+</div>`,
             image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200&auto=format&fit=crop",
             tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
+        },
+        {
+            id: "duomoeder-erkenning",
+            title: "De Rechtspositie van de Duomoeder bij Erkenning",
+            date: "24 SEPTEMBER 2026",
+            intro: "Een juridische analyse van de achterstandspositie van de duomoeder ten opzichte van biologische vaders in erkenningsprocedures en de noodzaak voor hervorming van het afstammingsrecht.",
+            content: `In geval van het uiteengaan van de duomoeder en de geboortemoeder blijkt de juridische positie van de duomoeder aanzienlijk zwakker ten opzichte van de positie van de biologische vader[cite: 2]. Dit ondanks de doelstelling van de wetgever met de 'Wet Lesbisch ouderschap' om de positie van kinderen geboren in lesbische relaties zoveel mogelijk in overeenstemming te brengen met die van kinderen in heteroseksuele relaties[cite: 2].<br><br>
+
+<h3 class="font-bold">Biologisch versus sociaal ouderschap</h3><br>
+Op grond van artikel 1:198 lid 1 sub a BW is de juridische moeder van het kind de vrouw uit wie het kind is geboren (de geboortemoeder)[cite: 2]. De verwekker of biologische vader die om vervangende toestemming verzoekt om te erkennen, heeft in gerechtelijke procedures een hele sterke positie (art. 1:204 lid 3 BW)[cite: 2]. Hem wordt toestemming slechts onthouden in zeer uitzonderlijke gevallen[cite: 2].<br><br>
+
+De duomoeder valt echter onder artikel 1:204 lid 4 BW als 'instemmende levensgezel'[cite: 2]. Zij moet bewijzen dat zij levensgezel was, dat zij heeft ingestemd met de verwekking én dat de erkenning in het belang van het kind is[cite: 2]. In de rechtspraktijk weegt de biologische band tussen verwekker en kind daardoor nog altijd zwaarder dan het sociale ouderschap[cite: 2].<br><br>
+
+<h3 class="font-bold">Conclusie & Aanbevelingen</h3><br>
+In de feitenrechtspraak wordt nog altijd te veel waarde gehecht aan de biologische verwantschapsband[cite: 2]. Gelet op de huidige gezinssamenstellingen zou er meer aandacht moeten zijn voor de positie en belangen van de sociale ouder[cite: 2]. Zonder verdere aanpassing van het afstammingsrecht blijft de duomoeder op een gegarandeerde achterstand staan[cite: 2].<br><br>
+
+<hr style="margin: 30px 0 20px 0; border: 0; border-top: 1px solid #ddd;" /><br>
+
+<div class="source-citation" style="font-size: 0.9em; color: #444;">
+    <p><strong>Bron:</strong> EB 2023/49 — <em>De positie van de duomoeder in de erkenningsprocedure</em>, mr. I. van Dijk-van Oosterhout & mr. N. Groen (SCG Advocaten), Echtscheidingsbulletin aflevering 6, juni 2023[cite: 2].</p>
+</div>
+
+<div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; margin-top: 16px;">
+    <p><strong>Disclaimer:</strong> Dit artikel vormt een redactionele samenvatting van juridische literatuur en is uitsluitend bedoeld ter informatie. Het vormt geen formeel juridisch advies.</p>
+</div>`,
+            image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200&auto=format&fit=crop",
+            tags: ["Familierecht", "Wetgeving", "LHBTQ+"]
         },
         {
             id: "ana-2",
@@ -266,12 +290,12 @@ Evan Stark, 'Coercive Control: How Men Entrap Women in Personal Life', Oxford Un
             image:"https://images.unsplash.com/photo-1625537134691-62a54cc4a909?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             tags: ["Maatschappij", "Familierecht", "Dwingende Controle"]
         },
-         {
-        id: "ana-1",
-        title: "Duizend manieren om mens te zijn",
-        date: "2 SEPTEMBER 2026",
-        intro: "In de maatschappij geldt vaak één norm voor hoe we moeten focussen, leren en functioneren. Voor Tim leidde het constante aanpassen aan die starre mal en het onbegrip rondom zijn ADHD.",
-        content: `Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar een' route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen. <br><br>
+        {
+            id: "ana-1",
+            title: "Duizend manieren om mens te zijn",
+            date: "2 SEPTEMBER 2026",
+            intro: "In de maatschappij geldt vaak één norm voor hoe we moeten focussen, leren en functioneren. Voor Tim leidde het constante aanpassen aan die starre mal en het onbegrip rondom zijn ADHD.",
+            content: `Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar een' route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen. <br><br>
 
 "Al mijn leven lang wist ik dat ik anders was," vertelt Tim. Die wetenschap was op zichzelf niet het ergste. Het echte trauma zat in de subtiele, dagelijkse afwijzing. In het gevoel een vreemde eend te zijn in een kamer vol mensen die dezelfde taal spreken, terwijl jij de enige bent die de ondertiteling mist. Het zat in de afkeurende blikken wanneer zijn gedachten sneller gingen dan de lesstof, de diepe eenzaamheid wanneer de buitenwereld zijn overprikkeling verwarde met 'lastig gedrag', en de ijzige stilte die volgde als hij probeerde uit te leggen hoe stormachtig het vanbinnen waaide.<br><br>
 
@@ -294,11 +318,11 @@ Voor iedereen die nu klem zit tussen de druk om te voldoen en de wens om zichzel
 Zoals Tim het onwrikbaar samenvat: "Altijd jezelf blijven. Want als je jezelf bent, kun je nooit negatief zijn."<br><br>
 
 Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 manieren om van te houden.`,
-        image: "assets/images/tim uitsnede.jpg",
-        tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
-    }
+            image: "assets/images/tim uitsnede.jpg",
+            tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
+        }
     ],
-    rawData:[
+    rawData: [
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
         "18/03 16:45 - Faillissementen bouwsector +15% YoY.",
         "18/03 12:00 - ECB houdt rente ongewijzigd op 4.25%.",
@@ -306,8 +330,7 @@ Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 maniere
         "16/03 14:00 - Leegstandsindex kantoren Randstad stijgt naar 18.4%.",
         "15/03 10:30 - Werkloosheid stabiliseert, krapte IT-markt neemt af."
     ],
-    topics:["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"],
-    
+    topics: ["Vastgoed", "Maatschappij", "Klimaat", "Economie", "Onderwijs"],
     portfolio: [
         {
             id: "port-1",
