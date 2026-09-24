@@ -136,7 +136,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
         <p style="margin: 6px 0 0 0; font-size: 0.95em;">
             Lees ook de juridische verdieping: 
-           <a href="/assets/images/duo%20moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
+           <a href="/assets/images/duomoeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
             De Rechtspositie van de Duomoeder bij Erkenning (PDF)
             </a>
         </p>
