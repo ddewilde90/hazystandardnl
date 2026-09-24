@@ -29,7 +29,7 @@ export const data = {
             title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
             date: "24 SEPTEMBER 2026",
             intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
-            content: `Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
+            content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
 <h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
@@ -104,7 +104,7 @@ Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkte
 
 <ul class="list-disc pl-6 space-y-2">
   <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maatschappelijke hulpverlening kijken te vaak door een heteronormatieve bril. Het stopzetten van het contact door de geboortemoeder wordt afgedaan als 'moeilijke communicatie tussen exen', in plaats van het bewust ontzeggen van een hechtingsfiguur.</li>
-  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er letterlijk alleen voor.</li>
+  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er letterlijk alleen voor vanwege de juridische pauzeknop (ookal willen instanties wel helpen, ze kunnen simpelweg niks).</li>
   <li><strong>Geen omgangsregeling tijdens de procedure:</strong> Omdat het gezag 'op pauze' staat, weigeren veel rechters en instanties een voorlopige omgangsregeling op te leggen zolang het juridisch ouderschap niet definitief vaststaat. Het kind wordt al die tijd weggehouden bij de moeder die het kent vanaf de geboorte.</li>
 </ul><br><br>
 
