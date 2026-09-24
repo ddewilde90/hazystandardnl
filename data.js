@@ -136,7 +136,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
         <p style="margin: 6px 0 0 0; font-size: 0.95em;">
             Lees ook de juridische verdieping: 
-           <a href="/hazystandardnl/assets/images/duo moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
+           <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
             De Rechtspositie van de Duomoeder bij Erkenning (PDF)
             </a>
         </p>
@@ -146,7 +146,7 @@ Het familierecht moet dringend op de schop:<br><br>
     <p style="font-weight: bold; margin-bottom: 8px;">Juridische verdieping: De Rechtspositie van de Duomoeder bij Erkenning</p>
     
     <object 
-        data="/hazystandardnl/assets/images/duo moeders.pdf" 
+        data="/hazystandardnl/assets/images/duo%20moeders.pdf" 
         type="application/pdf" 
         width="100%" 
         height="600px" 
@@ -155,7 +155,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <!-- Fallback voor mobiele browsers die embedded PDF's niet ondersteunen -->
         <p style="padding: 16px; background-color: #f9f9f9; border: 1px solid #ddd;">
             Je browser ondersteunt het direct tonen van PDF-bestanden niet. 
-            <a href="/hazystandardnl/assets/images/duo moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
+            <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
                 Klik hier om het document te openen (PDF) &rarr;
             </a>
         </p>
