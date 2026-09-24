@@ -292,13 +292,13 @@ Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 maniere
     }
 ];
 
-// 2. We pakken automatisch het allereerste artikel uit de lijst (het nieuwste)
+// 2. We pakken het eerste (nieuwste) artikel uit de lijst
 const latestArticle = analysisArticles[0];
 
-// 3. Vervolgens exporteren we het complete data-object
+// 3. Exporteer het data-object met 'analysis' (of 'analyse') in plaats van 'featured'
 export const data = {
-    featured: {
-        id: "featured-1",
+    analysis: {
+        id: latestArticle.id,
         title: latestArticle.title,
         excerpt: latestArticle.intro,
         image: latestArticle.image,
