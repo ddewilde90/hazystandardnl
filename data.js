@@ -119,7 +119,36 @@ Het familierecht moet dringend op de schop:<br><br>
   <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
   <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragende procedures direct worden afgewezen.</li>
   <li><strong>Erkenning in de jeugdzorg:</strong> Bied gerichte ondersteuning en erkenning voor duo-moeders, zodat het 'uitgummen' van een ouder niet langer gefaciliteerd wordt door het systeem.</li>
-</ul>`,
+</ul>
+
+<!-- HIER PLAATS JE HET ONDERSTAANDE BLOK -->
+        <hr style="margin: 40px 0 20px 0; border: 0; border-top: 1px solid #ddd;" />
+
+        <div class="article-footer">
+            <div class="source-citation" style="margin-bottom: 24px;">
+                <h4 style="margin-bottom: 8px;">Bronvermelding</h4>
+                <p style="font-size: 0.9em; line-height: 1.5; color: #444;">
+                    Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses uit het afstammingsrecht, waaronder:<br />
+                    <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023)[cite: 2].
+                </p>
+            </div>
+
+            <div class="related-article-box" style="background-color: #f4f4f4; padding: 16px; border-left: 4px solid #000; margin-bottom: 24px;">
+                <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
+                <p style="margin: 6px 0 0 0; font-size: 0.95em;">
+                    Lees ook de juridische verdieping: 
+                    <a href="/artikelen/duomoeder-erkenning" style="text-decoration: underline; color: #000; font-weight: 600;">
+                        De Rechtspositie van de Duomoeder bij Erkenning &rarr;
+                    </a>
+                </p>
+            </div>
+
+            <div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; line-height: 1.4;">
+                <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
+            </div>
+        </div>
+    `
+}`,
             image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200&auto=format&fit=crop",
             tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
         },
