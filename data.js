@@ -57,12 +57,12 @@ Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 maniere
     },
         {
             id: "ana-2",
-            title: "OPINIE | Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
+            title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
             date: "24 SEPTEMBER 2026",
             intro: "Het beëindigen van een relatie met dwingende controle brengt zelden rust. Sterker nog: vaak begint de echte terreur pas ná de breuk. Zolang het familierecht en de jeugdzorg feitelijke beschrijvingen van psychologische machtsmiddelen blijven wegzetten als ‘ouderstrijd’ of ‘modder gooien’, hebben slachtoffers maar één overlevingsstrategie: hun mond houden.",
             content: `Het is een van de meest fnuikende paradoxen binnen ons familierecht en de jeugdhulpverlening. Een ouder die een relatie beëindigt waarin sprake was van dwingende controle, loopt vrijwel meteen tegen een onzichtbare maar meedogenloze muur op. Waar het verbreken van de banden rust en veiligheid zou moeten brengen, verplaatst de strijd zich simpelweg naar het enige speelveld dat nog over is: het kind en de rechtbank. En wie het aandurft om het patroon van macht en manipulatie hardop te benoemen, krijgt van het systeem direct de deksel op de neus. Eerlijkheid wordt afgestraft als het 'voeden van de strijd'. Welkom in de werkelijkheid waarin het aloude spreekwoord cynisch waarheid wordt: spreken is zilver, maar zwijgen is goud.<br><br>
 
-<h3>De onzichtbare psychologische gijzeling</h3><br>
+<h3 class="font-bold">De onzichtbare psychologische gijzeling</h3><br>
 Om te begrijpen waarom de situatie ná een scheiding zo snel ontspoort, moeten we eerst kijken naar wat er tijdens de relatie gebeurt. Dwingende controle (coercive control) is geen verzameling van incidentele echtelijke ruzies of twee mensen die simpelweg niet bij elkaar passen. Zoals socioloog Evan Stark en Nederlandse experts als Ingrid Vledder en Ariane Hendriks (Met liefde heeft het niks te maken) aantonen, is het een systematisch patroon van dominantie, isolatie, intimidatie en micro-regulering.<br><br>
 
 In zo’n relatie is het voor het slachtoffer letterlijk onmogelijk om jezelf te zijn. Het zenuwstelsel staat onder continue hoogspanning. Om escalaties, stiltebehandelingen of emotionele chantage te voorkomen, ontwikkelt het slachtoffer een chronische fawn-respons: het voortdurend aanpassen van de eigen emoties, meningen en waarden aan de grille van de controleur. Door continue verdraaiing van de werkelijkheid (gaslighting) en het isoleren van vrienden en familie, raakt het eigen innerlijke kompas volledig uitgehold. Stukje bij beetje slijp je je eigen identiteit af om veilig te blijven, totdat er slechts een schim van jezelf overblijft.<br><br>
@@ -103,14 +103,14 @@ In zo’n relatie is het voor het slachtoffer letterlijk onmogelijk om jezelf te
   </table>
 </div><br><br>
 
-<h3>De illusie dat de breuk uitkomst biedt</h3><br>
+<h3 class="font-bold">De illusie dat de breuk uitkomst biedt</h3><br>
 Veel mensen vragen zich af waarom slachtoffers niet sneller weggaan. Het antwoord is even simpel als intriest: veel slachtoffers blijven juist jarenlang zitten omdat ze haarscherp aanvoelen dat het verbreken van de relatie het gevaar niet bezweert, maar verergert. Zodra de controleur de directe grip in huis verliest, slaat de paniek om machtsverlies toe. De dwingende controle stopt niet, maar verandert van vorm.<br><br>
 
 Het echte gevecht begint pas ná het beëindigen van de relatie. Het kind wordt door de controlerende ex-partner ingezet als het ultieme instrument om alsnog macht uit te oefenen. Ouderverstoting wordt hierbij bewust gecreëerd: het kind wordt emotioneel onder druk gezet, de andere ouder wordt zwartgemaakt, en omgangsafspraken worden eenzijdig geschrapt. Daarnaast wordt het familierechtstelsel als wapen gebruikt. Het aansturen op eindeloze rechtszaken en kort gedingen is een beproefde methode om de ex-partner financieel uit te putten en emotioneel gijzelaar te houden.<br><br>
 
 Slachtoffers staan hierin volkomen alleen. Er ontbreekt in Nederland een landelijk, gespecialiseerd steunpunt voor dwingende controle waar slachtoffers terechtkunnen voor daadwerkelijke bescherming, juridische rugdekking en specifieke expertise. Uit angst voor verdere escalatie of wraakacties durven slachtoffers er nauwelijks over te praten, wat leidt tot een diep emotioneel en maatschappelijk isolement.<br><br>
 
-<h3>De valkuil van de 'vechtscheiding'</h3><br>
+<h3 class="font-bold">De valkuil van de 'vechtscheiding'</h3><br>
 Wanneer de gedupeerde ouder vervolgens aanklopt bij de jeugdzorg, de Raad voor de Kinderbescherming of de rechter, volgt de tweede klap. Ons systeem is verslaafd aan de gedachte dat een conflictscheiding per definitie de verantwoordelijkheid is van twee 'kijvende' ouders. Er wordt vastgehouden aan het dogma van gelijkwaardig ouderschap en de deugdelijke communicatie, zonder dat er wordt ingezoomd op de unieke dynamiek die zich achter gesloten deuren afspeelt.<br><br>
 
 Hier maakt de controleur handig gebruik van de zogeheten DARVO-tactiek (Deny, Attack, Reverse Victim and Offender). De feiten worden ontkend, de gedupeerde ouder wordt aangevallen op diens stabiliteit, en de pleger presenteert zichzelf als de redelijke, 'beschermende' ouder. Als het slachtoffer wanhopig of emotioneel reageert op het feit dat het kind bij hen wordt weggehouden, wijst het systeem al snel met de beschuldigende vinger: "Zie je wel, ze maken allebei ruzie."<br><br>
@@ -146,7 +146,7 @@ Zo wordt feitelijke duiding weggezet als 'modder gooien'. Wie het patroon benoem
   </table>
 </div><br><br>
 
-<h3>Een oproep tot systeemverandering</h3><br>
+<h3 class="font-bold">Een oproep tot systeemverandering</h3><br>
 Het kan zo niet langer. Het beeld dat instanties onverschillig zijn klopt niet; de meeste professionals willen oprecht helpen. Maar zij staan onder immense werkdruk, missen specifieke expertise en hebben simpelweg de tijd en ruimte niet om maandenlang dossieronderzoek te doen naar verborgen psychologische patronen. Er zijn bovendien nauwelijks opvangplekken of veilige kaders waar slachtoffers van deze vorm van terreur terechtkunnen.<br><br>
 
 Om deze schadelijke spiraal te doorbreken, moet het familierechtstelsel grondig op de schop:<br><br>
