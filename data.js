@@ -93,7 +93,7 @@ Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de ein
       </tr>
       <tr class="bg-red-50">
         <td class="p-3 border border-gray-300 font-bold text-red-700">Eindresultaat</td>
-        <td class="p-3 border border-gray-300 font-bold text-red-700">Ruim 2,5 jaar gedwongen scheiding en hechtingsschade voor het kind.</td>
+        <td class="p-3 border border-gray-300 font-bold text-red-700">Ruim 2,5 jaar gedwongen aanpassingsscheiding en hechtingsschade voor het kind.</td>
       </tr>
     </tbody>
   </table>
@@ -136,8 +136,8 @@ Het familierecht moet dringend op de schop:<br><br>
         <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
         <p style="margin: 6px 0 0 0; font-size: 0.95em;">
             Lees ook de juridische verdieping: 
-            <a href="/artikelen/duomoeder-erkenning" style="text-decoration: underline; color: #000; font-weight: 600;">
-                De Rechtspositie van de Duomoeder bij Erkenning &rarr;
+           <a href="/pdf/duo moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
+            De Rechtspositie van de Duomoeder bij Erkenning (PDF)
             </a>
         </p>
     </div>
