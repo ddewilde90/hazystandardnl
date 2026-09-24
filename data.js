@@ -1,11 +1,11 @@
 export const data = {
     featured: {
-        id: "featured-1",
-        title: "De Val van Commercieel Vastgoed: Een Systeemfout",
-        excerpt: "Analyse van de leegstand in de Zuidas en de kettingreactie in de pensioenfondsen. De data wijst op een structurele overwaardering van 40%.",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+       id: "featured-1",
+        title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
+        excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
         author: "Studio",
-        date: "19 MAART 2026"
+        date: "24 SEPTEMBER 2026"
     },
     videos:[
         {
@@ -24,6 +24,105 @@ export const data = {
         }
     ],
    analysis: [
+       {
+            id: "ana-4",
+            title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
+            date: "24 SEPTEMBER 2026",
+            intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
+            content: `Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
+
+<h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
+Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
+
+Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
+
+<h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3><br>
+Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en de adoptie of de vervangende toestemming tot erkenning uitspreekt, voelt dat als een rechtvaardige overwinning. Maar in ons familierecht is dat oordeel vaak pas het begin van een lange uitputtingsslag.<br><br>
+
+<ul class="list-disc pl-6 space-y-2">
+  <li><strong>De termijn:</strong> Een ex-partner die het niet eens is met de beslissing van de rechter, kan <strong>binnen drie maanden na de datum van de uitspraak</strong> hoger beroep instellen bij het Gerechtshof.</li>
+  <li><strong>Herbeoordeling van de zaak:</strong> Het Gerechtshof doet de zaak niet zomaar kort over, maar behandelt de hele kwestie opnieuw van A tot Z. De duo-moeder moet alle bewijsstukken over de hechtingsband, de gezamenlijke kinderwens en het opvoederschap opnieuw overleggen en verdedigen.</li>
+  <li><strong>Geen drempel voor onderbouwing:</strong> Het wrange aan dit systeem is dat de geboortemoeder vrijwel zonder inhoudelijke drempel of hard bewijs hoger beroep kan aantekenen. Zelfs als een verweer juridisch of feitelijk op drijfzand is gebaseerd, wordt de zaak toch in behandeling genomen. De loutere instelling van het beroep gooit de boel maandenlang administratief en emotioneel op slot.</li>
+</ul><br><br>
+
+<h3 class="font-bold">Het stappenplan en het Raadsonderzoek: de vertraging stapelt zich op</h3><br>
+Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de eindstreep te zijn? Dan blijkt de werkelijkheid nog veel grilliger. Want het bepalen van de feitelijke <strong>omgangsregeling</strong> opent een heel nieuw juridisch hoofdstuk.<br><br>
+
+<ol class="list-decimal pl-6 space-y-2">
+  <li><strong>Inschakeling van de Raad voor de Kinderbescherming:</strong> Wanneer de geboortemoeder beweert dat er 'geen band' is of dat de verhoudingen verstoord zijn, gelast de rechter een raadsonderzoek om de verhouding tussen het kind en de duo-moeder te onderzoeken. Van het moment van de aanvraag bij de rechtbank tot het definitieve eindoordeel van zo'n onderzoek verstrijkt gemakkelijk ruim 1 jaar.</li>
+  <li><strong>Opbouw in babystapjes:</strong> Zelfs als uit het onderzoek blijkt dat het kind primair gehecht is aan de duo-moeder, wordt de omgang zelden direct volwaardig hersteld. De omgang wordt stapsgewijs opgebouwd (bijvoorbeeld van een uurtje onder begeleiding naar een middag, en pas veel later naar overnachtingen).</li>
+</ol><br><br>
+
+<div class="my-6 overflow-x-auto">
+  <table class="w-full text-left border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray-100">
+        <th colspan="2" class="p-3 border border-gray-300 text-center font-bold tracking-wide uppercase">
+          De 2,5 jaar durende tijdslijn van de duo-moeder
+        </th>
+      </tr>
+      <tr class="bg-gray-50">
+        <th class="p-3 border border-gray-300 font-bold w-1/3">Fase / Termijn</th>
+        <th class="p-3 border border-gray-300 font-bold w-2/3">Juridische werkelijkheid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top font-semibold">0 Maanden</td>
+        <td class="p-3 border border-gray-300 align-top">Relatiebreuk. Geboortemoeder blokkeert omgang &amp; erkenning.</td>
+      </tr>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top font-semibold">3 - 6 Maanden</td>
+        <td class="p-3 border border-gray-300 align-top">Procedure eerste aanleg (Rechtbank) voor adoptie/erkenning.</td>
+      </tr>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top font-semibold">Binnen 3 maanden</td>
+        <td class="p-3 border border-gray-300 align-top">Ex-partner stelt hoger beroep in bij het Gerechtshof.</td>
+      </tr>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top font-semibold">9 - 15 Maanden</td>
+        <td class="p-3 border border-gray-300 align-top">Behandeling bij het Gerechtshof en wachten op de uitspraak.</td>
+      </tr>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top font-semibold">15 - 18 Maanden</td>
+        <td class="p-3 border border-gray-300 align-top">Drie maanden wettelijke cassatietermijn afwachten voor verwerking BRP.</td>
+      </tr>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top font-semibold">18 - 30+ Maanden</td>
+        <td class="p-3 border border-gray-300 align-top">Raadsonderzoek omgang &amp; stapsgewijze opbouw van het contact.</td>
+      </tr>
+      <tr class="bg-red-50">
+        <td class="p-3 border border-gray-300 font-bold text-red-700">Eindresultaat</td>
+        <td class="p-3 border border-gray-300 font-bold text-red-700">Ruim 2,5 jaar gedwongen scheiding en hechtingsschade voor het kind.</td>
+      </tr>
+    </tbody>
+  </table>
+</div><br><br>
+
+<h3 class="font-bold">Uitgegumd zonder hulpverlening</h3><br>
+Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkteams vaak klaar om vader-kindcontact te herstellen. Maar zodra een duo-moeder wordt uitgesloten, stuit zij op een muur van onbegrip, handelingsverlegenheid en stereotypering.<br><br>
+
+<ul class="list-disc pl-6 space-y-2">
+  <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maatschappelijke hulpverlening kijken te vaak door een heteronormatieve bril. Het stopzetten van het contact door de geboortemoeder wordt afgedaan als 'moeilijke communicatie tussen exen', in plaats van het bewust ontzeggen van een hechtingsfiguur.</li>
+  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er letterlijk alleen voor.</li>
+  <li><strong>Geen omgangsregeling tijdens de procedure:</strong> Omdat het gezag 'op pauze' staat, weigeren veel rechters en instanties een voorlopige omgangsregeling op te leggen zolang het juridisch ouderschap niet definitief vaststaat. Het kind wordt al die tijd weggehouden bij de moeder die het kent vanaf de geboorte.</li>
+</ul><br><br>
+
+<h3 class="font-bold">Tijd voor echte homo-acceptatie in de rechtzaal</h3><br>
+Homo-acceptatie meet je niet af aan het hijsen van een vlag op de stadsboerderij of het houden van een feestelijke parade. Echte acceptatie blijkt uit hoe een samenleving omgaat met de kwetsbare momenten: wanneer de liefde over is en de belangen van het kind beschermd moeten worden.<br><br>
+
+Dat een duo-moeder in Nederland binnen de huidige wetgeving tot wel 2,5 jaar moet vechten tegen juridische vertragingstactieken, raadsonderzoeken en willekeur van de biologische ouder, is een directe schending van de gelijkwaardigheid van het regenbooggezin.<br><br>
+
+Het familierecht moet dringend op de schop:<br><br>
+
+<ul class="list-disc pl-6 space-y-2">
+  <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
+  <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragende procedures direct worden afgewezen.</li>
+  <li><strong>Erkenning in de jeugdzorg:</strong> Bied gerichte ondersteuning en erkenning voor duo-moeders, zodat het 'uitgummen' van een ouder niet langer gefaciliteerd wordt door het systeem.</li>
+</ul>`,
+            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
+            tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
+        },
         {
             id: "ana-2",
             title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
