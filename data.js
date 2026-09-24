@@ -67,20 +67,41 @@ Om te begrijpen waarom de situatie ná een scheiding zo snel ontspoort, moeten w
 
 In zo’n relatie is het voor het slachtoffer letterlijk onmogelijk om jezelf te zijn. Het zenuwstelsel staat onder continue hoogspanning. Om escalaties, stiltebehandelingen of emotionele chantage te voorkomen, ontwikkelt het slachtoffer een chronische fawn-respons: het voortdurend aanpassen van de eigen emoties, meningen en waarden aan de grille van de controleur. Door continue verdraaiing van de werkelijkheid (gaslighting) en het isoleren van vrienden en familie, raakt het eigen innerlijke kompas volledig uitgehold. Stukje bij beetje slijp je je eigen identiteit af om veilig te blijven, totdat er slechts een schim van jezelf overblijft.<br><br>
 
-<pre class="bg-gray-100 p-4 rounded-lg overflow-x-auto font-mono text-xs my-4">
-+-----------------------------------------------------------------------+
-|                HET MECHANISME VAN DWINGENDE CONTROLE                  |
-+-----------------------------------------------------------------------+
-|                                                                       |
-|   Tijdens de relatie                   Ná de breuk                    |
-|   ------------------                   -----------                    |
-|   • Isolatie van netwerk               • Kind als machtsmiddel        |
-|   • Gaslighting & twijfel              • Juridische uitputtingsslag   |
-|   • Micro-regulering                   • DARVO-tactiek bij instanties |
-|   • Fawn-respons (aanpassen)           • Dwang tot stilte / zwijgen   |
-|                                                                       |
-+-----------------------------------------------------------------------+
-</pre><br><br>
+<div class="my-6 overflow-x-auto">
+  <table class="w-full text-left border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray-100">
+        <th colspan="2" class="p-3 border border-gray-300 text-center font-bold tracking-wide uppercase">
+          Het mechanisme van dwingende controle
+        </th>
+      </tr>
+      <tr class="bg-gray-50">
+        <th class="p-3 border border-gray-300 font-bold w-1/2">Tijdens de relatie</th>
+        <th class="p-3 border border-gray-300 font-bold w-1/2">Ná de breuk</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top">
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Isolatie van netwerk</li>
+            <li>Gaslighting &amp; twijfel</li>
+            <li>Micro-regulering</li>
+            <li>Fawn-respons (aanpassen)</li>
+          </ul>
+        </td>
+        <td class="p-3 border border-gray-300 align-top">
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Kind als machtsmiddel</li>
+            <li>Juridische uitputtingsslag</li>
+            <li>DARVO-tactiek bij instanties</li>
+            <li>Dwang tot stilte / zwijgen</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div><br><br>
 
 <h3>De illusie dat de breuk uitkomst biedt</h3><br>
 Veel mensen vragen zich af waarom slachtoffers niet sneller weggaan. Het antwoord is even simpel als intriest: veel slachtoffers blijven juist jarenlang zitten omdat ze haarscherp aanvoelen dat het verbreken van de relatie het gevaar niet bezweert, maar verergert. Zodra de controleur de directe grip in huis verliest, slaat de paniek om machtsverlies toe. De dwingende controle stopt niet, maar verandert van vorm.<br><br>
