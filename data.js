@@ -3,7 +3,7 @@ export const data = {
        id: "featured-1",
         title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
         excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
         author: "Studio",
         date: "24 SEPTEMBER 2026"
     },
@@ -267,16 +267,7 @@ Zoals Tim het onwrikbaar samenvat: "Altijd jezelf blijven. Want als je jezelf be
 Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 manieren om van te houden.`,
         image: "assets/images/tim uitsnede.jpg",
         tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
-    },
-        {
-            id: "ana-3",
-            title: "Urbanisatie 2.0: De Vlucht uit de Stad",
-            date: "12 MRT 2026",
-            intro: "Demografische hittekaarten tonen een omkering van de trek naar de Randstad.",
-            content: "Hier typ je de volledige feitelijke analyse.",
-            image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
-            tags: ["Vastgoed", "Maatschappij"]
-        }
+    }
     ],
     rawData:[
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
