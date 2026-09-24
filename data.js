@@ -142,6 +142,26 @@ Het familierecht moet dringend op de schop:<br><br>
         </p>
     </div>
 
+    <div class="pdf-embed-container" style="margin: 24px 0;">
+    <p style="font-weight: bold; margin-bottom: 8px;">Juridische verdieping: De Rechtspositie van de Duomoeder bij Erkenning</p>
+    
+    <object 
+        data="/hazystandardnl/assets/images/duo%20moeders.pdf" 
+        type="application/pdf" 
+        width="100%" 
+        height="600px" 
+        style="border: 1px solid #ccc; border-radius: 4px;">
+        
+        <!-- Fallback voor mobiele browsers die embedded PDF's niet ondersteunen -->
+        <p style="padding: 16px; background-color: #f9f9f9; border: 1px solid #ddd;">
+            Je browser ondersteunt het direct tonen van PDF-bestanden niet. 
+            <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
+                Klik hier om het document te openen (PDF) &rarr;
+            </a>
+        </p>
+    </object>
+</div>
+
     <div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; line-height: 1.4;">
         <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
     </div>
