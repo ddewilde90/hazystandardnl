@@ -150,33 +150,6 @@ Het familierecht moet dringend op de schop:<br><br>
             tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
         },
         {
-            id: "duomoeder-erkenning",
-            title: "De Rechtspositie van de Duomoeder bij Erkenning",
-            date: "24 SEPTEMBER 2026",
-            intro: "Een juridische analyse van de achterstandspositie van de duomoeder ten opzichte van biologische vaders in erkenningsprocedures en de noodzaak voor hervorming van het afstammingsrecht.",
-            content: `In geval van het uiteengaan van de duomoeder en de geboortemoeder blijkt de juridische positie van de duomoeder aanzienlijk zwakker ten opzichte van de positie van de biologische vader[cite: 2]. Dit ondanks de doelstelling van de wetgever met de 'Wet Lesbisch ouderschap' om de positie van kinderen geboren in lesbische relaties zoveel mogelijk in overeenstemming te brengen met die van kinderen in heteroseksuele relaties[cite: 2].<br><br>
-
-<h3 class="font-bold">Biologisch versus sociaal ouderschap</h3><br>
-Op grond van artikel 1:198 lid 1 sub a BW is de juridische moeder van het kind de vrouw uit wie het kind is geboren (de geboortemoeder)[cite: 2]. De verwekker of biologische vader die om vervangende toestemming verzoekt om te erkennen, heeft in gerechtelijke procedures een hele sterke positie (art. 1:204 lid 3 BW)[cite: 2]. Hem wordt toestemming slechts onthouden in zeer uitzonderlijke gevallen[cite: 2].<br><br>
-
-De duomoeder valt echter onder artikel 1:204 lid 4 BW als 'instemmende levensgezel'[cite: 2]. Zij moet bewijzen dat zij levensgezel was, dat zij heeft ingestemd met de verwekking én dat de erkenning in het belang van het kind is[cite: 2]. In de rechtspraktijk weegt de biologische band tussen verwekker en kind daardoor nog altijd zwaarder dan het sociale ouderschap[cite: 2].<br><br>
-
-<h3 class="font-bold">Conclusie & Aanbevelingen</h3><br>
-In de feitenrechtspraak wordt nog altijd te veel waarde gehecht aan de biologische verwantschapsband[cite: 2]. Gelet op de huidige gezinssamenstellingen zou er meer aandacht moeten zijn voor de positie en belangen van de sociale ouder[cite: 2]. Zonder verdere aanpassing van het afstammingsrecht blijft de duomoeder op een gegarandeerde achterstand staan[cite: 2].<br><br>
-
-<hr style="margin: 30px 0 20px 0; border: 0; border-top: 1px solid #ddd;" /><br>
-
-<div class="source-citation" style="font-size: 0.9em; color: #444;">
-    <p><strong>Bron:</strong> EB 2023/49 — <em>De positie van de duomoeder in de erkenningsprocedure</em>, mr. I. van Dijk-van Oosterhout & mr. N. Groen (SCG Advocaten), Echtscheidingsbulletin aflevering 6, juni 2023[cite: 2].</p>
-</div>
-
-<div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; margin-top: 16px;">
-    <p><strong>Disclaimer:</strong> Dit artikel vormt een redactionele samenvatting van juridische literatuur en is uitsluitend bedoeld ter informatie. Het vormt geen formeel juridisch advies.</p>
-</div>`,
-            image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200&auto=format&fit=crop",
-            tags: ["Familierecht", "Wetgeving", "LHBTQ+"]
-        },
-        {
             id: "ana-2",
             title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
             date: "24 SEPTEMBER 2026",
