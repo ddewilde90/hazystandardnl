@@ -1,35 +1,11 @@
-export const data = {
-    featured: {
-        id: "featured-1",
+// 1. Eerst definiëren we de analyse-artikelen in een constante
+const analysisArticles = [
+    {
+        id: "ana-4",
         title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
-        excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
-        author: "HAZY STANDARD",
-        date: "24 SEPTEMBER 2026"
-    },
-    videos: [
-        {
-            id: "vid-1",
-            title: "Project Z: Verlaten Kantoorkolossen",
-            duration: "14:20",
-            thumb: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=600&auto=format&fit=crop",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
-        },
-        {
-            id: "vid-2",
-            title: "Grondstoftekorten in de Haven",
-            duration: "08:45",
-            thumb: "https://images.unsplash.com/photo-1586528116311-ad8ed745da33?q=80&w=600&auto=format&fit=crop",
-            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
-        }
-    ],
-    analysis: [
-        {
-            id: "ana-4",
-            title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
-            date: "24 SEPTEMBER 2026",
-            intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
-            content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
+        date: "24 SEPTEMBER 2026",
+        intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
+        content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
 <h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
@@ -128,7 +104,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <h4 style="margin-bottom: 8px;">Bronvermelding</h4>
         <p style="font-size: 0.9em; line-height: 1.5; color: #444;">
             Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses uit het afstammingsrecht, waaronder:<br />
-            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023)[cite: 2].
+            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023).
         </p>
     </div>
 
@@ -136,7 +112,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <p style="margin: 0; font-weight: bold;">Meer achtergrond over de wetgeving en rechtspraak?</p>
         <p style="margin: 6px 0 0 0; font-size: 0.95em;">
             Lees ook de juridische verdieping: 
-           <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
+            <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
             De Rechtspositie van de Duomoeder bij Erkenning (PDF)
             </a>
         </p>
@@ -166,15 +142,15 @@ Het familierecht moet dringend op de schop:<br><br>
         <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
     </div>
 </div>`,
-            image: "assets/images/regenboog.jpg",
-            tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
-        },
-        {
-            id: "ana-2",
-            title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
-            date: "24 SEPTEMBER 2026",
-            intro: "Het beëindigen van een relatie met dwingende controle brengt zelden rust. Sterker nog: vaak begint de echte terreur pas ná de breuk. Zolang het familierecht en de jeugdzorg feitelijke beschrijvingen van psychologische machtsmiddelen blijven wegzetten als ‘ouderstrijd’ of ‘modder gooien’, hebben slachtoffers maar één overlevingsstrategie: hun mond houden.",
-            content: `Het is een van de meest fnuikende paradoxen binnen ons familierecht en de jeugdhulpverlening. Een ouder die een relatie beëindigt waarin sprake was van dwingende controle, loopt vrijwel meteen tegen een onzichtbare maar meedogenloze muur op. Waar het verbreken van de banden rust en veiligheid zou moeten brengen, verplaatst de strijd zich simpelweg naar het enige speelveld dat nog over is: het kind en de rechtbank. En wie het aandurft om het patroon van macht en manipulatie hardop te benoemen, krijgt van het systeem direct de deksel op de neus. Eerlijkheid wordt afgestraft als het 'voeden van de strijd'. Welkom in de werkelijkheid waarin het aloude spreekwoord cynisch waarheid wordt: spreken is zilver, maar zwijgen is goud.<br><br>
+        image: "assets/images/regenboog.jpg",
+        tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
+    },
+    {
+        id: "ana-2",
+        title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
+        date: "24 SEPTEMBER 2026",
+        intro: "Het beëindigen van een relatie met dwingende controle brengt zelden rust. Sterker nog: vaak begint de echte terreur pas ná de breuk. Zolang het familierecht en de jeugdzorg feitelijke beschrijvingen van psychologische machtsmiddelen blijven wegzetten als ‘ouderstrijd’ of ‘modder gooien’, hebben slachtoffers maar één overlevingsstrategie: hun mond houden.",
+        content: `Het is een van de meest fnuikende paradoxen binnen ons familierecht en de jeugdhulpverlening. Een ouder die een relatie beëindigt waarin sprake was van dwingende controle, loopt vrijwel meteen tegen een onzichtbare maar meedogenloze muur op. Waar het verbreken van de banden rust en veiligheid zou moeten brengen, verplaatst de strijd zich simpelweg naar het enige speelveld dat nog over is: het kind en de rechtbank. En wie het aandurft om het patroon van macht en manipulatie hardop te benoemen, krijgt van het systeem direct de deksel op de neus. Eerlijkheid wordt afgestraft als het 'voeden van de strijd'. Welkom in de werkelijkheid waarin het aloude spreekwoord cynisch waarheid wordt: spreken is zilver, maar zwijgen is goud.<br><br>
 
 <h3 class="font-bold">De onzichtbare psychologische gijzeling</h3><br>
 Om te begrijpen waarom de situatie ná een scheiding zo snel ontspoort, moeten we eerst kijken naar wat er tijdens de relatie gebeurt. Dwingende controle (coercive control) is geen verzameling van incidentele echtelijke ruzies of twee mensen die simpelweg niet bij elkaar passen. Zoals socioloog Evan Stark en Nederlandse experts als Ingrid Vledder en Ariane Hendriks (Met liefde heeft het niks te maken) aantonen, is het een systematisch patroon van dominantie, isolatie, intimidatie en micro-regulering.<br><br>
@@ -280,15 +256,15 @@ Praten over dwingende controle zou geen risico mogen zijn op institutionele afst
 Ingrid Vledder & Ariane Hendriks, 'Met liefde heeft het niks te maken. Dwingende controle in intieme relaties', Uitgeverij SWP.<br>
 Evan Stark, 'Coercive Control: How Men Entrap Women in Personal Life', Oxford University Press. *Disclaimer: Dit is een algemeen, maatschappelijk artikel over de werking van dwingende controle, de patronen bij scheidingen en de knelpunten binnen het rechtssysteem en de hulpverlening. Het is gebaseerd op literatuur, ervaringen van diverse ouders en landelijke trends.
 </p>`,
-            image:"https://images.unsplash.com/photo-1625537134691-62a54cc4a909?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            tags: ["Maatschappij", "Familierecht", "Dwingende Controle"]
-        },
-        {
-            id: "ana-1",
-            title: "Duizend manieren om mens te zijn",
-            date: "2 SEPTEMBER 2026",
-            intro: "In de maatschappij geldt vaak één norm voor hoe we moeten focussen, leren en functioneren. Voor Tim leidde het constante aanpassen aan die starre mal en het onbegrip rondom zijn ADHD.",
-            content: `Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar een' route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen. <br><br>
+        image: "https://images.unsplash.com/photo-1625537134691-62a54cc4a909?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        tags: ["Maatschappij", "Familierecht", "Dwingende Controle"]
+    },
+    {
+        id: "ana-1",
+        title: "Duizend manieren om mens te zijn",
+        date: "2 SEPTEMBER 2026",
+        intro: "In de maatschappij geldt vaak één norm voor hoe we moeten focussen, leren en functioneren. Voor Tim leidde het constante aanpassen aan die starre mal en het onbegrip rondom zijn ADHD.",
+        content: `Het idee dat je pas deugt als je in het plaatje past, wanneer een maatschappij besluit dat er maar één manier is om te focussen, één manier om te leren en er maar een' route is om het goed te doen, maakt dat we ons ongemerkt superieur opstellen. Het dwingen van duizend unieke werelden in één starre mal is geen ordening; het is keiharde bekrompenheid. We vragen aan wie afwijkt om zichzelf te breken, enkel en alleen om in een bedacht hokje te passen. <br><br>
 
 "Al mijn leven lang wist ik dat ik anders was," vertelt Tim. Die wetenschap was op zichzelf niet het ergste. Het echte trauma zat in de subtiele, dagelijkse afwijzing. In het gevoel een vreemde eend te zijn in een kamer vol mensen die dezelfde taal spreken, terwijl jij de enige bent die de ondertiteling mist. Het zat in de afkeurende blikken wanneer zijn gedachten sneller gingen dan de lesstof, de diepe eenzaamheid wanneer de buitenwereld zijn overprikkeling verwarde met 'lastig gedrag', en de ijzige stilte die volgde als hij probeerde uit te leggen hoe stormachtig het vanbinnen waaide.<br><br>
 
@@ -306,15 +282,46 @@ Want een brein dat anders werkt, is geen defect mechanisme; het is een wonder va
 
 Er is niet één manier om te voelen, te denken, te werken of te creëren. Er zijn duizend manieren. Duizend manieren om informatie te verwerken, duizend manieren om de werkelijkheid te interpreteren, duizend manieren om de wereld van kleur te voorzien.<br><br>
 
-Voor iedereen die nu klem zit tussen de druk om te voldoen en de wens om zichzelf te zijn: je hoeft jezelf niet kleiner te maken om in de starre mal van een ander te passen. Je hoeft niet te herstellen van wie je bent, hooguit van de uitputting die het aanpassen heeft gekost.<br><br>
+Voor iedereen die nu klem zit tussen de druk om te voldoen en de wens om jezelf te zijn: je hoeft jezelf niet kleiner te maken om in de starre mal van een ander te passen. Je hoeft niet te herstellen van wie je bent, hooguit van de uitputting die het aanpassen heeft gekost.<br><br>
 
 Zoals Tim het onwrikbaar samenvat: "Altijd jezelf blijven. Want als je jezelf bent, kun je nooit negatief zijn."<br><br>
 
 Er zijn 1000 manieren om jezelf te leren kennen en er zijn minstens 1000 manieren om van te houden.`,
-            image: "assets/images/tim uitsnede.jpg",
-            tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
+        image: "assets/images/tim uitsnede.jpg",
+        tags: ["Maatschappij", "Mentale Gezondheid", "ADHD"]
+    }
+];
+
+// 2. We pakken automatisch het allereerste artikel uit de lijst (het nieuwste)
+const latestArticle = analysisArticles[0];
+
+// 3. Vervolgens exporteren we het complete data-object
+export const data = {
+    featured: {
+        id: "featured-1",
+        title: latestArticle.title,
+        excerpt: latestArticle.intro,
+        image: latestArticle.image,
+        author: "HAZY STANDARD",
+        date: latestArticle.date
+    },
+    videos: [
+        {
+            id: "vid-1",
+            title: "Project Z: Verlaten Kantoorkolossen",
+            duration: "14:20",
+            thumb: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=600&auto=format&fit=crop",
+            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+            id: "vid-2",
+            title: "Grondstoftekorten in de Haven",
+            duration: "08:45",
+            thumb: "https://images.unsplash.com/photo-1586528116311-ad8ed745da33?q=80&w=600&auto=format&fit=crop",
+            videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
         }
     ],
+    analysis: analysisArticles,
     rawData: [
         "19/03 08:30 - AEX opent -1.2% onder invloed van tech-correctie.",
         "18/03 16:45 - Faillissementen bouwsector +15% YoY.",
