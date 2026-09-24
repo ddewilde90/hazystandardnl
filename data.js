@@ -119,36 +119,7 @@ Het familierecht moet dringend op de schop:<br><br>
   <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
   <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragende procedures direct worden afgewezen.</li>
   <li><strong>Erkenning in de jeugdzorg:</strong> Bied gerichte ondersteuning en erkenning voor duo-moeders, zodat het 'uitgummen' van een ouder niet langer gefaciliteerd wordt door het systeem.</li>
-</ul>`
-
-<div class="article-footer" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
-    
-    <div class="source-citation" style="margin-bottom: 24px;">
-        <h3>Bronvermelding</h3>
-        <p>Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses en rechtspraak inzake het afstammingsrecht, waaronder:</p>
-        <ul>
-            <li>
-                <strong>De positie van de duomoeder in de erkenningsprocedure</strong><br>
-                Auteurs: mr. I. van Dijk-van Oosterhout & mr. N. Groen (SCG Advocaten)<br>
-                Gepubliceerd in: <em>Echtscheidingsbulletin (EB 2023/49)</em>, aflevering 6, juni 2023.
-            </li>
-        </ul>
-    </div>
-
-    <div class="related-article-box" style="background-color: #f9f9f9; padding: 16px; border-left: 4px solid #333; margin-bottom: 24px;">
-        <p style="margin: 0; font-weight: bold;">Verder lezen over de juridische achtergrond?</p>
-        <p style="margin: 8px 0 0 0;">
-            Lees hier het aanvullende verdiepingsartikel: 
-            <a href="/artikelen/duomoeder-erkenning" style="text-decoration: underline;">De Rechtspositie van de Duomoeder bij Erkenning &rarr;</a>
-        </p>
-    </div>
-
-    <div class="disclaimer-box" style="font-size: 0.85em; color: #666; font-style: italic;">
-        <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor persoonlijke situaties, specifieke adviezen en juridische bijstand altijd contact op met een daartoe bevoegde familierechtadvocaat.</p>
-    </div>
-
-</div>
-           ,
+</ul>`,
             image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200&auto=format&fit=crop",
             tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
         },
