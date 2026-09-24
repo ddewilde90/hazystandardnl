@@ -135,7 +135,7 @@ Praten over dwingende controle zou geen risico mogen zijn op institutionele afst
 Ingrid Vledder & Ariane Hendriks, 'Met liefde heeft het niks te maken. Dwingende controle in intieme relaties', Uitgeverij SWP.<br>
 Evan Stark, 'Coercive Control: How Men Entrap Women in Personal Life', Oxford University Press. *Disclaimer: Dit is een algemeen, maatschappelijk artikel over de werking van dwingende controle, de patronen bij scheidingen en de knelpunten binnen het rechtssysteem en de hulpverlening. Het is gebaseerd op literatuur, ervaringen van diverse ouders en landelijke trends.
 </p>`,
-            image: "https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?q=80&w=800",
+            image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=800&auto=format&fit=crop"",
             tags: ["Maatschappij", "Familierecht", "Dwingende Controle"]
         },
          {
