@@ -146,7 +146,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
     </div>
 </div>`,
-            image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1200&auto=format&fit=crop",
+            image: "https://images.unsplash.com/photo-1517457210348-703079e57d4b?q=80&w=1200&auto=format&fit=crop",
             tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
         },
         {
