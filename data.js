@@ -101,7 +101,7 @@ Homo-acceptatie meet je niet af aan het hijsen van een vlag op de stadsboerderij
 
 Dat een duo-moeder in Nederland binnen de huidige wetgeving tot wel 2,5 jaar moet vechten tegen juridische vertragingstactieken, raadsonderzoeken en willekeur van de biologische ouder, is een directe schending van de gelijkwaardigheid van het regenbooggezin.<br><br>
 
-Het familierecht moet dringend op de schop:<br><br>
+Het familierecht moet dringend deze juridische klem herzien:<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
   <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
