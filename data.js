@@ -36,7 +36,7 @@ Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de ein
 
 <ol class="list-decimal pl-6 space-y-2">
   <li><strong>Inschakeling van de Raad voor de Kinderbescherming:</strong> Wanneer de geboortemoeder beweert dat er 'geen band' is of dat de verhoudingen verstoord zijn, gelast de rechter een raadsonderzoek om de verhouding tussen het kind en de duo-moeder te onderzoeken. Van het moment van de aanvraag bij de rechtbank tot het definitieve eindoordeel van zo'n onderzoek verstrijkt gemakkelijk ruim 1 jaar.</li>
-  <li><strong>Opbouw in babystapjes:</strong> Zelfs als uit het onderzoek blijkt dat het kind primair gehecht is aan de duo-moeder, wordt de omgang zelden direct volwaardig hersteld. De omgang wordt stapsgewijs opgebouwd (bijvoorbeeld van een uurtje onder begeleiding naar een middag, en pas veel later naar overnachtingen).</li>
+  <li><strong>Opbouw in babystapjes:</strong> Zelfs als tijdens het onderzoek blijkt dat het kind primair gehecht is aan de duo-moeder, wordt de omgang zelden direct volwaardig hersteld. De omgang wordt stapsgewijs opgebouwd (bijvoorbeeld van een uurtje onder begeleiding naar een middag, en pas veel later naar overnachtingen).</li>
 </ol><br><br>
 
 <p><strong>Wat voorkomen had kunnen worden:</strong><br>
