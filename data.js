@@ -8,7 +8,7 @@ export const data = {
 <h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
 
-Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
+Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder, als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend, volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
 
 <h3 class="font-bold">De achterstand: bewijzen dat je 'veilig genoeg' bent</h3><br>
 Een duo-moeder wordt juridisch misschien niet direct als onveilig bestempeld, maar start wel met een enorme achterstand. In plaats van dat veiligheid en volwaardig ouderschap het uitgangspunt zijn, moet de duo-moeder zich eerst bewijzen om aan te tonen dat zij 'veilig genoeg' is en dat de hechtingsband er toe doet.<br><br>
