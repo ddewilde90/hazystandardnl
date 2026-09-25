@@ -2,7 +2,7 @@ export const data = {
     featured: {
         id: "featured-1",
         title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
-        excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
+        intro: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
         content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
 <h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
@@ -181,7 +181,7 @@ Het familierecht moet dringend op de schop:<br><br>
         {
             id: "ana-4",
             title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
-            date: "24 SEPTEMBER 2026",
+            date: "25 SEPTEMBER 2026",
             intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
             content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
