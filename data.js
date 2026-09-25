@@ -1,16 +1,16 @@
 export const data = {
     featured: {
-       id: "featured-1",
+        id: "featured-1",
         title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
         excerpt: "Nederland noemt zichzelf een gidsland voor LHBTQ+-rechten, maar bij een relatiebreuk zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar. Door verouderde wetgeving, de 'pauze op gezag' en slopende procedures kan een duo-moeder tot wel 2,5 jaar worden uitgesloten.",
         content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
-<h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
+<h3 class="font-bold">De schijn van gelijkwaardigheid</h3>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
 
 Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
 
-<h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3><br>
+<h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3>
 Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en de adoptie of de vervangende toestemming tot erkenning uitspreekt, voelt dat als een rechtvaardige overwinning. Maar in ons familierecht is dat oordeel vaak pas het begin van een lange uitputtingsslag.<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
@@ -19,7 +19,7 @@ Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en 
   <li><strong>Geen drempel voor onderbouwing:</strong> Het wrange aan dit systeem is dat de geboortemoeder vrijwel zonder inhoudelijke drempel of hard bewijs hoger beroep kan aantekenen. Zelfs als een verweer juridisch of feitelijk op drijfzand is gebaseerd, wordt de zaak toch in behandeling genomen. De loutere instelling van het beroep gooit de boel maandenlang administratief en emotioneel op slot.</li>
 </ul><br><br>
 
-<h3 class="font-bold">Het stappenplan en het Raadsonderzoek: de vertraging stapelt zich op</h3><br>
+<h3 class="font-bold">Het stappenplan en het Raadsonderzoek: de vertraging stapelt zich op</h3>
 Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de eindstreep te zijn? Dan blijkt de werkelijkheid nog veel grilliger. Want het bepalen van de feitelijke <strong>omgangsregeling</strong> opent een heel nieuw juridisch hoofdstuk.<br><br>
 
 <ol class="list-decimal pl-6 space-y-2">
@@ -73,16 +73,16 @@ Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de ein
   </table>
 </div><br><br>
 
-<h3 class="font-bold">Uitgegumd zonder hulpverlening</h3><br>
+<h3 class="font-bold">Uitgegumd zonder hulpverlening</h3>
 Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkteams vaak klaar om vader-kindcontact te herstellen. Maar zodra een duo-moeder wordt uitgesloten, stuit zij op een muur van onbegrip, handelingsverlegenheid en stereotypering.<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
-  <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maappelijke hulpverlening kijken te vaak door een heteronormatieve bril. Het stopzetten van het contact door de geboortemoeder wordt afgedaan als 'moeilijke communicatie tussen exen', in plaats van het bewust ontzeggen van een hechtingsfiguur.</li>
+  <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maatschappelijke hulpverlening kijken te vaak door een heteronormatieve bril. Het stopzetten van het contact door de geboortemoeder wordt afgedaan als 'moeilijke communicatie tussen exen', in plaats van het bewust ontzeggen van een hechtingsfiguur.</li>
   <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er letterlijk alleen voor vanwege de juridische pauzeknop (ookal willen instanties wel helpen, ze kunnen simpelweg niks).</li>
   <li><strong>Geen omgangsregeling tijdens de procedure:</strong> Omdat het gezag 'op pauze' staat, weigeren veel rechters en instanties een voorlopige omgangsregeling op te leggen zolang het juridisch ouderschap niet definitief vaststaat. Het kind wordt al die tijd weggehouden bij de moeder die het kent vanaf de geboorte.</li>
 </ul><br><br>
 
-<h3 class="font-bold">Tijd voor echte homo-acceptatie in de rechtzaal</h3><br>
+<h3 class="font-bold">Tijd voor echte homo-acceptatie in de rechtzaal</h3>
 Homo-acceptatie meet je niet af aan het hijsen van een vlag op de stadsboerderij of het houden van een feestelijke parade. Echte acceptatie blijkt uit hoe een samenleving omgaat met de kwetsbare momenten: wanneer de liefde over is en de belangen van het kind beschermd moeten worden.<br><br>
 
 Dat een duo-moeder in Nederland binnen de huidige wetgeving tot wel 2,5 jaar moet vechten tegen juridische vertragingstactieken, raadsonderzoeken en willekeur van de biologische ouder, is een directe schending van de gelijkwaardigheid van het regenbooggezin.<br><br>
@@ -102,7 +102,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <h4 style="margin-bottom: 8px;">Bronvermelding</h4>
         <p style="font-size: 0.9em; line-height: 1.5; color: #444;">
             Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses uit het afstammingsrecht, waaronder:<br />
-            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023)[cite: 2].
+            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023).
         </p>
     </div>
 
@@ -117,24 +117,21 @@ Het familierecht moet dringend op de schop:<br><br>
     </div>
 
     <div class="pdf-embed-container" style="margin: 24px 0;">
-    <p style="font-weight: bold; margin-bottom: 8px;">Juridische verdieping: De Rechtspositie van de Duomoeder bij Erkenning</p>
-    
-    <object 
-        data="/hazystandardnl/assets/images/duo%20moeders.pdf" 
-        type="application/pdf" 
-        width="100%" 
-        height="600px" 
-        style="border: 1px solid #ccc; border-radius: 4px;">
-        
-        <!-- Fallback voor mobiele browsers die embedded PDF's niet ondersteunen -->
-        <p style="padding: 16px; background-color: #f9f9f9; border: 1px solid #ddd;">
-            Je browser ondersteunt het direct tonen van PDF-bestanden niet. 
-            <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
-                Klik hier om het document te openen (PDF) &rarr;
-            </a>
-        </p>
-    </object>
-</div>
+        <p style="font-weight: bold; margin-bottom: 8px;">Juridische verdieping: De Rechtspositie van de Duomoeder bij Erkenning</p>
+        <object 
+            data="/hazystandardnl/assets/images/duo%20moeders.pdf" 
+            type="application/pdf" 
+            width="100%" 
+            height="600px" 
+            style="border: 1px solid #ccc; border-radius: 4px;">
+            <p style="padding: 16px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                Je browser ondersteunt het direct tonen van PDF-bestanden niet. 
+                <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
+                    Klik hier om het document te openen (PDF) &rarr;
+                </a>
+            </p>
+        </object>
+    </div>
 
     <div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; line-height: 1.4;">
         <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
@@ -169,12 +166,12 @@ Het familierecht moet dringend op de schop:<br><br>
             intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
             content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
-<h3 class="font-bold">De schijn van gelijkwaardigheid</h3><br>
+<h3 class="font-bold">De schijn van gelijkwaardigheid</h3>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
 
 Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
 
-<h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3><br>
+<h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3>
 Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en de adoptie of de vervangende toestemming tot erkenning uitspreekt, voelt dat als een rechtvaardige overwinning. Maar in ons familierecht is dat oordeel vaak pas het begin van een lange uitputtingsslag.<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
@@ -183,7 +180,7 @@ Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en 
   <li><strong>Geen drempel voor onderbouwing:</strong> Het wrange aan dit systeem is dat de geboortemoeder vrijwel zonder inhoudelijke drempel of hard bewijs hoger beroep kan aantekenen. Zelfs als een verweer juridisch of feitelijk op drijfzand is gebaseerd, wordt de zaak toch in behandeling genomen. De loutere instelling van het beroep gooit de boel maandenlang administratief en emotioneel op slot.</li>
 </ul><br><br>
 
-<h3 class="font-bold">Het stappenplan en het Raadsonderzoek: de vertraging stapelt zich op</h3><br>
+<h3 class="font-bold">Het stappenplan en het Raadsonderzoek: de vertraging stapelt zich op</h3>
 Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de eindstreep te zijn? Dan blijkt de werkelijkheid nog veel grilliger. Want het bepalen van de feitelijke <strong>omgangsregeling</strong> opent een heel nieuw juridisch hoofdstuk.<br><br>
 
 <ol class="list-decimal pl-6 space-y-2">
@@ -237,7 +234,7 @@ Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de ein
   </table>
 </div><br><br>
 
-<h3 class="font-bold">Uitgegumd zonder hulpverlening</h3><br>
+<h3 class="font-bold">Uitgegumd zonder hulpverlening</h3>
 Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkteams vaak klaar om vader-kindcontact te herstellen. Maar zodra een duo-moeder wordt uitgesloten, stuit zij op een muur van onbegrip, handelingsverlegenheid en stereotypering.<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
@@ -246,7 +243,7 @@ Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkte
   <li><strong>Geen omgangsregeling tijdens de procedure:</strong> Omdat het gezag 'op pauze' staat, weigeren veel rechters en instanties een voorlopige omgangsregeling op te leggen zolang het juridisch ouderschap niet definitief vaststaat. Het kind wordt al die tijd weggehouden bij de moeder die het kent vanaf de geboorte.</li>
 </ul><br><br>
 
-<h3 class="font-bold">Tijd voor echte homo-acceptatie in de rechtzaal</h3><br>
+<h3 class="font-bold">Tijd voor echte homo-acceptatie in de rechtzaal</h3>
 Homo-acceptatie meet je niet af aan het hijsen van een vlag op de stadsboerderij of het houden van een feestelijke parade. Echte acceptatie blijkt uit hoe een samenleving omgaat met de kwetsbare momenten: wanneer de liefde over is en de belangen van het kind beschermd moeten worden.<br><br>
 
 Dat een duo-moeder in Nederland binnen de huidige wetgeving tot wel 2,5 jaar moet vechten tegen juridische vertragingstactieken, raadsonderzoeken en willekeur van de biologische ouder, is een directe schending van de gelijkwaardigheid van het regenbooggezin.<br><br>
@@ -255,7 +252,7 @@ Het familierecht moet dringend op de schop:<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
   <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
-  <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragendinge procedures direct worden afgewezen.</li>
+  <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragende procedures direct worden afgewezen.</li>
   <li><strong>Erkenning in de jeugdzorg:</strong> Bied gerichte ondersteuning en erkenning voor duo-moeders, zodat het 'uitgummen' van een ouder niet langer gefaciliteerd wordt door het systeem.</li>
 </ul>
 
@@ -266,7 +263,7 @@ Het familierecht moet dringend op de schop:<br><br>
         <h4 style="margin-bottom: 8px;">Bronvermelding</h4>
         <p style="font-size: 0.9em; line-height: 1.5; color: #444;">
             Dit artikel is mede gebaseerd op en geïnspireerd door juridische analyses uit het afstammingsrecht, waaronder:<br />
-            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023)[cite: 2].
+            <em>"De positie van de duomoeder in de erkenningsprocedure"</em> — mr. I. van Dijk-van Oosterhout & mr. N. Groen (Echtscheidingsbulletin EB 2023/49, juni 2023).
         </p>
     </div>
 
@@ -276,29 +273,26 @@ Het familierecht moet dringend op de schop:<br><br>
             Lees ook de juridische verdieping: 
            <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: #000; font-weight: 600;">
             De Rechtspositie van de Duomoeder bij Erkenning (PDF)
-            </a>
+           </a>
         </p>
     </div>
 
     <div class="pdf-embed-container" style="margin: 24px 0;">
-    <p style="font-weight: bold; margin-bottom: 8px;">Juridische verdieping: De Rechtspositie van de Duomoeder bij Erkenning</p>
-    
-    <object 
-        data="/hazystandardnl/assets/images/duo%20moeders.pdf" 
-        type="application/pdf" 
-        width="100%" 
-        height="600px" 
-        style="border: 1px solid #ccc; border-radius: 4px;">
-        
-        <!-- Fallback voor mobiele browsers die embedded PDF's niet ondersteunen -->
-        <p style="padding: 16px; background-color: #f9f9f9; border: 1px solid #ddd;">
-            Je browser ondersteunt het direct tonen van PDF-bestanden niet. 
-            <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
-                Klik hier om het document te openen (PDF) &rarr;
-            </a>
-        </p>
-    </object>
-</div>
+        <p style="font-weight: bold; margin-bottom: 8px;">Juridische verdieping: De Rechtspositie van de Duomoeder bij Erkenning</p>
+        <object 
+            data="/hazystandardnl/assets/images/duo%20moeders.pdf" 
+            type="application/pdf" 
+            width="100%" 
+            height="600px" 
+            style="border: 1px solid #ccc; border-radius: 4px;">
+            <p style="padding: 16px; background-color: #f9f9f9; border: 1px solid #ddd;">
+                Je browser ondersteunt het direct tonen van PDF-bestanden niet. 
+                <a href="/hazystandardnl/assets/images/duo%20moeders.pdf" target="_blank" style="text-decoration: underline; font-weight: bold;">
+                    Klik hier om het document te openen (PDF) &rarr;
+                </a>
+            </p>
+        </object>
+    </div>
 
     <div class="disclaimer-box" style="font-size: 0.82em; color: #666; font-style: italic; line-height: 1.4;">
         <p><strong>Disclaimer:</strong> De inhoud op Hazy Standard is uitsluitend bedoeld voor algemene informatieve en redactionele doeleinden en vormt geen formeel juridisch advies. Neem voor specifieke situaties en juridische bijstand contact op met een familierechtadvocaat.</p>
@@ -307,6 +301,72 @@ Het familierecht moet dringend op de schop:<br><br>
             image: "assets/images/regenboog.jpg",
             tags: ["Maatschappij", "Familierecht", "LHBTQ+"]
         },
+        {
+            id: "ana-2",
+            title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
+            date: "24 SEPTEMBER 2026",
+            intro: "Het beëindigen van een relatie met dwingende controle brings zelden rust. Sterker nog: vaak begint de echte terreur pas ná de breuk. Zolang het familierecht en de jeugdzorg feitelijke beschrijvingen van psychologische machtsmiddelen blijven wegzetten als ‘ouderstrijd’ of ‘modder gooien’, hebben slachtoffers maar één overlevingsstrategie: hun mond houden.",
+            content: `Het is een van de meest fnuikende paradoxen binnen ons familierecht en de jeugdhulpverlening. Een ouder die een relatie beëindigt waarin sprake was van dwingende controle, loopt vrijwel meteen tegen een onzichtbare maar meedogenloze muur op. Waar het verbreken van de banden rust en veiligheid zou moeten brengen, verplaatst de strijd zich simpelweg naar het enige speelveld dat nog over is: het kind en de rechtbank. En wie het aandurft om het patroon van macht en manipulatie hardop te benoemen, krijgt van het systeem direct de deksel op de neus. Eerlijkheid wordt afgestraft als het 'voeden van de strijd'. Welkom in de werkelijkheid waarin het aloude spreekwoord cynisch waarheid wordt: spreken is zilver, maar zwijgen is goud.<br><br>
+
+<h3 class="font-bold">De onzichtbare psychologische gijzeling</h3>
+Om te begrijpen waarom de situatie ná een scheiding zo snel ontspoort, moeten we eerst kijken naar wat er tijdens de relatie gebeurt. Dwingende controle (coercive control) is geen verzameling van incidentele echtelijke ruzies of twee mensen die simpelweg niet bij elkaar passen. Zoals socioloog Evan Stark en Nederlandse experts als Ingrid Vledder en Ariane Hendriks (Met liefde heeft het niks te maken) aantonen, is het een systematisch patroon van dominantie, isolatie, intimidatie en micro-regulering.<br><br>
+
+In zo’n relatie is het voor het slachtoffer letterlijk onmogelijk om jezelf te zijn. Het zenuwstelsel staat onder continue hoogspanning. Om escalaties, stiltebehandelingen of emotionele chantage te voorkomen, develops het slachtoffer een chronische fawn-respons: het voortdurend aanpassen van de eigen emoties, meningen en waarden aan de grille van de controleur. Door continue verdraaiing van de werkelijkheid (gaslighting) en het isoleren van vrienden en familie, raakt het eigen innerlijke kompas volledig uitgehold. Stukje bij beetje slijp je je eigen identiteit af om veilig te blijven, totdat er slechts een schim van jezelf overblijft.<br><br>
+
+<div class="my-6 overflow-x-auto">
+  <table class="w-full text-left border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray-100">
+        <th colspan="2" class="p-3 border border-gray-300 text-center font-bold tracking-wide uppercase">
+          Het mechanisme van dwingende controle
+        </th>
+      </tr>
+      <tr class="bg-gray-50">
+        <th class="p-3 border border-gray-300 font-bold w-1/2">Tijdens de relatie</th>
+        <th class="p-3 border border-gray-300 font-bold w-1/2">Ná de breuk</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-3 border border-gray-300 align-top">
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Isolatie van netwerk</li>
+            <li>Gaslighting &amp; twijfel</li>
+            <li>Micro-regulering</li>
+            <li>Fawn-respons (aanpassen)</li>
+          </ul>
+        </td>
+        <td class="p-3 border border-gray-300 align-top">
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Kind als machtsmiddel</li>
+            <li>Juridische uitputtingsslag</li>
+            <li>DARVO-tactiek bij instanties</li>
+            <li>Dwang tot stilte / zwijgen</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div><br><br>
+
+<h3 class="font-bold">De illusie dat de breuk uitkomst biedt</h3>
+Veel mensen vragen zich af waarom slachtoffers niet sneller weggaan. Het antwoord is even simpel als intriest: veel slachtoffers blijven juist jarenlang zitten omdat ze haarscherp aanvoelen dat het verbreken van de relatie het gevaar niet bezweert, maar verergert. Zodra de controleur de directe grip in huis verliest, slaat de paniek om machtsverlies toe. De dwingende controle stopt niet, maar verandert van vorm.<br><br>
+
+Het echte gevecht begint pas ná het beëindigen van de relatie. Het kind wordt door de controlerende ex-partner ingezet als het ultieme instrument om alsnog macht uit te oefenen. Ouderverstoting wordt hierbij bewust gecreëerd: het kind wordt emotioneel onder druk gezet, de andere ouder wordt zwartgemaakt, en omgangsafspraken worden eenzijdig geschrapt. Daarnaast wordt het familierechtstelsel als wapen gebruikt. Het aansturen op eindeloze rechtszaken en kort gedingen is een beproefde methode om de ex-partner financieel uit te putten en emotioneel gijzelaar te houden.<br><br>
+
+Slachtoffers staan hierin volkomen alleen. Er ontbreekt in Nederland een landelijk, gespecialiseerd steunpunt voor dwingende controle waar slachtoffers terechtkunnen voor daadwerkelijke bescherming, juridische rugdekking en specifieke expertise. Uit angst voor verdere escalatie of wraakacties durven slachtoffers er nauwelijks over te praten, wat leidt tot een diep emotioneel en maatschappelijk isolement.<br><br>
+
+<h3 class="font-bold">De valkuil van de 'vechtscheiding'</h3>
+Wanneer de gedupeerde ouder vervolgens aanklopt bij de jeugdzorg, de Raad voor de Kinderbescherming of de rechter, volgt de tweede klap. Ons systeem is verslaafd aan de gedachte dat een conflictscheiding per definitie de verantwoordelijkheid is van twee 'kijvende' ouders. Er wordt vastgehouden aan het dogma van gelijkwaardig ouderschap en de deugdelijke communicatie, zonder dat er wordt ingezoomd op de unieke dynamiek die zich achter gesloten deuren afspeelt.<br><br>
+
+Hier maakt de controleur handig gebruik van de zogeheten DARVO-tactiek (Deny, Attack, Reverse Victim and Offender). De feiten worden ontkend, de gedupeerde ouder wordt aangevallen op diens stabiliteit, en de pleger presenteert zichzelf als de redelijke, 'beschermende' ouder. Als het slachtoffer wanhopig of emotioneel reageert op het feit dat het kind bij hen wordt weggehouden, wijst het systeem al snel met de beschuldigende vinger: "Zie je wel, ze maken allebei ruzie."<br><br>
+
+Zo wordt feitelijke duiding weggezet als 'modder gooien'. Wie het patroon benoemt, wordt gelabeld als onwillig om samen te werken. En dus leert de beschadigde ouder de wrede spelregels van de institutionele werkelijkheid: als je je kind niet helemaal kwijt wilt raken, moet je je mond houden, slikken en meebewegen. Zwijgen wordt de enige overlevingsstrategie.`,
+            image: "assets/images/zwijgen.jpg",
+            tags: ["Familierecht", "Psychologie", "Maatschappij"]
+        }
+    ]
+};
         {
             id: "ana-2",
             title: "Spreken is zilver, zwijgen is goud: hoe het familierecht slachtoffers van dwingende controle dwingt tot stilte",
