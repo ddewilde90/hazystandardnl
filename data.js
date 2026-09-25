@@ -93,7 +93,7 @@ Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkte
 
 <ul class="list-disc pl-6 space-y-2">
   <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maappelijke hulpverlening kijken te vaak door een juridische bril. Het willen behouden van contact door de duo-moeder wordt ten onrechte afgedaan als 'ouderstrijd' of 'moeilijke communicatie tussen exen', in plaats van het opkomen voor een normaal recht en het voorkomen van hechtingsschade bij het kind.</li>
-  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er alleen voor, omdat instanties zonder vastgesteld ouderschap simpelweg geen bevoegdheid hebben om in te grijpen.</li>
+  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er alleen voor, omdat instanties zonder vastgesteld ouderschap simpelweg geen bevoegdheid hebben om in te grijpen (ondanks dat de wil er wel is).</li>
   <li><strong>Geen omgangsregeling tijdens de procedure:</strong> Omdat het gezag 'op pauze' staat, weigeren veel rechters en instanties een voorlopige omgangsregeling op te leggen zolang het juridisch ouderschap niet definitief vaststaat. Het kind wordt al die tijd weggehouden bij de moeder die het kent vanaf de geboorte.</li>
 </ul><br><br>
 
