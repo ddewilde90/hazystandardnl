@@ -40,7 +40,7 @@ Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de ein
 </ol><br><br>
 
 <p><strong>Wat voorkomen had kunnen worden:</strong><br>
-Veel van deze stilstand, hechtingsschade en emotionele uitputtingsslag had voorkomen kunnen worden. Als er direct op het moment dat de biologische ouder hoger beroep instelt, verplicht onderzoek werd gedaan en een beschermend omgangstraject werd aangeboden, was het contact tussen het kind en de duo-moeder nooit maanden- of jarenlang stilgelegd. Het systeem faciliteert nu dat de biologische ouder de tijd in haar voordeel laat werken, terwijl een direct omgangstraject en snelle onderzoeksfase de continuïteit voor het kind én de positie van de duo-moeder hadden gewaarborgd.</p><br><br>
+Veel van deze stilstand, hechtingsschade en emotionele uitputtingsslag had voorkomen kunnen worden. Als er direct op het moment dat de biologische ouder hoger beroep instelt, verplicht onderzoek werd gedaan en een beschermend omgangstraject werd aangeboden, was het contact tussen het kind en de duo-moeder nooit maanden- of jarenlang stilgelegd. </p><br><br>
 
 <div class="my-6 overflow-x-auto">
   <table class="w-full text-left border-collapse border border-gray-300">
