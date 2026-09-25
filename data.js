@@ -8,7 +8,7 @@ export const data = {
 <h3 class="font-bold">De schijn van gelijkwaardigheid</h3>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
 
-Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
+Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder, als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend, volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
 
 <h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3>
 Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en de adoptie of de vervangende toestemming tot erkenning uitspreekt, voelt dat als een rechtvaardige overwinning. Maar in ons familierecht is dat oordeel vaak pas het begin van een lange uitputtingsslag.<br><br>
@@ -169,7 +169,7 @@ Het familierecht moet dringend op de schop:<br><br>
 <h3 class="font-bold">De schijn van gelijkwaardigheid</h3>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
 
-Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
+Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder, als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend, volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
 
 <h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3>
 Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en de adoptie of de vervangende toestemming tot erkenning uitspreekt, voelt dat als een rechtvaardige overwinning. Maar in ons familierecht is dat oordeel vaak pas het begin van een lange uitputtingsslag.<br><br>
