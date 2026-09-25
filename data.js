@@ -159,11 +159,11 @@ Het familierecht moet dringend op de schop:<br><br>
             videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
         }
     ],
-    analysis: [
+   analysis: [
         {
             id: "ana-4",
             title: "De regenboogmythe van Nederland: hoe het familierecht de duo-moeder na een breuk tot 2,5 jaar gijzelt",
-            date: "25 SEPTEMBER 2026",
+            date: "24 SEPTEMBER 2026",
             intro: "Nederland kleurt graag oranje en regenboogpaars tijdens Pride en noemt zichzelf gidsland op het gebied van LHBTQ+-rechten. Maar onder dat glimmende imago van homo-acceptatie schuilt een rauwe, juridische werkelijkheid. Zodra de relatie tussen twee moeders strandt, zakt de gelijke behandeling van de duo-moeder als een kaartenhuis in elkaar.",
             content: `Door een verouderd familierecht, de slopende 'pauze op gezag' en het totale gebrek aan wettelijke en maatschappelijke hulpverlening kan een duo-moeder simpelweg worden 'uitgegumd'. Het trieste dieptepunt? Je kunt zomaar 2,5 jaar procederen om überhaupt een volwaardige omgangsregeling te realiseren.<br><br>
 
@@ -171,6 +171,18 @@ Het familierecht moet dringend op de schop:<br><br>
 Op papier is het lesbisch ouderschap in Nederland goed geregeld. De <em>Wet Lesbisch Ouderschap</em> moet garanderen dat kinderen in een regenbooggezin dezelfde rechtsbescherming genieten als kinderen in een heteroseksueel gezin. Maar de praktijk toont een pijnlijk klassenverschil in het familierecht.<br><br>
 
 Waar een vader binnen een huwelijk vrijwel onkwetsbaar is en bij een scheiding automatisch het gezag behoudt, hangt de positie van de duo-moeder — als zij het kind niet vóór het ontstaan van de strijd formeel heeft geadopteerd of erkend — volledig af van de toestemming van de geboortemoeder. Trekken de moeders de stekker uit de relatie voordat alle stempels bij de gemeente zijn gezet? Dan treedt het juridische uitgumproces in werking.<br><br>
+
+<h3 class="font-bold">De achterstand: bewijzen dat je 'veilig genoeg' bent</h3>
+Een duo-moeder wordt juridisch misschien niet direct als onveilig bestempeld, maar start wel met een enorme achterstand. In plaats van dat veiligheid en volwaardig ouderschap het uitgangspunt zijn, moet de duo-moeder zich eerst bewijzen om aan te tonen dat zij 'veilig genoeg' is en dat de hechtingsband er toe doet.<br><br>
+
+Het fundamentele knelpunt zit in het feit dat een adoptie of erkenning wettelijk pas na de geboorte wordt uitgesproken. Hierdoor staat de duo-moeder vanaf de allereerste seconde in een machteloze positie. Oók als er sprake is geweest van een langdurig, gezamenlijk traject en een intensieve, gedeelde kinderwens: het is de geboortemoeder die de absolute macht behoudt totdat alle stempels zijn gezet en een rechter een omgangsregeling heeft vastgelegd.<br><br>
+
+<h3 class="font-bold">Gedwongen in een juridische strijd</h3>
+Zelfs als je overal hebt aangeklopt bij instanties, wijkteams en maatschappelijke hulpverleners, stuit je op onvermogen: zolang er geen juridische basis ligt, <em>kunnen</em> zij niets doen. Hierdoor word je als duo-moeder dwingend een slopende juridische strijd in gezogen. Niet omdat je wilt strijden, maar omdat je simpelweg geen enkel ander middel hebt om de rechten over je eigen kind te behouden.<br><br>
+
+Contact willen met je kind en er willen zijn voor de opvoeding is geen 'ouderstrijd' of ruzie maken; het is het opkomen voor een normaal en fundamenteel recht dat een ouder verdient. Maar in de huidige praktijk ben je zonder vonnis overgeleverd aan willekeur. Als je geluk hebt mag je je kind nog zien, feestdagen of verjaardagen meevieren, of meebeslissen over belangrijke zaken. Maar afdwingen kun je het niet.<br><br>
+
+Uiteindelijk is het kind hiervan de grootste dupe. Het kind wordt hiermee het fundamentele recht en de ruimte ontzegd om onvoorwaardelijk van beide ouders te mogen houden. Zijn bestaansrecht en de band met de ouder die er vanaf het begin voor hem was, worden door het systeem simpelweg weggewist.<br><br>
 
 <h3 class="font-bold">Hoe een Hoger Beroep werkt (en als wapen wordt ingezet)</h3>
 Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en de adoptie of de vervangende toestemming tot erkenning uitspreekt, voelt dat als een rechtvaardige overwinning. Maar in ons familierecht is dat oordeel vaak pas het begin van een lange uitputtingsslag.<br><br>
@@ -181,13 +193,16 @@ Wanneer de rechtbank in eerste aanleg het verzoek van de duo-moeder toewijst en 
   <li><strong>Geen drempel voor onderbouwing:</strong> Het wrange aan dit systeem is dat de geboortemoeder vrijwel zonder inhoudelijke drempel of hard bewijs hoger beroep kan aantekenen. Zelfs als een verweer juridisch of feitelijk op drijfzand is gebaseerd, wordt de zaak toch in behandeling genomen. De loutere instelling van het beroep gooit de boel maandenlang administratief en emotioneel op slot.</li>
 </ul><br><br>
 
-<h3 class="font-bold">Het stappenplan en het Raadsonderzoek: de vertraging stapelt zich op</h3>
+<h3 class="font-bold">Het stappenplan, de vertraging én wat voorkomen had kunnen worden</h3>
 Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de eindstreep te zijn? Dan blijkt de werkelijkheid nog veel grilliger. Want het bepalen van de feitelijke <strong>omgangsregeling</strong> opent een heel nieuw juridisch hoofdstuk.<br><br>
 
 <ol class="list-decimal pl-6 space-y-2">
   <li><strong>Inschakeling van de Raad voor de Kinderbescherming:</strong> Wanneer de geboortemoeder beweert dat er 'geen band' is of dat de verhoudingen verstoord zijn, gelast de rechter een raadsonderzoek om de verhouding tussen het kind en de duo-moeder te onderzoeken. Van het moment van de aanvraag bij de rechtbank tot het definitieve eindoordeel van zo'n onderzoek verstrijkt gemakkelijk ruim 1 jaar.</li>
   <li><strong>Opbouw in babystapjes:</strong> Zelfs als uit het onderzoek blijkt dat het kind primair gehecht is aan de duo-moeder, wordt de omgang zelden direct volwaardig hersteld. De omgang wordt stapsgewijs opgebouwd (bijvoorbeeld van een uurtje onder begeleiding naar een middag, en pas veel later naar overnachtingen).</li>
 </ol><br><br>
+
+<p><strong>Wat voorkomen had kunnen worden:</strong><br>
+Veel van deze stilstand, hechtingsschade en emotionele uitputtingsslag had voorkomen kunnen worden. Als er direct op het moment dat de biologische ouder hoger beroep instelt, verplicht onderzoek werd gedaan en een beschermend omgangstraject werd aangeboden, was het contact tussen het kind en de duo-moeder nooit maanden- of jarenlang stilgelegd. Het systeem faciliteert nu dat de biologische ouder de tijd in haar voordeel laat werken, terwijl een direct omgangstraject en snelle onderzoeksfase de continuïteit voor het kind én de positie van de duo-moeder hadden gewaarborgd.</p><br><br>
 
 <div class="my-6 overflow-x-auto">
   <table class="w-full text-left border-collapse border border-gray-300">
@@ -239,8 +254,8 @@ Denk je na 1,5 jaar procederen over de adoptie of erkenning eindelijk bij de ein
 Wanneer een vader uit het zicht dreigt te verdwijnen, staan instanties en wijkteams vaak klaar om vader-kindcontact te herstellen. Maar zodra een duo-moeder wordt uitgesloten, stuit zij op een muur van onbegrip, handelingsverlegenheid en stereotypering.<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
-  <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maatschappelijke hulpverlening kijken te vaak door een heteronormatieve bril. Het stopzetten van het contact door de geboortemoeder wordt afgedaan als 'moeilijke communicatie tussen exen', in plaats van het bewust ontzeggen van een hechtingsfiguur.</li>
-  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er letterlijk alleen voor vanwege de juridische pauzeknop (ookal willen instanties wel helpen, ze kunnen simpelweg niks).</li>
+  <li><strong>"Het is gewoon een ouderstrijd":</strong> Instanties zoals Jeugdbescherming, de Raad voor de Kinderbescherming en de maatschappelijke hulpverlening kijken te vaak door een heteronormatieve bril. Het willen behouden van contact door de duo-moeder wordt ten onrechte afgedaan als 'ouderstrijd' of 'moeilijke communicatie tussen exen', in plaats van het opkomen voor een normaal recht en het voorkomen van hechtingsschade bij het kind.</li>
+  <li><strong>Geen vangnet voor regenboogouders:</strong> Er zijn nauwelijks gespecialiseerde hulpverleners die begrijpen hoe emotioneel slopend en juridisch complex de positie van een niet-biologische moeder is. Als duo-moeder sta je er alleen voor, omdat instanties zonder vastgesteld ouderschap simpelweg geen bevoegdheid hebben om in te grijpen.</li>
   <li><strong>Geen omgangsregeling tijdens de procedure:</strong> Omdat het gezag 'op pauze' staat, weigeren veel rechters en instanties een voorlopige omgangsregeling op te leggen zolang het juridisch ouderschap niet definitief vaststaat. Het kind wordt al die tijd weggehouden bij de moeder die het kent vanaf de geboorte.</li>
 </ul><br><br>
 
@@ -253,6 +268,7 @@ Het familierecht moet dringend op de schop:<br><br>
 
 <ul class="list-disc pl-6 space-y-2">
   <li><strong>Directe bescherming van het sociale ouderschap:</strong> Zorg dat een duo-moeder die vanaf de kinderwens en geboorte aanwezig was, vanaf dag één recht heeft op omgang en gezag, ongeacht de status van de adoptieprocedure.</li>
+  <li><strong>Direct onderzoek en omgang bij hoger beroep:</strong> Stel verplicht dat bij het instellen van hoger beroep door de biologische ouder meteen onderzoek wordt gestart en een voorlopig omgangstraject wordt ingezet, om oudervervreemding en hechtingsschade te voorkomen.</li>
   <li><strong>Korte procestermijnen en poortwachter:</strong> Voer een strenge filter in voor hoger beroep en cassatie tegen een uitgesproken adoptie, zodat kansloze, nodeloos vertragende procedures direct worden afgewezen.</li>
   <li><strong>Erkenning in de jeugdzorg:</strong> Bied gerichte ondersteuning en erkenning voor duo-moeders, zodat het 'uitgummen' van een ouder niet langer gefaciliteerd wordt door het systeem.</li>
 </ul>
